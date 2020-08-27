@@ -1,0 +1,21 @@
+
+The true distribution was a mixture of two normal distributions,
+60:40, with means 7 and 14, and standard deviation both 1.5.  (In effect
+the true distribution was really a histogram of this in which all
+the values had been rounded down to the nearest whole number, because
+all values drawn from the distribution were truncated.)
+
+The sample of 150 points had histogram:                          its mean:
+
+  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+----------------------------------------------------------------
+  0  0  0  0  4 18 14 17 22 11  5  6  9 12 16  7  6  2  1  0  0:    9.6067
+
+and the three bootstrap samples drawn from that sample (and their means) were:
+
+  0  0  0  0  4 16 18 19 20 14  6  6  9 13 12  6  7  0  0  0  0:    9.3067
+
+  0  0  0  0  4 17 18 13 17  5  7  4 16 13 21  8  4  1  2  0  0:    9.9133
+
+  0  0  0  0  6  9  4 10 32 17  8  7 10 15 16 10  5  1  0  0  0:   10.1000
+

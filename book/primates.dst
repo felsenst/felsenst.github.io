@@ -1,0 +1,16 @@
+#NEXUS
+begin taxa;
+dimensions ntax=7;
+taxlabels Bovine Mouse Gibbon Orang Gorilla Chimp Human;
+end;
+begin distances;
+matrix
+Bovine      0.0000
+Mouse       1.6866  0.0000
+Gibbon      1.7198  1.5232  0.0000
+Orang       1.6606  1.4841  0.7115  0.0000
+Gorilla     1.5243  1.4465  0.5958  0.4631  0.0000
+Chimp       1.6043  1.4389  0.6179  0.5061  0.3484  0.0000
+Human       1.5905  1.4629  0.5583  0.4710  0.3083  0.2692  0.0000
+;
+end;

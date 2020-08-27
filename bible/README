@@ -1,0 +1,82 @@
+<head>
+<title>About the Bibliography of Theoretical Population Genetics</title>
+</head>
+<body bgcolor="#ccffff">
+<DIV ALIGN=CENTER>
+about the<BR>
+Bibliography of Theoretical Population Genetics<BR>
+by Joe Felsenstein<BR>
+<P>
+All contents of this bibliography (c) Copyright 1988 by Joseph Felsenstein
+</DIV>
+<P>
+The file "bible" contains the input entries used to create the Bibliography of
+Theoretical Population Genetics in 1981.  The last entries are very early 1981.
+<P>
+You are entirely welcome to download and use the Bibliography, as long as
+you preserve its copyright and do not charge anyone money for it or for
+access to it.
+<P>
+You should be able to search for keywords by simply reading this file into
+an editor or word processor, and using its Find function.
+<P>
+Each entry consists of lines of ASCII characters no more than 80 bytes long.
+There are three groups of lines in each entry, the Author lines, the Title
+lines, and the Reference lines.  Format should be self-explanatory.  The only
+tricky part is knowing when a group ends.
+<P>
+The general rule is that if an 80-column line has anything nonblank in either 
+column 79 or column 80, that field (Author, Title, or Reference) is to
+continue to another line.  So you keep reading lines until you come
+to one that is either shorter than 79 characters, or is 79 characters long and
+has a blank in column 79, or is 80 characters long with columns 79 and 80 
+both blank.  Note that when a field is exactly 79 or 80 characters long this 
+convention requires an extra, totally blank line to follow it to terminate the
+field.
+<P>
+Author names are inverted for the first name but not for subsequent ones.
+Blanks in the family name of an author are replaced by asterisks as in
+"Maynard*Smith".  The year of publication is always the last four nonblank 
+characters of the Reference line. 
+<P>
+I would like to hear about any interesting transmutations of this form of the 
+Bibliography.  I may resume updating it some day.  A more certain way of
+ensuring that it is updated is for you to volunteer to do it.
+<P>
+There was formerly a site at  <tt>gopher.gdb.org</tt>  that would do interactive
+searches of these files.  It was maintained by Dan Jacobson.  It is
+still there but does not work anymore.  However, a new version has been
+constructed by Martin Morgan at Washington State University, as web site at:<br>
+  <code>http://www.wsu.edu/~mmorgan/interactivities/felsenbib.cgi</code><br>
+which allows an interactive search using keywords, including combinations
+using operations such as AND and NOT.  Many thanks to him for this great
+service.
+<P>
+As for the printed form of the Bibliography, it was printed by Dowden,
+Hutchinson, and Ross of Stroudsburg, Pennsylvania in an edition of 500
+copies.  368 of these sold, a few were given to me as personal copies, and
+the rest (120 copies or so) were remaindered to a bookseller in
+Connecticut, who used to sell them for $5 each.  Now I hear those are
+sold out, but copies still are available on the used book market
+(go to <a href="www.abebooks.com">www.abebooks.com</a> or <a href="www.bookfinder.com">www.bookfinder.com</a> and search using the name
+"Felsenstein, Joseph").
+<P>
+<table border=0>
+<tr><td> Email address:<br>
+  <code>joe<!deathtospam>&nbsp;(at)<!deathtospam>&nbsp;removethispart.gs.washington.edu</code><br>
+<br>
+<br>
+phone: (206)-543-0150<br>
+fax:   (206)-543-0754<br>
+</td>
+<td>
+Joe Felsenstein<br>
+Department of Genome Sciences<br>
+University of Washington<br>
+Box 355065<br>
+Seattle, WA&nbsp;&nbsp; 98195-5065<br>
+USA<br>
+</td>
+</table>
+</body>
+</html>
