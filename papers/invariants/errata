@@ -1,0 +1,17 @@
+
+Errata:
+
+   In the paper:
+
+    Felsenstein, J.  1990.  Counting phylogenetic invariants in some simple
+       cases.  Journal of Theoretical Biology  152: 357-376.
+
+The last term in equation (24) (Lake's first invariant) should read
+
+         -(1/3) P_{xyzy}
+
+instead of
+
+         -(1/3) P_{xyzx}
+      
+
