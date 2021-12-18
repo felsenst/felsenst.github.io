@@ -187,7 +187,7 @@ For earlier work, including earlier papers, I am making available
 materials including the computer programs that were used for the 
 numerical examples.  I am gradually putting more of these online.
 For now there is this case:
-[Programs for the 1981 paper on speciation](MEMO.md)
+[Programs for the 1981 paper on speciation](/papers/speciation/MEMO.md)
 
 
 Joe Felsenstein
