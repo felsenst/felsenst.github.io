@@ -12,20 +12,20 @@ thesis, Department of Zoology, University of Chicago.
 
 *In folder [invariants](invariants)*
 
-Felsenstein, J.  1990.  Counting phylogenetic invariants in some simple cases.  _Journal of Theoretical Biology_  *152:* 357-376.
+Felsenstein, J.  1990.  Counting phylogenetic invariants in some simple cases.  _Journal of Theoretical Biology_  **152:** 357-376.
 
 
 *In folder [restml](/papers/restml)*
 
     Felsenstein, J.  1992.  Phylogenies from restriction sites: a maximum
-       likelihood approach.  _Evolution_  *46:* 159-173.
+       likelihood approach.  _Evolution_  **46:** 159-173.
 
 
 *In folder [ne](/papers/ne)*
 
     Felsenstein, J.  1992.  Estimating effective population size from
        samples of sequences: inefficiency of pairwise and segregating sites
-       as compared to phylogenetic estimates.  _Genetical Research_  *59:* 139-147.
+       as compared to phylogenetic estimates.  _Genetical Research_  **59:** 139-147.
 
 <p>
 <b>In folder <a href="montecarlo">montecarlo</a>:</b><br>
@@ -164,12 +164,12 @@ package</a>.
       continuous characters using the threshold model. American Naturalist 
       179: 145-156.
 </pre>
-<p>
-&nbsp;
-<p>
+
+
 Please note carefully that these papers, as published in the journals, are
 copyright to the publishers of those journals.
-<p>
+
+
 Note that in each case these are the final versions as submitted to the
 journal (the last full manuscript version) but do not reflect changes that
 the editor or I may have made in proof.  Published quotations of these
@@ -180,17 +180,19 @@ before publication should be checked with me by e-mail.
 In addition, many of my older papers are available on-line in the JSTOR system
 which makes older academic journals available.  Your institution would need
 to have a subscription to JSTOR for it to be available to you.  Links to
-these papers are available in my Curriculum Vitae which is at
-<a href="../felsenstein.cv.html">this link</a>.
+these papers are available in my Curriculum Vitae which is 
+[at this link](felsenstein.cv.html)
+
 It also has links to on-line copies of some of my papers at the sites of
 the journals that published them.  These too may require subscriptions.
 
-**Supplementary materials for earlier work**
+***Supplementary materials for earlier work***
 
 For earlier work, including earlier papers, I am making available 
 materials including the computer programs that were used for the 
 numerical examples.  I am gradually putting more of these online.
 For now there is this case:
+
 [Programs for the 1981 paper on speciation](/papers/speciation/MEMO.md)
 
 
