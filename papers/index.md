@@ -1,11 +1,11 @@
 
-***Papers from the Felsenstein lab***
+****Papers from the Felsenstein lab****
 
 **My Ph.D. Thesis**
 
-*In folder [thesis](thesis):*
+*In folder [/papers/thesis](thesis):*
 
-Felsenstein, J. 1968.  Statistical Inference and the Estimation of Phylogenies.  Ph.D.
+Felsenstein, J. 1968.  _Statistical Inference and the Estimation of Phylogenies._  Ph.D.
 thesis, Department of Zoology, University of Chicago.
 
 **Papers in this folder**
@@ -14,15 +14,19 @@ thesis, Department of Zoology, University of Chicago.
 
 Felsenstein, J.  1990.  Counting phylogenetic invariants in some simple cases.  _Journal of Theoretical Biology_  *152:* 357-376.
 
-<p>
-<b>In folder <a href="restml">restml</a>:</b><br>
+
+*In folder [restml](/papers/restml)*
+
     Felsenstein, J.  1992.  Phylogenies from restriction sites: a maximum
-       likelihood approach.  Evolution  46: 159-173.
-<p> 
-<b>In folder <a href="ne">ne</a>:</b><br>
+       likelihood approach.  _Evolution_  *46:* 159-173.
+
+
+*In folder [ne](/papers/ne)*
+
     Felsenstein, J.  1992.  Estimating effective population size from
        samples of sequences: inefficiency of pairwise and segregating sites
-       as compared to phylogenetic estimates.  Genetical Research  59: 139-147.
+       as compared to phylogenetic estimates.  _Genetical Research_  *59:* 139-147.
+
 <p>
 <b>In folder <a href="montecarlo">montecarlo</a>:</b><br>
     Felsenstein, J.   1992.   Estimating effective population size from
