@@ -3,8 +3,9 @@
 These are written in Pascal, a now-rare computer language
 which I found great for writing programs in that it
 pressured me to not make some obvious errors.  They
-should run on Free Pascal, (fpc) which you can download and
-install on your computer.  The first line may need to
+should run on Free Pascal (fpc), which you can download and
+install on your computer.  The first line is a signal to
+a different compiler and may need to
 be deleted.
 
 They are the programs used for the calculations in my
