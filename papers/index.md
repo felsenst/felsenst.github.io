@@ -18,21 +18,21 @@ Felsenstein, J.  1990.  Counting phylogenetic invariants in some simple cases.  
 **_In folder [`restml`](/papers/restml)_**
 
 Felsenstein, J.  1992.  Phylogenies from restriction sites: a maximum
-       likelihood approach.  _Evolution_  **46:** 159-173.
+likelihood approach.  _Evolution_  **46:** 159-173.
 
 
 **_In folder [`ne`](/papers/ne)_**
 
 Felsenstein, J.  1992.  Estimating effective population size from
-       samples of sequences: inefficiency of pairwise and segregating sites
-       as compared to phylogenetic estimates.  _Genetical Research_  **59:** 139-147.
+samples of sequences: inefficiency of pairwise and segregating sites
+as compared to phylogenetic estimates.  _Genetical Research_  **59:** 139-147.
 
 
 **_In folder [`montecarlo`](/papers/montecarlo)_**
 
 Felsenstein, J.   1992.   Estimating effective population size from
-       population samples of sequences: a bootstrap Monte Carlo approach.
-       _Genetical Research_  **59:** 139-147 (December issue).
+population samples of sequences: a bootstrap Monte Carlo approach.
+_Genetical Research_  **59:** 139-147 (December issue).
 
 > **[note -- the method proposed in this paper is _wrong_]**
 >   It has been shown to
@@ -44,11 +44,11 @@ Felsenstein, J.   1992.   Estimating effective population size from
 > [LAMARC](http://evolution.gs.washington.edu/lamarc.html)
 >
 
-**_In folder [`hillis`](papers/hillis)
+**_In folder [`hillis`](papers/hillis)_**
 
 Felsenstein, J. and H. Kishino.   1993.  Is there something wrong with
-       the bootstrap on phylogenies?  A reply to Hillis and Bull.  `Systematic
-       Biology` **42:** 193-200  (June)
+the bootstrap on phylogenies?  A reply to Hillis and Bull.  _Systematic
+Biology_ **42:** 193-200  (June)
 
 <b>In folder <a href="simulation">simulation</a>:</b><br>
     Kuhner, M. K. and J. Felsenstein.  1994.  A simulation comparison of
