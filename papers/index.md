@@ -17,20 +17,20 @@ Felsenstein, J.  1990.  Counting phylogenetic invariants in some simple cases.  
 
 **_In folder [`restml`](/papers/restml)_**
 
-    Felsenstein, J.  1992.  Phylogenies from restriction sites: a maximum
+Felsenstein, J.  1992.  Phylogenies from restriction sites: a maximum
        likelihood approach.  _Evolution_  **46:** 159-173.
 
 
 **_In folder [`ne`](/papers/ne)_**
 
-    Felsenstein, J.  1992.  Estimating effective population size from
+Felsenstein, J.  1992.  Estimating effective population size from
        samples of sequences: inefficiency of pairwise and segregating sites
        as compared to phylogenetic estimates.  _Genetical Research_  **59:** 139-147.
 
 
 **_In folder [`montecarlo`](/papers/montecarlo)_**
 
-    Felsenstein, J.   1992.   Estimating effective population size from
+Felsenstein, J.   1992.   Estimating effective population size from
        population samples of sequences: a bootstrap Monte Carlo approach.
        _Genetical Research_  **59:** 139-147 (December issue).
 
