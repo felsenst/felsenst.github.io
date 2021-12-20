@@ -1,5 +1,5 @@
 
-#### Papers from the Felsenstein lab ####
+# Papers from the Felsenstein lab #
 
 ## My Ph.D. Thesis ##
 
