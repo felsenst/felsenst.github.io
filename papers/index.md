@@ -1,55 +1,55 @@
 
-****Papers from the Felsenstein lab****
+#### Papers from the Felsenstein lab ####
 
-**My Ph.D. Thesis**
+## My Ph.D. Thesis ##
 
-*In folder [/papers/thesis](thesis):*
+**_In folder [`/papers/thesis`](thesis):_**
 
 Felsenstein, J. 1968.  _Statistical Inference and the Estimation of Phylogenies._  Ph.D.
 thesis, Department of Zoology, University of Chicago.
 
-**Papers in this folder**
+## Papers in this folder ##
 
-*In folder [invariants](invariants)*
+**_In folder [`invariants`](invariants)_**
 
 Felsenstein, J.  1990.  Counting phylogenetic invariants in some simple cases.  _Journal of Theoretical Biology_  **152:** 357-376.
 
 
-*In folder [restml](/papers/restml)*
+**_In folder [`restml`](/papers/restml)_**
 
     Felsenstein, J.  1992.  Phylogenies from restriction sites: a maximum
        likelihood approach.  _Evolution_  **46:** 159-173.
 
 
-*In folder [ne](/papers/ne)*
+**_In folder [`ne`](/papers/ne)_**
 
     Felsenstein, J.  1992.  Estimating effective population size from
        samples of sequences: inefficiency of pairwise and segregating sites
        as compared to phylogenetic estimates.  _Genetical Research_  **59:** 139-147.
 
-<p>
-<b>In folder <a href="montecarlo">montecarlo</a>:</b><br>
+
+**_In folder [`montecarlo`](/papers/montecarlo)_**
+
     Felsenstein, J.   1992.   Estimating effective population size from
        population samples of sequences: a bootstrap Monte Carlo approach.
-       Genetical Research  59: 139-147 (December issue).
-<br>
-<blockquote>
-    [note -- the method proposed in this paper is <b>wrong</b>.  It has been
-shown to
-        give a biased estimate of theta.  The paper by Felsenstein,
-        Yamato, and Kuhner corrects this.  That paper
-        is available here in directory
-        <a href="http://evolution.gs.washington.edu/papers/metro">http://evolution.gs.washington.edu/papers/metro</a>
-        and the program to implement it is
-        <a href="http://evolution.gs.washington.edu/lamarc.html">the LAMARC
-package</a>.
-</blockquote>
-<p>
-<b>In folder <a href="hillis">hillis</a>:</b><br>
-    Felsenstein, J. and H. Kishino.   1993.  Is there something wrong with
-       the bootstrap on phylogenies?  A reply to Hillis and Bull.  Systematic
-       Biology  42: 193-200  (June)
-<p>
+       _Genetical Research_  **59:** 139-147 (December issue).
+
+> **[note -- the method proposed in this paper is _wrong_]**
+>   It has been shown to
+> give a biased estimate of theta.  The paper by Felsenstein,
+> Yamato, and Kuhner corrects this.  That paper
+> is available here in directory
+[`http://evolution.gs.washington.edu/papers/metro`](http://evolution.gs.washington.edu/papers/metro)
+> and the program to implement it is
+> [LAMARC](http://evolution.gs.washington.edu/lamarc.html)
+>
+
+**_In folder [`hillis`](papers/hillis)
+
+Felsenstein, J. and H. Kishino.   1993.  Is there something wrong with
+       the bootstrap on phylogenies?  A reply to Hillis and Bull.  `Systematic
+       Biology` **42:** 193-200  (June)
+
 <b>In folder <a href="simulation">simulation</a>:</b><br>
     Kuhner, M. K. and J. Felsenstein.  1994.  A simulation comparison of
        phylogeny algorithms under equal and unequal evolutionary rates.
@@ -186,7 +186,7 @@ these papers are available in my Curriculum Vitae which is
 It also has links to on-line copies of some of my papers at the sites of
 the journals that published them.  These too may require subscriptions.
 
-***Supplementary materials for earlier work***
+## Supplementary materials for earlier work ##
 
 For earlier work, including earlier papers, I am making available 
 materials including the computer programs that were used for the 
@@ -194,6 +194,7 @@ numerical examples.  I am gradually putting more of these online.
 For now there is this case:
 
 [Programs for the 1981 paper on speciation](/papers/speciation/MEMO.md)
+
 
 
 Joe Felsenstein
