@@ -163,7 +163,7 @@ Biology_ **42:** 193-200  (June)
    Felsenstein, J.  2012. A comparative method for both discrete and 
       continuous characters using the threshold model. American Naturalist 
       179: 145-156.
-<P>
+</P>
 
 
 Please note carefully that these papers, as published in the journals, are
