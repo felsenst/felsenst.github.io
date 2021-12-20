@@ -3,7 +3,7 @@
 
 ## My Ph.D. Thesis ##
 
-**_In folder [`/papers/thesis`](thesis):_**
+**_In folder [`thesis`](papers/thesis):_**
 
 Felsenstein, J. 1968.  _Statistical Inference and the Estimation of Phylogenies._  Ph.D.
 thesis, Department of Zoology, University of Chicago.
