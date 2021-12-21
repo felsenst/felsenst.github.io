@@ -1,4 +1,3 @@
-(*$S+*)
 program specn;
    const loci = 3;
       lociminusone = 2;
