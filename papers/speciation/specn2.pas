@@ -1,5 +1,4 @@
-(*$S+*)
-program specn;
+program specn2;
    const loci = 3;
       lociminusone = 2;
       gamnumber = 8;
