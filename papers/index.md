@@ -65,8 +65,8 @@ using Metropolis-Hastings sampling. _Genetics_ **140:** 1421-1430.
 **_In folder [`hmc`](/papers/hmc)_**
 
 Felsenstein, J. and G. A. Churchill. 1996.  A Hidden Markov Model Approach
-to Variation Among Sites in Rate of Evolution.  Molecular Biology
-and Evolution  13: 93-104.
+to Variation Among Sites in Rate of Evolution.  _Molecular Biology
+and Evolution_  **13:** 93-104.
 
 **_In folder [`proteins`](/papers/proteins)_**
 
@@ -75,18 +75,18 @@ parsimony, distance, and likelihood methods. pp. 418-427 in _Computer
 Methods for Macromolecular Sequence Analysis_, ed. R. F. Doolittle.
 Methods in Enzymology, vol. 266.  Academic Press, Orlando, Florida.
 
-**_In folder [`ima`](/papers/hmc)_**
+**_In folder [`ima`](/papers/ima)_**
 
 Kuhner, M. K., J. Yamato, and J. Felsenstein  1997.  Applications of
-Metropolis-Hastings genealogy sampling.  pp. 183-192 in "Progress in
-Population Genetics and Human Evolution", ed. P. Donnelly and S. Tavare.
+Metropolis-Hastings genealogy sampling.  pp. 183-192 in _Progress in
+Population Genetics and Human Evolution_, ed. P. Donnelly and S. Tavare.
 IMA Volumes in Mathematics and its Applications, volume 87.  Springer
 Verlag, Berlin.
 
 **_In folder [`distance`](/papers/distance)_**
 
 Felsenstein, J.  1997.  An alternating least squares approach to inferring
-phylogenies from pairwise distances.  Systematic Biology  46: 101-111.
+phylogenies from pairwise distances.  _Systematic Biology_  **46:** 101-111.
 
 **_In folder [`migrate`](/papers/migrate)_**
 
@@ -111,64 +111,64 @@ a view through the trees.  pp. 609-627 in _Evolutionary Genetics: From
 Molecules to Morphology_, ed. R. S. Singh and C. B. Krimbas.
 Cambridge University Press, Cambridge.
 
-**_In folder [`snp">snp</a></b><br>_**
+**_In folder [`snp">(/papers/snp)_**
 
 Kuhner, M. K., P. Beerli, J. Yamato, and J. Felsenstein.  2000.
        Usefulness of single nucleotide polymorphism data for estimating
-       population parameters.  Genetics  156: 439-447.
+       population parameters.  _Genetics_  **156:** 439-447.
 
-**_In folder [`statphyl">statphyl</a></b><br>_**
+**_In folder [`statphy`](/papers/statphyl)_**
     
 Felsenstein, J.  2001.  The troubled growth of statistical phylogenetics.
-       Systematic Biology  50: 465-467.
+       _Systematic Biology_  **50:** 465-467.
 
-**_In folder [`rates">rates</a></b><br>_**
+**_In folder [`rates`](/papers/rates)_**
     
 Felsenstein, J.  2001.  Taking variation of evolutionary rates between
-       sites into account in inferring phylogenies. Journal of
-       Molecular Evolution 53: 447-455.
+       sites into account in inferring phylogenies. _Journal of
+       Molecular Evolution_ **53:** 447-455.
 
-**_In folder [`quantchar">quantchar</a></b><br>_**
+**_In folder [`quantchar`](/papers/quantchar)_**
     
 Felsenstein, J.  2002.  Quantitative characters, phylogenies, and
-       morphometrics.pp. 27-44 in "Morphology, Shape, and Phylogenetics",
+       morphometrics.pp. 27-44 in _Morphology, Shape, and Phylogenetics_,
        ed. N. MacLeod.  Systematics Association Special Volume Series 64.
        Taylor and Francis, London.
 
-**_In folder [`spectrum">spectrum</a></b><br>_**
+**_In folder [`spectrum`](/papers/spectrum)_**
     
 Felsenstein, J.  2002. Contrasts for a within-species comparative method.
-       pp.  118-129 in "Modern Developments in Theoretical Population
-       Genetics", ed. M. Slatkin and M. Veuille.  Oxford University Press,
+       pp.  118-129 in _Modern Developments in Theoretical Population
+       Genetics_, ed. M. Slatkin and M. Veuille.  Oxford University Press,
        Oxford.
 
-**_In folder [`galton">galton</a></b><br>_**
+**_In folder [`galton`](/papers/galton)_**
      
-Felsenstein, J. 2004.  An ancestor's influence (review of "Francis
-        Galton: Pioneer of Heredity and Biometry", by Michael Bulmer).
+Felsenstein, J. 2004.  An ancestor's influence (review of _Francis
+        Galton: Pioneer of Heredity and Biometry_, by Michael Bulmer).
         Nature Genetics 36 (10): 1031.
 
-**_In folder [`threshold">threshold</a></b><br>_**
+**_In folder [`threshold`](/papers/threshold)_**
      
 Felsenstein, J.  2005.  Using the quantitative genetic threshold model for
-        inferences between and within species.  Philosophical Transactions of
-        the Royal Society of London, series B  360: 1427-1434.
+        inferences between and within species.  _Philosophical Transactions of
+        the Royal Society of London, series B_  **360:** 1427-1434.
 
-_**In folder [`coalpower">(/papers/coalpower)_**   
+_**In folder [`coalpower`](/papers/coalpower)_**   
 Felsenstein, J.  2006.  Accuracy of coalescent likelihood estimates:
        Do we need more sites, more sequences, or more loci?
        Molecular Biology and Evolution  23: 691-700.
 
 **_In folder [`paris2005`](/papers/paris2005)_**
      Felsenstein, J.  2007.  Trees of genes in populations.  pp. 3-29 in
-       "Reconstructing Evolution. New Mathematical and Computational Advances",
+       _Reconstructing Evolution. New Mathematical and Computational Advances_,
        ed. Olivier Gascuel and Mike Steel.  Clarendon Press, Oxford.
 
 **_In folder [`comparerr`](/papers/comparerr)_**
     
 Felsenstein, J.  2008.  Comparative methods with sampling error and
        within-species variation: contrasts revisited and revised.
-       American Naturalist 171: 713-725. 
+       _American Naturalist_ **171:** 713-725. 
 
 **_In folder [`stone`](/papers/stone)_**
      
