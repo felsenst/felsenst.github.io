@@ -94,7 +94,7 @@ Beerli, P. and J. Felsenstein. 1999. Maximum Likelihood estimation
 of migration rates and effective population numbers in two 
 populations. _Genetics_ **152:** 763-773.
 
-<b>In folder [`ims`](/papers/ims)_**
+<**_In folder [`ims`](/papers/ims)_**
 
 Felsenstein, J., M. K. Kuhner, J. Yamato, and P. Beerli. 1999. 
 Likelihoods on coalescents: a Monte Carlo sampling approach to inferring
@@ -111,7 +111,7 @@ a view through the trees.  pp. 609-627 in _Evolutionary Genetics: From
 Molecules to Morphology_, ed. R. S. Singh and C. B. Krimbas.
 Cambridge University Press, Cambridge.
 
-**_In folder [`snp">(/papers/snp)_**
+**_In folder [`snp`](/papers/snp)_**
 
 Kuhner, M. K., P. Beerli, J. Yamato, and J. Felsenstein.  2000.
        Usefulness of single nucleotide polymorphism data for estimating
@@ -154,7 +154,7 @@ Felsenstein, J.  2005.  Using the quantitative genetic threshold model for
         inferences between and within species.  _Philosophical Transactions of
         the Royal Society of London, series B_  **360:** 1427-1434.
 
-_**In folder [`coalpower`](/papers/coalpower)_**   
+**_In folder [`coalpower`](/papers/coalpower)_**   
 Felsenstein, J.  2006.  Accuracy of coalescent likelihood estimates:
        Do we need more sites, more sequences, or more loci?
        Molecular Biology and Evolution  23: 691-700.
