@@ -3,7 +3,7 @@
 These are written in Pascal, a now-rare computer language
 which I found great for writing programs in that it
 pressured me to not make some obvious errors.  They
-should run on Free Pascal ([`fpc`](https://www.freepascal.org/), 
+should run on Free Pascal ([`fpc`](https://www.freepascal.org/)),  
 which you can download and
 install on your computer.  It will also compile successfully
 in most other Pascal compilers.
