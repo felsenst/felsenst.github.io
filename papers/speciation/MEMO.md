@@ -21,7 +21,7 @@ might further limit the number of species of organisms).
 | -------  |           ------------------------ |
 | [`specn.pas`](/papers/speciation/specn.pas) |          Haploid, 2 loci plus 1 mating cue (version with migration before recombination) |
 | [`specn2.pas`](/papers/speciation/specn2.pas) |         Same, but recombination before migration |
-| [`specn3.pas`](/papers/speciation/specn3.pas) |           "    "       "          "       " (?) |
+| [`specn3.pas`](/papers/speciation/specn3.pas) |         Same as #2 but can specify initial gene frequencies in both populations |
 | [`specn4.pas`](/papers/speciation/specn4.pas) |         Also a 4th locus which is a modifier of 
 |            |        the strength of assortative mating. | 
 |            |          Migration before recombination |
