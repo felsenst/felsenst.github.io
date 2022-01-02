@@ -19,12 +19,12 @@ might further limit the number of species of organisms).
 
 | Program  |            which case it calculates |
 | -------  |           ------------------------ |
-| [`specn.pas`](/papers/speciation/specn.pas) |          Haploid, 2 loci plus 1 mating cue (version with migration before recombination) |
-| [`specn2.pas`](/papers/speciation/specn2.pas) |         Same, but recombination before migration |
-| [`specn3.pas`](/papers/speciation/specn3.pas) |         Same as #2 but can specify initial gene frequencies in both populations |
-| [`specn4.pas`](/papers/speciation/specn4.pas) |         Also a 4th locus which is a modifier of the strength of assortative mating. |
+| [`specn.pas`](/software/speciation/specn.pas) |          Haploid, 2 loci plus 1 mating cue (version with migration before recombination) |
+| [`specn2.pas`](/software/speciation/specn2.pas) |         Same, but recombination before migration |
+| [`specn3.pas`](/software/speciation/specn3.pas) |         Same as #2 but can specify initial gene frequencies in both populations |
+| [`specn4.pas`](/software/speciation/specn4.pas) |         Also a 4th locus which is a modifier of the strength of assortative mating. |
 |                                               |         Migration before recombination |
-| [`specn5.pas`](/papers/speciation/specn5.pas) |         Diploid case without modifier (M before R) |
-| [`specn6.pas`](/papers/speciation/specn6.pas) |         Same as specn5.pas but recomb. before mig. |
-| [`specn7.pas`](/papers/speciation/specn7.pas) |         Same as specn.pas but also an interaction |
+| [`specn5.pas`](/software/speciation/specn5.pas) |         Diploid case without modifier (M before R) |
+| [`specn6.pas`](/software/speciation/specn6.pas) |         Same as specn5.pas but recomb. before mig. |
+| [`specn7.pas`](/software/speciation/specn7.pas) |         Same as specn.pas but also an interaction |
 |            |       parameter for epistasis between loci B, C. |
