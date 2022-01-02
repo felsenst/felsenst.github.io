@@ -15,16 +15,14 @@ Thus a typical fitness file would look like this:
 
 ```0.7 0.65 0.9
 0.8 1.0 0.8
-0.9 0.75 0.9
-```
+0.9 0.75 0.9```
 
 A fitness file for two loci for which there is no interaction between the loci (i.e, where the fitnesses 
 interact multiplicatively) would be
 
 ```0.64 0.8 0.56
 0.8 1.0 0.7
-0.72 0.9 0.63
-```
+0.72 0.9 0.63```
 
 The user specifies how many generations are to be run, and how often the population gene frequencies and D are to be 
 printed out.  The prinout for those generations also shows the mean fitness and a ```+``` or ```-``` indicating
@@ -93,5 +91,4 @@ how many (more) generations? (0 to restart, -1 to stop)
        8    0.4832992   0.7349026  -0.0303890   0.9905724 +
        9    0.4881526   0.7435948  -0.0289721   0.9914563 +
 how many (more) generations? (0 to restart, -1 to stop)
--1
-```
+-1```
