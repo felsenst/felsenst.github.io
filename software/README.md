@@ -5,7 +5,7 @@
 
 Pascal programs for the 1981 paper in Evolution: "Skepticism towards Santa Rosalia, or Why are there so few kinds of animals?"
 
-[click here to go to folder of programs](/software/speciation/MEMO.md)
+[click here to go to folder of programs](/software/speciation/README.md)
 
 ## Two locus iteration of gene frequencies, linkage disequilibrium with two linked interacting loci ##
 
