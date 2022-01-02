@@ -3,10 +3,32 @@
 
 This program, ```twoloci.c```, iterates genotype frequencies for an infinitely large population with two loci, each of which has two 
 alleles.  The alleles at the first locus are  A  and  a, the alleles at the second locus are  B  and  b.  The iterations are 
-deterministic, as the infinite population size means that there is no genetic drift.  The recombination fraction
+deterministic, as the infinite population size means that there is no genetic drift.  The recombination fraction  r  can be specified 
+by the user.  The initial state of the population is given by entering the initial gene frequencies of  A  and  B, and the 
+initial value of the linkage disequilibrium parameter  D.  
 
+The user is first asked for the name of the file with the fitnesses.  The fitness values are on three lines, 
+each line having three fitnesses separated by blanks.  The first line is for  AA  genotypes, and is the fitnesses 
+for BB, Bb, and bb.  The second line is for Aa, the third line is for  aa.
 
+Thus a typical fitness file would look like this:
 
+```0.7 0.65 0.9
+0.8 1.0 0.8
+0.9 0.75 0.9
+```
+
+A fitness file for two loci for which there is no interaction between the loci (i.e, where the fitnesses 
+interact multiplicatively) would be
+
+```0.64 0.8 0.56
+0.8 1.0 0.7
+0.72 0.9 0.63
+```
+
+The user specifies how many generations are to be run, and how often the population gene frequencies and D are to be 
+printed out.  The prinout for those generations also shows the mean fitness and a ```+``` or ```-``` indicating
+whether the mean fitness has increased or decreased since the previous generation.
 
 
 
@@ -26,9 +48,10 @@ otherwise it may work to type
 
 If the fitnesses are in file ```fitnesses``` and are
 
-1.0 1.0 1.01
+```1.0 1.0 1.01
 1.0 1.0 1.0
-1.01 1.0 0.0
+1.01 1.0 0.0```
+
 
 Then a typical run output will look like this:
 
