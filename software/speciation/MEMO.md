@@ -1,13 +1,18 @@
-
-
+<html>
+<head>
+<title> Speciation programs used in 1981 paper in Evolution </title>
+</head>
+<body>
+<h1> Speciation programs used in 1981 paper in Evolution </h1>
+<p>
 These are written in Pascal, a now-rare computer language
 which I found great for writing programs in that it
 pressured me to not make some obvious errors.  They
-should run on Free Pascal ([`fpc`](https://www.freepascal.org/)),  
+  should run on Free Pascal <a href="https://www.freepascal.org/">(<tt>fpc</tt>.</a>,  
 which you can download and
 install on your computer.  It will also compile successfully
 in most other Pascal compilers.
-
+<p>
 They are the programs used for the calculations in my
 1981 paper in Evolution, "Skepticism toward Santa Rosalia:
 Why are there so few kinds of animals?"
@@ -15,16 +20,20 @@ Why are there so few kinds of animals?"
 famous paper on the determinants of the number of species,
 rather it raised the issue of why the genetics of speciation
 might further limit the number of species of organisms).
-
-
-| Program  |            which case it calculates |
-| -------  |           ------------------------ |
-| [`specn.pas`](/software/speciation/specn.pas) |          Haploid, 2 loci plus 1 mating cue (version with migration before recombination) |
-| [`specn2.pas`](/software/speciation/specn2.pas) |         Same, but recombination before migration |
-| [`specn3.pas`](/software/speciation/specn3.pas) |         Same as #2 but can specify initial gene frequencies in both populations |
-| [`specn4.pas`](/software/speciation/specn4.pas) |         Also a 4th locus which is a modifier of the strength of assortative mating. |
-|                                               |         Migration before recombination |
-| [`specn5.pas`](/software/speciation/specn5.pas) |         Diploid case without modifier (M before R) |
-| [`specn6.pas`](/software/speciation/specn6.pas) |         Same as specn5.pas but recomb. before mig. |
-| [`specn7.pas`](/software/speciation/specn7.pas) |         Same as specn.pas but also an interaction |
-|            |       parameter for epistasis between loci B, C. |
+<p>
+<table>
+  <tr><td>Program</td><td>which case it calculates</td><td></td></tr>
+  <tr><td> ------- </td><td> ------------------------ </td><td></td></tr>
+  <tr><td><tt><a href="/software/speciation/specn.pas"> specn.pas </tt> </td><td> Haploid, 2 loci plus 1 mating cue (version with migration before recombination)</td></tr>
+  <tr><td><tt><a href="/software/speciation/specn2.pas"> specn2.pas</tt> </td><td>Same, but recombination before migration </td></tr>
+  <tr><td><tt><a href="/software/speciation/specn3.pas"> specn3.pas</tt> </td><td>Same as #2 but can specify initial gene frequencies in both populations </td></tr>
+  <tr><td><tt><a href="/software/speciation/specn4.pas"> specn4.pas</tt> </td><td>Also a 4th locus which is a modifier of the strength of assortative mating. </td></tr>
+  <tr><td></td><td></td><td> Migration before recombination </td></tr>
+  <tr><td><tt><a href="/software/speciation/specn5.pas"> specn5.pas</tt> </td>Diploid case without modifier (M before R) <td> </td></tr>
+  <tr><td><tt><a href="/software/speciation/specn6.pas"> specn6.pas</tt> </td> Same as specn5.pas but recomb. before mig. <td> </td></tr>
+  <tr><td><tt><a href="/software/speciation/specn7.pas"> specn7.pas</tt> </td> Same as specn.pas but also an interaction <td> </td></tr>
+  <tr><td></td><td> parameter for epistasis between loci B, C. </td><td> 
+  </table>
+  </body>
+  </html>
+  
