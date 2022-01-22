@@ -4,7 +4,7 @@
 <body>
 <h1> Two-locus genotype frequency iteration program </h1>
 <p>
-This C program, <pre>twoloci.c</pre>, iterates genotype frequencies for an infinitely large population with two loci, each of which has two 
+This C program, <tt>twoloci.c</tt>, iterates genotype frequencies for an infinitely large population with two loci, each of which has two 
 alleles.  The alleles at the first locus are  A  and  a, the alleles at the second locus are  B  and  b.  The iterations are 
 deterministic, as the infinite population size means that there is no genetic drift.  The recombination fraction  r  can be specified 
 by the user.  The initial state of the population is given by entering the initial gene frequencies of  A  and  B, and the 
@@ -44,12 +44,12 @@ gcc -lm twoloci.c -o twoloci
 <p>
 otherwise it may work to type
 <p>
-         <pre>
+<pre>
 cc -lm twoloci.c -o twoloci```
 </pre>
-         <p>
-
-         <h2> An example run </h2>
+<p>
+<p>
+<h2> An example run </h2>
 <P>
          If the fitnesses are in file <code>fitnesses</code> and are
 <p>
