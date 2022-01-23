@@ -1,0 +1,21 @@
+<html>
+<head>
+<title>Felsenstein Camin-Sokal parsimony program from 1966</title>
+</head>
+<body>
+<h1>My Camin-Sokal parsimony program from 1966</h1>
+<p>
+Download the program by clicking on this link: <a href="/software/parsimony/tax7.for">tax7.for</a>
+<p>
+<p>
+This is a FORTRAN II program that I wrote in 1966 to infer a tree using Camin-Sokal parsimony with characters that had "character state trees".
+It read in a data set that included a set of character state trees, where there could be up to 9 states (0 to 8) with state 9 being the "unknown"
+state.  I sent the original program to Bob Sokal and Jim Rohlf and they reported that it ran faster than their program.   That is not surprising
+since their program wrote out information to disk or tape and then read it back in.
+<p>
+This program is not the original version but is the program after a little development.  It uses standard FORTRAN II but also uses a
+nonstandard operation (&amp;) which is a bitwise AND of the bits in two integers.  That was available in the FORTRAN II compiler
+for the IBM 7094 at the University of Chicago.
+(more to come)
+</body>
+</html>
