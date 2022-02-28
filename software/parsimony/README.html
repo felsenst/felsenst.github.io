@@ -16,6 +16,21 @@ since their program wrote out information to disk or tape and then read it back 
 This program is not the original version but is the program after a little development.  It uses standard FORTRAN II but also uses a
 nonstandard operation (&amp;) which is a bitwise AND of the bits in two integers.  That was available in the FORTRAN II compiler
 for the IBM 7094 at the University of Chicago.
-(more to come)
+<P>
+The program reads in data that has up to 70 characters, each with up to 9 states (0 through 8).  State 9 is used to indicate
+that the state us unknown.  Each species has a name of 10 characters long.  After the initial line, which has the number of species
+  and the number of characters, there is one line for each character which indicates the "character state tree" for that character.
+  In each of those lines are 2 characters indicating which state is the immediate ancestor of that state on the character state
+  tree.  They are respectfully for states 0, 1, 2, ..., 8.  The 9th pair of characters is 0 if the character is to be ignored
+  in this run, otherwise something else.  If a state is the ancestral state the number for that state is 10.  Thus for a character
+  state tree that has ancestral state 1,  with state 0 arising from that, state 2 also arising from state 1, and state 3 arising
+  from state 2, the line for the character will be<br>
+   110 1 2-1-1-1-1-1 1<br>
+  (the -1 entries showing that the state is not used for that character).
+  The program can handle up to 40 species, but that number is easily increased.
+  <p>
+  The algorithm for tree construction is sequential addition of species.  After the last species is added,
+    there are then multiple rounds of Nearest Neighbor Interchanges which end when one of them does not
+    change the tree.
 </body>
 </html>
