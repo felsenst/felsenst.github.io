@@ -23,7 +23,7 @@ they were run with an equal initial frequency of the recombination allele (50:50
 effectiveness of natural selection for recombination by finding that the recombination allele fixed significantly
 more than 50% of the time.
 
-I believe that  recomb1.for  simulates the dominant case, and  recomb2.for  the recessive case.  In the latter case the 
+I believe that  recomb1976a.for  simulates the dominant case, and  recomb1976b.for  the recessive case.  In the latter case the 
 two subpopulations that have the two alleles at the recombination locus have no gene flow between them, so that Fisher 
 and Muller's argument for the advantage of recombination predicts that selection for recombination will occur.  It is less 
 obvious that this will be true for the dominant case, but it proved to be true in the simulations.
