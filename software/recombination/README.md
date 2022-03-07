@@ -9,7 +9,7 @@ to the expected rate of fixation at loci that are not in linkage disequilibrium 
 Kimura's 1962 formula).  It is written in FORTRAN IV for the University of Washington's
 CDC 6400 mainframe computer.  
 
-Click [here](recomb1964.for) to display or download  recomb1974.for, and
+Click [here](recomb1964.for) to display or download  recomb1974.for
 
 
 ## Programs simulating selection for an allele bringing about recombination for the Felsenstein and Yokoyama 1976 paper ##
