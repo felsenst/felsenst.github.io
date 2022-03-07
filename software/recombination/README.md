@@ -12,7 +12,7 @@ CDC 6400 mainframe computer.
 Click [here](recomb1964.for) to display or download  recomb1974.for
 
 
-## Programs simulating selection for an allele bringing about recombination for the Felsenstein and Yokoyama 1976 paper ##
+## Programs simulating selection for a recombination allele for the Felsenstein and Yokoyama 1976 paper ##
 
 These two programs were written for the 1976 paper by Felsenstein and Yokoyama in Genetics.  I designed the programs but I think
 that Shozo Yokoyama wrote them, and he did the runs that were reported in the paper.
