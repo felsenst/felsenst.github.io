@@ -3,7 +3,7 @@
 
 ## My Ph.D. Thesis ##
 
-**_In folder [`thesis`](papers/thesis):_**
+**_In folder [`thesis`](thesis):_**
 
 Felsenstein, J. 1968.  _Statistical Inference and the Estimation of Phylogenies._  Ph.D.
 thesis, Department of Zoology, University of Chicago.
@@ -15,20 +15,20 @@ thesis, Department of Zoology, University of Chicago.
 Felsenstein, J.  1990.  Counting phylogenetic invariants in some simple cases.  _Journal of Theoretical Biology_  **152:** 357-376.
 
 
-**_In folder [`restml`](/papers/restml)_**
+**_In folder [`restml`](restml)_**
 
 Felsenstein, J.  1992.  Phylogenies from restriction sites: a maximum
 likelihood approach.  _Evolution_  **46:** 159-173.
 
 
-**_In folder [`ne`](/papers/ne)_**
+**_In folder [`ne`](ne)_**
 
 Felsenstein, J.  1992.  Estimating effective population size from
 samples of sequences: inefficiency of pairwise and segregating sites
 as compared to phylogenetic estimates.  _Genetical Research_  **59:** 139-147.
 
 
-**_In folder [`montecarlo`](/papers/montecarlo)_**
+**_In folder [`montecarlo`](montecarlo)_**
 
 Felsenstein, J.   1992.   Estimating effective population size from
 population samples of sequences: a bootstrap Monte Carlo approach.
@@ -39,36 +39,36 @@ _Genetical Research_  **59:** 139-147 (December issue).
 > give a biased estimate of theta.  The paper by Felsenstein,
 > Yamato, and Kuhner corrects this.  That paper
 > is available here in directory
-[`http://evolution.gs.washington.edu/papers/metro`](http://evolution.gs.washington.edu/papers/metro)
+[metro](metro)
 > and the program to implement it is
 > [LAMARC](http://evolution.gs.washington.edu/lamarc.html)
 >
 
-**_In folder [`hillis`](papers/hillis)_**
+**_In folder [`hillis`](hillis)_**
 
 Felsenstein, J. and H. Kishino.   1993.  Is there something wrong with
 the bootstrap on phylogenies?  A reply to Hillis and Bull.  _Systematic
 Biology_ **42:** 193-200  (June)
 
-**_In folder [`simulation`](/papers/simulation)_**
+**_In folder [`simulation`](simulation)_**
 
 Kuhner, M. K. and J. Felsenstein.  1994.  A simulation comparison of
 phylogeny algorithms under equal and unequal evolutionary rates.
 _Molecular Biology and Evolution_ **11:** 459-468.
 
-**_In folder [`metro`](/papers/metro)_**
+**_In folder [`metro`](metro)_**
 
 Kuhner, M. K., J. Yamato, and J. Felsenstein. 1995.
 Estimating effective population size and mutation rate from sequence data
 using Metropolis-Hastings sampling. _Genetics_ **140:** 1421-1430.
 
-**_In folder [`hmc`](/papers/hmc)_**
+**_In folder [`hmc`](hmc)_**
 
 Felsenstein, J. and G. A. Churchill. 1996.  A Hidden Markov Model Approach
 to Variation Among Sites in Rate of Evolution.  _Molecular Biology
 and Evolution_  **13:** 93-104.
 
-**_In folder [`proteins`](/papers/proteins)_**
+**_In folder [`proteins`](proteins)_**
 
 Felsenstein, J.  1996.  Inferring phylogenies from protein sequences by
 parsimony, distance, and likelihood methods. pp. 418-427 in _Computer
