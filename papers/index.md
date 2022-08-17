@@ -212,7 +212,7 @@ For earlier work, including earlier papers, I am making available
 materials including the computer programs that were used for the 
 numerical examples.  I am gradually putting more of these online.
 
-This includes computer [programs from those projects](/software)
+This includes computer [programs from those projects](/software/README.md)
 
 
 &nbsp;
