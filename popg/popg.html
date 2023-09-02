@@ -1,0 +1,444 @@
+<HTML>
+<HEAD>
+<TITLE>
+PopG Genetic Simulation Program
+</TITLE>
+<LINK href="bluestyle.css" rel="stylesheet" type="text/css">
+</HEAD>
+<BODY BGCOLOR="#ccffff">
+<DIV ALIGN=CENTER>
+<H1>PopG genetic simulation program</H1>
+</DIV>
+<DIV ALIGN=CENTER>
+<IMG SRC="popg.gif" ALT="[PopG icon here]" HEIGHT=100>
+<P>
+<H2>version 4.03</H2>
+<H2>November, 2016</H2>
+</DIV>
+This is a one-locus, two-allele genetic simulation program for use by
+students.  It simulates multiple populations and allows you to see the
+effect of natural selection, mutation, migration, and genetic drift.  It
+is freely downloadable.  It is written in Java, and will run on
+Windows, Mac OS, and Linux systems if they have Java installed on them.
+<P>
+At its web site <a href="http://evolution.gs.washington.edu/popgen/">
+evolution.gs.washington.edu/popgen/</a>
+is a downloadable "zip archive" which contains a Java archive file which
+has the Java executable as well as the Java source code.  It also has
+this web page. There is also a folder <tt>images</tt>
+for the screenshot images used in this web page.  The compiled Java code
+in the Java archive file can be run on any system that has
+a reasonably recent version of Java installed.
+<P>
+The Java source for popg is called <tt>PopGUserInterface.java</tt> and is in the folder <tt>src</tt>. It was 
+developed in the <b>Eclipse</b> development environment but any environment you are comfortable with will do.
+<strong>Note: Normally you will not need the
+source code and you will not need to recompile the program.</strong>  The source code
+is there so you can see how things were done and use it
+as a base to make changes to the program and extensions of the program, 
+should you wish to do so. Most users can ignore it.
+<P>
+<H2>Getting PopG</H2>
+<P>
+You can fetch PopG using the links below.
+<P>
+We have posted a Zip archive of PopG, including Java archives and documentation
+files.  This archive is file <tt>PopG.zip</tt>.  To get it
+<ul>
+<li> Fetch it <a href="http://evolution.gs.washington.edu/popgen/PopG.zip">here</a>.
+<li> Install it using the instructions below.
+<li> Make sure you have a version of Java on your computer.
+</ul>
+<P>
+<h2>Installing PopG</h2>
+<P>
+Here are instructions for saving, unpacking, and installing PopG from different
+browsers, and on operating systems.  We cover the Chrome, Firefox, Safari,
+and Internet Explorer browsers on the Windows, Mac OS, and Linux operating
+systems.
+<P>
+Using Chrome on Windows, Mac OS, or Linux
+<ol>
+<li> Click on the link.
+<li> A downwards-pointing animated arrow in the lower-left portion of the
+browser window will move, pointing to a tab there called PopG.zip.
+<li> PopG.zip will now be found in your Downloads folder.
+<li> Click (or if this does not work, double-click) on the PopG.zip file.
+The Zip archive will be extracted into
+the Downloads folder.  A folder <tt>PopG</tt> will be created in the
+Downloads folder.
+<li> Move that folder to where you want it to be.
+</ol>
+<P>
+Using Firefox on Windows, Linux, or Mac OS
+<ol>
+<li> Click on the link.
+<li> A dialog box opens and offers to let you <tt>Save File</tt>. Choose that.
+<li> The Zip archive <tt>PopG.zip</tt> will be in your Downloads folder.
+<li> Double-click on it.  The archive will be extracted and a folder
+<tt>PopG</tt> created in the Downloads folder.
+<li> Move that folder to where you want it to be.
+</ol>
+<p>
+Using Internet Explorer on Windows
+<ol>
+<li> Click on the link.
+<li> A dialog box opens and offers to let you <tt>Save File</tt>. Choose that.
+<li> The Zip file <tt>PopG.zip</tt> will be downloaded into the downloads folder and will be
+automatically extracted.  A folder <tt>PopG</tt> will be created in the
+Downloads folder.
+<li> Move it where you want it to be.
+</ol>
+<P>
+Using Safari on Mac OS
+<ol>
+<li> Click on the link.
+<li> The Zip file will be downloaded into the downloads folder and will be
+automatically extracted.  A folder <tt>PopG</tt> will be created in the
+Downloads folder.
+<li> Move it where you want it to be.
+</ol>
+<P>
+A MAC PROBLEM: On Mac OS systems, when you attempt to extract the Zip archive, or
+when you attempt to run the Java executable, the system may complain that this is
+from an unknown developer.  That is simply because I did not sign the file with my
+Apple Developer ID.  You should be able to make the operation work by
+control-clicking on the icon and selecting the option to open the file, using the
+defaults suggested.  Once it successfully gets past this, it will not bother you
+with this again the next time you try to run the program.
+<P>
+<H4>The Java archive</H4>
+<P>
+The Java archive file <tt>PopG.jar</tt> will exist in the folder <tt>PopG</tt>
+once you have downloaded and installed PopG.
+If you have Java installed on your
+system, you should be able to run the Java program by finding the folder
+<tt>PopG</tt> and clicking or
+double-clicking on the icon of the file <tt>PopG.jar</tt>
+<P>
+<H4>The documentation page</H4>
+<P>
+The PopG folder also includes the present documentation web page which you are 
+now reading.  This can be read here or you can use the <font 
+face="Verdana">Save As</font> menu item in the <font 
+face="Verdana">File</font> menu of your browser to save a copy of it on your 
+machine.  The latest version of this page can be read on the Web <A 
+HREF="http://evolution.gs.washington.edu/popgen/popg.html">using this 
+link</A>.
+<P>
+<H4>Older versions of PopG</H4>
+<P>
+There are also older executable versions compiled for Windows, Mac OS, and
+Linux systems, plus some even older operating systems.
+These can be fetched from folder <a href="http://evolution.gs.washington.edu/popgen/old">old</a> at our PopG site.
+<b>Most users should not use these older executables,</b> but if you do, you should start by reading the
+<tt>README</tt> file in that folder.  One of the versions there is version 3.4,
+which has compiled executables for the three major operating systems
+available as well as C source code.  These may be useful if you do not have
+Java and cannot install it on your system.
+<P>
+<H4>Where are the Android and iOS versions?`</H4>
+<P>
+We would like to make versions available for tablets and even phones.
+Unfortunately, a version of Java that can use the graphics functions does
+not seem to exist on the Android operating system and the iOS operating
+system.  We would have to rewrite the program separately for each of those.  If
+you know of a way to run our Java executables on either of those operating
+systems, and get it to work, please let us know how you did that.
+<P>
+<H2>Making sure you have Java on your computer</H2>
+<p> 
+If you have Java installed you can run the PopG program.  Generally,
+Java will be already installed on Mac OS systems and on Linux systems.  If you aren't sure if you have Java 
+installed, you can type <tt>java -version</tt> in a command window and, it Java exists, it will tell you what the version is. If you get back a blank line, you need to either download Java or append where it is to your search path.
+On Windows systems and on Mac OS or Linux systems that do not have Java,
+you can install a recent version of Java at no cost by using this link: <a
+href="http://java.com"><tt>java.com</tt></a>.   Recent Linux and Mac OS systems
+usually have a recent-enough version of Java already installed.  Mac OS
+systems 10.4 (Leopard) and earlier may not have a recent-enough Java to be
+able to run PopG.  Windows systems do not come with Java already installed,
+but it can be installed on them from the above web site.
+
+<H2>Running the program</H2>
+<p> 
+To run the PopG Java program you should simply click (or double-click) on the
+icon of the PopG.jar file (you can also run it from a command window by navigating to where <tt>PopG.jar</tt>
+is stored and typing <tt>java -jar PopG.jar</tt>). The start up screen looks like this:
+</p>
+<p>
+<div align="center">
+<img src="images/PopGStartup.png" alt="PopG Startup Screen" width=50% />
+</div>
+</p>
+<P> 
+There are two menus, <font face="Verdana">File</font> and <font face="Verdana">Run</font>, that control PopG.  
+They are in the upper left of the main PopG window.
+<P>
+<H3>The <font face="Verdana">Run</font> menu</H3>
+<p>
+The <font face="Verdana">Run</font> menu contains five items: <font face="Verdana">Continue w/</font>, <font face="Verdana">Continue</font>, <font face="Verdana">New Run</font>, <font face="Verdana">Restart</font>, and <font face="Verdana">Display Whole Plot</font>.
+</p>
+<p>
+The first time it is picked, it looks like:
+</p>
+<p>
+<div align=left>
+<table><tr><td width="5%">&nbsp;</td><td width="20%">
+<img src="images/RunMenu.png" alt="PopG Run Menu"/>
+</td></tr></table>
+</div>
+</p>
+<p>
+with all but <font face="Verdana">New Run</font> grayed out. Once you have done your first run, all the selections will be active.
+</p>
+<DL>
+<DT><font face="Verdana" size=+1>New Run</font></DT>
+<DD>Initially only <font face="Verdana">New Run</font> is available.  It brings up the following dialog:
+<p>
+<img src="images/NewRunDialog.png" alt="PopG New Run Dialog"/>
+</p>
+It contains all the parameters that control a PopG run. Note that usually you do not enter a Random Number seed unless you want to do two identical runs. When you are finished editing you can click the <font face="Verdana">OK</font> box to start the run. You can also click <font face="Verdana">Cancel</font> to not start the run and <font face="Verdana">Defaults</font> to reset all the data entry boxes to their default values.</DD>
+<DT><font face="Verdana" size=+1>Continue w/</font></DT>
+<DD>This choice continues the run, for the same number of generations as
+previously entered in the <font face="Verdana">New Run</font> menu.</DD>
+<DT><font face="Verdana" size=+1>Continue</font></DT>
+<DD>This continues the run, but presents the following dialog:
+<p>
+<img src="images/ContinueDialog.png" alt="PopG Continue Dialog"/>
+</p>
+which allows you to 
+change the number of generations run in the next continuation of the run.</DD>
+<DT><font face="Verdana" size=+1>Restart</font></DT>
+<DD>This restarts the run with the same parameter values as before.  If you
+want to change some of the parameter values, use <font face="Verdana">New Run</font> instead.
+<DT><font face="Verdana" size=+1>Display Whole Plot</font> </DT>
+<DD>This plots all generations on the same plot. During a run the plots will
+normally show only the last group of generations. This shows all generations
+that have been simulated so far. This is particularly handy when you have finished
+a simulation and want to print the results of the whole run.</DD>
+<P> 
+<h3>The random number generator</h3>
+<P>
+The program uses a random number generator which automatically initializes
+from your system clock. Thus it should give you a different 
+sequence of random numbers and thus a different result every time you
+run the program. In the menu for a new run, there is a setting for
+<font face="Verdana">Random number seed</font> which is set by default
+to <font face="Verdana">(Autogenerate)</font>, which will initialize from the
+system clock.  You probably won't have any reason to change this,
+unless you are debugging PopG and want to do the same run, with the
+same random outcomes, twice. If you do wish to do the same exact
+run twice, enter a value in place of the <font face="Verdana">(Autogenerate)</font>
+string and PopG will use that to initialize the random number generator. 
+Assuming you have not modified the <tt>calcPopG</tt> routine within the Java code,
+every time you start with that random number you will get exactly the same results.
+</DL>
+<P>
+<H3>The <font face="Verdana">File</font> menu</H3>
+<p>
+This contains four menu items.  They are <font face="Verdana">Save</font>,
+<font face="Verdana">Print</font>, <font face="Verdana">About</font> and <font face="Verdana">Quit</font>. 
+</p>
+<p>
+The first time it is displayed, it looks like:
+</p>
+<p>
+<div align=left>
+<table><tr><td width="10%">&nbsp;</td><td width="20%">
+<img src="images/FileMenu.png" alt="PopG File Menu">
+</td></tr></table>
+</div>
+</p>
+<p>
+with <font face="Verdana">Save</font> and <font face="Verdana">Print</font> grayed out. Once you have done your first run, they will be active.
+</p>
+ 
+<DL>
+<DT><font face="Verdana" size=+1>Save</font></DT>
+<DD>This opens a standard save file dialog and allows you to save the graph as a JPG or PNG file. The default name is PopG with the appropriate extension to match to file format.</DD>
+<DT><font face="Verdana" size=+1>Print</font></DT>
+<DD>This opens a standard print dialog and allows you to select a printer and print the graph.</DD>
+<DT><font face="Verdana" size=+1>About</font></DT>
+<DD>Displays the program's copyright notice.</DD>
+<DT><font face="Verdana" size=+1>Quit</font></DT>
+<DD>This is self-explanatory: the program quits.</DD>
+</DL>
+<P> 
+<H2>Compiling it yourself</H2>
+<P>
+Most people will not need to compile the program themselves 
+as the Java Jar package supplied should run on most versions of Java.
+So you should probably skip this section.  But if you wish to modify the 
+functionality of PopG or if you have some unusual Java environment that will 
+not run the supplied Jar file
+you will need a Java compiler. We repeat: 
+<i><b>If you just need to run the program,
+you should run the Jar file that comes in our distribution. 
+You do not need to compile anything (though you may need to install Java). </b> </i>
+<P>
+If you do need to compile the program, you will find a <tt>src</tt> directory
+in the downloaded and unzipped folder <tt>PopG</tt> which you got from our
+site.  Import the file <tt>PopGUserInterface.java</tt> from <tt>src</tt>
+into your favorite Java editor (we used <b>Eclipse</b>). You can either
+execute it directly from there or export a Java Jar from the editor
+and execute it. 
+<tt>PopGUserInterface.java</tt> does not reference any
+external libraries, everything it needs is in the <tt>JavaSE-1.6</tt>
+system library.  If you are modifying our program, once you have finished
+doing that you should have no problems creating the Java Jar,
+<P>
+If you cannot do, tell us, since that would be a bug.
+<P>
+<H2>Simulating with PopG</H2>
+<P> 
+This program simulates the evolution of random-mating populations with two 
+alleles, arbitrary fitnesses of the three genotypes, an arbitrary mutation 
+rate, an arbitrary rate of migration between the replicate populations, and
+finite population size.
+<P>
+The programs simulate simultaneously evolving populations with you
+specifying the population size, the fitnesses
+of the three genotypes, the mutation rates in both directions (from <EM>A</EM> 
+to <EM>a</EM>
+and from <EM>a</EM> to <EM>A</EM>), and the initial gene frequency.  They also
+ask for a migration rate among all the populations, which will make their gene
+frequencies more similar to each other.  Much of the time (but not always!)
+you will want to set this migration rate to zero.  In most respects the
+program is self-explanatory. 
+<P>
+Initially there are ten populations.   You can set the number of
+simultaneously-evolving populations to any number from 0 to 1000.
+The population size for each population can be any number from
+1 to 10000.  Note that a larger population, a larger number of generations run, and a larger number of populations can lead to longer runs.
+<P>
+When you make a menu selection that causes the program to run,
+a graph of the gene frequencies of the <EM>A</EM> allele in each of the
+populations will be drawn in the window.
+Here is what the graph looks like when we run with an initial gene frequency
+of 0.2 and fitnesses of AA, Aa, and aa set to  1.08, 1.04, and 1, with all
+other parameters in their default values.  (Note that if you try this run,
+there will be different random numbers, so your result will be a bit
+different).
+<p>
+<div align="center">
+<img src="images/PopGRun.png" alt="PopG Startup Screen" width=50% />
+</div>
+</p>
+Note that the window can be
+resized, and the graph should adjust to this.  
+There is also a blue curve that shows what the
+gene frequencies would be in an infinite population (one with no
+genetic drift).  If the number of populations being simulated is
+set to zero, this curve is all you will see.  The graph can be printed using
+the <font face="Verdana">Print</font>
+option of the <font face="Verdana">File</font> menu, or saved to a Postscript file using
+the <font face="Verdana">Save</font> option in that menu.
+<P>
+Note that once the plot of the gene frequency curves reaches the
+right-hand side of the graph, the program prints there the number of
+populations that fixed for the <EM>A</EM> allele (ended up with a
+frequency of 1.0) and the number that lost this allele.
+<P>
+<H2>Suggestions</H2>
+<P> 
+The program can simulate a wide variety of cases, and you should
+explore some of these.  Here are some suggestions:
+<UL>
+<LI>Try cases with no mutation, no migration, and all fitnesses 1.0 so
+that there is no selection.  Does genetic drift in a population of
+size 1000 accomplish roughly the same changes in 1000 generations as
+genetic drift in a population of size 100 does in 100 generations?
+By running a largish number of populations, can you check whether
+the probability that an allele is fixed by genetic drift is equal to
+its initial frequency in the populations?
+<LI>Try a case with no mutation or migration, with the <EM>A</EM>
+allele favored by natural selection (with fitness of the <EM>AA</EM>
+genotype set highest and fitness of the <EM>aa</EM> genotype set
+lowest).  Start with a small frequency of <EM>A</EM>.  Is it always
+fixed?  If one starts with a single copy of the allele, how does
+the probability that <EM>A</EM> is fixed compare with the selection
+coefficient favoring it in the heterozygote (the fraction by
+which the <em>Aa</em> genotype is higher compared to the fitness
+of the <EM>aa</EM> genotype)?  Is this fixation probability larger than
+the one you would get with the same initial frequency but with no
+selection?
+<LI>Try overdominance (<EM>Aa</EM> having the highest fitness).  Does
+the gene frequency converge towards an equilibrium?  Why does it
+vary from this equilibrium frequency?  How large do the selection
+coefficients have to be to cause the gene frequency to stay away from
+fixation or loss for large amounts of time?
+<LI>Try underdominance (<EM>Aa</EM> having the lowest fitness).
+Is there a starting gene frequency that will result in some populations
+heading for fixation, and others heading for loss?  If you add a small
+amount of migration, what will happen in the long run? What will happen if
+instead you add a small 
+amount of mutation in both directions?
+<LI>With migration but no selection or mutation, how much migration is
+needed to make the gene frequency curves be quite similar to each other?
+How much is needed to make them all end up at the same gene frequency
+in the long run?
+How is that migration rate affected by the population size?
+<LI>With mutation but no migration or selection, how much mutation is
+needed to cause the gene frequencies to converge to a mutational
+equilibrium gene frequency?  How does this value relate to the
+population size?
+<LI>If an allele is selected against, can you set up mutation rates
+that will maintain it at low frequency in the population?
+</UL>
+You should be able to use the program to get a good feel for the 
+relative strengths of different evolutionary forces.  It is worthwhile
+trying many different kinds of cases and asking what values of
+parameters are needed to make one evolutionary force be influential in
+the presence of another.
+<P>
+<H2>Credits</H2>
+<P>
+Version 4.0 of PopG, the first Java version, was written by Ben Zawadzki.
+His enormously effective programming made good use of mentorship and
+advice from our lab's Java wizard, Jim McGill.
+<P>
+
+The original version of PopG was written in the 1970s in FORTRAN by Joe 
+Felsenstein.  The interactive version then was written
+in C with much work by Hisashi Horino, Sean Lamont, Bill Alford, Mark Wells, Mike Palczewski, 
+Doug Buxton, Elizabeth Walkup, Ben Zawadzki and Jim McGill.
+Hisashi and Sean wrote the C version,
+and the screen graphics for IBM PC and the first 
+part of the Postscript printing system.  Bill greatly improved and expanded 
+the Postscript printing and the X windows graphics.  Mark Wells did the 
+original Macintosh version.  Mike Palczewski greatly improved the Windows, 
+Macintosh and X Windows graphical user interface, and Doug Buxton modified the 
+program to the 3.0 version and prepared the executables for different 
+operating systems.  Elizabeth Walkup improved the X windows interaction and 
+prepared version 3.3.  Small documentation changes after version 4.0 were made
+by me.
+<P>
+<H2>Copyright notice</H2>
+<P>
+Copyright 1993-2016.  University of Washington and Joseph Felsenstein.  All
+rights reserved.  Permission is granted to reproduce, perform, and modify
+this program.  Permission is granted to distribute or provide access to this
+program provided that this copyright notice is not removed, this program is
+not integrated with or called by any product or service that generates
+revenue, and that your distribution of this program is free.  Any modified
+versions of this program that are distributed or accessible shall indicate
+that they are based on this program.  Educational institutions are
+granted permission to distribute this program to their students and staff
+for a fee to recover distribution costs.  Permission requests for any other
+distribution of this program should be directed to
+&nbsp;&nbsp;license<!deathtospam>&nbsp;(at)&nbsp;<!deathtospam>u.washington.edu.
+<P>
+<DIV ALIGN=RIGHT>
+<TABLE>
+<TR><TD ALIGN=LEFT> Joe Felsenstein<BR>
+Department of Genome Sciences<BR>
+University of Washington<BR>
+Box 355065<BR>
+Seattle, WA 98195-5065, USA</TD></TR>
+</TABLE>
+</DIV>
+<P>
+email: <TT>&nbsp;&nbsp;joe<!put here to frustrate spammers harvesting email
+addresses>&nbsp;(at)&nbsp;<!more antispam>gs.washington.edu&nbsp;&nbsp;</TT>
+</BODY>
+</HTML>

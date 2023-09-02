@@ -1,0 +1,40 @@
+
+These are versions of a simple one-locus population genetics simulation
+program I use in my classes.
+
+The files present here are:
+
+
+The archives are binaries and must be transferred in "binary" mode.
+
+README              This file
+
+popg.html           web page describing getting and runnuing the executables
+popg.gif            icon for the web pages
+
+popgwin.exe         Windows executables archive
+popgmac.sit         MacOS 9 executables archive
+popgosx.sit         MacOS X native-mode executables
+popglinux.tar.gz    Linux executables archive
+
+compiling.html      web page describing getting and compiling the source code
+
+popgsrc.exe         Windows archive of source code
+popgsrc.sit         MacOS 9 and MacOS X archive of source code
+popgsrc.tar.gz      Linux/Unix archive of source code
+
+The Macintosh files are in Stuffit format as well, and may need to be
+translated by Stuffit.
+
+Folder "old" contains earlier versions of Popg (and its predecesor
+Simul8). Consult the README file in that folder for details.
+
+Please note that all of these files are copyrighted.  Permission is granted to
+copy and use them provided no resale or other commercial use is made of
+them, and provided the copyright notices are not removed.
+
+J.F.
+---- 
+Joe Felsenstein         joe@gs.washington.edu
+ Departments of Genome Sciences and Biology, University of Washington,
+ Box 357730, Seattle, WA 98195-7730 USA

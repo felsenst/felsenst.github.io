@@ -1,0 +1,177 @@
+
+                     Simul8 genetic simulation program
+ 
+ This is a one-locus, two-allele genetic simulation program for use by
+ students.  There are executable versions for (1) 386, 486 or Pentium,
+ (2) pre-386 DOS machines such as PC/AT's and PC/XT's and their clones,
+ (3) PowerMacs, (4) Macintoshes, (5) DEC Alphas under Digital Unix,
+ (6) 386, 486, or Pentium systems under Linux, (7) Sun SPARCs, (8) IBM
+ RS6000 AIX systems, and (9) DECstations.  The C source code is provided,
+ which can be compiled with the Makefile to produce executable versions for
+ most workstations that have X windows.
+
+
+ THE EXECUTABLES
+
+ The file names of these executables are
+     simul8.exe          pre-386 DOS version
+     simul386.exe        386/486/Pentium DOS version
+     simul8.alpha        DEC Alpha Unix version
+     simul8.linux        Linux 386/486/Pentium version
+     simul8.sun          Sun SPARC version
+     simul8.rs6          IBM RS6000 AIX version
+     simul8.ds           DECstation version
+     simul8PPC.bin       Macintosh version for PowerMacs
+     simul868.bin        Macintosh version for 68k (non-PowerMac) machines
+
+ If you get simul386.exe, you should also get dos4gw.exe, the Rational Systems
+ DOS extender, which must be put into the root directory (C:\) of your system.  
+ It is legally redistributable by us along with the compiled code
+ simul386.exe.
+ 
+ To run the program, you should simply type SIMUL386 or SIMUL8, which cause
+ the program SIMUL386.EXE or SIMUL8.EXE to be read into the computer's memory
+ and executed.
+ 
+ The program uses a random number generator.  It should give you a different 
+ result every time it is run. 
+ 
+ For the Sun or DEC executables just make sure the executable has execute
+ permission (the command is "chmod +x simul8.sun", "chmod +x simul8.dec",
+ or "chmod +x simul8.alpha").  That only needs to be done once.
+
+ To run them type the name of the program.
+
+ The Macintosh version provided here is a variant of a program, PoPG 1.0,
+ written by Mark Wells.  That in turn was based on an earlier version of
+ Simul8.  It is started by double-clicking on the program icon.   It opens
+ a window to set parameter values, then is controlled using the Run and File
+ menus.  It has two migration models (stepping-stone and source/sink) that
+ are not found in the other versions of Simul8.  There are two executables
+ provided, Simul8PPC and Simul868.  The former is for PowerMac systems, the
+ second for older (68k non-PowerMac) systems, although it too can run,
+ somewhat slowly, on PowerMacs.  Note that as stored in this ftp area,
+ the executables are MacBinary files and must be transferred with an
+ ftp program that can translate these (such as Fetch).
+
+
+ COMPILING IT YOURSELF ON WORKSTATIONS
+
+ If you want to compile the program yourself on a workstation, instructions
+ are as follows (if, not, you can skip this section).
+
+ The Makefile can be used on most Unix workstation to compile the program
+ by simply putting simul8.c and the Makefile into a directory and then
+ typing "make".  That will tell you what to do (which depends on your
+ workstation).  If that does not work, then use one of these:
+
+       cc simul8.c -DX -lm -lX11 -o simul8
+
+ or if you are on Openwindows on a Sun SPARCstation:
+
+       cc simul8.c -DX -lm -lX11 -o simul8\
+           -I/usr/openwin/include -L/usr/openwin/lib -o simul8
+       (where the \ means the line continues to the next line, but you do not
+        type a "\")
+
+ The resulting executable (simul8) can display on any X terminal or X-capable
+ workstation.
+
+ If you are compiling on a Sun SPARC for use on Suns other than the one on
+ which you are compiling, you might want to add the switch "-Bstatic"
+ to force the compilation to not use dynamically linked libraries, as
+ these may differ among machines and cause trouble.
+
+ 
+ RUNNING SIMULATIONS WITH SIMUL8
+ 
+ This program simulates the evolution of random-mating populations with two 
+ alleles, arbitrary fitnesses of the three genotypes, an arbitrary mutation 
+ rate, an arbitrary rate of migration between the replicate populations, and
+ finite population size.
+
+ The program is written to work on a variety of different systems, with several 
+ different graphics displays.  When the program starts running it asks you to 
+ choose one of the displays.  You will probably want to choose the graphics
+ setting, (option number 1).
+
+ On DOS systems the colors of the graph may be hard to read.  To
+ change them choose option 0 when the main menu appears.  On X-windows
+ systems the window for the gene frequency plots has an irritating
+ tendency to overlap the area where you are supposed to type, and the
+ text window where you are to type may have to be clicked on to make it active
+ too.  You will want to resize the main text window and/or move it out of the
+ way.
+
+ The Macintosh version is based on a program, PopGen 1.0, written by Mark Wells
+ for Doug Schemske of our Botany Department.  That in turn was based on earlier
+ versions of Simul8.  It has two versions, one for 68k Macs and one for
+ PowerMacs.  Although the first will also run on PowerMacs, it is better to run
+ the native PowerMac code, as that runs more quickly.  On old Macs that do not
+ have a math coprocessor the program will run very slowly as it is emulating
+ math coprocessor functions, which is slow.
+
+ The programs simulate eight simultaneously evolving populations with you
+ specifying the population size (less than or equal to 10000), the fitnesses
+ of the three genotypes, the mutation rates in both directions (from A to a
+ and from a to A), and the initial gene frequency.  They also ask for a
+ migration rate among all the populations, which will make their gene
+ frequencies more similar to each other.  Much of the time (but not always!)
+ you will want to set this to zero.  In most respects the programs are
+ self-explanatory. 
+
+ When you run the program a main menu appears showing you the settings of
+ these parameters.  In the DOS and Unix versions you change any of them by
+ typing the digit (0 through 9) that appears on the left side of that line.
+ The program will then ask you for a new value of that parameter.  You can
+ reset any or all of them.  In the Macintosh and PowerMac versions you edit
+ the values that appear in the menu in the usual Macintosh way.
+
+ The program will display a plot of the gene frequencies for that case
+ for each of the populations, plus a dashed curve that shows what the
+ gene frequencies would be in an infinite population.  In the DOS and Unix
+ versions, after showing the proper number of generations the program asks you
+ if you want to specify the number of generations to simulate.  If you just
+ press the Enter key at this point you get another run of the same number of
+ generations.  If you type in the number "0" it will stop the simulation
+ and return to the main menu.  The number of populations in which the
+ allele A has been fixed and the number in which it has been lost are also
+ shown.
+
+ In the Mac and PowerMac versions you should use the Run menu to Continue
+ the run, or its Start option to start a new run with the same parameter
+ values, or its New Case option to choose new parameter values for a new run.
+ You can stop by choosing the Quit option from the File menu.  In the Mac and
+ PowerMac versions you can also resize the graph by altering the lower-right
+ corner of the graph's window.
+
+ In the DOS and Unix versions, you can also type "P" when asked for the number
+ of generations.  This causes the program to write out a file in the Postscript
+ language that plots a graph of the current screen.  You will be asked for a
+ file name.  After you have finished running the program, you can send that
+ file to a Postscript printer (such as an Apple Laserwriter, but not an HP
+ Laserjet-compatible printer unless it has been equipped with a Postscript
+ cartridge).  On PCDOS this is done by a command like (if the file name
+ is FOO.PS)  COPY FOO.PS PRN:, on workstations you may be able to use the
+ "lpr foo.ps" command.  After writing the file when you type P and
+ specify the file name, the system returns to asking you about the number
+ of generations you want to simulate.
+
+ On the Mac and PowerMac version you can choose the Print option from the
+ File menu to print the current graph to your computer's printer.  Note that
+ if you have resized the graph, you may find that it prints past the margin
+ of the paper, unless you use Landscape printing.
+
+ The program can simulate a wide variety of cases, and you should
+ explore some of these.
+
+ Simul8 was written by Joe Felsenstein, Hisashi Horino, Sean Lamont,
+ Bill Alford, and Mark Wells.  It is copyrighted to Joe Felsenstein but can be
+ freely copied and run provided no fee is charged for it and provided that
+ the copyright notices are not removed.
+
+                                                 Joe Felsenstein
+                                                 Department of Genetics
+                                                 University of Washington
+                                                 Box 357360
+ Internet: joe@genetics.washington.edu           Seattle, WA 98195-7360, U.S.A.

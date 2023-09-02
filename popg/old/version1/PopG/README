@@ -1,0 +1,26 @@
+
+These are rather preliminary versions of a simple one-locus
+population genetics simulation program I use in my classes.
+The DOS, Unix, Mac, and PowerMac versions of the current simulation
+program are in directory "pub/popgen" (the parent directory of this
+one).  
+
+The Macintosh versions in this directory are modifications of our code by Mark
+Wells and are posted here with his permission.
+
+PopG_2.0.bin           Macintosh executables for Macs with no math coprocessors
+
+PopG_2.0_68881.bin     Macintosh executables for Macs with math coprocessors
+
+PopGen_2.0_Instructions   How to use the Mac executables, in MS Word format
+
+These three Macintosh files are in MacBinary format.
+
+Please note that all of these files are copyrighted.  Permission is granted to
+copy and use them provided no resale or other commercial use is made of
+them, and provided the copyright notices are not removed.
+
+J.F.
+-----
+Joe Felsenstein         joe@genetics.washington.edu     (IP No. 128.95.12.41)
+ Dept. of Genetics, Univ. of Washington, Box 357360, Seattle, WA 98195-7360

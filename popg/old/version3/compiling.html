@@ -1,0 +1,216 @@
+<HTML>
+<HEAD>
+<TITLE>
+Compiling the PopG Genetic Simulation Program
+</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ccffff">
+<DIV ALIGN=CENTER>
+<H1>Compiling the PopG genetic simulation program</H1>
+</DIV>
+<DIV ALIGN=CENTER>
+<IMG SRC="popg.gif" ALT="[PopG icon here]" HEIGHT=100>
+<P>
+<H2>version 3.0</H2>
+<H2>November, 2003</H2>
+</DIV>
+ 
+PopG is a one-locus, two-allele genetic simulation program for use by
+students.  There are executables archives that
+<A HREF="http://evolution.gs.washington.edu/popgen/popg.html">
+can be fetched </A>
+for Windows, Mac OS, Mac OS X
+and Linux.
+These contain executables and documentation.  Source code archives are
+also available which have support files for compiling your own version
+of the program in these operating systems.  Normally you will not need the
+source code and you will not need to recompile the program.  The source code
+can also be used to make versions for other varieties of Unix.
+See below for links that will enable you to fetch the archives.
+<P>
+<H2>Why you don't need these instructions</H2>
+<P>
+Because you don't need to recompile the program.  We have already compiled
+it.  If all you need to do is to use PopG, you already have access to
+executables.  You can just run them -- there are versions for Windows,
+for Mac OS X, for Mac OS, and for Linux on Pentium or AMD processors.  Only if
+you have some other operating system, or if you want to make changes to the
+programs, do you need to compile the programs again.
+<P>
+<H2>Getting PopG source code</H2>
+<P>
+You can fetch PopG source code using the links below.
+<P>
+<UL>
+<LI>For Windows: <A HREF="http://evolution.gs.washington.edu/popgen/popgsrc.exe">popgsrc.exe</A>
+A self-extracting WinZip archive containing the source code files of the Windows version. 
+<LI>For Mac OS X and Mac OS 9: <A HREF="http://evolution.gs.washington.edu/popgen/popgsrc.sit">popgsrc.sit</A>
+A Mac OS source code version which can be compiled on Mac OS X or on Mac OS 9 (and maybe on earlier Mac OS versions too) to produce a native-mode
+executable.  It is a Stuffit archive which should be unstuffed
+as it is transferred; if not, you could use Stuffit Deluxe to unpack it.
+<LI>For Linux: <A HREF="http://evolution.gs.washington.edu/popgen/popgsrc.tar.gz">popgsrc.tar.gz</A> Linux version, as a Gnuzip'ed tar archive of
+the source code. 
+</UL>
+<P> 
+<H2>Unpacking the archives</H2>
+<P>
+After fetching the archives for Windows, for Mac, or for Linux/Unix, you need
+to unpack them.  Do this:
+<DL>
+<DT>For Windows
+<DD>Make sure the <TT>popgsrc.exe</TT> file is in the directory where you want
+the program to be.  The click on it.  It will run and unpack itself into
+a set of files, including this documentation file and the
+PopG source code files.  These will be in a folder (directory) called
+<TT>PopG 3.0 src</TT>
+<DT>For Mac OS X or Mac OS 9
+<DD>When the file <TT>popgsrc.sit</TT> was downloaded, it should have
+created a folder (directory), <TT>PopG 3.0 src</TT>, with
+this documentation file and the source code files.
+If the <TT>popgsrc.sit</TT> archive was transferred without being unpacked,
+you could unpack it using Stuffit Deluxe.
+<DT>For Linux or Unix
+<DD>Put the <TT>popgsrc.tar.gz</TT> file into the directory where you want
+the program to reside.  If your system has the Gnuzip program for unpacking
+<TT>.gz</TT> archives, you can run it by typing <TT>gunzip popgsrc.tar.gz</TT>, after which you use <TT>tar xvf popglinux.tar</TT>.  This will create a
+folder (directory) called <TT>PopG_3.0_src</TT> that contains this
+documentation file and the source code files.
+</DL>
+<P> 
+<H2>Compiling PopG</H2>
+<P>
+If you want to compile the program, find the section below that corresponds
+to the operating system you are using.  
+There will be the folder that contains the source code, and also folders
+within that for materials specific to the Mac OS 9 and Mac OS X operating
+systems (the Windows and Linux materials are all in the main folder).
+<P>
+<H3>Compiling PopG on Linux or Unix systems</H3>
+<P>
+Make sure your system has a C compiler installed (some Linux installations
+do not come with a C or C++ compiler installed by default).
+If it is present, in the main source code folder, type <TT>make</TT>.
+The program will compile and the executable, called <TT>popg</TT>, will
+be in that source code directory.
+If instead you type <TT>make install</TT>, the executable will be placed in
+the <TT>/usr/local/bin</TT> directory.
+<P>
+The program uses the X Windows windowing
+system, which we assume you also have present.   Note that, although
+MasOS X is Unix, it has a different windowing system -- you should use the
+separate instructions for Mac OS X below.  If you were to use <TT>make</TT>
+or <TT>make install</TT> on a Mac OS X system, the program will compile
+correctly, but it will assume the presence of the X Windows system.  The
+X Windows system is distributed with Mac OS X 10.3 ("Panther") and can be
+downloaded from the Apple web site for earlier versions of Mac OS X.  If you
+make a Mac OS X executable this way and want it to run successfully, it is up
+to you to make sure that X Windows is actually installed on the system.
+The program will run when its name
+(<TT>popg</TT>) is typed, and will try to use X Windows.
+<P>
+<H3>Compiling PopG on Windows</H3>
+<P>
+<H4>With Microsoft Visual C++ version 6</H4>
+<P>
+A makefile exists for compiling PopG on any Windows system that has
+Microsoft Visual C++ version 6 (we don't know whether this works on earlier
+or later versions of this compiler).  If you have such a C++ compiler,
+open a Command window (this can be done in the Start menu by choosing
+the <TT>Programs</TT> (or <TT>All Programs</TT>) option and then the
+<TT>Accessories</TT> option and looking for the <TT>Command Prompt</TT>
+menu choice.  In the Command window, at the prompt type
+<TT>nmake -f Makefile.msvc</TT>.  This will invoke the compiler and
+compile the program.  The executable will be called <TT>PopG.exe</TT>
+(in many configurations of Windows, the three-letter extension will not
+appear in the file name when the icon is displayed, and it may be labelled
+<TT<>PopG</TT> instead).
+<P>
+<H4>With Microsoft Visual C++ .NET</H4>
+<P>
+For the more recent version of the Microsoft compiler, C++ .NET, uses
+projects.  We have created a project file for it, called <TT>PopG.sln</TT>.
+Click on this to open the IDE environment to enable compiling. 
+Under the <TT>Build</TT> menu, click on <TT>Build Solution</TT>
+This will make a <TT>Release</TT> folder which contains the
+executable.
+<P>
+<H3>Compiling PopG on Mac OS X</H3>
+<P>
+Start in the <TT>PopG 3.0 src</TT> folder.  Find the <TT>OSX</TT> folder,
+and enter it.  Double-click on <TT>PopG.pbproj</TT>.  This will start the
+Project Builder with the PopG project, which will use the Gnu C++ compiler
+that comes with Mac OS X.  When it runs, you will see a menu at the top of
+the screen.  Choose the <tt>Build</tt> menu, and in that choose the
+<tt>Build</tt> choice.
+<P>
+In some cases the compilation will result in several warning messages, which
+may be ignored.  Sometimes there will also be an Error Message complaining
+about the (perfectly legal) operator ">>".  If the compilation fails for
+this reason, choose the <tt>Build</tt> menu again, and in it the <tt>Build</tt>
+option, as before.  The second time, the compilation will succeed (don't ask
+us to explain why -- we are just as mystified as you).
+<P>
+When the compilation succeeds, the executable will be found in a <tt>Build</tt>
+folder in the current directory.  You can run it by clicking on it (not by
+typing its name in a Terminal window).
+<P>
+<H3>Compiling PopG on Mac OS 9</H3>
+<P>
+For this compilation, you must have Metrowerks Codewarrior C++ compiler
+installed on your system.  These instructions are for Codewarrior 9; they may
+or may not work for earlier or later versions.
+<P>
+Start in the <TT>PopG 3.0 src</TT> folder.  Find the <TT>Mac</TT> folder,
+Enter that Mac folder.  click on the project there which is called
+<TT>PopG.proj</TT>.   The compiler may say that the project is for a different
+version of the compiler, and ask you whether you want to convert it (yes, you
+do).  To compile the program, select the <TT>Make</TT>
+option in the <TT>Project</TT> menu.  The program will compile.  If some
+warning messages about unused variables appear, you may ignore them.
+An executable called <tt>PopG</tt> should have been created.  The executable
+may or may not have an icon, depending on mysterious facts about your
+computer which we do not understand (the icon is particularly likely
+to be missing if you are emulating Mac OS 9 using the Classic environment
+under Mac OS X  -- in that case you would probably be better off compiling
+the native-mode Mac OS X executable).
+<P>
+<H2>Credits</H2>
+<P>
+PopG was written by Joe Felsenstein, Hisashi Horino, Sean Lamont,
+Bill Alford, Mark Wells, Mike Palczewski, and Doug Buxton.  I wrote the original
+version of the program.  Hisashi and Sean did the screen graphics for
+IBM PC and the first part of the Postscript printing system.  Bill
+greatly improved and expanded the Postscript printing and
+the X windows graphics.  Mark Wells did the
+original Macintosh version.  Mike Palczewski greatly improved the Windows,
+Macintosh and X Windows graphical user interface, and Doug Buxton modified the
+program to the 3.0 version and prepared the executables for different
+operating systems.
+<P>
+<H2>Copyright notice</H2>
+<P>
+Copyright 1993-2003.  University of Washington and Joseph Felsenstein.  All
+rights reserved.  Permission is granted to reproduce, perform, and modify
+this program.  Permission is granted to distribute or provide access to this
+program provided that this copyright notice is not removed, this program is
+not integrated with or called by any product or service that generates
+revenue, and that your distribution of this program is free.  Any modified
+versions of this program that are distributed or accessible shall indicate
+that they are based on this program.  Educational institutions are
+granted permission to distribute this program to their students and staff
+for a fee to recover distribution costs.  Permission requests for any other
+distribution of this program should be directed to &nbsp;&nbsp;license<!deathtospam>&nbsp;@&nbsp;<!deathtospam>u.washington.edu.
+<P>
+<DIV ALIGN=RIGHT>
+<TABLE>
+<TR><TD ALIGN=LEFT> Joe Felsenstein<BR>
+Genome Sciences Department<BR>
+University of Washington<BR>
+Box 357730<BR>
+Seattle, WA 98195-7730, USA</TD></TR>
+</TABLE>
+</DIV>
+<P>
+email: <TT>&nbsp;&nbsp;joe<!put here to frustrate spammers harvesting email addresses>&nbsp;@&nbsp;<!more antispam>gs.washington.edu&nbsp;&nbsp;</TT>
+</BODY>
+</HTML>

@@ -1,0 +1,318 @@
+<HTML>
+<HEAD>
+<TITLE>
+Compiling the PopG Genetic Simulation Program
+</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ccffff">
+<DIV ALIGN=CENTER>
+<H1>Compiling the PopG genetic simulation program</H1>
+</DIV>
+<DIV ALIGN=CENTER>
+<IMG SRC="popg.gif" ALT="[PopG icon here]" HEIGHT=100>
+<P>
+<H2>version 3.3</H2>
+<H2>October, 2008</H2>
+</DIV>
+ 
+PopG is a one-locus, two-allele genetic simulation program for use by
+students.  There are executables archives that
+<A HREF="http://evolution.gs.washington.edu/popgen/popg.html">
+can be fetched </A>
+for Windows, Mac OS X, and Linux.
+These contain executables and documentation.  Source code archives are
+also available there which have support files for compiling your own version
+of the program in these operating systems. <i>Normally you will not need the
+source code and you will not need to recompile the program.</i>
+The source code
+can also be used to make versions for other varieties of Unix.
+See below for links that will enable you to fetch the archives.
+<P>
+<H2>Why you don't need these instructions</H2>
+<P>
+<i>Because you don't need to recompile the program.  We have already compiled
+it.</i>  If all you need to do is to use PopG, you already have access to
+executables.  You can just run them -- there are versions for Windows,
+for Mac OS X, and for Linux on Pentium or AMD processors.  Only if
+you have some other operating system, or if you want to make changes to the
+programs, do you need to compile the programs again.
+<P>
+<H2>Getting PopG source code</H2>
+<P>
+You can fetch PopG source code using the links below.
+<P>
+<UL>
+<LI>For Windows: <A HREF="popgsrc.exe">popgsrc.exe</A>
+A self-extracting WinZip archive containing 
+source code files of the Windows version. 
+<LI>For Mac OS X: <A HREF="popgsrc.dmg">popgsrc.dmg</A>
+A Mac OS source code version which can be compiled on Mac OS X
+is available in the Mac OS X distribution.
+<LI>For Linux: <A HREF="popgsrc.tar.gz">popgsrc.tar.gz</A>
+Linux version, as a Gnuzip'ed tar archive of
+the source code. 
+</UL>
+<P> 
+<H2>Unpacking the archives</H2>
+<P>
+After fetching the archives for Windows, for Mac OS X, or for Linux/Unix,
+you need to unpack them.  Do this:
+<DL>
+<DT>For Windows
+<DD>Make sure the <TT>popgsrc.exe</TT> file is in the directory where you want
+the program to be.  The click on it.  It will run and unpack itself into
+a set of files, including this documentation file and the
+PopG source code files.  These will be in a folder (directory) called
+<TT>PopG_3.3_src</TT>
+<DT>For Mac OS X
+<DD>When the file <TT>popgsrc.dmg</TT> was downloaded, it is present as
+a "disk image" file.  Clicking on this mounts the disk image and opens
+a folder showing its contents.  <i>You should copy the contents
+to some other place on your system, outside of the disk image.</i>
+There will be a folder (directory), <TT>PopG_3.3_src</TT>, with
+this documentation file and the source code files.
+<DT>For Linux or Unix
+<DD>Put the <TT>popgsrc.tar.gz</TT> file into the directory where you want
+the program to reside.
+Uncompress the file using the command <TT>tar xfvz popgsrc.tar.gz</TT>. 
+This will create a
+folder (directory) called <TT>PopG_3.3_src</TT> that contains this
+documentation file and the source code files.
+</DL>
+<P> 
+<H2>Compiling PopG</H2>
+<P>
+If you want to compile the program, find the section below that corresponds
+to the operating system you are using.  
+There will be the folder that contains the source code, and also folders
+within that for materials specific to the Mac OS X operating
+systems (the Windows and Linux materials are all in the main folder).
+<P>
+<H3>Compiling PopG on Linux or Unix systems</H3>
+<P>
+Make sure your system has a C compiler installed (some Linux installations
+do not come with a C or C++ compiler installed by default).
+If it is present, in the main source code folder, type one of the following:
+<ul>
+<li><TT>make -f Makefile.x11</TT> &nbsp;&nbsp;for an X11 version.
+<li><TT>make -f Makefile.gtk</TT> &nbsp;&nbsp;for a somewhat spiffier looking version
+using GTK.
+</ul>
+Alternatively, you could copy one of the files <tt>Makefile.x11</tt> or
+<tt>Makefile.gtk</tt> to <tt>Makefile</tt> and just type <tt>make</tt>.
+X11 will be present on more systems than GTK.
+<p>
+The program will compile and the executable, called <TT>popg</TT>, will
+be in that source code directory.
+If instead you type <TT>make install</TT>, the executable will be placed in
+the <TT>/usr/local/bin</TT> directory.
+<P>
+The program uses the X Windows windowing
+system, which we assume you also have present.   Note that, although
+Mac OS X is Unix, it has a different windowing system -- you should use the
+separate instructions for Mac OS X below.  You may be able to compile
+the X11 version on a Mac, but we don't recommend it.  The
+X Windows system is distributed with Mac OS X 10.3 ("Panther") and later
+versions, and can be
+downloaded from the Apple web site for earlier versions of Mac OS X.  If you
+make a Mac OS X executable this way and want it to run successfully, it is up
+to you to make sure that X Windows is actually installed on your system.
+The program will run when its name
+(<TT>popg</TT>) is typed, and will try to use X Windows.
+<P>
+<H3>Compiling PopG on Windows</H3>
+
+<P>
+<H4>Compiling with Cygnus Gnu C++</H4>
+<P>
+Cygnus Solutions (now a part of Red Hat, Inc.) has adapted the Gnu C compiler
+to Windows systems and
+provided an environment, CygWin, which mimics Unix for compiling.
+Currently, this is the compiler that we use to prepare the Windows
+executables. Free and paid versions are available.
+The download is large.  To get it, go
+to <A HREF="http://www.cygwin.com/">the Cygwin web site</A> at
+<CODE>http://www.cygwin.com</CODE> and follow the
+instructions there.
+<P>
+Compiling PopG with cygwin is closely similar to
+what one does for Unix or Linux:
+<P>
+<UL>
+<LI> Enter the Cygwin environment (which you can do using the Windows
+<TT>Start</TT> menu and its <TT>All Programs</TT> menu item.  There should be
+a <TT>Cygnus</TT> menu choice within that submenu, which you can use to
+start the Cygnus environment.  This puts you in an imitation of a Unix
+shell.)  Alternatively you may have a CygWin icon on your desktop and you
+can enter the environment by clicking on that.
+<P>
+<LI> On entering the CygWin environment you will find yourself in one of the
+folders within the CygWin folder.  Change to the folder where the
+PopG sources have been put.  For example, if you are user
+"fred" on a Windows xp system, and have extracted our self-extracting
+archive of the Sources and Documentation files onto your desktop,
+you will want to change folders by typing the command
+ <tt>&nbsp;&nbsp;cd C:/"Documents and Settings"/fred/Desktop/PopG_3.3_src</tt>
+<p>
+<li> Make sure that the file <tt>Makefile</tt> has been renamed 
+as <tt>Makefile.unix</tt> and that a copy of <tt>Makefile.win32</tt> has 
+been renamed
+as <tt>Makefile</tt>.
+<P>
+<li> You should then be able to compile PopG
+by issuing the appropriate make command, such as <TT>make install</TT>.
+</ul>
+
+
+<P>
+<h4>Compiling with Microsoft Visual C++</h4> 
+<P>
+We have had success in the past compiling PopG with Microsoft Visual
+C++ (the compiler in the Microsoft .NET package), although the
+Windows executables that we distribute are built
+using the Cygwin GCC compiler.  The following instructions are the ones we
+have used for Visual C++ for the .NET 2008 version with Visual C++ version 9.0.
+Microsoft also makes a free download version of their C++ compiler
+from 2005 available as Visual C++ Express Edition.  That version has a somewhat
+different content, and these instructions will not work with it.  If you
+figure out how to get the compiler and Makefiles to work together, please
+let us know -- we don't have the energy to figure this out for all possible
+configurations of the Microsoft C++ compiler.
+<P>
+The instructions use the <tt>nmake</tt> command that uses a Makefile which is
+called <tt>Makefile.msvc</tt> in our distribution.
+At the end of this section we have some comments on how to
+compile the programs with Visual C++ version 7.0, which also has a somewhat
+different file folder structure.
+<P>
+With Microsoft Visual C++, you can compile using a Makefile.  We have supplied
+this in the source code distrubution as <TT>Makefile.msvc</TT>.
+You may wish to preserve the Unix Makefile by renaming <TT>Makefile</TT> to,
+say, <TT>Makefile.unix</TT>, then make a copy of <TT>Makefile.msvc</TT>
+and call it <TT>Makefile</TT>.   (You may have to change your Windows desktop
+settings to make the three-letter extensions visible, or you could use
+the <TT>RENAME</TT> command in the Command tool).
+<UL>
+<LI><B>Setting the path.</B>
+Before using <TT>nmake</TT> you will need to have the paths
+set properly.  For this, use the Start menu to open in the Accessories
+a Command Prompt first.  To set the path type<BR>
+<PRE>
+set MSVC=Path
+</PRE>
+where Path is where Microsoft Visual Studio is installed. 
+On our Windows XP system, "Path" is
+<TT>C:\Program Files\Microsoft Visual Studio 9.0</TT>
+<P>
+Once you have set MSVC, type
+<PRE>
+PATH=%PATH%;%MSVC%\VC\bin;%MSVC%\Common7\IDE
+</PRE>
+(The "7" is correct here; it is not a typo.)
+<P>
+The Makefile has some paths in it, which are, I hope, in
+the correct form for Visual C++ 9.0 on your system.
+If not, the statement
+<PRE>
+MSVCPATH="C:\Program Files\Microsoft Visual Studio 9.0\VC"
+</PRE>
+will need to be changed so that 
+it points to wherever Microsoft Visual Studio is installed, followed by
+ <TT>\VC</TT> (for Visual Studio 9.0).
+<P>
+<LI><B>Using the Makefile</B>. The Makefile is invoked using the
+<TT>nmake</TT> command.  To compile <tt>PopG.exe</tt>
+type <TT>nmake</TT>.  We have supplied all the
+support files and icons needed for the compilations
+in the main source code folder.
+</UL>
+<P>
+If instead you have an earlier version of Visual Studio .NET which
+has the Visual C++ 7.0 compiler, you should proceed as above, but
+instead, set MSVC to
+<TT>C:\Program Files\Microsoft Visual Studio .NET</TT>,
+and then type
+<P>
+<PRE>
+PATH=%PATH%;%MSVC%\Vc7\bin;%MSVC%\Common7\IDE
+</PRE>
+<P>
+You will also need to edit the line in the Makefile that
+defines the variable MSVCPATH.  You should change this to
+<PRE>
+MSVCPATH="C:\Program Files\Microsoft Visual Studio .NET\Vc7"
+</PRE>
+If this does not work with your Visual C++ 7.0 compiler,
+then the most likely reason is that your installation
+was not placed into the folder <TT>C:\Program Files</TT>,
+or has a name that is not exactly identical to
+<TT>Microsoft Visual Studio .NET</TT>.  In that case,
+you will need to find the correct path to the Visual C++
+7.0 installation on your system, and supply this in the
+MSVC variable above, and also in the Makefile.  (Note
+that in the Makefile, you will need to follow this path
+with <TT>\Vc7</TT>.)
+
+<P>
+<H3>Compiling PopG on Mac OS X</H3>
+<P>
+Compiling on the Mac requires a complier and make program, such
+as <tt>gcc</tt> and <tt>gnu make</tt>. If they aren't already on
+your system, you may be able to download them by installing the
+<a href="http://developer.apple.com/tools/xcode/">Xcode developer tools</a>
+from the
+<a href="http://www.apple.com">Apple web site</a>.
+<P>
+You will be compiling from the command line. Start up the <tt>terminal</tt>
+application and <tt>cd</tt> to wherever you placed the
+<TT>PopG 3.3 src</TT> folder. The command <tt>make -f Makefile.osx</tt>
+should generate the application for you.
+<P>
+The compilation will result in several warning messages, 
+about deprecated methods, which may be ignored.  
+<P>
+When the compilation succeeds, the executable will be found
+in the current directory.  You can run it by clicking on it (not by
+typing its name in a Terminal window).
+<P>
+<H2>Credits</H2>
+<P>
+PopG was written by Joe Felsenstein, Hisashi Horino, Sean Lamont,
+Bill Alford, Mark Wells, Mike Palczewski, Doug Buxton, and Elizabeth Walkup.
+I wrote the original version of the program.  Hisashi and Sean did the
+screen graphics for IBM PC and the first part of the Postscript printing
+system.  Bill greatly improved and expanded the Postscript printing and
+the X windows graphics.  Mark Wells did the
+original Macintosh version.  Mike Palczewski greatly improved the Windows,
+Macintosh and X Windows graphical user interface, and Doug Buxton modified the
+program to the 3.0 version and prepared the executables for different
+operating systems.  Elizabeth improved the functioning of the X Windows
+interface and prepared the 3.3 release.
+<P>
+<H2>Copyright notice</H2>
+<P>
+Copyright 1993-2008.  University of Washington and Joseph Felsenstein.  All
+rights reserved.  Permission is granted to reproduce, perform, and modify
+this program.  Permission is granted to distribute or provide access to this
+program provided that this copyright notice is not removed, this program is
+not integrated with or called by any product or service that generates
+revenue, and that your distribution of this program is free.  Any modified
+versions of this program that are distributed or accessible shall indicate
+that they are based on this program.  Educational institutions are
+granted permission to distribute this program to their students and staff
+for a fee to recover distribution costs.  Permission requests for any other
+distribution of this program should be directed to &nbsp;&nbsp;license<!deathtospam>&nbsp;@&nbsp;<!deathtospam>u.washington.edu.
+<P>
+<DIV ALIGN=RIGHT>
+<TABLE>
+<TR><TD ALIGN=LEFT> Joe Felsenstein<BR>
+Department of Genome Sciences<BR>
+University of Washington<BR>
+Box 355065<BR>
+Seattle, WA 98195-5065, USA</TD></TR>
+</TABLE>
+</DIV>
+<P>
+email: <TT>&nbsp;&nbsp;joe<!put here to frustrate spammers harvesting email addresses>&nbsp;@&nbsp;<!more antispam>gs.washington.edu&nbsp;&nbsp;</TT>
+</BODY>
+</HTML>
