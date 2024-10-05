@@ -56,7 +56,7 @@ Social Biology".
 
 ## Did I have qualms about publishing there? ##
 
-Yes, I recall feeling a bit queasy when that journal was proposed.  
+Yes, I recall feeling a bit queasy when that journal was proposed. 
 But I read other articles in the journal, and concluded that 
 people would look at them and understand that this journal was by 
 then not really about eugenics.   Perhaps I was wrong about assuming 
