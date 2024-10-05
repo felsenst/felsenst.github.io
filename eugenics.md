@@ -21,7 +21,7 @@ derived results on how much assortative mating would increase additive genetic v
 character for which there was assortative mating.  But his derivation was very hard to 
 follow.  Sewall Wright, in one of his pioneering papers on inbreeding in 1921, had a 
 similar result, derived using his own method of "path coefficients".  But even that was hard to follow.
-Jim Crow was working on materials for his 1970 book with Motoo Kimura.  For the section  
+Jim Crow was working on materials for his 1970 book with Motoo Kimura.  For the section 
 on assortative mating, he found a way to use kinship coefficients to derive Wright's 
 result.  I read the draft of this and figured out a way to generalize his result to 
 cases where the trait was caused by a mix of genes of large and small effects.  So I 
