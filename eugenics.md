@@ -94,5 +94,5 @@ having more children than less well-educated people.  They imagined society bein
 overwhelmed by working-class people's children.   Of course, eugenicists were 
 hereditarians, in that they attributed most differences between groups of people 
 to genetics.  So of course that meant that they tended to carry this over to any 
-dicussion of race.  But the literature is actually mostly about class.
+discussion of race.  But the literature is actually mostly about class.
 
