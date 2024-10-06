@@ -5,11 +5,11 @@
 One of my earliest papers, in 1968, was this one:
 
 Crow, J. F. and J. Felsenstein.  1968.  The effect of assortative mating on the genetic composition of a 
-population.  _Eugenics Quarterly_ #15:# 85-97.
+population.  _Eugenics Quarterly_ #15#: 85-97.
 
 ## The content of the paper ##
 
-The paper gives derivations of the covaraiances between relatives in a population that is not 
+The paper gives derivations of the variance components of a character in a population that is not 
 random-mating, but has a character for which there is assortative mating, that is, for which 
 individuals who mate are more likely to be similar in that character.  Examples would be 
 people who tend to marry someone who is of a similar height.
