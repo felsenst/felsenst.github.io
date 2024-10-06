@@ -5,7 +5,7 @@
 One of my earliest papers, in 1968, was this one:
 
 Crow, J. F. and J. Felsenstein.  1968.  The effect of assortative mating on the genetic composition of a 
-population.  _Eugenics Quarterly_ #15#: 85-97.
+population.  _Eugenics Quarterly_ **15:** 85-97.
 
 ## The content of the paper ##
 
