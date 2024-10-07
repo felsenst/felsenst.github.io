@@ -75,7 +75,7 @@ of German Shepherd Dogs (Alsatians) to have sturdy-looking hind quarters ended u
 leading to high rates of congenital hip dislocation.  Oops.
 
 3. Can we do this without massively violating human rights?  By, for example telling 
-people who can have children and who can't.  I don't think we can.
+people who can have children and who can't?  I don't think we can.
 
 I think the answer to, not just one or two, but all three of these is clearly "no".  And 
 in fact there is basically no country in the world right now that has a eugenics program, 
