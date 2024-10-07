@@ -9,7 +9,7 @@ population.  _Eugenics Quarterly_ **15:** 85-97.
 
 ## The content of the paper ##
 
-The paper gives derivations of the variance components of a character in a population that is not 
+The paper gives derivations of the additive genetic variance of a character in a population that is not 
 random-mating, but which for that character has assortative mating: 
 individuals who mate are more likely to be similar in that character.  Examples would be 
 people who tend to marry someone who is of a similar height.
