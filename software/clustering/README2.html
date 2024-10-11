@@ -42,6 +42,10 @@ allows you to iterate generations and see whether mean fitnesses are increasing 
   <p>
     <a href="/software/parsimony/README.html">click here to go to folder of program</a>
     <p>
+<em>A warning about compiling the FORTRAN programs:</em>  They use the operator .AND. to do bitwise AND operations.  This may work in FORTRAN 77, 
+as there is backwards compatibility in it.  In Gnu FORTRAN it will work if you use the -fdec flag with the compiler.  Otherwise 
+it may be necessary to change expressions like  M.AND.N  to  IAND(M, N) or to  AND(M,N).
+      
       <p>
 <h2> FORTRAN IV programs for simulation of the evolution of recombination (Felsenstein, 1974; Felsenstein and Yokoyama, 1976) </h2>
   <p>
