@@ -15,7 +15,10 @@ since their program wrote out information to disk or tape and then read it back 
 <p>
 This program is not the original version but is the program after a little development.  It uses standard FORTRAN II but also uses a
 nonstandard operation (&amp;) which is a bitwise AND of the bits in two integers.  That was available in the FORTRAN II compiler
-for the IBM 7094 at the University of Chicago.
+for the IBM 7094 at the University of Chicago.  It could be replaced by the .AND. operator.  
+In Gnu FORTRAN that will work if you use the -fdec flag with the compiler. Otherwise it may be necessary to change expressions like M&amp;N to IAND(M, N) or to AND(M,N). 
+In FORTRAN 77 M&amp;N could be replaced by those or by  M.AND.N
+</p>  
 <P>
 The program reads in data that has up to 70 characters, each with up to 9 states (0 through 8).  State 9 is used to indicate
 that the state us unknown.  Each species has a name of 10 characters long.  After the initial line, which has the number of species
