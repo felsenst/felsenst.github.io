@@ -19,11 +19,16 @@ CDC 6400 mainframe computer.
 These two programs were written for the 1976 paper by Felsenstein and Yokoyama in Genetics.  I designed the programs but I think
 that Shozo Yokoyama wrote them, and he did the runs that were reported in the paper.
 <p>
-They are written in FORTRAN IV for the University of Washington's CDC 6400 mainframe.  One case that was run was where the locus
+They are written in FORTRAN IV for the University of Washington's CDC 6400 mainframe.  
+<em>A warning about compiling the FORTRAN IV programs:</em>  They use the operator .AND. to do bitwise AND operations.  This may work in FORTRAN 77, 
+as there is backwards compatibility in it.  In Gnu FORTRAN it will work if you use the -fdec flag with the compiler.  Otherwise 
+it may be necessary to change expressions like  M.AND.N  to  IAND(M, N) or to  AND(M,N).  
+  
+<p>One case that was run was where the locus
 that controls recombination had the allele for recombination dominant, the other had it recessive.  Generally
 they were run with an equal initial frequency of the recombination allele (50:50) and then we could detect the
 effectiveness of natural selection for recombination by finding that the recombination allele fixed significantly
-more than 50% of the time.
+more than 50% of the time.</p>
     <p>
 I believe that  recomb1976a.for  simulates the dominant case, and  recomb1976b.for  the recessive case.  In the latter case the 
 two subpopulations that have the two different alleles at the recombination locus have no gene flow between them, so that Fisher 
