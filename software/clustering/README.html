@@ -16,7 +16,9 @@ This is not the original version but one expanded to handle character-state tree
 clustering methods.
 <p>
 It was written in FORTRAN II for UC's IBM 7094.  The one nonstandard feature is the use of the ampersand character (&amp;)
-to represent the nonstandard operation of a bitwise AND operation on two integers.  Watch out for that!
+to represent the nonstandard operation of a bitwise AND operation on two integers.  Watch out for that!  In 
+FORTRAN 77 or earlier it may be possible to replace  M&amp;N  by  M.AND.N  .    In Gnu FORTRAN it may 
+be possible to replace this by that if one uses the  -fdec  compiler flag, or by  AND(M,N) or by IAND(M,N).
 <p>
 Later I gave this program, about 1972 or so, to Fred Allendorf so he and Fred Utter could analyze electrophoretic
 allele gene frequencies to get a phylogeny of salmonid species.
