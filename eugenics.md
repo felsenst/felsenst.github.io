@@ -90,7 +90,7 @@ many more immediate dangers if they take power.
 If you go back and actually read the papers written in the literature of eugenics, 
 you may be confused to find that most of them are not focused on racial differences, 
 but on class differences.  They were alarmed that better educated people were 
-having more children than less well-educated people.  They imagined society being 
+having fewer children than less well-educated people.  They imagined society being 
 overwhelmed by working-class people's children.   Of course, eugenicists were 
 hereditarians, in that they attributed most differences between groups of people 
 to genetics.  So of course that meant that they tended to carry this over to any 
