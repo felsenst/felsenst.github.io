@@ -9,15 +9,15 @@ population.  _Eugenics Quarterly_ **15:** 85-97.
 
 ## The content of the paper ##
 
-The paper gives derivations of the additive genetic variance of a character in a population that is not 
-random-mating, but which for that character has assortative mating: 
+The paper gives derivations of the additive genetic variance of a character for which there is not 
+random mating, but for which there is assortative mating: 
 individuals who mate are more likely to be similar in that character.  Examples would be 
 people who tend to marry someone who is of a similar height.
 
 ## Where does the paper fit into the literature? ##
 
 R. A. Fisher gave a derivation in his major 1918 paper on the theory of quantitative genetics 
-derived results on how much assortative mating would increase additive genetic variance in the 
+of how big an increase of additive genetic variance there would be in a  
 character for which there was assortative mating.  But his derivation was very hard to 
 follow.  Sewall Wright, in one of his pioneering papers on inbreeding in 1921, had a 
 similar result, derived using his own method of "path coefficients".  But even that was hard to follow.
@@ -80,7 +80,7 @@ people who can have children and who can't?  I don't think we can.
 I think the answer to, not just one or two, but all three of these is clearly "no".  And 
 in fact there is basically no country in the world right now that has a eugenics program, 
 or is even talking about one.  There are alarming 
-neo-fascist movements, in many countries, that have racist fantasies about breeding people to 
+neo-fascist movements in many countries, whose ideologues have racist fantasies about breeding people to 
 be blonde "Aryans" (or whatever). But instituting eugenics programs is not the 
 main danger they pose -- that would be very slow and cumbersome, while there are 
 many more immediate dangers if they take power.
