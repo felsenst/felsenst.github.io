@@ -17,7 +17,7 @@ people who tend to marry someone who is of a similar height.
 ## Where does the paper fit into the literature? ##
 
 R. A. Fisher gave a derivation in his major 1918 paper on the theory of quantitative genetics 
-of how big an increase of additive genetic variance there would be in a  
+of how big an increase of additive genetic variance there would be in a 
 character for which there was assortative mating.  But his derivation was very hard to 
 follow.  Sewall Wright, in one of his pioneering papers on inbreeding in 1921, had a 
 similar result, derived using his own method of "path coefficients".  But even that was hard to follow.
