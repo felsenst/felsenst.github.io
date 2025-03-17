@@ -37,10 +37,10 @@ from others.  In the model in the paper, every member of the population is equal
 
 James F. Crow, the senior author, wanted it there.  He was one of the major people who 
 revived work in human genetics after World War II, when much of it was discredited by 
-the association of advocates of eugenics with the horrors that Nazi ideology led to.
+the association of advocates of eugenics with the horrors that Nazi ideology led to. 
 He was an associate of H.J. Muller, who pioneered work on mutations in human 
 populations, and human genetic loads.  Muller (and Crow) did not want eugenics to be completely ruled out, 
-in cases such as trying to reduce the numbers of harmful mutations in the population.
+in cases such as trying to reduce the numbers of harmful mutations in the population. 
 I think Jim was trying not to totally abandon having some future eugenics program.
 With our ability to detect new mutations and to engage in genetic engineering to 
 directly change those loci, the idea of using a eugenics program to reduce the numbers 
