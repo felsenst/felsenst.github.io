@@ -1,0 +1,81 @@
+\NeedsTeXFormat{LaTeX2e}[1995/12/01]
+\ProvidesPackage{PPRbluish}[2003/04/04]
+\typeout{bluish style for Prosper ---}
+
+% Required packages
+\IfFileExists{pst-grad}{\RequirePackage{pst-grad}}{\RequirePackage{gradient}}
+\RequirePackage{amssymb}
+\RequirePackage{times}
+
+% Colors 
+\newrgbcolor{goldenrod}{.80392 .60784 .11373} %Title color and first level bullets
+\newrgbcolor{mygoldenrod}{.6874 .4983 .07142} %second level bullets
+\newrgbcolor{darkgoldenrod}{.5451 .39608 .03137} %third level bullets
+\newrgbcolor{brown}{.15 .15 .15} %top background
+\newrgbcolor{darkolivegreen}{.33333 .41961 .18431} %bottom background
+\newrgbcolor{lightblue}{.80 1.0 1.0}
+\ifinColor
+\def\colA{blue}
+\def\colB{black}
+%\def\colA{darkolivegreen} %color 1 (bottom of the slide) for the background
+%\def\colB{brown} %color 2 (top of the slide) for the background
+\global\let\colC=\blue
+%\global\let\colC=\goldenrod
+\ifcolorBG
+\global\let\colD=\black%text color
+\else
+\global\let\colD=\black
+\fi
+\else
+\def\colA{white}
+\def\colB{lightgray}
+\global\let\colC=\blue
+\global\let\colD=\black
+\fi
+
+% The fonts
+\FontTitle{%
+  \usefont{T1}{phv}{b}{n}\fontsize{12pt}{103pt}\selectfont\colC}{%
+  \usefont{T1}{phv}{b}{n}\fontsize{12pt}{10pt}\selectfont\colC}
+\FontText{%
+  \usefont{T1}{phv}{m}{n}\fontsize{10pt}{8pt}\selectfont\colD}{%
+  \usefont{T1}{phv}{m}{n}\fontsize{10pt}{8pt}\selectfont\colD}
+
+\ColorFoot{\lightgray}
+
+% Positioning of the title of a slide
+\def\slidetitle#1{\rput[lb](0.0,3.8){%
+    \parbox{12cm}{\fontTitle{\baselineskip=0pt #1}}}}
+
+% Positioning for a logo
+\LogoPosition{-1,-1.1}
+
+\newcommand{\BSquareFrame}[1]{%
+  \ifcolorBG
+  \psframe[fillstyle=solid, fillcolor=lightblue](-2,-1.4)(12.5,9)
+%  \psframe[fillstyleu=gradient,gradbegin=\colB,gradend=\colA,gradmidpoint=1]%
+%          (-2,-1.4)(12.5,9)
+  \fi
+  \PutLogo % Mandatory
+  {#1}}
+
+%define 3 level of bullets, decreasing in size
+\myitem{1}{\psframe[fillstyle=solid,fillcolor=goldenrod,%
+  linestyle=none](-.10,.13)(.02,.03)}
+\myitem{2}{\psframe[fillstyle=solid,fillcolor=mygoldenrod,%
+  linestyle=none](-.09,.12)(.01,.04)}
+\myitem{3}{\psframe[fillstyle=solid,fillcolor=darkgoldenrod,%
+  linestyle=none](-.08,.11)(.0,.05)}
+
+\NewSlideStyle[11.5cm]{t}{5.4,3.5}{BSquareFrame}
+%\PDFCroppingBox{10 35 594 830}
+\PDFCroppingBox{10 35 594 830}
+
+\titleSpacing{\vspace*{20pt}}
+
+\endinput
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 

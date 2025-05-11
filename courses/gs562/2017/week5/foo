@@ -1,0 +1,3 @@
+latex week5.tex
+dvips -o week5.ps week5.dvi
+ps2pdf week5.ps
