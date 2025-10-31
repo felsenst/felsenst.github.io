@@ -1,0 +1,3 @@
+latex final.tex
+dvips -o final.ps final.dvi
+ps2pdf final.ps
