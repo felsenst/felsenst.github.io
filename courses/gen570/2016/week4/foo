@@ -1,0 +1,3 @@
+latex week4.tex
+dvips -t landscape week4.dvi -o week4.ps
+ps2pdf -dEmbedAllFonts=true -dPDFSETTINGS=/prepress week4.ps
