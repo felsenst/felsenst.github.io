@@ -1,0 +1,26 @@
+To add or change:
+    lecture 1:
+       maybe shots of first pages of the major papers
+        Sokal and Sneath 1963 book
+        Edwards and Cavalli-Sforza 1964, 1965; also 1963 abstract ["nett"]
+        Camin and Sokal 1965
+        Fitch and Margoliash paper
+        Atlas of protein sequences 1967-1968
+        Eck and Dayhoff 1966: maybe a figure
+       Farris and Kluge refs  1969 (2); 1970  (under their pictures?)
+       Hennig's book 1966;  maybe a tree with bars, a classification/tree 
+       Refs to recent papers disputing: Farris 1981, a sample of
+         later papers in Cladistics
+     lecture 2:
+       Re-examine order of figure in least squares
+         equations for 5-species case are too early
+       use Sarich as a data example there, show tree earlier
+       show equations for weights  1/D_{ij}^2
+       a little more on slide for statistical justification of LS
+       Jukes-Cantor transition probability: explain no-events Poisson formula
+         also a figure to explain the two systems of events
+         a note on why the last event erases all others
+       Jukes-Cantor distance: put the distance formula after curve
+       colors in UPGMA matrices?
+       show tree as it is gradually revealed, strip-tease style
+       a figure for minimum evolution, flow of method? 
