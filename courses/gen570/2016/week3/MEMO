@@ -1,0 +1,11 @@
+For next time:
+   lecture 1:  More on weighted parsimony, how it works,
+               successive weighting, nonsuccessive weighting
+               A more real data example of successive and nonsuccessive wtg
+   lecture 2:  need slides for the compatibility test
+               maybe a figure with a tree, characters that are and are
+                not compatible with it, count of them vs. parsimony
+               maybe use the Horses data and show data and matrix
+   lecture 3:  derivation for 0/1 consistency has a jump of some equations
+                (where compare two least frequent)
+               maybe a slide of flow of steps in Hendy/Penny inconsistency
