@@ -1,0 +1,178 @@
+\begin{slide}[Replace]{Hidden Markov Models}
+\bigskip
+
+These are the most widely used models allowing rate variation to be
+correlated along the sequence.
+\bigskip
+
+We assume:
+\begin{itemize}
+\item There are a finite number of rates, $\mathbf{m}$.  Rate $i$ is $\mathbf{r_i}$.
+\item There are probabilities $\mathbf{p_i}$ of a site having rate $\mathbf{i}$.
+\item A process not visible to us (``hidden") assigns rates to
+sites.  It is a Markov process working along the sequence.  For example
+it might have transition probability $\mathbf{\Prob(j|i)}$ of changing to rate $\mathbf{j}$
+in the next site, given that it is at rate $\mathbf{i}$ in this site.
+\item The probability of our seeing some data are to be obtained by
+summing over all possible combinations of rates, weighting approproately
+by their probabilities of occurrence.
+\end{itemize}
+
+\end{slide}
+
+\begin{slide}[Replace]{Likelihood with a[n] HMM}
+\bigskip
+
+Suppose that we have a way of calculating, for each possible
+rate at each possible site, the probability of the data at that
+site given that rate.  This is
+
+\[
+\mathbf{\Prob\left(D^{(i)}\;|\;r_j\right)}
+\]
+
+To get the overall probability of all data, sum over all
+possible paths through the array of sites $\mathbf{\times}$ rates,
+weighting each combination of rates by its probability:
+
+\end{slide}
+
+
+\begin{slide}[Replace]{A Hidden Markov Model for rates in a phylogeny}
+\bigskip
+
+\centerline{\includegraphics[width=3.2in]{hmc2.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{\bf Hidden Markov Models}
+\bigskip
+
+If there are a number of hidden rate states, with state $i$ having rate $r_i$
+\[
+\begin{array}{l}
+\mathbf{\Prob(D\;|\;T) = ~~~~ \sum\limits_{i_1} \sum\limits_{i_2} \dots \sum\limits_{i_p} \Prob (r_{i_1}, r_{i_2}, \dots r_{i_p})}\\
+\\
+\mathbf{~~~~~~~~~~~~~~~~~~~~~~~~~ \times \Prob(D\;|\;T, r_{i_1}, r_{i_2}, \dots r_{i_m})}
+\end{array}
+\]
+Evolution is independent once each site has had its rate specified
+\[
+\begin{array}{l}
+\mathbf{\Prob(D\; |\; T, r_1, r_2, \dots, r_p)\ = }\\
+\\
+\mathbf{~~~~\prod\limits_{i=1}^p \Prob(D^{(i)}\; |\; T, r_i)}.
+\end{array}
+\]
+
+\end{slide}
+
+\begin{slide}[Replace]{Seems impossible ...}
+\bigskip
+
+Evolution is independent once each site has had its rate specified
+\[
+\mathbf{\Prob(D | T, r_1, r_2, \dots, r_m)\ = \ \prod\limits_{i=1}^m \Prob(D^{(i)} | T, r_i)}.
+\]
+To compute the likelihood we sum over all ways rate states could be
+assigned to sites:
+
+\[
+\renewcommand{\arraystretch}{1.4}
+\begin{array}{c c l}
+\mathbf{L} & \mathbf{=}  & \mathbf{\Prob(D\;|\;T)}\\
+&  \mathbf{=} & \mathbf{\sum\limits_{i_1=1}^m \sum\limits_{i_2=1}^m \dots \sum\limits_{i_p=1}^m\ \Prob\left(r_{i_1}, r_{i_2}, \dots, r_{i_p}\right)} \\
+& &\mathbf{\times\ \Prob\left(D^{(1)}\;|\;r_{i_1}\right) \Prob\left(D^{(2)}\;|\;r_{i_2}\right) \dots \Prob\left(D^{(n)}\;|\;r_{i_p}\right)}
+\end{array}
+\]
+\bigskip
+
+Problem: The number of rate combinations is very large.  With
+100 sites and 3 rates at each, it is $\mathbf{3^{100} \simeq 5 \times 10^{47}}$.
+This makes the summation impractical.
+
+\end{slide}
+
+\begin{slide}[Replace]{Factorization and the algorithm}
+\bigskip
+
+Fortunately, the terms can be reordered:
+\[
+\begin{array}{c c c l}
+\mathbf{L}  & =  &   \mathbf{\Prob(D\;|\;T)}\\
+& & \\
+&  \mathbf{=} & \mathbf{\sum\limits_{i_1=1}^m\ \sum\limits_{i_2=1}^m\ \dots\ \sum\limits_{i_p=1}^m}
+& \mathbf{\Prob(i_1)\ \Prob\left(D^{(1)}\;|\;r_{i_1}\right)}\\
+& & &\mathbf{\times\ \Prob(i_2\;|\;i_1)\ \Prob\left(D^{(2)}\;|\;r_{i_2}\right)}\\
+& & &\mathbf{\times\ \Prob(i_3\;|\;i_2)\ \Prob\left(D^{(3)}\;|\;r_{i_3}\right)}\\
+& & &\\
+& & &\mathbf{\vdots}\\
+& & &\\
+& & &\mathbf{\times\ \Prob(i_p\;|\;i_{p-1})\ \Prob\left(D^{(p)}\;|\;r_{i_p}\right)}
+\end{array}
+\]
+
+\end{slide}
+
+\begin{slide}[Replace]{Using Horner's Rule}
+\bigskip
+
+and the summations can be moved each as far rightwards as it
+can go:
+\[
+\begin{array}{c c l}
+\mathbf{L} & \mathbf{=}  & \mathbf{\sum\limits_{i_1=1}^m\ \Prob(i_1)\ \Prob\left(D^{(1)}\;|\;r_{i_1}\right)}\\
+& & \mathbf{\sum\limits_{i_2=1}^m\ \Prob(i_2\;|\;i_1)\ \Prob\left(D^{(2)}\;|\;r_{i_2}\right)}\\
+& & \mathbf{\sum\limits_{i_3=1}^m\ \Prob(i_3\;|\;i_2)\ \Prob\left(D^{(3)}\;|\;r_{i_3}\right)}\\
+& &\ \ \ \ \mathbf{\vdots}\\
+ & & \\
+& & \mathbf{\sum\limits_{i_p=1}^m\ \Prob(i_p\;|\;i_{p-1})\ \Prob\left(D^{(p)}\;|\;r_{i_p}\right)}
+\end{array}
+\]
+
+\end{slide}
+
+\begin{slide}[Replace]{Recursive calculation of HMM likelihoods}
+\bigskip
+
+The summations can be evaluated innermost-outwards.  The same
+summations appear in multiple terms.  We can then evaluate them
+only once.  A huge saving results.  The result is this algorithm:
+
+Define $\mathbf{{\cal P}_i(j)}$ as the probability of everything
+at or to the right of site $\mathbf{i}$, given that site $\mathbf{i}$ has the
+$\mathbf{j}$-th rate.
+
+Now we can immediately see for the last site that for each possible
+rate category $\mathbf{i_p}$
+\[
+\mathbf{{\cal P}_p(i_p)\ = \ \Prob\left(D^{(p)}\;|\;r_{i_p}\right)}
+\]
+(as ``at or to the right of" simply means ``at" for that site).
+
+\end{slide}
+
+\begin{slide}[Replace]{Recursive calculation}
+\bigskip
+
+More generally, for site $\mathbf{\ell < p}$ and its rates $\mathbf{i_\ell}$
+
+\[
+\mathbf{{\cal P}_\ell(i_\ell)\ \ = \ \ \Prob\left(D^{(\ell)}\;|\;r_{i_\ell}\right)
+ \sum\limits_{i_\ell = 1}^m \ \Prob(i_{\ell+1}\;|\;i_\ell)\ {\cal P}_{\ell+1}(i_{\ell+1})}
+\]
+
+We can compute the $\mathbf{{\cal P}}$'s recursively using this,
+starting with the last site and moving leftwards down the
+sequence.  Finally we have the $\mathbf{{\cal P}_1(i_1)}$ for all $\mathbf{m}$
+states.  These are simply weighted by the equilibrium
+probabilities of the Markov chain of rate categories:
+\[
+\mathbf{L\ =\ \Prob(D\;|\;T)\ = \ \sum\limits_{i_1=1}^m\ \Prob(i_1)\ {\cal P}_1(i_1)}
+\]
+An entirely similar calculation can be done from left to right,
+remembering that the transition probabilities $\mathbf{\Prob(i_k|i_{k+1})}$ would
+be different in that case.
+
+\end{slide}
+

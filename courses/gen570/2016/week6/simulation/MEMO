@@ -1,0 +1,10 @@
+
+data simulated with Ts/Tn ratio 0.500001 with K2P (hence closely JC) model
+on tree:
+((A:0.82,B:0.11):0.055,(C:0.82,D:0.11):0.055);
+random number seed  5113,   100,000 sites    (file "thedata")
+
+Runs with 100, 200, 500, ... , 100000  sites (by changing first line of
+infile) with Dnaml,  Ts/Tn 0.500001, base frequencies forced equal (hence
+closely JC model).  Used two trees ((A,B),(C,D)); and  ((A,C),(B,D));
+Number of sites and Ln Likelihoods in file  "xy"

@@ -1,0 +1,8 @@
+Changes:
+   Restriction sites etc.:
+     Need a diagram of AFLP, RAPDS
+     Need more diagrams of microsatellite change methods
+   Likelihood:  "support", rows (hypotheses) vs. columns (data outcomes)
+   More figures on branch length iteration
+   Need more discussion of analogy with pruning algorithm
+   Need example of HMM use (I used fifteen.dna and an HMM)

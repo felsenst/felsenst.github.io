@@ -1,0 +1,78 @@
+
+Nucleic acid sequence Maximum Likelihood method, version 4.0
+
+
+Base Frequencies:
+
+   A       0.25000
+   C       0.25000
+   G       0.25000
+  T(U)     0.25000
+
+Transition/transversion ratio =   0.500001
+
+User-defined trees:
+
+
+  +------B         
+  |  
+  |      +------------------------------------------------C         
+  2------3  
+  |      +-----D         
+  |  
+  +------------------------------------------------A         
+
+
+remember: this is an unrooted tree!
+
+Ln Likelihood = -479171.37891
+
+ Between        And            Length      Approx. Confidence Limits
+ -------        ---            ------      ------- ---------- ------
+
+     2          A                 0.81387     (  0.80366,     0.82371) **
+     2          B                 0.11077     (  0.10759,     0.11473) **
+     2             3              0.11314     (  0.10914,     0.11688) **
+     3          C                 0.82304     (  0.81286,     0.83311) **
+     3          D                 0.10549     (  0.10196,     0.10902) **
+
+     *  = significantly positive, P < 0.05
+     ** = significantly positive, P < 0.01
+
+
+
+  +-------------------------------------------------C         
+  |  
+  |  +---------B         
+  2--3  
+  |  +---------D         
+  |  
+  +-------------------------------------------------A         
+
+
+remember: this is an unrooted tree!
+
+Ln Likelihood = -479913.53356
+
+ Between        And            Length      Approx. Confidence Limits
+ -------        ---            ------      ------- ---------- ------
+
+     2          A                 0.82660     (  0.81634,     0.83682) **
+     2          C                 0.83415     (  0.82382,     0.84451) **
+     2             3              0.00007     (     zero,     0.00145)
+     3          B                 0.16716     (  0.16342,     0.17086) **
+     3          D                 0.16176     (  0.15807,     0.16545) **
+
+     *  = significantly positive, P < 0.05
+     ** = significantly positive, P < 0.01
+
+
+
+Kishino-Hasegawa-Templeton test
+
+Tree    logL    Diff logL    Its S.D.   Significantly worse?
+
+  1 -479171.4  <------ best
+  2 -479913.5    -742.2     40.4653           Yes
+
+
