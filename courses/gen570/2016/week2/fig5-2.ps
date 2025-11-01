@@ -1,0 +1,2400 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%Creator: epsConverter 1.0
+%%For: (Joe Felsenstein)
+%%Title: (fig5-2.ps.art)
+%%CreationDate: (1/28/97) (3:12 PM)
+%%BoundingBox: 3 6 579 655
+%%PageOrigin: 30 31
+%%DocumentProcessColors: Black
+%%DocumentSuppliedResources: procset Adobe_packedarray 2.0 0
+%%+ procset Adobe_cmykcolor 1.1 0
+%%+ procset Adobe_cshow 1.1 0
+%%+ procset Adobe_customcolor 1.0 0
+%%+ procset Adobe_typography_AI3 1.0 1
+%%+ procset Adobe_IllustratorA_AI3 1.0 1
+%AI3_ColorUsage: Black&White
+%AI3_DocumentPreview: None
+%%EndComments
+%%BeginProlog
+%%BeginResource: procset Adobe_packedarray 2.0 0
+%%Title: (Packed Array Operators)
+%%Version: 2.0 
+%%CreationDate: (8/2/90) ()
+%%Copyright: ((C) 1987-1990 Adobe Systems Incorporated All Rights Reserved)
+userdict /Adobe_packedarray 5 dict dup begin put
+/initialize			% - initialize -
+{
+/packedarray where
+	{
+	pop
+	}
+	{
+	Adobe_packedarray begin
+	Adobe_packedarray
+		{
+		dup xcheck
+			{
+			bind
+			} if
+		userdict 3 1 roll put
+		} forall
+	end
+	} ifelse
+} def
+/terminate			% - terminate -
+{
+} def
+/packedarray		% arguments count packedarray array
+{
+array astore readonly
+} def
+/setpacking			% boolean setpacking -
+{
+pop
+} def
+/currentpacking		% - setpacking boolean
+{
+false
+} def
+currentdict readonly pop end
+%%EndResource
+Adobe_packedarray /initialize get exec
+%%BeginResource: procset Adobe_cmykcolor 1.1 0
+%%Title: (CMYK Color Operators)
+%%Version: 1.1 
+%%CreationDate: (1/23/89) ()
+%%Copyright: ((C) 1987-1990 Adobe Systems Incorporated All Rights Reserved)
+currentpacking true setpacking
+userdict /Adobe_cmykcolor 4 dict dup begin put
+/initialize			% - initialize -
+{
+/setcmykcolor where
+	{
+	pop
+	}
+	{
+	userdict /Adobe_cmykcolor_vars 2 dict dup begin put
+	/_setrgbcolor
+		/setrgbcolor load def
+	/_currentrgbcolor
+		/currentrgbcolor load def
+	Adobe_cmykcolor begin
+	Adobe_cmykcolor
+		{
+		dup xcheck
+			{
+			bind
+			} if
+		pop pop
+		} forall
+	end
+	end
+	Adobe_cmykcolor begin
+	} ifelse
+} def
+/terminate			% - terminate -
+{
+currentdict Adobe_cmykcolor eq
+	{
+	end
+	} if
+} def
+/setcmykcolor		% cyan magenta yellow black setcmykcolor -
+{
+1 sub 4 1 roll
+3
+	{
+	3 index add neg dup 0 lt
+		{
+		pop 0
+		} if
+	3 1 roll
+	} repeat
+Adobe_cmykcolor_vars /_setrgbcolor get exec
+pop
+} def 
+/currentcmykcolor	% - currentcmykcolor cyan magenta yellow black
+{
+Adobe_cmykcolor_vars /_currentrgbcolor get exec
+3
+	{
+	1 sub neg 3 1 roll
+	} repeat
+0
+} def
+currentdict readonly pop end
+setpacking
+%%EndResource
+%%BeginResource: procset Adobe_cshow 1.1 0
+%%Title: (cshow Operator)
+%%Version: 1.1 
+%%CreationDate: (1/23/89) ()
+%%Copyright: ((C) 1987-1990 Adobe Systems Incorporated All Rights Reserved)
+currentpacking true setpacking
+userdict /Adobe_cshow 3 dict dup begin put
+/initialize			% - initialize -
+{
+/cshow where
+	{
+	pop
+	}
+	{
+	userdict /Adobe_cshow_vars 1 dict dup begin put
+	/_cshow		% - _cshow proc
+		{} def
+	Adobe_cshow begin
+	Adobe_cshow
+		{
+		dup xcheck
+			{
+			bind
+			} if
+		userdict 3 1 roll put
+		} forall
+	end
+	end
+	} ifelse
+} def
+/terminate			% - terminate -
+{
+} def
+/cshow				% proc string cshow -
+{
+exch
+Adobe_cshow_vars
+	exch /_cshow
+	exch put
+	{
+	0 0 Adobe_cshow_vars /_cshow get exec
+	} forall
+} def
+currentdict readonly pop end
+setpacking
+%%EndResource
+%%BeginResource: procset Adobe_customcolor 1.0 0
+%%Title: (Custom Color Operators)
+%%Version: 1.0 
+%%CreationDate: (5/9/88) ()
+%%Copyright: ((C) 1987-1990 Adobe Systems Incorporated All Rights Reserved)
+currentpacking true setpacking
+userdict /Adobe_customcolor 5 dict dup begin put
+/initialize			% - initialize -
+{
+/setcustomcolor where
+	{
+	pop
+	}
+	{
+	Adobe_customcolor begin
+	Adobe_customcolor
+		{
+		dup xcheck
+			{
+			bind
+			} if
+		pop pop
+		} forall
+	end
+	Adobe_customcolor begin
+	} ifelse
+} def
+/terminate			% - terminate -
+{
+currentdict Adobe_customcolor eq
+	{
+	end
+	} if
+} def
+/findcmykcustomcolor	% cyan magenta yellow black name findcmykcustomcolor object
+{
+5 packedarray
+}  def
+/setcustomcolor		% object tint setcustomcolor -
+{
+exch
+aload pop pop
+4
+	{
+	4 index mul 4 1 roll
+	} repeat
+5 -1 roll pop
+setcmykcolor
+} def
+/setoverprint		% boolean setoverprint -
+{
+pop
+} def
+currentdict readonly pop end
+setpacking
+%%EndResource
+%%BeginResource: procset Adobe_typography_AI3 1.1 0
+%%Title: (Typography Operators)
+%%Version: 1.0 
+%%CreationDate:(5/31/90) ()
+%%Copyright: ((C) 1987-1990 Adobe Systems Incorporated All Rights Reserved)
+currentpacking true setpacking
+userdict /Adobe_typography_AI3 47 dict dup begin put
+/initialize			% - initialize -
+{
+/TZ
+ where
+	{
+	pop
+	}
+	{
+	Adobe_typography_AI3 begin
+	Adobe_typography_AI3
+		{
+		dup xcheck
+			{
+			bind
+			} if
+		pop pop
+		} forall
+	end
+	Adobe_typography_AI3 begin
+	} ifelse
+} def
+/terminate			% - terminate -
+{
+currentdict Adobe_typography_AI3 eq
+	{
+	end
+	} if
+} def
+% [ number value stream [ array for encoding modification ] modifyEncoding ==> [ modified array ]
+/modifyEncoding
+{
+	/_tempEncode exch ddef
+	
+	% pointer for sequential encodings
+	/_pntr 0 ddef
+	
+	{
+		% get bottom object
+		counttomark -1 roll
+		% is it a mark ?
+		dup type dup /marktype eq 		
+		{
+			% exit
+			pop pop exit
+		}
+		{
+			% ... object ... type ....
+			% insert if a nametype
+			/nametype eq
+			{
+				% insert the name at _pntr and increment pointer
+				_tempEncode /_pntr dup load dup 3 1 roll 1 add ddef 3 -1 roll
+				put
+			}
+			{
+				% reset _pntr if it's a number
+				/_pntr exch ddef					
+			}
+			ifelse
+		}
+		ifelse
+	}
+	loop	
+	
+	% return the modified encoding
+	_tempEncode
+}
+def
+/TE	% Set std platform encoding 	% (encoding pairs) TE -
+{
+	StandardEncoding 256 array copy modifyEncoding 
+	/_nativeEncoding exch def
+} def
+% re-define font
+% expected arguments
+% for 'normal fonts : 
+% [ /_Helvetica-Bold/Helvetica-Bold direction fontScript defaultEncoding TZ
+%
+% for cartographic, pictographic, and expert fonts :
+% [ ... number value stream ... /_Symbol/Symbol 
+%	direction fontScript defaultEncoding TZ
+% for blended fonts w/ default encoding :
+% [ /_AdobeSans_20ULig1XCond-Bold/AdobeSans 
+%	direction fontScript defaultEncoding [ w0 w1 ... wn ] TZ
+% for blended fonts w/ special encoding :
+% [ ... number value stream ... /_AdobeSans_20ULig1XCond/AdobeSans 
+%	direction fontScript defaultEncoding [ w0 w1 ... wn ] TZ
+/TZ		
+{
+	% set weight vector (if present)
+	dup type /arraytype eq {/_wv exch def} {/_wv 0 def} ifelse 
+	% platform dependent coding flag
+	/_useNativeEncoding exch def
+	% pop fontScript & direction
+	pop pop
+	
+	% create a new dictionary with length
+	% equal to original dictionary length + 2
+	% copy all the key/value pairs except FID
+	% call makeblended font with the weight values if _wv is an array
+	findfont _wv type /arraytype eq {_wv makeblendedfont} if dup length 2 add dict
+	
+	begin
+	
+		% copy all the values but the FID
+		% into the new dictionary
+		mark exch
+		{
+			1 index /FID ne { def } if cleartomark mark
+		}
+		forall
+		% discard last mark
+		pop
+		
+		% define FontName
+		/FontName exch def
+		
+		% if no re-encoding stream is present
+		% then if the base encoding vector of the font
+		% is the same as StandardEncoding
+		% and the use platform encoding flag is true
+		% then install AI platform encoding
+		% else leave the base encoding in effect
+		counttomark 0 eq
+		{
+			1 _useNativeEncoding eq
+			{
+				/Encoding _nativeEncoding def
+			}
+			if
+			% clean up
+			cleartomark
+		}
+		{	
+			% custom encoding to be done
+			% start off with a copy of the font's standard encoding
+			/Encoding load 256 array copy 
+			modifyEncoding /Encoding exch def
+		}
+		ifelse		
+		FontName currentdict
+	end
+	
+	% register the new font
+	definefont pop
+}
+def
+% text painting operators
+/tr					% string tr ax ay string 
+{
+_ax _ay 3 2 roll
+} def
+/trj				% string trj cx cy fillchar ax ay string 
+{
+_cx _cy _sp _ax _ay 6 5 roll
+} def
+/a0
+{
+/Tx	% text							% textString Tx -
+	{
+	dup 
+	currentpoint 3 2 roll
+	tr _psf
+	newpath moveto
+	tr _ctm _pss
+	} ddef
+/Tj	% justified text				% textString Tj -
+	{
+	dup
+	currentpoint 3 2 roll
+	trj _pjsf
+	newpath moveto
+	trj _ctm _pjss
+	} ddef
+	
+} def
+/a1
+{
+/Tx	% text							% textString Tx -
+	{
+	dup currentpoint 4 2 roll gsave
+	dup currentpoint 3 2 roll
+	tr _psf
+	newpath moveto
+	tr _ctm _pss
+	grestore 3 1 roll moveto tr sp
+	} ddef
+/Tj	% justified text				% textString Tj -
+	{
+	dup currentpoint 4 2 roll gsave
+	dup currentpoint 3 2 roll
+	trj _pjsf
+	newpath moveto
+	trj _ctm _pjss
+	grestore 3 1 roll moveto tr sp
+	} ddef
+	
+} def
+/e0
+{
+/Tx	% text							% textString Tx -
+	{
+	tr _psf
+	} ddef
+/Tj	% justified text				% textString Tj -
+	{
+	trj _pjsf
+	} ddef
+} def
+/e1
+{
+/Tx	% text							% textString Tx -
+	{
+	dup currentpoint 4 2 roll gsave 
+	tr _psf  
+	grestore 3 1 roll moveto tr sp 
+	} ddef
+/Tj	% justified text				% textString Tj -
+	{
+	dup currentpoint 4 2 roll gsave 
+	trj _pjsf
+	grestore 3 1 roll moveto tr sp 
+	} ddef
+} def
+/i0
+{
+/Tx	% text							% textString Tx -
+	{
+	tr sp
+	} ddef
+/Tj	% justified text				% textString Tj -
+	{
+	trj jsp
+	} ddef
+} def
+/i1
+{
+W N
+} def
+/o0
+{
+/Tx	% text							% textString Tx -
+	{
+	tr sw rmoveto
+	} ddef
+/Tj	% justified text				% textString Tj -
+	{
+	trj swj rmoveto
+	} ddef
+} def
+/r0
+{
+/Tx	% text							% textString Tx -
+	{
+	tr _ctm _pss
+	} ddef
+/Tj	% justified text				% textString Tj -
+	{
+	trj _ctm _pjss
+	} ddef
+} def
+/r1
+{
+/Tx	% text							% textString Tx -
+	{
+	dup currentpoint 4 2 roll currentpoint gsave newpath moveto
+	tr _ctm _pss 
+	grestore 3 1 roll moveto tr sp 
+	} ddef
+/Tj	% justified text				% textString Tj -
+	{
+	dup currentpoint 4 2 roll currentpoint gsave newpath moveto
+	trj _ctm _pjss
+	grestore 3 1 roll moveto tr sp 
+	} ddef
+} def
+% font operators
+% Binding
+/To	% begin text 					% bindType To -
+{
+	pop _ctm currentmatrix pop
+} def
+/TO	% end text					% TO -
+{
+	Te _ctm setmatrix newpath
+} def
+% Text paths
+/Tp	% begin text path				% a b c d tx ty startPt Tp -
+{
+	pop _tm astore pop _ctm setmatrix 
+	_tDict begin /W {} def /h {} def
+} def
+/TP	% end text path					% TP -
+{
+	end
+	iTm 0 0 moveto
+} def
+% Render mode & matrix operators
+/Tr	% begin render					% render Tr - 
+{
+	_render 3 le {currentpoint newpath moveto} if
+	dup 8 eq {pop 0} {dup 9 eq {pop 1} if} ifelse
+	dup /_render exch ddef
+	_renderStart exch get load exec
+} def
+/iTm % internal set text matrix		% - iTm -	(uses _tm as implicit argument)
+{
+_ctm setmatrix _tm concat 0 _rise translate _hs 1 scale
+} def
+/Tm % set text matrix				% a b c d tx ty Tm -
+{
+_tm astore pop iTm 0 0 moveto
+} def
+/Td % translate text matrix 		% tx ty Td -
+{
+_mtx translate _tm _tm concatmatrix pop iTm 0 0 moveto
+} def
+/Te	% end render					% - Te -
+{
+	_render -1 eq {} {_renderEnd _render get dup null ne {load exec} {pop} ifelse} ifelse
+	/_render -1 ddef
+} def
+% Attributes
+/Ta	% set alignment					% alignment Ta -
+{
+pop
+} def
+/Tf	% set font name and size		% fontname size Tf -
+{
+dup 1000 div /_fScl exch ddef
+exch findfont exch scalefont setfont
+} def
+/Tl	% set leading					% leading paragraphLeading Tl -
+{
+pop
+0 exch _leading astore pop
+} def
+/Tt	% set user tracking				% userTracking Tt -
+{
+pop
+} def
+/TW % set word spacing				% minSpace optSpace maxSpace TW -
+{
+3 npop
+} def
+/Tw	% set computed word spacing		% wordSpace Tw
+{
+/_cx exch ddef
+} def
+/TC % set character spacing			% minSpace optSpace maxSpace TC -
+{
+3 npop
+} def
+/Tc	% set computed char spacing 	% charSpace Tc -
+{
+/_ax exch ddef
+} def
+/Ts % set super/subscripting (rise)	% rise Ts -
+{
+/_rise exch ddef
+currentpoint
+iTm
+moveto
+} def
+/Ti	% set indentation				% firstStartIndent otherStartIndent stopIndent Ti -
+{
+3 npop
+} def
+/Tz % set horizontal scaling		% scalePercent Tz -
+{
+100 div /_hs exch ddef
+iTm
+} def
+/TA % set pairwise kerning			% autoKern TA -
+									%	autoKern = 0 -> no pair kerning
+									%			 = 1 -> automatic pair kerning
+{
+pop
+} def
+/Tq % set hanging quotes			% hangingQuotes Tq -
+									%	hangingQuotes 	= 0 -> no hanging quotes
+									%			 		= 1 -> hanging quotes
+{
+pop
+} def
+% Text Bodies
+/TX {pop} def
+%/Tx	% non-justified text			% textString Tx -
+%/Tj	% justified text				% textString Tj -
+/Tk	% kern							% autoKern kernValue Tk -
+									%  	autoKern = 0 -> manual kern, = 1 -> auto kern
+									%	kernValue = kern value in em/1000 space
+{
+exch pop _fScl mul neg 0 rmoveto
+} def
+/TK	% non-printing kern				% autoKern kernValue TK -
+{
+2 npop
+} def
+/T* % carriage return & line feed	% - T* -
+{
+_leading aload pop neg Td
+} def
+/T*- % carriage return & negative line feed	% - T*- -
+{
+_leading aload pop Td
+} def
+/T-	% print a discretionary hyphen	% - T- -
+{
+_hyphen Tx
+} def
+/T+	% discretionary hyphen hyphen	% - T+ -
+{} def
+/TR	% reset pattern matrix 			% a b c d tx ty TR -
+{
+_ctm currentmatrix pop 	
+_tm astore pop 
+iTm 0 0 moveto 
+} def
+/TS	% special chars					% textString justified TS -
+{
+0 eq {Tx} {Tj} ifelse
+} def
+currentdict readonly pop end
+setpacking
+%%EndResource
+%%BeginResource: procset Adobe_IllustratorA_AI3 1.0 2
+%%Title: (Adobe Illustrator (R) Version 3.0 Abbreviated Prolog)
+%%Version: 1.0 
+%%CreationDate: (7/22/89) ()
+%%Copyright: ((C) 1987-1990 Adobe Systems Incorporated All Rights Reserved)
+currentpacking true setpacking
+userdict /Adobe_IllustratorA_AI3 61 dict dup begin put
+% initialization
+/initialize				% - initialize -
+{
+% 47 vars, but leave slack of 10 entries for custom Postscript fragments
+userdict /Adobe_IllustratorA_AI3_vars 57 dict dup begin put
+% paint operands
+/_lp /none def
+/_pf {} def
+/_ps {} def
+/_psf {} def
+/_pss {} def
+/_pjsf {} def
+/_pjss {} def
+/_pola 0 def
+/_doClip 0 def
+% paint operators
+/cf	currentflat def	% - cf flatness
+% typography operands
+/_tm matrix def
+/_renderStart [/e0 /r0 /a0 /o0 /e1 /r1 /a1 /i0] def 
+/_renderEnd [null null null null /i1 /i1 /i1 /i1] def
+/_render -1 def
+/_rise 0 def
+/_ax 0 def			% x character spacing	(_ax, _ay, _cx, _cy follows awidthshow naming convention)
+/_ay 0 def			% y character spacing
+/_cx 0 def			% x word spacing
+/_cy 0 def			% y word spacing
+/_leading [0 0] def
+/_ctm matrix def
+/_mtx matrix def
+/_sp 16#020 def
+/_hyphen (-) def
+/_fScl 0 def
+/_cnt 0 def
+/_hs 1 def
+/_nativeEncoding 0 def
+/_useNativeEncoding 0 def
+/_tempEncode 0 def
+/_pntr 0 def
+/_tDict 2 dict def
+% typography operators
+/Tx {} def
+/Tj {} def
+% compound path operators
+/CRender {} def
+% printing
+/_AI3_savepage {} def
+% color operands
+/_gf null def
+/_cf 4 array def
+/_if null def
+/_of false def
+/_fc {} def
+/_gs null def
+/_cs 4 array def
+/_is null def
+/_os false def
+/_sc {} def
+/_i null def
+Adobe_IllustratorA_AI3 begin
+Adobe_IllustratorA_AI3
+	{
+	dup xcheck
+		{
+		bind
+		} if
+	pop pop
+	} forall
+end
+end
+Adobe_IllustratorA_AI3 begin
+Adobe_IllustratorA_AI3_vars begin
+newpath
+} def
+/terminate				% - terminate -
+{
+end
+end
+} def
+% definition operators
+/_					% - _ null
+null def
+/ddef				% key value ddef -
+{
+Adobe_IllustratorA_AI3_vars 3 1 roll put
+} def
+/xput				% key value literal xput -
+{
+dup load dup length exch maxlength eq
+	{
+	dup dup load dup
+	length 2 mul dict copy def
+	} if
+load begin def end
+} def
+/npop				% integer npop -
+{
+	{
+	pop
+	} repeat
+} def
+% marking operators
+/sw					% ax ay string sw x y 
+{
+dup length exch stringwidth
+exch 5 -1 roll 3 index 1 sub mul add
+4 1 roll 3 1 roll 1 sub mul add
+} def
+/swj				% cx cy fillchar ax ay string swj x y
+{
+dup 4 1 roll
+dup length exch stringwidth 
+exch 5 -1 roll 3 index 1 sub mul add
+4 1 roll 3 1 roll 1 sub mul add 
+6 2 roll /_cnt 0 ddef
+{1 index eq {/_cnt _cnt 1 add ddef} if} forall pop
+exch _cnt mul exch _cnt mul 2 index add 4 1 roll 2 index add 4 1 roll pop pop
+} def
+/ss					% ax ay string matrix ss -
+{
+4 1 roll
+	{				% matrix ax ay char 0 0 {proc} -
+	2 npop 
+	(0) exch 2 copy 0 exch put pop
+	gsave
+	false charpath currentpoint
+	4 index setmatrix
+	stroke
+	grestore
+	moveto
+	2 copy rmoveto
+	} exch cshow
+3 npop
+} def
+/jss				% cx cy fillchar ax ay string matrix jss -
+{
+4 1 roll
+	{				% cx cy fillchar matrix ax ay char 0 0 {proc} -   
+	2 npop 
+	(0) exch 2 copy 0 exch put 
+	gsave
+	_sp eq 
+		{
+		exch 6 index 6 index 6 index 5 -1 roll widthshow  
+		currentpoint
+		}
+		{
+		false charpath currentpoint
+		4 index setmatrix stroke
+		}ifelse
+	grestore
+	moveto
+	2 copy rmoveto
+	} exch cshow
+6 npop
+} def
+% path operators
+/sp					% ax ay string sp -
+{
+	{
+	2 npop (0) exch
+	2 copy 0 exch put pop
+	false charpath
+	2 copy rmoveto
+	} exch cshow
+2 npop
+} def
+/jsp					% cx cy fillchar ax ay string jsp -
+{
+	{					% cx cy fillchar ax ay char 0 0 {proc} -
+	2 npop 
+	(0) exch 2 copy 0 exch put 
+	_sp eq 
+		{
+		exch 5 index 5 index 5 index 5 -1 roll widthshow  
+		}
+		{
+		false charpath
+		}ifelse
+	2 copy rmoveto
+	} exch cshow
+5 npop
+} def
+% path construction operators
+/pl				% x y pl x y
+{
+transform
+0.25 sub round 0.25 add exch
+0.25 sub round 0.25 add exch
+itransform
+} def
+/setstrokeadjust where
+	{
+	pop true setstrokeadjust
+	/c				% x1 y1 x2 y2 x3 y3 c -
+	{
+	curveto
+	} def
+	/C
+	/c load def
+	/v				% x2 y2 x3 y3 v -
+	{
+	currentpoint 6 2 roll curveto
+	} def
+	/V
+	/v load def
+	/y				% x1 y1 x2 y2 y -
+	{
+	2 copy curveto
+	} def
+	/Y
+	/y load def
+	/l				% x y l -
+	{
+	lineto
+	} def
+	/L
+	/l load def
+	/m				% x y m -
+	{
+	moveto
+	} def
+	}
+	{%else
+	/c
+	{
+	pl curveto
+	} def
+	/C
+	/c load def
+	/v
+	{
+	currentpoint 6 2 roll pl curveto
+	} def
+	/V
+	/v load def
+	/y
+	{
+	pl 2 copy curveto
+	} def
+	/Y
+	/y load def
+	/l
+	{
+	pl lineto
+	} def
+	/L
+	/l load def
+	/m
+	{
+	pl moveto
+	} def
+	}ifelse
+% graphic state operators
+/d					% array phase d -
+{
+setdash
+} def
+/cf	{} def			% - cf flatness
+/i					% flatness i -
+{
+dup 0 eq
+	{
+	pop cf
+	} if
+setflat
+} def
+/j					% linejoin j -
+{
+setlinejoin
+} def
+/J					% linecap J -
+{
+setlinecap
+} def
+/M					% miterlimit M -
+{
+setmiterlimit
+} def
+/w					% linewidth w -
+{
+setlinewidth
+} def
+% path painting operators
+/H					% - H -
+{} def
+/h					% - h -
+{
+closepath
+} def
+/N					% - N -
+{
+_pola 0 eq 
+	{
+	_doClip 1 eq {clip /_doClip 0 ddef} if 
+	newpath
+	} 
+	{
+	/CRender {N} ddef
+	}ifelse
+} def
+/n					% - n -
+{N} def
+/F					% - F -
+{
+_pola 0 eq 
+	{
+	_doClip 1 eq 
+		{
+		gsave _pf grestore clip newpath /_lp /none ddef _fc 
+		/_doClip 0 ddef
+		}
+		{
+		_pf
+		}ifelse
+	} 
+	{
+	/CRender {F} ddef
+	}ifelse
+} def
+/f					% - f -
+{
+closepath
+F
+} def
+/S					% - S -
+{
+_pola 0 eq 
+	{
+	_doClip 1 eq 
+		{
+		gsave _ps grestore clip newpath /_lp /none ddef _sc 
+		/_doClip 0 ddef
+		}
+		{
+		_ps
+		}ifelse
+	} 
+	{
+	/CRender {S} ddef
+	}ifelse
+} def
+/s					% - s -
+{
+closepath
+S
+} def
+/B					% - B -
+{
+_pola 0 eq 
+	{
+	_doClip 1 eq 	% F clears _doClip
+	gsave F grestore 
+		{
+		gsave S grestore clip newpath /_lp /none ddef _sc
+		/_doClip 0 ddef
+		} 
+		{
+		S
+		}ifelse
+	}
+	{
+	/CRender {B} ddef
+	}ifelse
+} def
+/b					% - b -
+{
+closepath
+B
+} def
+/W					% - W -
+{
+/_doClip 1 ddef
+} def
+/*					% - [string] * -
+{
+count 0 ne 
+	{
+	dup type (stringtype) eq {pop} if
+	} if 
+_pola 0 eq {newpath} if
+} def
+% group operators
+/u					% - u -
+{} def
+/U					% - U -
+{} def
+/q					% - q -
+{
+_pola 0 eq {gsave} if
+} def
+/Q					% - Q -
+{
+_pola 0 eq {grestore} if
+} def
+/*u					% - *u -
+{
+_pola 1 add /_pola exch ddef
+} def
+/*U					% - *U -
+{
+_pola 1 sub /_pola exch ddef 
+_pola 0 eq {CRender} if
+} def
+/D					% polarized D -
+{pop} def
+/*w					% - *w -
+{} def
+/*W					% - *W -
+{} def
+% place operators
+/`					% matrix llx lly urx ury string ` -
+{
+/_i save ddef
+6 1 roll 4 npop
+concat pop
+userdict begin
+/showpage {} def
+0 setgray
+0 setlinecap
+1 setlinewidth
+0 setlinejoin
+10 setmiterlimit
+[] 0 setdash
+newpath
+0 setgray
+false setoverprint
+} def
+/~					% - ~ -
+{
+end
+_i restore
+} def
+% color operators
+/O					% flag O -
+{
+0 ne
+/_of exch ddef
+/_lp /none ddef
+} def
+/R					% flag R -
+{
+0 ne
+/_os exch ddef
+/_lp /none ddef
+} def
+/g					% gray g -
+{
+/_gf exch ddef
+/_fc
+{ 
+_lp /fill ne
+	{
+	_of setoverprint
+	_gf setgray
+	/_lp /fill ddef
+	} if
+} ddef
+/_pf
+{
+_fc
+fill
+} ddef
+/_psf
+{
+_fc
+ashow
+} ddef
+/_pjsf
+{
+_fc
+awidthshow
+} ddef
+/_lp /none ddef
+} def
+/G					% gray G -
+{
+/_gs exch ddef
+/_sc
+{
+_lp /stroke ne
+	{
+	_os setoverprint
+	_gs setgray
+	/_lp /stroke ddef
+	} if
+} ddef
+/_ps
+{
+_sc
+stroke
+} ddef
+/_pss
+{
+_sc
+ss
+} ddef
+/_pjss
+{
+_sc
+jss
+} ddef
+/_lp /none ddef
+} def
+/k					% cyan magenta yellow black k -
+{
+_cf astore pop
+/_fc
+{
+_lp /fill ne
+	{
+	_of setoverprint
+	_cf aload pop setcmykcolor
+	/_lp /fill ddef
+	} if
+} ddef
+/_pf
+{
+_fc
+fill
+} ddef
+/_psf
+{
+_fc
+ashow
+} ddef
+/_pjsf
+{
+_fc
+awidthshow
+} ddef
+/_lp /none ddef
+} def
+/K					% cyan magenta yellow black K -
+{
+_cs astore pop
+/_sc
+{
+_lp /stroke ne
+	{
+	_os setoverprint
+	_cs aload pop setcmykcolor
+	/_lp /stroke ddef
+	} if
+} ddef
+/_ps
+{
+_sc
+stroke
+} ddef
+/_pss
+{
+_sc
+ss
+} ddef
+/_pjss
+{
+_sc
+jss
+} ddef
+/_lp /none ddef
+} def
+/x					% cyan magenta yellow black name gray x -
+{
+/_gf exch ddef
+findcmykcustomcolor
+/_if exch ddef
+/_fc
+{ 
+_lp /fill ne
+	{
+	_of setoverprint
+	_if _gf 1 exch sub setcustomcolor
+	/_lp /fill ddef
+	} if
+} ddef
+/_pf
+{
+_fc
+fill
+} ddef
+/_psf
+{
+_fc
+ashow
+} ddef
+/_pjsf
+{
+_fc
+awidthshow
+} ddef
+/_lp /none ddef
+} def
+/X					% cyan magenta yellow black name gray X -
+{
+/_gs exch ddef
+findcmykcustomcolor
+/_is exch ddef
+/_sc
+{
+_lp /stroke ne
+	{
+	_os setoverprint
+	_is _gs 1 exch sub setcustomcolor
+	/_lp /stroke ddef
+	} if
+} ddef
+/_ps
+{
+_sc
+stroke
+} ddef
+/_pss
+{
+_sc
+ss
+} ddef
+/_pjss
+{
+_sc
+jss
+} ddef
+/_lp /none ddef
+} def
+% locked object operator
+/A					% value A -
+{
+pop
+} def
+currentdict readonly pop end
+setpacking
+% annotate page operator
+/annotatepage
+{
+} def
+%%EndResource
+%%EndProlog
+%%BeginSetup
+Adobe_cmykcolor /initialize get exec
+Adobe_cshow /initialize get exec
+Adobe_customcolor /initialize get exec
+Adobe_typography_AI3 /initialize get exec
+Adobe_IllustratorA_AI3 /initialize get exec
+%%EndSetup
+0 To
+0.707 0.707 -0.707 0.707 148.492 219.203 0 Tp
+TP
+2 Tr
+0.000 0.000 0.000 0.500 k
+0.000 0.000 0.000 1.000 K
+0 J
+0 j
+0.707 w
+10.000 M
+[] 0.000 d
+/Helvetica 72 Tf
+() Tx
+0 Tt
+0.000 Tc
+TO
+0 i
+1 J
+1 j
+1.000 w
+143.500 409.920 m
+229.000 482.920 l
+S
+0.000 0.000 0.000 1.000 k
+228.681 482.652 m
+227.074 484.567 l
+233.469 486.669 l
+230.288 480.737 l
+228.681 482.652 l
+f
+143.500 409.920 m
+115.500 480.420 l
+S
+115.656 480.034 m
+113.338 479.097 l
+113.315 485.828 l
+117.974 480.970 l
+115.656 480.034 l
+f
+341.500 25.920 m
+341.500 115.920 l
+S
+341.500 115.503 m
+339.000 115.503 l
+341.500 121.753 l
+344.000 115.503 l
+341.500 115.503 l
+f
+289.752 289.818 m
+289.752 291.475 289.752 292.818 y
+289.756 291.475 289.756 289.818 v
+289.756 288.161 289.755 286.818 y
+289.752 288.161 289.752 289.818 v
+b
+341.500 121.920 m
+275.500 223.920 l
+S
+275.727 223.570 m
+273.630 222.209 l
+272.323 228.812 l
+277.824 224.932 l
+275.727 223.570 l
+f
+341.500 121.920 m
+341.500 217.920 l
+S
+341.500 217.503 m
+339.000 217.503 l
+341.500 223.753 l
+344.000 217.503 l
+341.500 217.503 l
+f
+341.500 121.920 m
+413.500 217.920 l
+S
+413.249 217.587 m
+411.253 219.092 l
+417.011 222.578 l
+415.246 216.083 l
+413.249 217.587 l
+f
+341.500 121.920 m
+481.500 217.920 l
+S
+481.155 217.687 m
+479.757 219.760 l
+486.336 221.182 l
+482.553 215.614 l
+481.155 217.687 l
+f
+341.500 25.920 m
+413.500 109.920 l
+S
+413.227 109.605 m
+411.340 111.245 l
+417.327 114.322 l
+415.113 107.965 l
+413.227 109.605 l
+f
+341.500 25.920 m
+485.500 109.920 l
+S
+485.139 109.712 m
+483.889 111.877 l
+490.552 112.837 l
+486.389 107.547 l
+485.139 109.712 l
+f
+0 To
+1.000 0.000 0.000 1.000 413.500 121.924 0 Tp
+TP
+0 Tr
+/Times-Roman 24 Tf
+(etc.) Tx
+TO
+0 To
+1.000 0.000 0.000 1.000 485.434 126.720 0 Tp
+TP
+0 Tr
+(etc.) Tx
+TO
+0 To
+1.000 0.000 0.000 1.000 473.500 234.720 0 Tp
+TP
+0 Tr
+(etc.) Tx
+TO
+0 To
+1.000 0.000 0.000 1.000 401.500 234.720 0 Tp
+TP
+0 Tr
+(etc.) Tx
+TO
+0 To
+1.000 0.000 0.000 1.000 323.500 234.720 0 Tp
+TP
+0 Tr
+(etc.) Tx
+TO
+0.000 0.000 0.000 0.000 k
+0.000 0.000 0.000 0.000 K
+0.864 w
+312.000 91.920 m
+355.472 91.920 l
+355.472 75.000 l
+312.000 75.000 l
+312.000 91.920 l
+b
+0 To
+1.000 0.000 0.000 1.000 316.000 76.520 0 Tp
+TP
+0 Tr
+0.000 0.000 0.000 1.000 k
+/Times-Roman 18 Tf
+(add 1) Tx
+TO
+0.000 0.000 0.000 0.000 k
+366.000 91.920 m
+409.472 91.920 l
+409.472 75.000 l
+366.000 75.000 l
+366.000 91.920 l
+b
+0 To
+1.000 0.000 0.000 1.000 370.000 76.520 0 Tp
+TP
+0 Tr
+0.000 0.000 0.000 1.000 k
+(add 2) Tx
+TO
+0.000 0.000 0.000 0.000 k
+417.246 91.920 m
+460.717 91.920 l
+460.717 75.000 l
+417.246 75.000 l
+417.246 91.920 l
+b
+0 To
+1.000 0.000 0.000 1.000 421.245 76.520 0 Tp
+TP
+0 Tr
+0.000 0.000 0.000 1.000 k
+(add 3) Tx
+TO
+0.000 0.000 0.000 0.000 k
+270.000 193.920 m
+313.472 193.920 l
+313.472 177.000 l
+270.000 177.000 l
+270.000 193.920 l
+b
+0 To
+1.000 0.000 0.000 1.000 274.000 178.520 0 Tp
+TP
+0 Tr
+0.000 0.000 0.000 1.000 k
+(add 2) Tx
+TO
+0.000 0.000 0.000 0.000 k
+324.000 193.920 m
+367.472 193.920 l
+367.472 177.000 l
+324.000 177.000 l
+324.000 193.920 l
+b
+0 To
+1.000 0.000 0.000 1.000 328.000 178.520 0 Tp
+TP
+0 Tr
+0.000 0.000 0.000 1.000 k
+(add 3) Tx
+TO
+0.000 0.000 0.000 0.000 k
+372.000 193.920 m
+415.472 193.920 l
+415.472 177.000 l
+372.000 177.000 l
+372.000 193.920 l
+b
+0 To
+1.000 0.000 0.000 1.000 376.000 178.520 0 Tp
+TP
+0 Tr
+0.000 0.000 0.000 1.000 k
+(add 4) Tx
+TO
+0.000 0.000 0.000 0.000 k
+420.000 193.920 m
+463.472 193.920 l
+463.472 177.000 l
+420.000 177.000 l
+420.000 193.920 l
+b
+0 To
+1.000 0.000 0.000 1.000 424.000 178.520 0 Tp
+TP
+0 Tr
+0.000 0.000 0.000 1.000 k
+(add 5) Tx
+TO
+0.000 0.000 0.000 1.000 K
+1.000 w
+269.500 229.920 m
+197.500 301.920 l
+S
+197.795 301.625 m
+196.027 299.858 l
+193.375 306.045 l
+199.562 303.393 l
+197.795 301.625 l
+f
+269.500 229.920 m
+269.500 301.920 l
+S
+269.500 301.503 m
+267.000 301.503 l
+269.500 307.753 l
+272.000 301.503 l
+269.500 301.503 l
+f
+269.500 229.920 m
+341.500 301.920 l
+S
+341.206 301.625 m
+339.438 303.393 l
+345.625 306.045 l
+342.973 299.858 l
+341.206 301.625 l
+f
+0.000 0.000 0.000 0.000 k
+0.000 0.000 0.000 0.000 K
+0.864 w
+198.000 283.920 m
+241.472 283.920 l
+241.472 267.000 l
+198.000 267.000 l
+198.000 283.920 l
+b
+0 To
+1.000 0.000 0.000 1.000 202.000 268.520 0 Tp
+TP
+0 Tr
+0.000 0.000 0.000 1.000 k
+(add 3) Tx
+TO
+0.000 0.000 0.000 0.000 k
+246.000 283.920 m
+289.472 283.920 l
+289.472 267.000 l
+246.000 267.000 l
+246.000 283.920 l
+b
+0 To
+1.000 0.000 0.000 1.000 250.000 268.520 0 Tp
+TP
+0 Tr
+0.000 0.000 0.000 1.000 k
+(add 1) Tx
+TO
+0.000 0.000 0.000 0.000 k
+246.000 283.920 m
+289.472 283.920 l
+289.472 267.000 l
+246.000 267.000 l
+246.000 283.920 l
+b
+0 To
+1.000 0.000 0.000 1.000 250.000 268.520 0 Tp
+TP
+0 Tr
+0.000 0.000 0.000 1.000 k
+(add 4) Tx
+TO
+0.000 0.000 0.000 0.000 k
+294.000 283.920 m
+337.472 283.920 l
+337.472 267.000 l
+294.000 267.000 l
+294.000 283.920 l
+b
+0 To
+1.000 0.000 0.000 1.000 298.000 268.520 0 Tp
+TP
+0 Tr
+0.000 0.000 0.000 1.000 k
+(add 5) Tx
+TO
+0.000 0.000 0.000 1.000 K
+1.000 w
+473.500 82.080 m
+473.500 83.273 474.467 84.240 475.660 84.240 c
+476.853 84.240 477.820 83.273 477.820 82.080 c
+477.820 80.887 476.853 79.920 475.660 79.920 c
+474.467 79.920 473.500 80.887 473.500 82.080 c
+b
+482.140 82.080 m
+482.140 83.273 483.107 84.240 484.300 84.240 c
+485.493 84.240 486.460 83.273 486.460 82.080 c
+486.460 80.887 485.493 79.920 484.300 79.920 c
+483.107 79.920 482.140 80.887 482.140 82.080 c
+b
+490.780 82.080 m
+490.780 83.273 491.747 84.240 492.940 84.240 c
+494.133 84.240 495.100 83.273 495.100 82.080 c
+495.100 80.887 494.133 79.920 492.940 79.920 c
+491.747 79.920 490.780 80.887 490.780 82.080 c
+b
+473.500 184.080 m
+473.500 185.273 474.467 186.240 475.660 186.240 c
+476.853 186.240 477.820 185.273 477.820 184.080 c
+477.820 182.887 476.853 181.920 475.660 181.920 c
+474.467 181.920 473.500 182.887 473.500 184.080 c
+b
+482.140 184.080 m
+482.140 185.273 483.107 186.240 484.300 186.240 c
+485.493 186.240 486.460 185.273 486.460 184.080 c
+486.460 182.887 485.493 181.920 484.300 181.920 c
+483.107 181.920 482.140 182.887 482.140 184.080 c
+b
+490.780 184.080 m
+490.780 185.273 491.747 186.240 492.940 186.240 c
+494.133 186.240 495.100 185.273 495.100 184.080 c
+495.100 182.887 494.133 181.920 492.940 181.920 c
+491.747 181.920 490.780 182.887 490.780 184.080 c
+b
+347.500 274.080 m
+347.500 275.273 348.467 276.240 349.660 276.240 c
+350.853 276.240 351.820 275.273 351.820 274.080 c
+351.820 272.887 350.853 271.920 349.660 271.920 c
+348.467 271.920 347.500 272.887 347.500 274.080 c
+b
+356.140 274.080 m
+356.140 275.273 357.107 276.240 358.300 276.240 c
+359.493 276.240 360.460 275.273 360.460 274.080 c
+360.460 272.887 359.493 271.920 358.300 271.920 c
+357.107 271.920 356.140 272.887 356.140 274.080 c
+b
+364.780 274.080 m
+364.780 275.273 365.747 276.240 366.940 276.240 c
+368.133 276.240 369.100 275.273 369.100 274.080 c
+369.100 272.887 368.133 271.920 366.940 271.920 c
+365.747 271.920 364.780 272.887 364.780 274.080 c
+b
+[2.000 2.000] 0.000 d
+191.500 307.920 m
+167.500 349.920 l
+S
+167.708 349.559 m
+165.543 348.309 l
+164.583 354.972 l
+169.873 350.809 l
+167.708 349.559 l
+f
+163.500 357.920 m
+143.500 403.920 l
+S
+143.663 403.536 m
+141.361 402.560 l
+141.221 409.289 l
+145.964 404.513 l
+143.663 403.536 l
+f
+[] 0.000 d
+143.500 409.920 m
+345.000 485.420 l
+S
+344.611 485.271 m
+343.715 487.604 l
+350.446 487.510 l
+345.507 482.936 l
+344.611 485.271 l
+f
+0.000 0.000 0.000 0.000 k
+0.000 0.000 0.000 0.000 K
+0.864 w
+102.000 463.920 m
+145.472 463.920 l
+145.472 447.000 l
+102.000 447.000 l
+102.000 463.920 l
+b
+0 To
+1.000 0.000 0.000 1.000 106.000 448.520 0 Tp
+TP
+0 Tr
+0.000 0.000 0.000 1.000 k
+(add 8) Tx
+TO
+0.000 0.000 0.000 0.000 k
+246.000 463.920 m
+289.472 463.920 l
+289.472 447.000 l
+246.000 447.000 l
+246.000 463.920 l
+b
+0 To
+1.000 0.000 0.000 1.000 250.000 448.520 0 Tp
+TP
+0 Tr
+0.000 0.000 0.000 1.000 k
+(add 10) Tx
+TO
+0.000 0.000 0.000 0.000 k
+172.623 462.870 m
+216.095 462.870 l
+216.095 445.950 l
+172.623 445.950 l
+172.623 462.870 l
+b
+0 To
+1.000 0.000 0.000 1.000 176.623 447.470 0 Tp
+TP
+0 Tr
+0.000 0.000 0.000 1.000 k
+(add 9) Tx
+TO
+0.000 0.000 0.000 1.000 K
+1.000 w
+113.500 487.920 m
+91.500 558.920 l
+S
+91.622 558.521 m
+89.231 557.791 l
+89.795 564.498 l
+94.013 559.252 l
+91.622 558.521 l
+f
+113.500 487.920 m
+146.500 559.420 l
+S
+146.324 559.042 m
+144.058 560.099 l
+148.965 564.706 l
+148.590 557.986 l
+146.324 559.042 l
+f
+89.500 565.920 m
+89.500 619.920 l
+S
+89.500 619.503 m
+87.000 619.503 l
+89.500 625.753 l
+92.000 619.503 l
+89.500 619.503 l
+f
+149.000 565.420 m
+149.500 642.920 l
+S
+149.500 642.503 m
+147.000 642.503 l
+149.500 648.753 l
+152.000 642.503 l
+149.500 642.503 l
+f
+0.000 0.000 0.000 0.000 k
+0.000 0.000 0.000 0.000 K
+0.864 w
+72.000 541.920 m
+115.472 541.920 l
+115.472 525.000 l
+72.000 525.000 l
+72.000 541.920 l
+b
+0 To
+1.000 0.000 0.000 1.000 76.000 526.520 0 Tp
+TP
+0 Tr
+0.000 0.000 0.000 1.000 k
+(add 9) Tx
+TO
+0.000 0.000 0.000 0.000 k
+132.000 601.920 m
+175.472 601.920 l
+175.472 585.000 l
+132.000 585.000 l
+132.000 601.920 l
+b
+0 To
+1.000 0.000 0.000 1.000 136.000 586.520 0 Tp
+TP
+0 Tr
+0.000 0.000 0.000 1.000 k
+(add 9) Tx
+TO
+0.000 0.000 0.000 0.000 k
+66.000 601.920 m
+109.472 601.920 l
+109.472 585.000 l
+66.000 585.000 l
+66.000 601.920 l
+b
+0 To
+1.000 0.000 0.000 1.000 70.000 586.520 0 Tp
+TP
+0 Tr
+0.000 0.000 0.000 1.000 k
+(add 3) Tx
+TO
+0.000 0.000 0.000 0.000 k
+66.000 601.920 m
+109.472 601.920 l
+109.472 585.000 l
+66.000 585.000 l
+66.000 601.920 l
+b
+0 To
+1.000 0.000 0.000 1.000 70.000 586.520 0 Tp
+TP
+0 Tr
+0.000 0.000 0.000 1.000 k
+(add 10) Tx
+TO
+0.000 0.000 0.000 0.000 k
+126.000 541.920 m
+169.472 541.920 l
+169.472 525.000 l
+126.000 525.000 l
+126.000 541.920 l
+b
+0 To
+1.000 0.000 0.000 1.000 130.000 526.520 0 Tp
+TP
+0 Tr
+0.000 0.000 0.000 1.000 k
+(add 10) Tx
+TO
+0.000 0.000 0.000 1.000 K
+1.000 w
+233.500 487.920 m
+212.000 558.920 l
+S
+212.122 558.521 m
+209.731 557.791 l
+210.295 564.498 l
+214.513 559.252 l
+212.122 558.521 l
+f
+234.000 487.920 m
+264.500 557.420 l
+S
+264.331 557.039 m
+262.047 558.056 l
+266.873 562.749 l
+266.614 556.022 l
+264.331 557.039 l
+f
+209.500 565.920 m
+209.500 619.920 l
+S
+209.500 619.503 m
+207.000 619.503 l
+209.500 625.753 l
+212.000 619.503 l
+209.500 619.503 l
+f
+267.500 563.420 m
+267.500 644.920 l
+S
+267.500 644.503 m
+265.000 644.503 l
+267.500 650.753 l
+270.000 644.503 l
+267.500 644.503 l
+f
+0.000 0.000 0.000 0.000 k
+0.000 0.000 0.000 0.000 K
+0.864 w
+192.000 541.920 m
+235.472 541.920 l
+235.472 525.000 l
+192.000 525.000 l
+192.000 541.920 l
+b
+0 To
+1.000 0.000 0.000 1.000 196.000 526.520 0 Tp
+TP
+0 Tr
+0.000 0.000 0.000 1.000 k
+(add 8) Tx
+TO
+0.000 0.000 0.000 0.000 k
+253.000 601.920 m
+296.472 601.920 l
+296.472 585.000 l
+253.000 585.000 l
+253.000 601.920 l
+b
+0 To
+1.000 0.000 0.000 1.000 257.000 586.520 0 Tp
+TP
+0 Tr
+0.000 0.000 0.000 1.000 k
+(add 8) Tx
+TO
+0.000 0.000 0.000 0.000 k
+186.000 601.920 m
+229.472 601.920 l
+229.472 585.000 l
+186.000 585.000 l
+186.000 601.920 l
+b
+0 To
+1.000 0.000 0.000 1.000 190.000 586.520 0 Tp
+TP
+0 Tr
+0.000 0.000 0.000 1.000 k
+(add 3) Tx
+TO
+0.000 0.000 0.000 0.000 k
+186.000 601.920 m
+229.472 601.920 l
+229.472 585.000 l
+186.000 585.000 l
+186.000 601.920 l
+b
+0 To
+1.000 0.000 0.000 1.000 190.000 586.520 0 Tp
+TP
+0 Tr
+0.000 0.000 0.000 1.000 k
+(add 10) Tx
+TO
+0.000 0.000 0.000 0.000 k
+240.000 541.920 m
+283.472 541.920 l
+283.472 525.000 l
+240.000 525.000 l
+240.000 541.920 l
+b
+0 To
+1.000 0.000 0.000 1.000 244.000 526.520 0 Tp
+TP
+0 Tr
+0.000 0.000 0.000 1.000 k
+(add 10) Tx
+TO
+0.000 0.000 0.000 1.000 K
+1.000 w
+350.746 487.920 m
+328.000 560.420 l
+S
+328.122 560.021 m
+325.731 559.291 l
+326.295 565.998 l
+330.513 560.752 l
+328.122 560.021 l
+f
+350.746 487.920 m
+385.000 560.920 l
+S
+384.824 560.542 m
+382.558 561.599 l
+387.465 566.206 l
+387.090 559.486 l
+384.824 560.542 l
+f
+326.746 565.920 m
+326.746 619.920 l
+S
+326.746 619.503 m
+324.246 619.503 l
+326.746 625.753 l
+329.246 619.503 l
+326.746 619.503 l
+f
+386.500 566.420 m
+386.500 643.920 l
+S
+386.500 643.503 m
+384.000 643.503 l
+386.500 649.753 l
+389.000 643.503 l
+386.500 643.503 l
+f
+0.000 0.000 0.000 0.000 k
+0.000 0.000 0.000 0.000 K
+0.864 w
+309.246 541.920 m
+352.717 541.920 l
+352.717 525.000 l
+309.246 525.000 l
+309.246 541.920 l
+b
+0 To
+1.000 0.000 0.000 1.000 313.245 526.520 0 Tp
+TP
+0 Tr
+0.000 0.000 0.000 1.000 k
+(add 8) Tx
+TO
+0.000 0.000 0.000 0.000 k
+369.246 601.920 m
+412.717 601.920 l
+412.717 585.000 l
+369.246 585.000 l
+369.246 601.920 l
+b
+0 To
+1.000 0.000 0.000 1.000 373.245 586.520 0 Tp
+TP
+0 Tr
+0.000 0.000 0.000 1.000 k
+(add 8) Tx
+TO
+0.000 0.000 0.000 0.000 k
+303.246 601.920 m
+346.717 601.920 l
+346.717 585.000 l
+303.246 585.000 l
+303.246 601.920 l
+b
+0 To
+1.000 0.000 0.000 1.000 307.245 586.520 0 Tp
+TP
+0 Tr
+0.000 0.000 0.000 1.000 k
+(add 3) Tx
+TO
+0.000 0.000 0.000 0.000 k
+303.246 601.920 m
+346.717 601.920 l
+346.717 585.000 l
+303.246 585.000 l
+303.246 601.920 l
+b
+0 To
+1.000 0.000 0.000 1.000 307.245 586.520 0 Tp
+TP
+0 Tr
+0.000 0.000 0.000 1.000 k
+(add 9) Tx
+TO
+0.000 0.000 0.000 0.000 k
+360.000 541.920 m
+403.472 541.920 l
+403.472 525.000 l
+360.000 525.000 l
+360.000 541.920 l
+b
+0 To
+1.000 0.000 0.000 1.000 364.000 526.520 0 Tp
+TP
+0 Tr
+0.000 0.000 0.000 1.000 k
+(add 9) Tx
+TO
+0 To
+1.000 0.000 0.000 1.000 257.467 313.920 0 Tp
+TP
+0 Tr
+/Times-Roman 24 Tf
+(etc.) Tx
+TO
+0 To
+1.000 0.000 0.000 1.000 333.467 311.920 0 Tp
+TP
+0 Tr
+(etc.) Tx
+TO
+0 To
+1.000 0.000 0.000 1.000 327.500 6.470 0 Tp
+TP
+0 Tr
+/Times-Roman 18 Tf
+(start) Tx
+TO
+0 To
+1.000 0.000 0.000 1.000 3.500 631.120 0 Tp
+TP
+0 Tr
+/Times-Roman 12 Tf
+(\(1,2,3,4,5,6,7,8,9,10\)) Tx
+TO
+0 To
+1.000 0.000 0.000 1.000 79.500 654.723 0 Tp
+TP
+0 Tr
+(\(1,2,3,4,5,6,7,8,10,9\)) Tx
+TO
+0 To
+1.000 0.000 0.000 1.000 158.910 631.120 0 Tp
+TP
+0 Tr
+(\(1,2,3,4,5,6,7,9,8,10\)) Tx
+TO
+0 To
+1.000 0.000 0.000 1.000 214.500 654.723 0 Tp
+TP
+0 Tr
+(\(1,2,3,4,5,6,7,9,10,8\)) Tx
+TO
+0 To
+1.000 0.000 0.000 1.000 276.500 631.120 0 Tp
+TP
+0 Tr
+(\(1,2,3,4,5,6,7,10,8,9\)) Tx
+TO
+0 To
+1.000 0.000 0.000 1.000 336.500 654.723 0 Tp
+TP
+0 Tr
+(\(1,2,3,4,5,6,7,10,9,8\)) Tx
+TO
+0.000 0.000 0.000 1.000 K
+1.000 w
+[2.000 2.000] 0.000 d
+269.396 330.820 m
+246.996 380.420 l
+S
+247.165 380.039 m
+244.881 379.023 l
+244.623 385.749 l
+249.449 381.056 l
+247.165 380.039 l
+f
+269.396 330.820 m
+269.396 381.220 l
+S
+269.396 380.803 m
+266.896 380.803 l
+269.396 387.053 l
+271.896 380.803 l
+269.396 380.803 l
+f
+269.396 330.820 m
+286.996 380.420 l
+S
+286.853 380.028 m
+284.504 380.884 l
+288.991 385.902 l
+289.202 379.173 l
+286.853 380.028 l
+f
+[] 0.000 d
+287.284 355.492 m
+287.284 356.446 288.057 357.220 289.012 357.220 c
+289.966 357.220 290.740 356.446 290.740 355.492 c
+290.740 354.538 289.966 353.764 289.012 353.764 c
+288.057 353.764 287.284 354.538 287.284 355.492 c
+b
+294.196 355.492 m
+294.196 356.446 294.969 357.220 295.924 357.220 c
+296.878 357.220 297.652 356.446 297.652 355.492 c
+297.652 354.538 296.878 353.764 295.924 353.764 c
+294.969 353.764 294.196 354.538 294.196 355.492 c
+b
+301.108 355.492 m
+301.108 356.446 301.881 357.220 302.836 357.220 c
+303.790 357.220 304.564 356.446 304.564 355.492 c
+304.564 354.538 303.790 353.764 302.836 353.764 c
+301.881 353.764 301.108 354.538 301.108 355.492 c
+b
+[2.000 2.000] 0.000 d
+351.996 329.820 m
+329.596 379.420 l
+S
+329.765 379.039 m
+327.481 378.023 l
+327.223 384.749 l
+332.049 380.056 l
+329.765 379.039 l
+f
+351.996 329.820 m
+351.996 380.220 l
+S
+351.996 379.803 m
+349.496 379.803 l
+351.996 386.053 l
+354.496 379.803 l
+351.996 379.803 l
+f
+351.996 329.820 m
+369.596 379.420 l
+S
+369.453 379.028 m
+367.104 379.884 l
+371.591 384.902 l
+371.803 378.173 l
+369.453 379.028 l
+f
+[] 0.000 d
+369.884 354.492 m
+369.884 355.446 370.658 356.220 371.612 356.220 c
+372.566 356.220 373.340 355.446 373.340 354.492 c
+373.340 353.538 372.566 352.764 371.612 352.764 c
+370.658 352.764 369.884 353.538 369.884 354.492 c
+b
+376.796 354.492 m
+376.796 355.446 377.570 356.220 378.524 356.220 c
+379.478 356.220 380.252 355.446 380.252 354.492 c
+380.252 353.538 379.478 352.764 378.524 352.764 c
+377.570 352.764 376.796 353.538 376.796 354.492 c
+b
+383.708 354.492 m
+383.708 355.446 384.482 356.220 385.436 356.220 c
+386.390 356.220 387.164 355.446 387.164 354.492 c
+387.164 353.538 386.390 352.764 385.436 352.764 c
+384.482 352.764 383.708 353.538 383.708 354.492 c
+b
+454.588 275.192 m
+454.588 276.146 455.362 276.920 456.316 276.920 c
+457.270 276.920 458.044 276.146 458.044 275.192 c
+458.044 274.238 457.270 273.464 456.316 273.464 c
+455.362 273.464 454.588 274.238 454.588 275.192 c
+b
+461.500 275.192 m
+461.500 276.146 462.274 276.920 463.228 276.920 c
+464.182 276.920 464.956 276.146 464.956 275.192 c
+464.956 274.238 464.182 273.464 463.228 273.464 c
+462.274 273.464 461.500 274.238 461.500 275.192 c
+b
+468.412 275.192 m
+468.412 276.146 469.186 276.920 470.140 276.920 c
+471.095 276.920 471.868 276.146 471.868 275.192 c
+471.868 274.238 471.095 273.464 470.140 273.464 c
+469.186 273.464 468.412 274.238 468.412 275.192 c
+b
+[2.000 2.000] 0.000 d
+517.803 141.630 m
+533.461 191.046 l
+S
+533.332 190.650 m
+530.955 191.423 l
+535.264 196.594 l
+535.710 189.878 l
+533.332 190.650 l
+f
+518.803 141.630 m
+557.543 191.334 l
+S
+557.287 191.006 m
+555.317 192.545 l
+561.135 195.931 l
+559.257 189.467 l
+557.287 191.006 l
+f
+518.803 141.630 m
+574.581 190.151 l
+S
+574.267 189.878 m
+572.627 191.765 l
+578.983 193.978 l
+575.907 187.991 l
+574.267 189.878 l
+f
+[] 0.000 d
+553.860 162.760 m
+553.860 163.953 554.827 164.920 556.020 164.920 c
+557.213 164.920 558.180 163.953 558.180 162.760 c
+558.180 161.567 557.213 160.600 556.020 160.600 c
+554.827 160.600 553.860 161.567 553.860 162.760 c
+b
+562.500 162.760 m
+562.500 163.953 563.467 164.920 564.660 164.920 c
+565.853 164.920 566.820 163.953 566.820 162.760 c
+566.820 161.567 565.853 160.600 564.660 160.600 c
+563.467 160.600 562.500 161.567 562.500 162.760 c
+b
+571.140 162.760 m
+571.140 163.953 572.107 164.920 573.300 164.920 c
+574.493 164.920 575.460 163.953 575.460 162.760 c
+575.460 161.567 574.493 160.600 573.300 160.600 c
+572.107 160.600 571.140 161.567 571.140 162.760 c
+b
+530.676 274.648 m
+530.676 275.602 531.449 276.376 532.404 276.376 c
+533.358 276.376 534.132 275.602 534.132 274.648 c
+534.132 273.693 533.358 272.920 532.404 272.920 c
+531.449 272.920 530.676 273.693 530.676 274.648 c
+b
+537.588 274.648 m
+537.588 275.602 538.362 276.376 539.316 276.376 c
+540.270 276.376 541.044 275.602 541.044 274.648 c
+541.044 273.693 540.270 272.920 539.316 272.920 c
+538.362 272.920 537.588 273.693 537.588 274.648 c
+b
+544.500 274.648 m
+544.500 275.602 545.274 276.376 546.228 276.376 c
+547.182 276.376 547.956 275.602 547.956 274.648 c
+547.956 273.693 547.182 272.920 546.228 272.920 c
+545.274 272.920 544.500 273.693 544.500 274.648 c
+b
+[2.000 2.000] 0.000 d
+499.350 253.835 m
+501.306 303.460 l
+S
+501.292 303.043 m
+498.793 303.130 l
+501.510 309.289 l
+503.790 302.956 l
+501.292 303.043 l
+f
+499.350 253.835 m
+524.150 304.124 l
+S
+523.968 303.749 m
+521.721 304.845 l
+526.708 309.366 l
+526.215 302.653 l
+523.968 303.749 l
+f
+499.350 253.835 m
+541.396 303.220 l
+S
+541.128 302.901 m
+539.213 304.508 l
+545.146 307.688 l
+543.044 301.294 l
+541.128 302.901 l
+f
+423.811 254.934 m
+422.705 304.860 l
+S
+422.712 304.443 m
+420.212 304.400 l
+422.603 310.692 l
+425.211 304.487 l
+422.712 304.443 l
+f
+423.811 254.934 m
+445.386 305.301 l
+S
+445.223 304.917 m
+442.922 305.894 l
+447.666 310.671 l
+447.525 303.941 l
+445.223 304.917 l
+f
+423.811 254.934 m
+462.596 304.220 l
+S
+462.340 303.891 m
+460.370 305.431 l
+466.188 308.817 l
+464.310 302.352 l
+462.340 303.891 l
+f
+%%PageTrailer
+gsave annotatepage grestore showpage
+%%Trailer
+Adobe_IllustratorA_AI3 /terminate get exec
+Adobe_typography_AI3 /terminate get exec
+Adobe_customcolor /terminate get exec
+Adobe_cshow /terminate get exec
+Adobe_cmykcolor /terminate get exec
+Adobe_packedarray /terminate get exec
+%%EOF
