@@ -1,0 +1,95 @@
+\documentclass[12pt]{article}
+\usepackage{hyperref}
+\def\baselinestretch{1.0}
+\setlength{\topmargin}{-30pt}
+\setlength{\textheight}{660pt}
+\setlength{\oddsidemargin}{0pt}
+\setlength{\evensidemargin}{60pt}
+\setlength{\textwidth}{477pt}
+\setlength{\footskip}{30pt}
+\parindent 0.3in
+\hyphenpenalty=10000
+\tolerance=10000
+\pagestyle{empty}
+
+\begin{document}
+{\large
+\noindent
+Genome 570 \hfill Winter, 2016\\
+Phylogenetic Inference \hfill J. Felsenstein\\
+}
+
+\vfill
+
+\centerline{Homework no. 4}
+\medskip
+
+\centerline{Due Wednesday, March 2}
+\bigskip
+
+\noindent
+Take the same data set you used for the previous homework (if
+possible) and do Bayesian inference of the phylogeny.
+Here are eight programs for this (some work only on DNA, only on RNA,
+or only on protein sequences):  When this PDF is viewed on-line,
+the links below should be active and lead you to the programs' web sites.
+
+\hspace*{0in}\hspace{-0.3in}{\parindent=-0.75in
+\fbox{
+\begin{tabular}{l l}
+{\tt MrBayes} & {\tt \url{http://www.mrbayes.net}}\\
+{\tt BEAST} & {\tt \url{http://beast.bio.ed.ac.uk}}\\
+{\tt Bayes Phylogenies} & {\tt
+\url{http://www.evolution.rdg.ac.uk/BayesPhy.html}}\\
+{\tt PHASE} & {\tt \url{http://www.bioinf.man.ac.uk/resources/phase/}}\\
+{\tt PhyloBayes} & {\tt
+\url{http://www.atgc-montpellier.fr/phylobayes/binaries.php}}\\
+& (a web server is near there too)\\
+{\tt PAML} & {\tt \url{http://abacus.gene.ucl.ac.uk/software/paml.html}} \\
+{\tt BAMBE} & {\tt \url{http://www.mathcs.duq.edu/larget/bambe.html}} \\
+{\tt p4} & {\tt \url{http://p4.nhm.ac.uk/}}
+\end{tabular}
+}
+}
+
+\noindent
+Alternatively, you can explore the other Bayesian programs in the
+Bayesian Inference section of the list of programs by Methods in my
+``Phylogeny Programs'' web pages (use that phrase to find the pages).
+\medskip
+
+\begin{itemize}
+\item Make the models as similar as you can to the ones used in the
+likelihood analysis.
+\item Show a tree summarizing the results of Bayesian inference on your
+data, with clade posterior probabilities.
+\item Explain what prior on trees (and what priors on parameter values)
+were used.  Don't just say ``the default priors'' but describe them.
+\item Compare the clade probabilities in the Bayesian analysis to the
+bootstrap $P$ values that you found in homework \#3.
+\item If there is a parameter in your model for transition/transversion
+ratio, have the program give it a prior, and allow it to vary during the
+run.  What information did the program give you on the posterior on
+the value of this parameter?
+\item If you can, do more than one Bayesian run.  Do they get similar
+results?  How did you decide how long to run the Bayesian program?
+\item If you choose rather different priors, does this change the results?
+\item Comment on the biological reasonableness of the results, if possible.
+\item Comment on the programs you used, how well they worked and how easy they
+were to use.
+\item Report this to me in a short (3-5 pages or so) report.  Show some
+results (including a tree with clade probabilities).
+\end{itemize}
+\medskip
+
+\noindent
+e-mail me {\tt (joe (at) gs.washington.edu)} with a report in PDF or MS Word
+(.DOCX or .DOC) format.
+format on the results.
+
+\vfill
+
+\vfill
+
+\end{document}
+
