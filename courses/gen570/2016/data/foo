@@ -1,0 +1,21 @@
+cp $1.prt infile
+./seqboot << END
+J
+J
+J
+J
+J
+i
+Y
+END
+mv outfile infile
+./seqboot << END
+J
+J
+J
+J
+J
+Y
+END
+mv outfile $1.prt
+ls *.prt

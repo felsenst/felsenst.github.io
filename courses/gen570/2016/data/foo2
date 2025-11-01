@@ -1,0 +1,7 @@
+rm outfile
+./protdist $1.prt << END
+$1.prt
+i
+y
+END
+ls *.prt
