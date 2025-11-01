@@ -1,0 +1,3 @@
+latex week1.tex
+dvips week1.dvi -o week1.ps
+ps2pdf -dAutoRotatePages=/None week1.ps

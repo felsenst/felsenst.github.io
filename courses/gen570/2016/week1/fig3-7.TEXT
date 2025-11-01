@@ -1,0 +1,18 @@
+1 REM calculate Fig3-7 numbers (tree shapes with bif'g rooted trees)
+5 DIM s(100)
+15 s(1) = 1
+20 FOR i = 2 TO 20 STEP 2
+25 a = 0
+30 FOR j = 1 TO ((i-1)/2)
+40 a = a+s(j)*s(i-j)
+50 NEXT j
+55 a = a+s(i/2)*(s(i/2)+1)/2
+60 s(i) = a
+70 PRINT i,s(i)
+90 a = 0
+100 FOR j = 1 TO i/2
+110 a = a+s(j)*s(i+1-j)
+120 NEXT j
+130 s(i+1) = a
+140 PRINT i+1,s(i+1)
+200 NEXT i
