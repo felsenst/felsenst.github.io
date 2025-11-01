@@ -1,0 +1,357 @@
+\documentclass[bluish,slideColor,colorBG,pdf]{prosper}
+\hypersetup{pdfpagemode=FullScreen}
+\usepackage{graphicx,amsfonts,amsmath,hyperref,color}
+\def\baselinestretch{1.0}
+\setlength{\topmargin}{-60pt}
+\setlength{\textheight}{460pt}
+\setlength{\oddsidemargin}{0pt}
+\setlength{\evensidemargin}{0pt}
+\setlength{\textwidth}{660pt}
+\setlength{\footskip}{0pt}
+\parindent 0.3in
+\hyphenpenalty=10000
+\tolerance=10000
+\pagestyle{empty}
+
+\def\Prob{{\rm Prob\;}}
+\def\prob{{\rm \;Prob\;}}
+\def\Var{{\rm Var}}        % Var
+\def\Cov{{\rm Cov}}        % Cov
+
+\DeclareSymbolFont{AMSb}{U}{msb}{m}{n}
+\DeclareMathSymbol{\expect}{\mathalpha}{AMSb}{'105}
+
+% bold math (use \bm{...})
+\def\bm#1{\mathpalette\bmstyle{#1}}
+\def\bmstyle#1#2{\mbox{\boldmath$#1#2$}}
+
+\title{Week 7:  Bayesian inference}
+\author{Genome 570}
+\institution{February, 2016}
+
+\begin{document}
+
+\maketitle
+
+\begin{slide}[Replace]{\bf Bayes' Theorem}
+
+Conditional probability of hypothesis given data is:
+\[
+\mathsf{\prob(H\;|\;D)\ = \ {\prob(H\;\&\;D) \over \prob(D)}}
+\]
+
+Since
+\[
+\mathsf{\prob(H\;\&\;D)\ =\ \prob(H)\ \prob(D\;|\;H)},
+\]
+
+substituting this in:
+\[
+\mathsf{\prob(H\;|\;D)\ = \ {\prob(H)\ \prob(D\;|\;H) \over \prob(D)}}
+\]
+The denominator $\mathsf{\prob(D)}$
+is the sum of the numerators over all possible hypotheses $~\mathsf{H}$, so it
+is the sum of the numerators over those, giving
+\[
+\mathsf{\prob(H\;|\;D)\ = \ {\prob(H)\ \prob(D\;|\;H) \over \sum_H \prob(H)\ \prob(D\;|\;H)}}
+\]
+
+\end{slide}
+
+\begin{slide}[Replace]{A visual example of Bayes' Theorem}
+\bigskip
+
+\centerline{\includegraphics[width=3.3in]{bayestheorem.idraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{A dramatic, if not real, example}
+
+\centerline{\bf Example: ``Space probe photos show no Little Green Men on Mars!"}
+\medskip
+
+\centerline{\includegraphics[height=2.8in]{littlegreenmen.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Calculations for that example}
+
+\noindent
+Using the Odds Ratio form of Bayes' Theorem:
+\[
+\begin{array}{c c c c}
+\mathsf{\frac{\prob(H_1|D)\raisebox{-1pt}{\strut}}{\prob(H_2|D)\raisebox{1pt}{\strut}}} & \mathsf{=} & \mathsf{\frac{\prob(D|H_1)\raisebox{-1pt}{\strut}}{\prob(D|H_2)\raisebox{1pt}{\strut}}} &  \mathsf{\frac{\prob(H_1)\raisebox{-1pt}{\strut}}{\prob(H_2)\raisebox{1pt}{\strut}}}\\
+\mathsf{\underbrace{~~~~~~~~~~~~~~}} & & \mathsf{\underbrace{~~~~~~~~~}} & \mathsf{\underbrace{~~~~~~~}}\\
+{\rm posterior} & & {\rm likelihood} & {\rm prior~~~~}\\
+{\rm odds~ratio} & & {\rm ratio} & {\rm odds~ratio}
+\end{array}
+\]
+
+\noindent
+For the odds favoring their existence, the calculation is, for the optimist
+about Little Green Men:
+\[
+\mathsf{\frac{4}{1} \times \frac{1/3}{1} \ \ = \ \ \frac{4/3}{1} \ \ = \ \ 4:3}
+\]
+
+\noindent
+While for the pessimist it is
+\[
+\mathsf{\frac{1}{4} \times \frac{1/3}{1} \ \ = \ \ \frac{1/12}{1} \ \ = \ \ 1:12}
+\]
+
+
+\end{slide}
+
+\begin{slide}[Replace]{With repeated observation the prior matters less}
+
+\noindent
+If we send 5 space probes, and all fail to see LGMs, since the probability
+of this observation is $\mathsf{~(1/3)^5~}$ if there are LGMs, and $~\mathsf{1}~$ if there aren't,
+
+we get for the optimist about Little Green Men:
+\[
+\mathsf{\frac{4}{1} \times \frac{(1/3)^5}{1} \ \ = \ \  = \ \ \frac{4/243}{1} \ \ = \ \ 4:243}
+\]
+
+while for the pessimist about Little Green Men:
+\[
+\mathsf{\frac{1}{4} \times \frac{(1/3)^5}{1} \ \ = \ \  = \ \ \frac{1/972}{1} \ \ = \ \ 1:972}
+\]
+
+\end{slide}
+
+\begin{slide}[Replace]{A coin tossing example}
+
+\begin{center}
+\begin{tabular}{l c c}
+\parbox[b]{0.4in}{\ptsize{8}The prior\\{~~}\\} & \includegraphics[width=0.85in]{fig18-1a.ydraw} & \includegraphics[width=0.85in]{fig18-1a.ydraw}\\
+\parbox[b]{0.4in}{\ptsize{8} The\\ likelihood\\ function\\{~~}\\} & \includegraphics[width=0.85in]{fig18-1b.ydraw} & \includegraphics[width=0.85in]{fig18-1c.ydraw}\\
+\parbox[b]{0.4in}{\ptsize{8} The posterior\\{~~}\\} & \includegraphics[width=0.85in]{fig18-1d.ydraw} & \includegraphics[width=0.85in]{fig18-1e.ydraw}\\
+ & 11 tosses with 5 heads & 44 tosses with 20 heads
+\end{tabular}
+\end{center}
+
+\end{slide}
+
+\begin{slide}[Replace]{Markov Chain Monte Carlo sampling}
+
+To draw trees from a distribution whose probabilities are proportional to $~\mathsf{f(t)}$, we can use the Metropolis algorithm:
+\begin{enumerate} 
+\setlength{\itemsep}{2pt}
+\item Start at some tree.  Call this $\mathsf{T_i}$.
+\item Pick a tree that is a neighbor of this tree in the graph of trees.  Call
+this the proposal $\mathsf{T_j}$.
+\item Compute the ratio of the probabilities (or probability density
+functions) of the proposed new tree and the old tree:
+\[
+\mathsf{R \ = \ {f(T_j) \over f(T_i)}}
+\]
+\item If $\mathsf{R \ge 1}$, accept the new tree as the current tree.
+\item If $\mathsf{R < 1}$, draw a uniform random number (a random fraction between
+0 and 1).  If it is less than $\mathsf{R}$, accept the new tree as the current tree.
+\item Otherwise reject the new tree and continue with tree $\mathsf{T_i}$ as the
+current tree.
+\item Return to step 2.
+\end{enumerate}
+
+\end{slide}
+
+\begin{slide}[Replace]{Two programs demonstrating MCMC sampling}
+\bigskip
+
+Two excellent programs exist to demonstrate how MCMC finds peaks in a
+two-dimensional space.  The user can place the peaks and can run both
+regular and ``heated'' chains to explore the space.
+
+\begin{itemize}
+\item Paul Lewis's Windows program {\tt MCRobot} which is available at
+\textcolor{purple}{\href{http://www.eeb.uconn.edu/people/plewis/software.php}
+{http://www.eeb.uconn.edu/people/plewis/software.php}}
+\item John Huelsenbeck's similar Mac OS X program {\tt McmcApp} (also called {\tt
+iMCMC}) which is available at
+\textcolor{purple}{\href{http://cteg.berkeley.edu/software.html}{http://cteg.berkeley.edu/software.html}}\\
+(hint: to place a peak on the run window, before running move the cursor on
+the window while holding down the mouse button.  The peak is much wider than
+the initial ellipse, so keep that smallish).
+\end{itemize}
+ 
+We will demonstrate one of these in class.
+
+\end{slide}
+
+% \begin{slide}[Replace]{Reversibility (again) }
+% 
+% \centerline{\includegraphics[height=2.8in]{fig18-2.ydraw}}
+% 
+% \end{slide}
+% 
+% \begin{slide}[Replace]{Does it achieve the desired equilibrium distribution? }
+% 
+% 
+% If $~\mathsf{f(T_i) > f(T_j)}$,  then $~\mathsf{\Prob(T_i\;|\;T_j) = 1}$, and $~\mathsf{\Prob(T_j\;|\;T_i) = f(T_j) / f(T_i)}$ so that
+% \[
+% \mathsf{{\prob(T_j\;|\;T_i) \over \prob(T_i\;|\;T_j)}\ =\ {f(T_j) \over f(T_i)}}
+% \]
+% (the same formula can be shown to hold when $~\mathsf{f(T_i) < f(T_j)}~$).  Then in both cases
+% \[
+% \mathsf{f(T_i) \prob(T_j\;|\;T_i) \ = \ \prob(T_i\;|\;T_j)\; f(T_j)}
+% \]
+% 
+% Summing over all $~\mathsf{T_i}$, the right-hand side sums up to $~\mathsf{f(T_j)}~$ so
+% \[
+% \mathsf{\sum_{T_i} f(T_i) \prob(T_j\;|\;T_i)\ =\ f(T_j)}
+% \]
+% 
+% \noindent
+% This shows that applying this algorithm, if we start in the desired distribution,
+% we stay in it.  It is also true under most conditions that if you start in
+% any other distribution, you converge to this one.
+% 
+% \end{slide}
+% 
+\begin{slide}[Replace]{Bayesian MCMC}
+
+We try to achieve the posterior
+\[
+\mathsf{\prob(T) \prob(D\;|\;T) \ / \ (\rm denominator)}
+\]
+
+and this turns out to need the acceptance ratio
+\[
+R \ = \ \frac{\prob(T_{\rm new}) \prob(D\;|\;T_{\rm new})}{\prob(T_{\rm old}) \prob(D\;|\;T_{\rm old})}
+\]
+(the denominators are the same and cancel out.  This is a great convenience,
+as we often cannot evaluate the deonominator, but we can usually evaluate the
+numerators).
+\bigskip
+
+Note that we could also have a prior on model parameters too, and as we
+move through tree space we could also be moving through parameter space.
+
+\end{slide}
+
+% \begin{slide}[Replace]{Mau and Newton's proposal mechanism}
+% 
+% \centerline{\includegraphics[height=2.8in]{fig18-3.ydraw}}
+% 
+% \end{slide}
+
+\begin{slide}[Replace]{Using MrBayes on the primates data}
+\bigskip
+
+\centerline{\includegraphics[height=2.6in]{mrbayes.ydraw}}
+\bigskip
+
+\centerline{Frequencies of partitions (posterior clade probabilities)}
+
+\end{slide}
+
+\overlays{8}{
+\begin{slide}[Replace]{Issues to think about with Bayesian inference}
+\bigskip
+
+\begin{itemstep}
+\item Where do you get your prior from?
+\begin{itemize}
+\item Are you assuming each branch has a length drawn independently from a distribution?  How
+wide a distribution?
+\item Or is the tree drawn from a birth-death process?   If so, what are the
+rates of birth and death?
+\item Or is there also a stage where the species studied are chosen are selected from all
+extant species of the group?  How do you model that?  Are you modelling
+biologists' decision-making processes?
+\end{itemize}
+\item Is your prior the same as your reader's prior?
+\begin{itemize}
+\item If not, what do you do?
+\item Use several priors?
+\item Just give the reader the likelihood surface and let them provide their
+own prior?
+\end{itemize}
+\end{itemstep}
+
+\end{slide}
+}
+
+\begin{slide}[Replace]{An example}
+\bigskip
+
+Suppose we have two species with a Jukes-Cantor model, so that
+the estimation of the (unrooted) tree is simply the estimation of the branch
+length between the two species.
+\bigskip
+
+We can express the result either as branch length $\mathsf{t}$, or
+as the net probability of base change 
+\[
+\mathsf{p = \frac{3}{4}\left(1-\exp(-\frac{4}{3}t)\right)}
+\]
+
+\end{slide}
+
+\begin{slide}[Replace]{A flat prior on $~\mathsf{p}$ }
+
+\centerline{\includegraphics[height=2.8in]{fig18-4a.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{The corresponding prior on $~\mathsf{t}$ }
+
+\centerline{\includegraphics[height=2.8in]{fig18-4b.ydraw}}
+\bigskip
+
+So which is the ``flat prior''?
+
+\end{slide}
+
+\begin{slide}[Replace]{Flat prior for $\mathsf{t}$ between 0 and 5}
+
+\centerline{\includegraphics[height=2.8in]{fig18-6a.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{The corresponding prior on $\mathsf{p}$}
+
+\centerline{\includegraphics[height=2.8in]{fig18-6b.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{The invariance of the ML estimator to scale change}
+
+\centerline{\includegraphics[height=2.6in]{fig18-5a.ydraw}}
+\bigskip
+
+\centerline{Likelihood curve for $\mathsf{~t~}$ }
+
+\centerline{when 3 sites differ out of 10}
+
+\end{slide}
+
+\begin{slide}[Replace]{The invariance of the ML estimator to scale change}
+
+\centerline{\includegraphics[height=2.6in]{fig18-5b.ydraw}}
+
+\centerline{Likelihood curve for $\mathsf{~p~}$ }
+
+\centerline{when 3 sites differ out of 10}
+
+\end{slide}
+
+\begin{slide}[Replace]{When $\mathsf{~t~}$ has a wide flat prior}
+
+\centerline{\includegraphics[height=2.4in]{fig18-7.ydraw}}
+
+\centerline{The 95\% two-tailed credible interval for $~\mathsf{t}~$ with various}
+\centerline{truncation points on a flat prior for $~\mathsf{t}$}
+
+\end{slide}
+
+\begin{slide}[Replace]{What is going on in that case is ...}
+\bigskip
+
+\centerline{\includegraphics[height=2in]{goingon.ydraw}}
+
+\end{slide}
+
+\end{document}

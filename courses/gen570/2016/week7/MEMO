@@ -1,0 +1,16 @@
+   In Bayesian lecture
+     mention cancellation of denominators in Bayesian MCMC page
+     have some coverage of clade probabilities, how summarize trees
+     put reversibility page just after "proof" of MCMC working
+     after Mau and Newton, put the primates example tree
+   In likelihood ratio test
+     Figure showing test in a 2-d contour plot
+     Model selection: better numerical example.  Explain arrow thicknesses
+     Animate the topology-test figure to show significant against v=0, but
+       doubt about whether significant against best other tree
+     Goldman's test: annotate arrow "to infer actual distribution"
+   Bootstraps
+     need panel on block-bootstrap 
+     need panel on bootstrap bias correction (biascorrect1, biascorrect2)
+     mention danger of multiple-tests?
+     need better examples.  Use ML on same model, same data set in all 3

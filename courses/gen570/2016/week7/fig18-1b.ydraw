@@ -1,0 +1,2400 @@
+%!PS-Adobe-2.0 EPSF-1.2
+%%Creator: idraw
+%%DocumentFonts: Palatino-Roman
+%%Pages: 1
+%%BoundingBox: 115 185 497 571
+%%EndComments
+
+%%BeginIdrawPrologue
+/arrowhead {
+0 begin
+transform originalCTM itransform
+/taily exch def
+/tailx exch def
+transform originalCTM itransform
+/tipy exch def
+/tipx exch def
+/dy tipy taily sub def
+/dx tipx tailx sub def
+/angle dx 0 ne dy 0 ne or { dy dx atan } { 90 } ifelse def
+gsave
+originalCTM setmatrix
+tipx tipy translate
+angle rotate
+newpath
+arrowHeight neg arrowWidth 2 div moveto
+0 0 lineto
+arrowHeight neg arrowWidth 2 div neg lineto
+patternNone not {
+originalCTM setmatrix
+/padtip arrowHeight 2 exp 0.25 arrowWidth 2 exp mul add sqrt brushWidth mul
+arrowWidth div def
+/padtail brushWidth 2 div def
+tipx tipy translate
+angle rotate
+padtip 0 translate
+arrowHeight padtip add padtail add arrowHeight div dup scale
+arrowheadpath
+ifill
+} if
+brushNone not {
+originalCTM setmatrix
+tipx tipy translate
+angle rotate
+arrowheadpath
+istroke
+} if
+grestore
+end
+} dup 0 9 dict put def
+
+/arrowheadpath {
+newpath
+arrowHeight neg arrowWidth 2 div moveto
+0 0 lineto
+arrowHeight neg arrowWidth 2 div neg lineto
+} def
+
+/leftarrow {
+0 begin
+y exch get /taily exch def
+x exch get /tailx exch def
+y exch get /tipy exch def
+x exch get /tipx exch def
+brushLeftArrow { tipx tipy tailx taily arrowhead } if
+end
+} dup 0 4 dict put def
+
+/rightarrow {
+0 begin
+y exch get /tipy exch def
+x exch get /tipx exch def
+y exch get /taily exch def
+x exch get /tailx exch def
+brushRightArrow { tipx tipy tailx taily arrowhead } if
+end
+} dup 0 4 dict put def
+
+%%EndIdrawPrologue
+
+/arrowHeight 8 def
+/arrowWidth 4 def
+
+/IdrawDict 51 dict def
+IdrawDict begin
+
+/reencodeISO {
+dup dup findfont dup length dict begin
+{ 1 index /FID ne { def }{ pop pop } ifelse } forall
+/Encoding ISOLatin1Encoding def
+currentdict end definefont
+} def
+
+/ISOLatin1Encoding [
+/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+/space/exclam/quotedbl/numbersign/dollar/percent/ampersand/quoteright
+/parenleft/parenright/asterisk/plus/comma/minus/period/slash
+/zero/one/two/three/four/five/six/seven/eight/nine/colon/semicolon
+/less/equal/greater/question/at/A/B/C/D/E/F/G/H/I/J/K/L/M/N
+/O/P/Q/R/S/T/U/V/W/X/Y/Z/bracketleft/backslash/bracketright
+/asciicircum/underscore/quoteleft/a/b/c/d/e/f/g/h/i/j/k/l/m
+/n/o/p/q/r/s/t/u/v/w/x/y/z/braceleft/bar/braceright/asciitilde
+/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+/.notdef/dotlessi/grave/acute/circumflex/tilde/macron/breve
+/dotaccent/dieresis/.notdef/ring/cedilla/.notdef/hungarumlaut
+/ogonek/caron/space/exclamdown/cent/sterling/currency/yen/brokenbar
+/section/dieresis/copyright/ordfeminine/guillemotleft/logicalnot
+/hyphen/registered/macron/degree/plusminus/twosuperior/threesuperior
+/acute/mu/paragraph/periodcentered/cedilla/onesuperior/ordmasculine
+/guillemotright/onequarter/onehalf/threequarters/questiondown
+/Agrave/Aacute/Acircumflex/Atilde/Adieresis/Aring/AE/Ccedilla
+/Egrave/Eacute/Ecircumflex/Edieresis/Igrave/Iacute/Icircumflex
+/Idieresis/Eth/Ntilde/Ograve/Oacute/Ocircumflex/Otilde/Odieresis
+/multiply/Oslash/Ugrave/Uacute/Ucircumflex/Udieresis/Yacute
+/Thorn/germandbls/agrave/aacute/acircumflex/atilde/adieresis
+/aring/ae/ccedilla/egrave/eacute/ecircumflex/edieresis/igrave
+/iacute/icircumflex/idieresis/eth/ntilde/ograve/oacute/ocircumflex
+/otilde/odieresis/divide/oslash/ugrave/uacute/ucircumflex/udieresis
+/yacute/thorn/ydieresis
+] def
+/Palatino-Roman reencodeISO def
+
+/none null def
+/numGraphicParameters 17 def
+/stringLimit 65535 def
+
+/Begin {
+save
+numGraphicParameters dict begin
+} def
+
+/End {
+end
+restore
+} def
+
+/SetB {
+dup type /nulltype eq {
+pop
+false /brushRightArrow idef
+false /brushLeftArrow idef
+true /brushNone idef
+} {
+/brushDashOffset idef
+/brushDashArray idef
+0 ne /brushRightArrow idef
+0 ne /brushLeftArrow idef
+/brushWidth idef
+false /brushNone idef
+} ifelse
+} def
+
+/SetCFg {
+/fgblue idef
+/fggreen idef
+/fgred idef
+} def
+
+/SetCBg {
+/bgblue idef
+/bggreen idef
+/bgred idef
+} def
+
+/SetF {
+/printSize idef
+/printFont idef
+} def
+
+/SetP {
+dup type /nulltype eq {
+pop true /patternNone idef
+} {
+dup -1 eq {
+/patternGrayLevel idef
+/patternString idef
+} {
+/patternGrayLevel idef
+} ifelse
+false /patternNone idef
+} ifelse
+} def
+
+/BSpl {
+0 begin
+storexyn
+newpath
+n 1 gt {
+0 0 0 0 0 0 1 1 true subspline
+n 2 gt {
+0 0 0 0 1 1 2 2 false subspline
+1 1 n 3 sub {
+/i exch def
+i 1 sub dup i dup i 1 add dup i 2 add dup false subspline
+} for
+n 3 sub dup n 2 sub dup n 1 sub dup 2 copy false subspline
+} if
+n 2 sub dup n 1 sub dup 2 copy 2 copy false subspline
+patternNone not brushLeftArrow not brushRightArrow not and and { ifill } if
+brushNone not { istroke } if
+0 0 1 1 leftarrow
+n 2 sub dup n 1 sub dup rightarrow
+} if
+end
+} dup 0 4 dict put def
+
+/Circ {
+newpath
+0 360 arc
+closepath
+patternNone not { ifill } if
+brushNone not { istroke } if
+} def
+
+/CBSpl {
+0 begin
+dup 2 gt {
+storexyn
+newpath
+n 1 sub dup 0 0 1 1 2 2 true subspline
+1 1 n 3 sub {
+/i exch def
+i 1 sub dup i dup i 1 add dup i 2 add dup false subspline
+} for
+n 3 sub dup n 2 sub dup n 1 sub dup 0 0 false subspline
+n 2 sub dup n 1 sub dup 0 0 1 1 false subspline
+patternNone not { ifill } if
+brushNone not { istroke } if
+} {
+Poly
+} ifelse
+end
+} dup 0 4 dict put def
+
+/Elli {
+0 begin
+newpath
+4 2 roll
+translate
+scale
+0 0 1 0 360 arc
+closepath
+patternNone not { ifill } if
+brushNone not { istroke } if
+end
+} dup 0 1 dict put def
+
+/Line {
+0 begin
+2 storexyn
+newpath
+x 0 get y 0 get moveto
+x 1 get y 1 get lineto
+brushNone not { istroke } if
+0 0 1 1 leftarrow
+0 0 1 1 rightarrow
+end
+} dup 0 4 dict put def
+
+/MLine {
+0 begin
+storexyn
+newpath
+n 1 gt {
+x 0 get y 0 get moveto
+1 1 n 1 sub {
+/i exch def
+x i get y i get lineto
+} for
+patternNone not brushLeftArrow not brushRightArrow not and and { ifill } if
+brushNone not { istroke } if
+0 0 1 1 leftarrow
+n 2 sub dup n 1 sub dup rightarrow
+} if
+end
+} dup 0 4 dict put def
+
+/Poly {
+3 1 roll
+newpath
+moveto
+-1 add
+{ lineto } repeat
+closepath
+patternNone not { ifill } if
+brushNone not { istroke } if
+} def
+
+/Rect {
+0 begin
+/t exch def
+/r exch def
+/b exch def
+/l exch def
+newpath
+l b moveto
+l t lineto
+r t lineto
+r b lineto
+closepath
+patternNone not { ifill } if
+brushNone not { istroke } if
+end
+} dup 0 4 dict put def
+
+/Text {
+ishow
+} def
+
+/idef {
+dup where { pop pop pop } { exch def } ifelse
+} def
+
+/ifill {
+0 begin
+gsave
+patternGrayLevel -1 ne {
+fgred bgred fgred sub patternGrayLevel mul add
+fggreen bggreen fggreen sub patternGrayLevel mul add
+fgblue bgblue fgblue sub patternGrayLevel mul add setrgbcolor
+eofill
+} {
+eoclip
+originalCTM setmatrix
+pathbbox /t exch def /r exch def /b exch def /l exch def
+/w r l sub ceiling cvi def
+/h t b sub ceiling cvi def
+/imageByteWidth w 8 div ceiling cvi def
+/imageHeight h def
+bgred bggreen bgblue setrgbcolor
+eofill
+fgred fggreen fgblue setrgbcolor
+w 0 gt h 0 gt and {
+l w add b translate w neg h scale
+w h true [w 0 0 h neg 0 h] { patternproc } imagemask
+} if
+} ifelse
+grestore
+end
+} dup 0 8 dict put def
+
+/istroke {
+gsave
+brushDashOffset -1 eq {
+[] 0 setdash
+1 setgray
+} {
+brushDashArray brushDashOffset setdash
+fgred fggreen fgblue setrgbcolor
+} ifelse
+brushWidth setlinewidth
+originalCTM setmatrix
+stroke
+grestore
+} def
+
+/ishow {
+0 begin
+gsave
+fgred fggreen fgblue setrgbcolor
+/fontDict printFont printSize scalefont dup setfont def
+/descender fontDict begin 0 /FontBBox load 1 get FontMatrix end
+transform exch pop def
+/vertoffset 1 printSize sub descender sub def {
+0 vertoffset moveto show
+/vertoffset vertoffset printSize sub def
+} forall
+grestore
+end
+} dup 0 3 dict put def
+/patternproc {
+0 begin
+/patternByteLength patternString length def
+/patternHeight patternByteLength 8 mul sqrt cvi def
+/patternWidth patternHeight def
+/patternByteWidth patternWidth 8 idiv def
+/imageByteMaxLength imageByteWidth imageHeight mul
+stringLimit patternByteWidth sub min def
+/imageMaxHeight imageByteMaxLength imageByteWidth idiv patternHeight idiv
+patternHeight mul patternHeight max def
+/imageHeight imageHeight imageMaxHeight sub store
+/imageString imageByteWidth imageMaxHeight mul patternByteWidth add string def
+0 1 imageMaxHeight 1 sub {
+/y exch def
+/patternRow y patternByteWidth mul patternByteLength mod def
+/patternRowString patternString patternRow patternByteWidth getinterval def
+/imageRow y imageByteWidth mul def
+0 patternByteWidth imageByteWidth 1 sub {
+/x exch def
+imageString imageRow x add patternRowString putinterval
+} for
+} for
+imageString
+end
+} dup 0 12 dict put def
+
+/min {
+dup 3 2 roll dup 4 3 roll lt { exch } if pop
+} def
+
+/max {
+dup 3 2 roll dup 4 3 roll gt { exch } if pop
+} def
+
+/midpoint {
+0 begin
+/y1 exch def
+/x1 exch def
+/y0 exch def
+/x0 exch def
+x0 x1 add 2 div
+y0 y1 add 2 div
+end
+} dup 0 4 dict put def
+
+/thirdpoint {
+0 begin
+/y1 exch def
+/x1 exch def
+/y0 exch def
+/x0 exch def
+x0 2 mul x1 add 3 div
+y0 2 mul y1 add 3 div
+end
+} dup 0 4 dict put def
+
+/subspline {
+0 begin
+/movetoNeeded exch def
+y exch get /y3 exch def
+x exch get /x3 exch def
+y exch get /y2 exch def
+x exch get /x2 exch def
+y exch get /y1 exch def
+x exch get /x1 exch def
+y exch get /y0 exch def
+x exch get /x0 exch def
+x1 y1 x2 y2 thirdpoint
+/p1y exch def
+/p1x exch def
+x2 y2 x1 y1 thirdpoint
+/p2y exch def
+/p2x exch def
+x1 y1 x0 y0 thirdpoint
+p1x p1y midpoint
+/p0y exch def
+/p0x exch def
+x2 y2 x3 y3 thirdpoint
+p2x p2y midpoint
+/p3y exch def
+/p3x exch def
+movetoNeeded { p0x p0y moveto } if
+p1x p1y p2x p2y p3x p3y curveto
+end
+} dup 0 17 dict put def
+
+/storexyn {
+/n exch def
+/y n array def
+/x n array def
+n 1 sub -1 0 {
+/i exch def
+y i 3 2 roll put
+x i 3 2 roll put
+} for
+} def
+
+/SSten {
+fgred fggreen fgblue setrgbcolor
+dup true exch 1 0 0 -1 0 6 -1 roll matrix astore
+} def
+
+/FSten {
+dup 3 -1 roll dup 4 1 roll exch
+newpath
+0 0 moveto
+dup 0 exch lineto
+exch dup 3 1 roll exch lineto
+0 lineto
+closepath
+bgred bggreen bgblue setrgbcolor
+eofill
+SSten
+} def
+
+/Rast {
+exch dup 3 1 roll 1 0 0 -1 0 6 -1 roll matrix astore
+} def
+
+%%EndProlog
+
+%I Idraw 13 Grid 8 8 
+
+%%Page: 1 1
+
+Begin
+%I b u
+%I cfg u
+%I cbg u
+%I f u
+%I p u
+%I t u
+/originalCTM matrix currentmatrix def
+
+Begin %I Poly
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg Black
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.05 0 0 0.05 18 108 ] concat
+%I 4
+9216 2304
+9216 9216
+2304 9216
+2304 2304
+4 Poly
+End
+
+Begin %I Text
+%I cfg Black
+0 0 0 SetCFg
+%I f -adobe-times-medium-r-*-*-25-*-*-*-*-*-*-*
+Palatino-Roman 25 SetF
+%I t
+[ 1 0 0 1 120.59 212.477 ] concat
+%I
+[
+(0.0)
+] Text
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg Black
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.05 0 0 0.05 18 108 ] concat
+%I 2
+2304 9216
+2304 9078
+2 MLine
+%I 1
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg Black
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.05 0 0 0.05 18 108 ] concat
+%I 2
+2304 2304
+2304 2442
+2 MLine
+%I 1
+End
+
+Begin %I Text
+%I cfg Black
+0 0 0 SetCFg
+%I f -adobe-times-medium-r-*-*-25-*-*-*-*-*-*-*
+Palatino-Roman 25 SetF
+%I t
+[ 1 0 0 1 189.71 212.477 ] concat
+%I
+[
+(0.2)
+] Text
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg Black
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.05 0 0 0.05 18 108 ] concat
+%I 2
+3686 9216
+3686 9078
+2 MLine
+%I 1
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg Black
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.05 0 0 0.05 18 108 ] concat
+%I 2
+3686 2304
+3686 2442
+2 MLine
+%I 1
+End
+
+Begin %I Text
+%I cfg Black
+0 0 0 SetCFg
+%I f -adobe-times-medium-r-*-*-25-*-*-*-*-*-*-*
+Palatino-Roman 25 SetF
+%I t
+[ 1 0 0 1 258.83 212.477 ] concat
+%I
+[
+(0.4)
+] Text
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg Black
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.05 0 0 0.05 18 108 ] concat
+%I 2
+5069 9216
+5069 9078
+2 MLine
+%I 1
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg Black
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.05 0 0 0.05 18 108 ] concat
+%I 2
+5069 2304
+5069 2442
+2 MLine
+%I 1
+End
+
+Begin %I Text
+%I cfg Black
+0 0 0 SetCFg
+%I f -adobe-times-medium-r-*-*-25-*-*-*-*-*-*-*
+Palatino-Roman 25 SetF
+%I t
+[ 1 0 0 1 327.95 212.477 ] concat
+%I
+[
+(0.6)
+] Text
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg Black
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.05 0 0 0.05 18 108 ] concat
+%I 2
+6451 9216
+6451 9078
+2 MLine
+%I 1
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg Black
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.05 0 0 0.05 18 108 ] concat
+%I 2
+6451 2304
+6451 2442
+2 MLine
+%I 1
+End
+
+Begin %I Text
+%I cfg Black
+0 0 0 SetCFg
+%I f -adobe-times-medium-r-*-*-25-*-*-*-*-*-*-*
+Palatino-Roman 25 SetF
+%I t
+[ 1 0 0 1 397.07 212.477 ] concat
+%I
+[
+(0.8)
+] Text
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg Black
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.05 0 0 0.05 18 108 ] concat
+%I 2
+7834 9216
+7834 9078
+2 MLine
+%I 1
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg Black
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.05 0 0 0.05 18 108 ] concat
+%I 2
+7834 2304
+7834 2442
+2 MLine
+%I 1
+End
+
+Begin %I Text
+%I cfg Black
+0 0 0 SetCFg
+%I f -adobe-times-medium-r-*-*-25-*-*-*-*-*-*-*
+Palatino-Roman 25 SetF
+%I t
+[ 1 0 0 1 466.19 212.477 ] concat
+%I
+[
+(1.0)
+] Text
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg Black
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.05 0 0 0.05 18 108 ] concat
+%I 2
+9216 9216
+9216 9078
+2 MLine
+%I 1
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg Black
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.05 0 0 0.05 18 108 ] concat
+%I 2
+9216 2304
+9216 2442
+2 MLine
+%I 1
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg Black
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.05 0 0 0.05 18 108 ] concat
+%I 2
+2304 9216
+2304 9161
+2 MLine
+%I 1
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg Black
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.05 0 0 0.05 18 108 ] concat
+%I 2
+2304 2304
+2304 2359
+2 MLine
+%I 1
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg Black
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.05 0 0 0.05 18 108 ] concat
+%I 2
+2995 9216
+2995 9161
+2 MLine
+%I 1
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg Black
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.05 0 0 0.05 18 108 ] concat
+%I 2
+2995 2304
+2995 2359
+2 MLine
+%I 1
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg Black
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.05 0 0 0.05 18 108 ] concat
+%I 2
+3686 9216
+3686 9161
+2 MLine
+%I 1
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg Black
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.05 0 0 0.05 18 108 ] concat
+%I 2
+3686 2304
+3686 2359
+2 MLine
+%I 1
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg Black
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.05 0 0 0.05 18 108 ] concat
+%I 2
+4378 9216
+4378 9161
+2 MLine
+%I 1
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg Black
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.05 0 0 0.05 18 108 ] concat
+%I 2
+4378 2304
+4378 2359
+2 MLine
+%I 1
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg Black
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.05 0 0 0.05 18 108 ] concat
+%I 2
+5069 9216
+5069 9161
+2 MLine
+%I 1
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg Black
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.05 0 0 0.05 18 108 ] concat
+%I 2
+5069 2304
+5069 2359
+2 MLine
+%I 1
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg Black
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.05 0 0 0.05 18 108 ] concat
+%I 2
+5760 9216
+5760 9161
+2 MLine
+%I 1
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg Black
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.05 0 0 0.05 18 108 ] concat
+%I 2
+5760 2304
+5760 2359
+2 MLine
+%I 1
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg Black
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.05 0 0 0.05 18 108 ] concat
+%I 2
+6451 9216
+6451 9161
+2 MLine
+%I 1
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg Black
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.05 0 0 0.05 18 108 ] concat
+%I 2
+6451 2304
+6451 2359
+2 MLine
+%I 1
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg Black
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.05 0 0 0.05 18 108 ] concat
+%I 2
+7142 9216
+7142 9161
+2 MLine
+%I 1
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg Black
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.05 0 0 0.05 18 108 ] concat
+%I 2
+7142 2304
+7142 2359
+2 MLine
+%I 1
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg Black
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.05 0 0 0.05 18 108 ] concat
+%I 2
+7834 9216
+7834 9161
+2 MLine
+%I 1
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg Black
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.05 0 0 0.05 18 108 ] concat
+%I 2
+7834 2304
+7834 2359
+2 MLine
+%I 1
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg Black
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.05 0 0 0.05 18 108 ] concat
+%I 2
+8525 9216
+8525 9161
+2 MLine
+%I 1
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg Black
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.05 0 0 0.05 18 108 ] concat
+%I 2
+8525 2304
+8525 2359
+2 MLine
+%I 1
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg Black
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.05 0 0 0.05 18 108 ] concat
+%I 2
+9216 9216
+9216 9161
+2 MLine
+%I 1
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg Black
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.05 0 0 0.05 18 108 ] concat
+%I 2
+9216 2304
+9216 2359
+2 MLine
+%I 1
+End
+
+Begin %I Text
+%I cfg Black
+0 0 0 SetCFg
+%I f -adobe-times-medium-r-*-*-25-*-*-*-*-*-*-*
+Palatino-Roman 25 SetF
+%I t
+[ 1 0 0 1 117.928 236.331 ] concat
+%I
+[
+(0)
+] Text
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg Black
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.05 0 0 0.05 18 108 ] concat
+%I 2
+9216 2304
+9078 2304
+2 MLine
+%I 1
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg Black
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.05 0 0 0.05 18 108 ] concat
+%I 2
+2304 2304
+2442 2304
+2 MLine
+%I 1
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg Black
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.05 0 0 0.05 18 108 ] concat
+%I 2
+9216 9216
+9078 9216
+2 MLine
+%I 1
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg Black
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.05 0 0 0.05 18 108 ] concat
+%I 2
+2304 9216
+2442 9216
+2 MLine
+%I 1
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg Black
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.05 0 0 0.05 18 108 ] concat
+%I 2
+9216 2304
+9161 2304
+2 MLine
+%I 1
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg Black
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.05 0 0 0.05 18 108 ] concat
+%I 2
+2304 2304
+2359 2304
+2 MLine
+%I 1
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg Black
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.05 0 0 0.05 18 108 ] concat
+%I 2
+9216 9216
+9161 9216
+2 MLine
+%I 1
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg Black
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.05 0 0 0.05 18 108 ] concat
+%I 2
+2304 9216
+2359 9216
+2 MLine
+%I 1
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg Black
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.05 0 0 0.05 18 108 ] concat
+%I 500
+2304 2304
+2311 2304
+2318 2304
+2325 2304
+2332 2304
+2339 2304
+2345 2304
+2352 2304
+2359 2304
+2366 2304
+2373 2304
+2380 2304
+2387 2304
+2394 2304
+2401 2304
+2408 2304
+2415 2304
+2422 2304
+2428 2304
+2435 2304
+2442 2304
+2449 2304
+2456 2304
+2463 2304
+2470 2304
+2477 2304
+2484 2304
+2491 2304
+2498 2304
+2504 2304
+2511 2304
+2518 2304
+2525 2304
+2532 2304
+2539 2304
+2546 2304
+2553 2305
+2560 2305
+2567 2305
+2574 2305
+2580 2305
+2587 2305
+2594 2305
+2601 2305
+2608 2305
+2615 2306
+2622 2306
+2629 2306
+2636 2306
+2643 2306
+2650 2307
+2657 2307
+2663 2307
+2670 2307
+2677 2308
+2684 2308
+2691 2308
+2698 2309
+2705 2309
+2712 2310
+2719 2310
+2726 2311
+2733 2311
+2739 2312
+2746 2312
+2753 2313
+2760 2313
+2767 2314
+2774 2315
+2781 2315
+2788 2316
+2795 2317
+2802 2318
+2809 2319
+2815 2320
+2822 2321
+2829 2322
+2836 2323
+2843 2324
+2850 2325
+2857 2326
+2864 2328
+2871 2329
+2878 2330
+2885 2332
+2892 2333
+2898 2335
+2905 2337
+2912 2338
+2919 2340
+2926 2342
+2933 2344
+2940 2346
+2947 2348
+2954 2350
+2961 2352
+2968 2354
+2974 2357
+2981 2359
+2988 2361
+2995 2364
+3002 2367
+3009 2369
+3016 2372
+3023 2375
+3030 2378
+3037 2381
+3044 2384
+3050 2387
+3057 2391
+3064 2394
+3071 2398
+3078 2401
+3085 2405
+3092 2409
+3099 2413
+3106 2417
+3113 2421
+3120 2425
+3127 2430
+3133 2434
+3140 2439
+3147 2444
+3154 2448
+3161 2453
+3168 2458
+3175 2464
+3182 2469
+3189 2474
+3196 2480
+3203 2486
+3209 2491
+3216 2497
+3223 2503
+3230 2510
+3237 2516
+3244 2522
+3251 2529
+3258 2536
+3265 2542
+3272 2549
+3279 2556
+3286 2564
+3292 2571
+3299 2579
+3306 2586
+3313 2594
+3320 2602
+3327 2610
+3334 2619
+3341 2627
+3348 2636
+3355 2644
+3362 2653
+3368 2662
+3375 2671
+3382 2681
+3389 2690
+3396 2700
+3403 2709
+3410 2719
+3417 2729
+3424 2740
+3431 2750
+3438 2761
+3444 2771
+3451 2782
+3458 2793
+3465 2805
+3472 2816
+3479 2827
+3486 2839
+3493 2851
+3500 2863
+3507 2875
+3514 2888
+3521 2900
+3527 2913
+3534 2926
+3541 2939
+3548 2952
+3555 2965
+3562 2979
+3569 2992
+3576 3006
+3583 3020
+3590 3034
+3597 3049
+3603 3063
+3610 3078
+3617 3093
+3624 3108
+3631 3123
+3638 3138
+3645 3154
+3652 3169
+3659 3185
+3666 3201
+3673 3217
+3679 3233
+3686 3250
+3693 3267
+3700 3283
+3707 3300
+3714 3317
+3721 3335
+3728 3352
+3735 3370
+3742 3388
+3749 3405
+3756 3424
+3762 3442
+3769 3460
+3776 3479
+3783 3497
+3790 3516
+3797 3535
+3804 3554
+3811 3574
+3818 3593
+3825 3613
+3832 3633
+3838 3652
+3845 3672
+3852 3693
+3859 3713
+3866 3733
+3873 3754
+3880 3775
+3887 3796
+3894 3817
+3901 3838
+3908 3859
+3914 3881
+3921 3902
+3928 3924
+3935 3946
+3942 3968
+3949 3990
+3956 4012
+3963 4034
+3970 4057
+3977 4079
+3984 4102
+3991 4125
+3997 4148
+4004 4171
+4011 4194
+4018 4217
+4025 4241
+4032 4264
+4039 4288
+4046 4311
+4053 4335
+4060 4359
+4067 4383
+4073 4407
+4080 4431
+4087 4455
+4094 4480
+4101 4504
+4108 4529
+4115 4553
+4122 4578
+4129 4603
+4136 4627
+4143 4652
+4150 4677
+4156 4702
+4163 4728
+4170 4753
+4177 4778
+4184 4803
+4191 4829
+4198 4854
+4205 4880
+4212 4905
+4219 4931
+4226 4956
+4232 4982
+4239 5008
+4246 5034
+4253 5059
+4260 5085
+4267 5111
+4274 5137
+4281 5163
+4288 5189
+4295 5215
+4302 5241
+4308 5267
+4315 5293
+4322 5319
+4329 5345
+4336 5371
+4343 5397
+4350 5423
+4357 5450
+4364 5476
+4371 5502
+4378 5528
+4385 5554
+4391 5580
+4398 5606
+4405 5632
+4412 5658
+4419 5684
+4426 5710
+4433 5736
+4440 5762
+4447 5788
+4454 5814
+4461 5840
+4467 5866
+4474 5891
+4481 5917
+4488 5943
+4495 5968
+4502 5994
+4509 6020
+4516 6045
+4523 6070
+4530 6096
+4537 6121
+4543 6146
+4550 6171
+4557 6197
+4564 6222
+4571 6246
+4578 6271
+4585 6296
+4592 6321
+4599 6345
+4606 6370
+4613 6394
+4620 6419
+4626 6443
+4633 6467
+4640 6491
+4647 6515
+4654 6539
+4661 6563
+4668 6586
+4675 6610
+4682 6633
+4689 6656
+4696 6680
+4702 6703
+4709 6725
+4716 6748
+4723 6771
+4730 6793
+4737 6816
+4744 6838
+4751 6860
+4758 6882
+4765 6904
+4772 6926
+4778 6947
+4785 6968
+4792 6990
+4799 7011
+4806 7032
+4813 7052
+4820 7073
+4827 7093
+4834 7114
+4841 7134
+4848 7154
+4855 7174
+4861 7193
+4868 7213
+4875 7232
+4882 7251
+4889 7270
+4896 7288
+4903 7307
+4910 7325
+4917 7343
+4924 7361
+4931 7379
+4937 7397
+4944 7414
+4951 7431
+4958 7448
+4965 7465
+4972 7482
+4979 7498
+4986 7514
+4993 7530
+5000 7546
+5007 7561
+5014 7577
+5020 7592
+5027 7607
+5034 7621
+5041 7636
+5048 7650
+5055 7664
+5062 7678
+5069 7692
+5076 7705
+5083 7718
+5090 7731
+5096 7744
+5103 7756
+5110 7768
+5117 7780
+5124 7792
+5131 7804
+5138 7815
+5145 7826
+5152 7837
+5159 7847
+5166 7858
+5172 7868
+5179 7877
+5186 7887
+5193 7896
+5200 7906
+5207 7914
+5214 7923
+5221 7931
+5228 7940
+5235 7947
+5242 7955
+5249 7963
+5255 7970
+5262 7977
+5269 7983
+5276 7990
+5283 7996
+5290 8002
+5297 8007
+5304 8013
+5311 8018
+5318 8023
+5325 8027
+5331 8032
+5338 8036
+5345 8040
+5352 8043
+5359 8046
+5366 8050
+5373 8052
+5380 8055
+5387 8057
+5394 8059
+5401 8061
+5407 8063
+5414 8064
+5421 8065
+5428 8066
+5435 8066
+5442 8067
+5449 8067
+5456 8066
+5463 8066
+5470 8065
+5477 8064
+5484 8063
+5490 8061
+5497 8060
+5504 8058
+5511 8055
+5518 8053
+5525 8050
+5532 8047
+5539 8044
+5546 8040
+5553 8036
+5560 8032
+5566 8028
+5573 8023
+5580 8019
+5587 8014
+5594 8008
+5601 8003
+5608 7997
+5615 7991
+5622 7985
+5629 7978
+5636 7972
+5642 7965
+5649 7957
+5656 7950
+5663 7942
+5670 7934
+5677 7926
+5684 7918
+5691 7909
+5698 7900
+5705 7891
+5712 7882
+5719 7872
+5725 7863
+5732 7852
+5739 7842
+5746 7832
+5753 7821
+500 MLine
+%I 1
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg Black
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.05 0 0 0.05 18 108 ] concat
+%I 500
+5753 7821
+5760 7810
+5767 7799
+5774 7788
+5781 7776
+5788 7764
+5795 7752
+5801 7740
+5808 7728
+5815 7715
+5822 7702
+5829 7689
+5836 7676
+5843 7663
+5850 7649
+5857 7635
+5864 7621
+5871 7607
+5878 7592
+5884 7578
+5891 7563
+5898 7548
+5905 7533
+5912 7517
+5919 7502
+5926 7486
+5933 7470
+5940 7454
+5947 7437
+5954 7421
+5960 7404
+5967 7387
+5974 7370
+5981 7353
+5988 7336
+5995 7318
+6002 7301
+6009 7283
+6016 7265
+6023 7247
+6030 7228
+6036 7210
+6043 7191
+6050 7172
+6057 7153
+6064 7134
+6071 7115
+6078 7096
+6085 7076
+6092 7056
+6099 7037
+6106 7017
+6113 6997
+6119 6976
+6126 6956
+6133 6936
+6140 6915
+6147 6894
+6154 6874
+6161 6853
+6168 6832
+6175 6811
+6182 6789
+6189 6768
+6195 6746
+6202 6725
+6209 6703
+6216 6681
+6223 6659
+6230 6637
+6237 6615
+6244 6593
+6251 6571
+6258 6548
+6265 6526
+6271 6504
+6278 6481
+6285 6458
+6292 6435
+6299 6413
+6306 6390
+6313 6367
+6320 6344
+6327 6321
+6334 6297
+6341 6274
+6348 6251
+6354 6227
+6361 6204
+6368 6181
+6375 6157
+6382 6134
+6389 6110
+6396 6086
+6403 6063
+6410 6039
+6417 6015
+6424 5991
+6430 5967
+6437 5944
+6444 5920
+6451 5896
+6458 5872
+6465 5848
+6472 5824
+6479 5800
+6486 5776
+6493 5752
+6500 5728
+6506 5704
+6513 5679
+6520 5655
+6527 5631
+6534 5607
+6541 5583
+6548 5559
+6555 5535
+6562 5511
+6569 5487
+6576 5463
+6583 5439
+6589 5415
+6596 5391
+6603 5367
+6610 5343
+6617 5319
+6624 5295
+6631 5271
+6638 5247
+6645 5223
+6652 5199
+6659 5175
+6665 5152
+6672 5128
+6679 5104
+6686 5081
+6693 5057
+6700 5033
+6707 5010
+6714 4986
+6721 4963
+6728 4940
+6735 4916
+6742 4893
+6748 4870
+6755 4847
+6762 4824
+6769 4801
+6776 4778
+6783 4755
+6790 4732
+6797 4709
+6804 4687
+6811 4664
+6818 4641
+6824 4619
+6831 4596
+6838 4574
+6845 4552
+6852 4530
+6859 4508
+6866 4486
+6873 4464
+6880 4442
+6887 4420
+6894 4398
+6900 4377
+6907 4355
+6914 4334
+6921 4313
+6928 4291
+6935 4270
+6942 4249
+6949 4228
+6956 4207
+6963 4187
+6970 4166
+6977 4146
+6983 4125
+6990 4105
+6997 4085
+7004 4064
+7011 4044
+7018 4025
+7025 4005
+7032 3985
+7039 3965
+7046 3946
+7053 3927
+7059 3907
+7066 3888
+7073 3869
+7080 3850
+7087 3832
+7094 3813
+7101 3794
+7108 3776
+7115 3758
+7122 3739
+7129 3721
+7135 3703
+7142 3686
+7149 3668
+7156 3650
+7163 3633
+7170 3616
+7177 3598
+7184 3581
+7191 3564
+7198 3548
+7205 3531
+7212 3514
+7218 3498
+7225 3481
+7232 3465
+7239 3449
+7246 3433
+7253 3417
+7260 3402
+7267 3386
+7274 3371
+7281 3355
+7288 3340
+7294 3325
+7301 3310
+7308 3296
+7315 3281
+7322 3266
+7329 3252
+7336 3238
+7343 3224
+7350 3210
+7357 3196
+7364 3182
+7370 3169
+7377 3155
+7384 3142
+7391 3129
+7398 3115
+7405 3102
+7412 3090
+7419 3077
+7426 3064
+7433 3052
+7440 3040
+7447 3028
+7453 3016
+7460 3004
+7467 2992
+7474 2980
+7481 2969
+7488 2957
+7495 2946
+7502 2935
+7509 2924
+7516 2913
+7523 2902
+7529 2892
+7536 2881
+7543 2871
+7550 2861
+7557 2850
+7564 2840
+7571 2831
+7578 2821
+7585 2811
+7592 2802
+7599 2792
+7606 2783
+7612 2774
+7619 2765
+7626 2756
+7633 2747
+7640 2738
+7647 2730
+7654 2721
+7661 2713
+7668 2705
+7675 2697
+7682 2689
+7688 2681
+7695 2673
+7702 2665
+7709 2658
+7716 2651
+7723 2643
+7730 2636
+7737 2629
+7744 2622
+7751 2615
+7758 2608
+7764 2602
+7771 2595
+7778 2589
+7785 2582
+7792 2576
+7799 2570
+7806 2564
+7813 2558
+7820 2552
+7827 2546
+7834 2540
+7841 2535
+7847 2529
+7854 2524
+7861 2519
+7868 2514
+7875 2508
+7882 2503
+7889 2499
+7896 2494
+7903 2489
+7910 2484
+7917 2480
+7923 2475
+7930 2471
+7937 2467
+7944 2462
+7951 2458
+7958 2454
+7965 2450
+7972 2446
+7979 2442
+7986 2439
+7993 2435
+7999 2431
+8006 2428
+8013 2424
+8020 2421
+8027 2418
+8034 2414
+8041 2411
+8048 2408
+8055 2405
+8062 2402
+8069 2399
+8076 2396
+8082 2394
+8089 2391
+8096 2388
+8103 2386
+8110 2383
+8117 2381
+8124 2378
+8131 2376
+8138 2374
+8145 2371
+8152 2369
+8158 2367
+8165 2365
+8172 2363
+8179 2361
+8186 2359
+8193 2357
+8200 2355
+8207 2354
+8214 2352
+8221 2350
+8228 2349
+8234 2347
+8241 2345
+8248 2344
+8255 2342
+8262 2341
+8269 2340
+8276 2338
+8283 2337
+8290 2336
+8297 2335
+8304 2333
+8311 2332
+8317 2331
+8324 2330
+8331 2329
+8338 2328
+8345 2327
+8352 2326
+8359 2325
+8366 2324
+8373 2323
+8380 2323
+8387 2322
+8393 2321
+8400 2320
+8407 2320
+8414 2319
+8421 2318
+8428 2318
+8435 2317
+8442 2316
+8449 2316
+8456 2315
+8463 2315
+8470 2314
+8476 2314
+8483 2313
+8490 2313
+8497 2312
+8504 2312
+8511 2311
+8518 2311
+8525 2311
+8532 2310
+8539 2310
+8546 2310
+8552 2309
+8559 2309
+8566 2309
+8573 2308
+8580 2308
+8587 2308
+8594 2308
+8601 2308
+8608 2307
+8615 2307
+8622 2307
+8628 2307
+8635 2307
+8642 2306
+8649 2306
+8656 2306
+8663 2306
+8670 2306
+8677 2306
+8684 2306
+8691 2305
+8698 2305
+8705 2305
+8711 2305
+8718 2305
+8725 2305
+8732 2305
+8739 2305
+8746 2305
+8753 2305
+8760 2305
+8767 2305
+8774 2305
+8781 2305
+8787 2304
+8794 2304
+8801 2304
+8808 2304
+8815 2304
+8822 2304
+8829 2304
+8836 2304
+8843 2304
+8850 2304
+8857 2304
+8863 2304
+8870 2304
+8877 2304
+8884 2304
+8891 2304
+8898 2304
+8905 2304
+8912 2304
+8919 2304
+8926 2304
+8933 2304
+8940 2304
+8946 2304
+8953 2304
+8960 2304
+8967 2304
+8974 2304
+8981 2304
+8988 2304
+8995 2304
+9002 2304
+9009 2304
+9016 2304
+9022 2304
+9029 2304
+9036 2304
+9043 2304
+9050 2304
+9057 2304
+9064 2304
+9071 2304
+9078 2304
+9085 2304
+9092 2304
+9098 2304
+9105 2304
+9112 2304
+9119 2304
+9126 2304
+9133 2304
+9140 2304
+9147 2304
+9154 2304
+9161 2304
+9168 2304
+9175 2304
+9181 2304
+9188 2304
+9195 2304
+9202 2304
+500 MLine
+%I 1
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg Black
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.05 0 0 0.05 18 108 ] concat
+%I 3
+9202 2304
+9209 2304
+9216 2304
+3 MLine
+%I 1
+End
+
+Begin %I Line
+%I b 65520
+2 0 0 [12 4] 0 SetB
+%I cfg Indigo
+0.746105 0 0.996109 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.95698 -0 -0 0.95698 113.223 142.351 ] concat
+%I
+185 444 185 85 Line
+%I 1
+End
+
+End %I eop
+
+showpage
+
+%%Trailer
+
+end
