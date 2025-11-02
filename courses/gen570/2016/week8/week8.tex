@@ -1,0 +1,977 @@
+\documentclass[bluish,slideColor,colorBG,pdf]{prosper}
+\hypersetup{pdfpagemode=FullScreen}
+\usepackage{graphicx,amsfonts,amsmath}
+\def\baselinestretch{1.0}
+\setlength{\topmargin}{-60pt}
+\setlength{\textheight}{460pt}
+\setlength{\oddsidemargin}{0pt}
+\setlength{\evensidemargin}{0pt}
+\setlength{\textwidth}{660pt}
+\setlength{\footskip}{0pt}
+\parindent 0.3in
+\hyphenpenalty=10000
+\tolerance=10000
+\pagestyle{empty}
+
+\def\Prob{{\rm Prob\;}}
+\def\prob{{\rm \;Prob\;}}
+\def\Var{{\rm Var}}        % Var
+\def\Cov{{\rm Cov}}        % Cov
+
+\DeclareSymbolFont{AMSb}{U}{msb}{m}{n}
+\DeclareMathSymbol{\expect}{\mathalpha}{AMSb}{'105}
+
+% bold math (use \bm{...})
+\def\bm#1{\mathpalette\bmstyle{#1}}
+\def\bmstyle#1#2{\mbox{\boldmath$#1#2$}}
+
+\title{Week 8:  Testing trees, Bootstraps, jackknifes, gene frequencies}
+\author{Genome 570}
+\institution{February, 2016}
+
+\begin{document}
+
+\maketitle
+
+% \begin{slide}[Replace]{An example -- two trees}
+% 
+% \centerline{\includegraphics[height=3in]{fig21-1.ydraw}}
+% 
+% \end{slide}
+% 
+% \begin{slide}[Replace]{The differences of log likelihoods}
+% 
+% \centerline{\includegraphics[height=1.3in]{fig21-2.ydraw}}
+% 
+% \end{slide}
+% 
+% \begin{slide}[Replace]{The histogram of differences of log-likelihoods}
+% 
+% \centerline{\includegraphics[height=3.0in]{fig21-3.ydraw}}
+% 
+% \end{slide}
+% 
+% \begin{slide}[Replace]{Paired sites tests}
+% 
+% \begin{itemize}
+% \item Winning sites test (Prager and Wilson, 1988).  Do a sign test on
+% the signs of the differences.
+% \item ${\mathsf z}$ test (me, 1993 in PHYLIP documentation).  Assume differences are normal, do $\mathsf{z}$ test of whether
+% mean (hence sum) difference is significant.
+% \item $\mathsf{t}$ test.  Swofford et. al., 1996: do a $\mathsf{t}$ test (paired)
+% \item Wilcoxon ranked sums test (Templeton, 1983).
+% \item RELL test (Kishino and Hasegawa, 1989 per my suggestion).  Bootstrap
+% resample sites, get distribution of difference of totals.
+% \end{itemize}
+% 
+% \end{slide}
+% 
+% \begin{slide}[Replace]{In our example ... }
+% 
+% \begin{itemize}
+% \item Winning sites test.  160 of 232 sites favor tree I. $\mathsf{P < 3.279 \times 10^{-9}}$
+% \item $\mathsf{z}$ test.  Difference of log-likeihood totals is 0.948104 standard deviations
+% from 0, $\mathsf{P =  0.343077}$.  Not significant.
+% \item $\mathsf{t}$ test.  Same as $\mathsf{z}$ test for this large a number of sites. 
+% \item Wilcoxon ranked sums test.  Rank sum is 4.82805 standard deviations
+% below its expected value, $\mathsf{P = 0.000001378765}$
+% \item RELL test.  8,326 out of 10,000 samples have a positive sum, $\mathsf{P = 0.3348}$
+% (two-sided) 
+% \end{itemize}
+% 
+% \end{slide}
+% 
+% \begin{slide}[Replace]{The Shimodaira-Hasegawa test}
+% 
+% \begin{itemize}
+% \item Starts with a set of user-specified trees
+% \item Gets the sitewise log-likelihoods
+% \item adjusts each trees' log-likelihoods to add up to same value
+% \item then resamples columns (sites) from these
+% \item asks how often a tree will get more than X worse then the
+% best
+% \item for each X (the log-likelihood difference between one tree and the best one)
+% can get a P value.
+% \end{itemize}
+% 
+% 
+% \end{slide}
+
+\begin{slide}[Replace]{Normal distribution: curvature of log of height}
+\vspace{-0.2in}
+
+\begin{center}
+\[
+\begin{array}{c c}
+\includegraphics[height=2.0in]{curvlog.idraw} &
+\includegraphics[height=2.0in]{curvlog2.idraw}\\
+\frac{1}{\sigma \sqrt{2\pi}}
+e^{-\frac{1}{2}\frac{(x-\mu)^2}{\sigma^2}}
+&
+{\scriptstyle  \rm (constant~stuff)}
+-\frac{1}{2}\frac{(x-\mu)^2}{\sigma^2}
+\end{array}
+\]
+\end{center}
+
+Taking the logarithm of the height of the density curve of a normal
+distribution whose variance is $\sigma^2$, we see that it is a quadratic curve whose curvature is
+$\ \ \ -1/\sigma^2$
+
+\end{slide}
+
+\begin{slide}[Replace]{The likelihood curve is nearly a normal distribution}
+
+\centerline{\includegraphics[width=2.6in]{curvature1.ydraw}}
+\bigskip
+
+If we have large amounts of data, the values of parameters we need to try
+are all very similar, and the shape of the distribution (which is nearly
+normal) will not be too
+different for these values.
+
+\end{slide}
+
+\begin{slide}[Replace]{The likelihood curve is nearly a normal distribution}
+
+\centerline{\includegraphics[width=2.6in]{curvature2.ydraw}}
+\bigskip
+
+If we have large amounts of data, the values of parameters we need to try
+are all very similar, and the shape of the distribution (which is nearly
+normal) will not be too
+different for these values.
+
+\end{slide}
+
+\begin{slide}[Replace]{The likelihood curve is nearly a normal distribution}
+
+\centerline{\includegraphics[width=2.6in]{curvature3.ydraw}}
+\bigskip
+
+If we have large amounts of data, the values of parameters we need to try
+are all very similar, and the shape of the distribution (which is nearly
+normal) will not be too
+different for these values.
+
+\end{slide}
+
+\begin{slide}[Replace]{The likelihood curve is nearly a normal distribution}
+
+\centerline{\includegraphics[width=2.6in]{curvature4.ydraw}}
+\bigskip
+
+If we have large amounts of data, the values of parameters we need to try
+are all very similar, and the shape of the distribution (which is nearly
+normal) will not be too
+different for these values.
+
+\end{slide}
+
+\begin{slide}[Replace]{The likelihood curve is nearly a normal distribution}
+
+\centerline{\includegraphics[width=2.6in]{curvature5.ydraw}}
+\bigskip
+
+If we have large amounts of data, the values of parameters we need to try
+are all very similar, and the shape of the distribution (which is nearly
+normal) will not be too
+different for these values.
+
+\end{slide}
+
+\begin{slide}[Replace]{The likelihood curve is nearly a normal distribution}
+
+\centerline{\includegraphics[width=2.6in]{curvature6.ydraw}}
+\bigskip
+
+If we have large amounts of data, the values of parameters we need to try
+are all very similar, and the shape of the distribution (which is nearly
+normal) will not be too
+different for these values.
+
+\end{slide}
+
+\begin{slide}[Replace]{The likelihood curve is nearly a normal distribution}
+
+\centerline{\includegraphics[width=2.6in]{curvature7.ydraw}}
+\bigskip
+
+If we have large amounts of data, the values of parameters we need to try
+are all very similar, and the shape of the distribution (which is nearly
+normal) will not be too
+different for these values.
+
+\end{slide}
+
+\begin{slide}[Replace]{The likelihood curve is nearly a normal distribution}
+
+\centerline{\includegraphics[width=2.6in]{curvature8.ydraw}}
+\bigskip
+
+If we have large amounts of data, the values of parameters we need to try
+are all very similar, and the shape of the distribution (which is nearly
+normal) will not be too
+different for these values.
+
+\end{slide}
+
+\begin{slide}[Replace]{Curvatures and covariances of ML estimates}
+\medskip
+
+ML estimates have covariances computable from curvatures of the expected log-likelihood:
+\[
+\mathsf{\Var\left[\widehat\theta \right] \simeq - 1 \big/ \left({d^2 \expect(\log(L))\over d\theta^2}\right)}
+\]
+
+The same is true when there are multiple parameters:
+\[
+\mathsf{\Var\left[\bm{\widehat\theta} \right] \simeq {\bf V} \simeq - {\bf C}^{-1}}
+\]
+where
+\[
+\mathsf{C_{ij} = \expect\left({\partial^2 \log(L) \over \partial\theta_i\; \partial\theta_j} \right)}
+\]
+
+\end{slide}
+
+\begin{slide}[Replace]{With large amounts of data, asymptotically}
+\bigskip
+
+When the true value of $~\mathsf{\theta}~$ is $~\mathsf{\theta_0}$,
+\[
+\mathsf{{\hat{\theta}-\theta_0 \over \sqrt{v}}\ \sim\ {\cal N}(0, 1)}
+\]
+
+Since $\mathsf{1/v}$ is the negative of the curvature of the log-likelihood:
+\[
+\mathsf{\ln L\left(\theta_0\right)\ =\ \ln L(\hat{\theta})
+ - \frac{1}{2}{(\theta_0-\hat{\theta})^2  \over v}}
+\]
+
+so that twice the difference of log-likelihoods is the square of a normal:
+\[
+\mathsf{2 \left(\ln L(\hat{\theta}) - \ln L\left(\theta_0\right)\right)
+\ \sim\  \chi^2_1}
+\]
+
+\end{slide}
+
+\begin{slide}[Replace]{Corresponding results for multiple parameters}
+\medskip
+
+\[
+\mathsf{\ln L(\theta_0)\ \simeq\ \ln L(\theta_0) - \frac{1}{2}
+          \left(\theta_0-\theta\right)^T {\bf C} \left(\theta_0-\theta\right)}
+\]
+
+\[
+\mathsf{\left(\theta-\theta_0\right)^T {\bf C} \left(\theta-\theta_0\right)\ \sim\ \chi^2_p}
+\]
+
+so that the log-likelihood difference is:
+\[
+\mathsf{2 \left(\ln L(\hat{\theta}) - \ln L\left(\theta_0\right)\right)
+\ \sim\  \chi^2_p}
+\]
+
+When in the (true) null hypothesis $\theta_0$ we have  $~\mathsf{q}~$ of the $~\mathsf{p}~$ parameters constrained:
+\[
+\mathsf{2 \left(\ln L(\hat{\theta}) - \ln L\left(\theta_0\right)\right)
+\ \sim\ \chi^2_q}
+\]
+
+\end{slide}
+
+\begin{slide}[Replace]{A log-likelihood curve}
+
+\begin{center}
+\includegraphics[width=2.7in]{like1a.idraw}
+\end{center}
+
+\end{slide}
+
+\begin{slide}[Replace]{Its maximum likelihood estimate}
+
+\begin{center}
+\includegraphics[width=2.7in]{like1b.idraw}
+\end{center}
+
+\end{slide}
+
+\begin{slide}[Replace]{The (approximate, asymptotic) confidence interval}
+
+\begin{center}
+\includegraphics[width=2.7in]{like1.idraw}
+\end{center}
+
+\end{slide}
+
+\begin{slide}[Replace]{Contours of a log-likelihood surface in two dimensions}
+
+\begin{center}
+\includegraphics[width=3.1in]{like2a.idraw}
+\end{center}
+
+\end{slide}
+
+\begin{slide}[Replace]{Contours of a log-likelihood surface in two dimensions}
+
+\begin{center}
+\includegraphics[width=3.1in]{like2b.idraw}
+\end{center}
+
+\end{slide}
+
+\begin{slide}[Replace]{Log-likelihood-based confidence set for two variables}
+
+\begin{center}
+\includegraphics[width=3.1in]{like2.idraw}
+\end{center}
+
+\end{slide}
+
+\begin{slide}[Replace]{Confidence interval for one variable}
+
+\begin{center}
+\includegraphics[width=3.1in]{like2c.idraw}
+\end{center}
+
+\end{slide}
+
+\begin{slide}[Replace]{Confidence interval for the other variable}
+
+\begin{center}
+\includegraphics[width=3.1in]{like2d.idraw}
+\end{center}
+
+\end{slide}
+\begin{slide}[Replace]{Likelihood ratio interval for a parameter}
+
+\centerline{\includegraphics[height=2.6in]{fig19-1.ydraw}}
+\bigskip
+
+Inferring the transition/transversion ratio for an F84 model with
+the 14-species primate mitochondria data set.
+
+\end{slide}
+
+\begin{slide}[Replace]{LRT of a molecular clock -- how many parameters? }
+
+\centerline{\includegraphics[height=2.5in]{fig19-4.ydraw}}
+\medskip
+
+How does each equation constrain the branch lengths in the unrooted tree?  What
+about the red equation?
+
+\end{slide}
+
+\begin{slide}[Replace]{Likelihood Ratio Test for a molecular clock}
+\bigskip
+
+Using the 7-species mitochondrial DNA data set (the great apes
+plus Bovine and Mouse), we get with Ts/Tn = 30 and an F84 model:
+\bigskip
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{l r}
+Tree & $\mathsf{\ln\;L}$ \\
+\hline
+No clock & $\mathsf{-1372.77620}$ \\
+Clock & $\mathsf{-1414.45053}$ \\
+Difference & $\mathsf{41.67473}$
+\end{tabular}
+\end{center}
+\bigskip
+
+Chi-square statistic:  $~\mathsf{2 \times 41.675 \ = \ 83.35}$, with $~\mathsf{n-2 \ = \ 5}~$ degrees of freedom -- highly significant.
+
+\end{slide}
+
+\begin{slide}[Replace]{Model selection using the LRT}
+
+\centerline{\includegraphics[height=2.6in]{fig19-2.ydraw}}
+\bigskip
+
+The problem with using likelihood ratio tests is the multiplicity of tests
+and the multiple routes to the same hypotheses.
+
+\end{slide}
+
+\begin{slide}[Replace]{The Akaike Information Criterion}
+
+Compare between hypotheses $~\mathsf{-2 \ln L + 2 p}\ $  (the same as reducing
+the log-likelihood by the number of parameters)
+
+\begin{displaymath}
+\renewcommand{\arraystretch}{1.1}
+\begin{array}{l l c l}
+ & & \mathsf{Number~of} &\\
+\mathsf{Model} & \mathsf{\ln L} & \mathsf{parameters} & \mathsf{AIC} \\
+\hline
+\raisebox{3pt}{\strut}\rule{0pt}{8pt}\mbox{\sf Jukes-Cantor} & \mathsf{-3068.29186} & \mathsf{25} & \mathsf{6186.58} \\
+\rule{0pt}{8pt}\mbox{\sf K2P,~ $\mathsf{R = 2.0}$} & \mathsf{-2953.15830} & \mathsf{25} & \mathsf{5956.32} \\
+\rule{0pt}{8pt}\mbox{\sf K2P,~  $\mathsf{\widehat{R} = 1.889}$} & \mathsf{-2952.94264} & \mathsf{26} & \mathsf{5957.89} \\
+\rule{0pt}{8pt}\mbox{\sf F81} & \mathsf{-2935.25430} & \mathsf{28} & \mathsf{5926.51} \\
+\rule{0pt}{8pt}\mbox{\sf F84,~ $\mathsf{R = 2.0}$}  & \mathsf{-2680.32982} &  \mathsf{28} & \mathsf{5416.66}\\
+\rule{0pt}{8pt}\mbox{\sf F84,~ $\mathsf{\widehat{R} = 28.95}$}   & \mathsf{-2616.3981} &  \mathsf{29} & \mathsf{5290.80}\\\end{array}
+\end{displaymath}
+
+\end{slide}
+
+\begin{slide}[Replace]{Can we test trees using the LRT? }
+
+\vspace{-0.1in}
+
+\centerline{\includegraphics[height=2.8in]{fig19-3.ydraw}}
+
+\vspace{-0.12in}
+If so, how many degrees of freedom for the comparison of  the two peaks?
+These are three-species clocklike trees (shown here plotted in a ``profile
+log-likelihood plot'' plotting the highest likelihood for each value of the
+interior branch length).
+
+\end{slide}
+
+\begin{slide}[Replace]{The bootstrap}
+
+\vspace{-0.1in}
+
+\centerline{\includegraphics[height=2.7in]{fig20-1.ydraw}}
+\bigskip
+
+An example with mixed normal distributions.  Draw from the empirical
+distribution 150 times if there are 150 data points.  With replacement!
+
+\end{slide}
+
+\begin{slide}[Replace]{The bootstrap for phylogenies}
+
+\centerline{\includegraphics[height=2.7in]{fig20-2.ydraw}}
+\bigskip
+
+Drawing columns of the data matrix, with replacement.
+
+\end{slide}
+
+\begin{slide}[Replace]{A partition defined by a branch in the first tree}
+
+\centerline{\includegraphics[height=3in]{fig18-3a.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Another partition from the first tree}
+
+\centerline{\includegraphics[height=3in]{fig18-3b.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{The third partition from that tree}
+
+\centerline{\includegraphics[height=3in]{fig18-3c.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Partitions from the second tree}
+
+\centerline{\includegraphics[height=3in]{fig18-3d.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Partitions from the third tree}
+
+\centerline{\includegraphics[height=3in]{fig18-3e.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Partitions from the fourth tree}
+
+\centerline{\includegraphics[height=3in]{fig18-3f.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Partitions from the fifth tree}
+
+\centerline{\includegraphics[height=3in]{fig18-3g.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{The table of partitions from all trees}
+
+\centerline{\includegraphics[height=3in]{fig18-3h.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{The majority-rule consensus tree}
+
+\centerline{\includegraphics[height=3in]{fig18-3i.ydraw}}
+
+\end{slide}
+
+\overlays{6}{
+\begin{slide}[Replace]{Why will the MR consensus give a tree? }
+
+\begin{itemstep}
+\item Suppose that for each partition in a tree we construct a (fake) morphological
+character with 0 for one set in the partition, 1 for the other.
+\item Such a character is compatible with a tree if (and only if) the tree 
+contains that partition.
+\item If two of these characters both occur in more than 50\% of the trees,
+they must co-occur in at least one tree.
+\item Thus the set of these ``characters'' that occur in more then 50\% of the
+trees are all pairwise compatible.
+\item By the Pairwise Compatibility Theorem (remember that?) they must then be
+jointly compatible
+\item So there must be a tree that contains them all.
+\end{itemstep}
+
+\end{slide}
+}
+
+\begin{slide}[Replace]{The MR tree with 14-species primate mtDNA data}
+
+\centerline{\includegraphics[height=3.2in]{bootex.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Potential problems with the bootstrap}
+\bigskip
+
+\begin{enumerate}
+\item Sites may not evolve independently
+\item Sites may not come from a common distribution (but can
+consider them sampled from a mixture of possible distributions)
+\item If do not know which branch is of interest at the outset,
+a ``multiple-tests" problem means P values are overstated
+\item P values are biased (too conservative)
+\item Bootstrapping does not correct biases in phylogeny methods
+\end{enumerate}
+
+\end{slide}
+
+\begin{slide}[Replace]{Other resampling methods}
+\bigskip
+
+\begin{itemize}
+\item Delete-half jackknife.  Sample a random 50\% of the sites,
+{\it without} replacement.
+\item Delete-$\mathsf{1/e}$ jackknife (Farris et. al. 1996)  (too little
+deletion from a statistical viewpoint).
+\item Reweighting characters by choosing weights from an
+exponential distribution.
+\item In fact, reweighting them by any exchangeable weights having
+coefficient of variation of 1
+\item Parametric bootstrap -- simulate data sets of this size
+assuming the estimate of the tree is the truth
+\item (to correct for correlation among adjacent sites) (K\"unsch, 1989)
+Block-bootstrapping -- sample $\mathsf{n/b}$ blocks of $\mathsf{b}$ adjacent
+sites.
+\end{itemize}
+
+\end{slide}
+
+\begin{slide}[Replace]{With the delete-half jackknife}
+
+\centerline{\includegraphics[height=3.2in]{jackex.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Bootstrap versus jackknife in a simple case}
+
+\centerline{\includegraphics[height=3in]{jackboot.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Probability of a character being omitted from a bootstrap}
+\bigskip
+
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{ | r l  | r l | r l | r l | }
+$N$ & $(1-1/N)^N$ & & & & & & \\
+\hline
+1 & 0 & 11 & 0.35049  & 25 & 0.36040 & 100 & 0.36603 \\
+2 & 0.25  & 12 & 0.35200  & 30 & 0.36166 & 150 & 0.36665 \\
+3 & 0.29630 & 13 & 0.35326  & 35 & 0.36256 & 200 & 0.36696 \\
+4 & 0.31641  & 14 & 0.35434  & 40 & 0.36323 & 250 & 0.36714 \\
+5 & 0.32768  & 15 & 0.35526  & 45 & 0.36375 & 300 & 0.36727 \\
+6 & 0.33490  & 16 & 0.35607  & 50 & 0.36417 & 500 & 0.36751 \\
+7 & 0.33992  & 17 & 0.35679  & 60 & 0.36479  & 1000 & 0.36770 \\
+8 & 0.34361  & 18 & 0.35742  & 70 & 0.36524 & $\infty$ & 0.36788 \\
+9 & 0.34644  & 19 & 0.35798  & 80 & 0.36557 & & \\
+ 10 & 0.34868  & 20 & 0.35849 & 90 & 0.36583 & \\ 
+\hline
+\end{tabular}
+\end{center}
+
+\end{slide}
+
+\begin{slide}[Replace]{A toy example to examine bias of $P$ values}
+\bigskip
+
+\centerline{\includegraphics[height=1.7in]{fig20-4.ydraw}}
+\bigskip
+
+Assuming a normal distribution, trying to infer whether the mean
+is above 0, when the mean is unknown and the variance known to be 1
+
+\end{slide}
+
+\begin{slide}[Replace]{Bias in the P values}
+
+\centerline{\includegraphics[height=3in]{bootbias.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{How much bias in the P values? }
+
+\centerline{\includegraphics[height=3in]{fig20-5.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Bias in the P values with different priors}
+
+\centerline{\includegraphics[height=3in]{fig20-6.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{The parametric bootstrap}
+
+\centerline{\includegraphics[height=3in]{fig20-7.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{The parametric bootstrap with the primates data}
+
+\centerline{\includegraphics[height=2.4in]{parbootex.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Goldman's test using simulation}
+
+\centerline{\includegraphics[height=3in]{goldman.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{An outcome of Brownian motion on a 5-species tree}
+
+\centerline{\includegraphics[height=3.0in]{fig23-2a.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{An outcome of Brownian motion on a 5-species tree}
+
+\centerline{\includegraphics[height=3.0in]{fig23-2b.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{An outcome of Brownian motion on a 5-species tree}
+
+\centerline{\includegraphics[height=3.0in]{fig23-2c.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{An outcome of Brownian motion on a 5-species tree}
+
+\centerline{\includegraphics[height=3.0in]{fig23-2.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Brownian motion along a tree}
+
+\centerline{\includegraphics[height=3.0in]{fig23-1.ydraw}}
+
+\end{slide}
+
+\overlays{5}{
+\begin{slide}[Replace]{Distribution of tips on a tree under Brownian Motion}`
+
+\centerline{\includegraphics[width=2.2in]{brownian.idraw}}
+
+\begin{itemstep}
+\item  Tip 1 is the sum of two independent changes each of which is drawn from
+a normal distribution (with mean $\mathsf{0}$ and variances $\ \mathsf{v_3}\ $ and $\ \mathsf{v_1}$) so it is normally
+distributed with mean $\mathsf{0}$ and variance $\ \mathsf{v_3 + v_1}$.
+\item Similarly for tip 2 (variance is $\ \mathsf{v_3 + v_2}$).
+\item They share branch 3, and the change there affects both random variables.
+So they are not independent or uncorrelated.
+\item Variance is the expectation of the square (of deviation from the mean),
+and covariance is the expectation of the product of those deviations, for the
+two variables.
+\item In fact the covariance of the values at tip 1 and tip 2 is the
+variance of the shared term that is the same in both of them, so it is $\ \mathsf{v_3}$.
+\end{itemstep}
+
+\end{slide}
+}
+
+\begin{slide}[Replace]{Covariances of species on the tree}
+\bigskip
+
+{\tiny
+\renewcommand{\arraystretch}{1.4}
+{~~}\hfill\hspace{-0.4in}$
+\left[\hspace{-0.1in}\begin{array}{c c c c c c c c c c c c c}
+\multicolumn{3}{c}{\mathsf{v_1+v_8+v_9}} & \mathsf{v_8+v_9} & & \mathsf{v_9} & & \mathsf{0} & & \mathsf{0} & & \mathsf{0} & \mathsf{0} \\
+& \mathsf{v_8+v_9} & \multicolumn{3}{c}{\mathsf{v_2+v_8+v_9}} & \mathsf{v_9} & & \mathsf{0} & & \mathsf{0} & & \mathsf{0} & \mathsf{0}\\
+& \mathsf{v_9}     & & \mathsf{v_9} & \multicolumn{3}{c}{\mathsf{v_3+v_9}} & \mathsf{0} & & \mathsf{0} & & \mathsf{0} & \mathsf{0} \\
+& \mathsf{0}       & & \mathsf{0} & & \mathsf{0} & \multicolumn{3}{c}{\mathsf{v_4+v_{12}}} & \mathsf{v_{12}} & & \mathsf{v_{12}} & \mathsf{v_{12}} \\
+& \mathsf{0}       & & \mathsf{0} & & \mathsf{0} & & \mathsf{v_{12}} & \multicolumn{3}{c}{\mathsf{v_5+v_{11}+v_{12}}} & \mathsf{v_{11}+v_{12}} & \mathsf{v_{11}+v_{12}} \\
+& \mathsf{0}       & & \mathsf{0} & & \mathsf{0} & & \mathsf{v_{12}} & & \mathsf{v_{11}+v_{12}} & \multicolumn{2}{c}{\mathsf{v_6+v_{10}+v_{11}+v_{12}}} & \mathsf{v_{10}+v_{11}+v_{12}} \\
+& \mathsf{0} & & \mathsf{0} & & \mathsf{0} & & \mathsf{v_{12}} & & \mathsf{v_{11}+v_{12}} & \multicolumn{2}{c}{\mathsf{v_{10}+v_{11}+v_{12}}} & \mathsf{v_7+v_{10}+v_{11}+v_{12}} \\
+\end{array}\hspace{-0.05in}\right]$\hfill{~~}
+}
+
+\end{slide}
+
+\begin{slide}[Replace]{Covariances are of form }
+\bigskip
+
+{\ptsize{10}
+\[
+\left[
+\begin{array}{c  c c | c c c c}
+\multicolumn{1}{c|}{\mathsf{a}} & \multicolumn{1}{c|}{\mathsf{b}} & \mathsf{c} & \mathsf{0} & \mathsf{0} & \mathsf{0} & \mathsf{0} \\
+\cline{1-2}
+\multicolumn{1}{c|}{\mathsf{b}} & \multicolumn{1}{c|}{\mathsf{d}} & \mathsf{c} & \mathsf{0} & \mathsf{0} & \mathsf{0} & \mathsf{0} \\
+\cline{1-3}
+\mathsf{c} & \multicolumn{1}{c|}{\mathsf{c}} & \mathsf{e} & \mathsf{0} & \mathsf{0} & \mathsf{0} & \mathsf{0} \\
+\hline
+\mathsf{0} & \mathsf{0} & \mathsf{0} & \multicolumn{1}{c|}{\mathsf{f}} & \mathsf{g} & \mathsf{g} & \mathsf{g} \\
+\cline{4-7}
+\mathsf{0} & \mathsf{0} & \mathsf{0} & \multicolumn{1}{c|}{\mathsf{g}} & \multicolumn{1}{c|}{\mathsf{h}} & \mathsf{i} & \mathsf{i} \\
+\cline{5-7}
+\mathsf{0} & \mathsf{0} & \mathsf{0} & \multicolumn{1}{c|}{\mathsf{g}} & \multicolumn{1}{c|}{\mathsf{i}} & \multicolumn{1}{c|}{\mathsf{j}} & \mathsf{k} \\
+\cline{6-7}
+\mathsf{0} & \mathsf{0} & \mathsf{0} & \multicolumn{1}{c|}{\mathsf{g}} & \multicolumn{1}{c|}{\mathsf{i}} & \multicolumn{1}{c|}{\mathsf{k}} & \mathsf{l} \\
+\end{array}
+\right]
+\]
+}
+
+\end{slide}
+
+\begin{slide}[Replace]{Likelihood under Brownian motion with two species}
+\bigskip
+
+\centerline{\includegraphics[height=1in]{twosptree.idraw}}
+\bigskip
+
+\[
+\mathsf{f\left(x ; \mu, \sigma^2\right) \ = \  \frac{1}{\sigma \sqrt{2\pi}}
+\exp \left(-\frac{(x-\mu)^2}{2 \sigma^2} \right)}
+\]
+\bigskip
+
+\[
+\mathsf{L  \ = \  \prod_{i=1}^p  \frac{1}{(2\pi) \sqrt{v_1 v_2}} 
+\exp\left(-\frac{1}{2}\left[
+\frac{\left(x_{1i} \ - \ x_{0i}\right)^2}{v_1}
++ \frac{\left(x_{2i} \ - \ x_{0i}\right)^2}{v_2}
+\right]
+\right)}
+\]
+
+\end{slide}
+
+\begin{slide}[Replace]{What happens if we estimate means and branch lengths? }
+\bigskip
+
+Do we get the right answer if we estimate for each coordinate (each character)
+the value at the root and the branch lengths $\mathsf{~v_1~}$ and
+$\mathsf{~v_2~}$?  Actually
+no.
+\bigskip
+
+Below, we will do this by finding values of these that maximize the likelihood,
+and show that the likelihood becomes infinite if either $\mathsf{~v_1~}$ or
+$\mathsf{~v_2~}$
+approaches zero.
+\bigskip
+
+Even if we constrain there to be a clock, so $\mathsf{~v_1 \ = \ v_2~}$ and look only at
+their sum $\mathsf{~v_1+v_2}$ this turns out to be half as big as the truth,
+even with an infinite number of characters.
+\bigskip
+
+Why?  The problem seems to be that we are estimating too many parameters.
+There is one parameter (the root value) for each character.  So the ratio
+of data to parameters does not rise to infinity as we increase the number
+of parameters.  In circumstances like this, likelihood methods can misbehave.
+\bigskip
+
+\end{slide}
+
+\begin{slide}[Replace]{The solution: don't infer ancestors; use REML}
+\bigskip
+
+\bigskip
+
+We can eliminate these problems by:
+
+\begin{enumerate}
+\item Do not infer the states of the interior nodes.
+\item Use only the relative positions of the tips.  This eliminates
+the starting state at the root.  It is REML, a variant of ML that loses
+almost no statistical power.
+\end{enumerate}
+
+\end{slide}
+
+\begin{slide}[Replace]{Minimizing for each character $~\mathsf{i}$ }
+\bigskip
+
+\[
+\mathsf{Q\ =\ \frac{\left(x_{1i}-x_{0i}\right)^2}{v_1}\ +\
+\frac{\left(x_{2i}-x_{0i}\right)^2}{v_2}}
+\]
+
+so:
+\[
+\mathsf{\frac{dQ}{dx_{0i}} \ = \ -2 \frac{\left(x_{1i}-x_{0i}\right)}{v_1}
+ \ - \ 2 \frac{\left(x_{2i}-x_{0i}\right)}{v_2} \ = \ 0}
+\]
+
+and then:
+\[
+\mathsf{\widehat{x}_{0i}\  = \ \frac{\frac{1}{v_1} x_{1i} \ + \ \frac{1}{v_2}
+x_{2i}}{\frac{1}{v_1} \ + \ \frac{1}{v_2}}}
+\]
+So that we have a maximum likelihood estimate of the starting value
+$\mathsf{x_{0i}}$ for each character.
+\bigskip
+
+The result is that
+\[
+\mathsf{Q\  =\ \frac{\left(x_{1i} - x_{2i}\right)^2}{v_1+v_2}}
+\]
+
+\end{slide}
+
+\begin{slide}[Replace]{Likelihood after estimating initial coordinates}
+\bigskip
+
+Substituting in our estimates of $\mathsf{x_{0i}}$, we end up with
+\bigskip
+
+\[
+\mathsf{L\  =\  \frac{1}{(2\pi)^p  \left(v_1 v_2\right)^{\frac{1}{2}p}}
+\exp\left(-\frac{1}{2}\sum\limits_{i=1}^p
+\frac{\left(x_{1i}-x_{2i}\right)^2}{v_1+v_2} \right)}
+\]
+
+and this finally turns into:
+
+\[
+\mathsf{\ln L\  = \ - p \ln (2\pi) \ - \frac{1}{2}p \ln \left(v_1 v_2\right)
+         \ -\frac{1}{2}\sum_{i=1}^p
+\frac{\left(x_{1i}-x_{2i}\right)^2}{v_1+v_2}}
+\]
+
+This actually goes to infinity as either $\mathsf{v_1}$ or $\mathsf{v_2}$
+goes to zero!  This is related to the problem that Edwards and Cavalli-Sforza
+had with their maximum likelihood method in 1964.
+
+\end{slide}
+
+\begin{slide}[Replace]{If there is a clock ... }
+
+If instead we constrain $~\mathsf{v_1=v_2}~$ because assume a clock:
+\[
+\mathsf{\ln L \ = \  K'\  -\  p \ln (v_1+v_2)\  -\  \frac{1}{2} \frac{D^2}{(v_1+v_2)}}
+\]
+
+which leads to
+\[
+\mathsf{\widehat{v}_1\  = \ \widehat{v}_2\  = \  D^2/(4p)}
+\]
+\bigskip
+
+(which is half as big as it should be!)
+\bigskip
+
+The number of parameters being estimated is $\mathsf{p+1}$, which rises
+as we consider more characters.   The fact that the ratio of data to
+parameters does not rise without limit is the reason why likelihood misbehaves
+in this case.
+
+\end{slide}
+
+\begin{slide}[Replace]{The difference between ML and REML}
+\bigskip
+
+\centerline{\includegraphics[width=2.5in]{reml.idraw}}
+\bigskip
+
+Does it matter that we don't know $\mathsf{~\mathsf{x}~}$?   It makes it unnecessary
+to estimate the starting value $\ \mathsf{x_0}$, and that eliminates $\
+\mathsf{p}\ $ parameters.  It means that the ratio of data to parameters does
+then rise as we add characters.
+
+\end{slide}
+
+\begin{slide}[Replace]{Using only differences between populations (REML)}
+\bigskip
+
+We assume that we have observed only the differences $\mathsf{x_{1i} -
+x_{2i}}$, and not the actual locations on the phenotype scale.  Then
+
+\[
+\mathsf{L\  =\  \prod\limits_{i=1}^p  \frac{1}{\sqrt{2\pi} \sqrt{v_1+v_2}} 
+\exp\left(-\frac{1}{2}
+\frac{\left(x_{1i}-x_{2i}\right)^2}{v_1+v_2}\right)}
+\]
+\bigskip
+
+
+\[
+\mathsf{\ln L\ =\ K \ - \ \frac{p}{2} \ln \left(v_1+v_2\right) \ + \ \frac{1}{2\left(v_1+v_2\right)} \sum\limits_{i=1}^n {\left({x_{i1}-x_{i2}}\right)^2}}
+\]
+\bigskip
+
+
+\end{slide}
+
+\begin{slide}[Replace]{Likelihood with two species using REML}
+\bigskip
+
+\[
+\mathsf{\ln L \ = \ K \ - \ \frac{p}{2} \ln \left(v_1+v_2\right) \ + \
+\frac{D^2}{2\left(v_1+v_2\right)}}
+\]
+\bigskip
+
+
+\[
+\mathsf{\ln L \ = \ K \ - \ \frac{p}{2} \ln \left(v_T \right) \ + \
+\frac{D^2}{2 \,v_T}}
+\]
+\bigskip
+
+
+\[
+\mathsf{\widehat{v}_T \ = \ D^2/p}
+\]
+\bigskip
+
+The number of parameters being estimated is 1 (it is the sum 
+$\mathsf{~v_1+v_2}$).  The
+number of parameters does not rise as we consider more characters.
+
+
+\end{slide}
+
+\begin{slide}[Replace]{ ``Pruning'' a tree in the Brownian motion case}
+
+\centerline{\includegraphics[height=2.2in]{fig23-3.ydraw}}
+\bigskip
+
+The likelihood for the tree is the product of the linkelihoods for these
+two trees. By repeatedly applying this we can decompose the tree into
+$\mathsf{~n-1~}$ independent two-species trees.  Getting their likelihoods is easy.
+
+
+\end{slide}
+
+\end{document}
