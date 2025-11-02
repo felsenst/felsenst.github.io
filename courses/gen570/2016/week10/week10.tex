@@ -1,0 +1,1088 @@
+\documentclass[bluish,slideColor,colorBG,pdf]{prosper}
+\hypersetup{pdfpagemode=FullScreen}
+\usepackage{graphicx,amsfonts,amsmath}
+\def\baselinestretch{1.0}
+\setlength{\topmargin}{-60pt}
+\setlength{\textheight}{460pt}
+\setlength{\oddsidemargin}{0pt}
+\setlength{\evensidemargin}{0pt}
+\setlength{\textwidth}{660pt}
+\setlength{\footskip}{0pt}
+\parindent 0.3in
+\hyphenpenalty=10000
+\tolerance=10000
+\pagestyle{empty}
+
+\def\Prob{{\rm Prob\;}}
+\def\prob{{\rm \;Prob\;}}
+\def\Var{{\rm Var}}        % Var
+\def\Cov{{\rm Cov}}        % Cov
+
+\DeclareSymbolFont{AMSb}{U}{msb}{m}{n}
+\DeclareMathSymbol{\expect}{\mathalpha}{AMSb}{'105}
+
+% bold math (use \bm{...})
+\def\bm#1{\mathpalette\bmstyle{#1}}
+\def\bmstyle#1#2{\mbox{\boldmath$#1#2$}}
+
+\title{Week 10:  Coalescents, Consensus trees, etc. }
+\author{Genome 570}
+\institution{March, 2016}
+
+\begin{document}
+
+\maketitle
+
+\bigskip
+
+\begin{slide}[Replace]{Cann, Stoneking, and Wilson}
+
+\centerline{
+\includegraphics[width=1.10in]{rebecca-cann.ps}
+\hfill
+\includegraphics[width=1.5in]{stoneking.ps}
+\hfill
+\includegraphics[width=1.0in]{AllanWilson.ps}
+}
+
+Becky Cann \hfill Mark Stoneking \hfill the late Allan Wilson \\
+\bigskip
+
+\noindent
+Cann, R. L., M. Stoneking, and A. C. Wilson. 1987. Mitochondrial DNA and human
+evolution. {\it Nature} {\bf 325:a} 31-36.
+
+\end{slide}
+
+\begin{slide}[Replace]{Mitochondrial Eve}
+
+\centerline{\includegraphics[width=2.15in]{mteve.ps}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Gene copies in a population of 10 individuals }
+
+\vspace{-0.2in}
+
+\centerline{\includegraphics[width=3.2in]{coal1-0.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Going back one generation}
+
+\vspace{-0.2in}
+
+\centerline{\includegraphics[width=3.2in]{coal1-1.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{ ... and one more}
+
+\vspace{-0.2in}
+
+\centerline{\includegraphics[width=3.2in]{coal1-2.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{ ... and one more}
+
+\vspace{-0.2in}
+
+\centerline{\includegraphics[width=3.2in]{coal1-3.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{ ... and one more}
+
+\vspace{-0.2in}
+
+\centerline{\includegraphics[width=3.2in]{coal1-4.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{ ... and one more}
+
+\vspace{-0.2in}
+
+\centerline{\includegraphics[width=3.2in]{coal1-5.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{ ... and one more}
+
+\vspace{-0.2in}
+
+\centerline{\includegraphics[width=3.2in]{coal1-6.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{ ... and one more}
+
+\vspace{-0.2in}
+
+\centerline{\includegraphics[width=3.2in]{coal1-7.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{ ... and one more}
+
+\vspace{-0.2in}
+
+\centerline{\includegraphics[width=3.2in]{coal1-8.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{ ... and one more}
+
+\vspace{-0.2in}
+
+\centerline{\includegraphics[width=3.2in]{coal1-9.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{ ... and one more}
+
+\vspace{-0.2in}
+
+\centerline{\includegraphics[width=3.2in]{coal1-10.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{ ... and one more}
+
+\vspace{-0.2in}
+
+\centerline{\includegraphics[width=3.2in]{coal1-11.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{The genealogy of gene copies is a tree}
+
+\centerline{\includegraphics[height=3in]{coalgenes.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Ancestry of a sample of 3 copies}
+
+\centerline{\includegraphics[height=3in]{coalthree.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Here is that tree of 3 copies in the pedigree}
+
+\centerline{\includegraphics[height=3in]{coalinped.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Kingman's coalescent}
+
+\centerline{\includegraphics[height=2.2in]{kingman3.ydraw}}
+\bigskip
+
+What's misleading about this diagram: the lineages that coalesce are random
+pairs, not necessarily ones that are next to each other in a linear order.
+
+\end{slide}
+
+\begin{slide}[Replace]{The Wright-Fisher model}
+\bigskip
+
+This is the canonical model of genetic drift in populations.  It was
+invented in 1930 and 1932 by Sewall Wright and R. A. Fisher.
+\bigskip
+
+In this model the next generation is produced by doing this:
+\begin{itemize}
+\setlength{\itemsep}{5pt}
+\item Choose two individuals {\it with replacement} (including the
+possibility that they are the same individual) to be parents,
+\item Each produces one gamete, these become a diploid individual,
+\item Repeat these steps until $\mathsf{N}$ diploid individuals have been
+produced.
+\end{itemize}
+
+The effect of this is to have each locus in an individual in the next generation
+consist of two genes sampled from the parents' generation at random,
+with replacement.
+
+\end{slide}
+
+\begin{slide}[Replace]{The coalescent -- a derivation}
+\bigskip
+
+The probability that $~\mathsf{k}~$ lineages becomes $~\mathsf{k-1}~$ one generation
+earlier turns out to be (as each lineage ``chooses'' its ancestor independently):
+\[
+\mathsf{k(k-1)/2 \times \Prob({\rm First~two~have~same~parent,~rest~are~different})}
+\]
+(since there are $~\mathsf{{k \choose 2} = k(k-1)/2}~$ different pairs of copies)
+
+We add up terms, all the same, for the $~\mathsf{k(k-1)/2}~$ pairs that
+could coalesce; the sum is:
+\[
+\begin{array}{r}
+\mathsf{k(k-1)/2\;\times\;1\;\times\;\frac{1}{2N}\;\times\;\left(1 - \frac{1}{2N}\right)}
+\\\\
+\mathsf{\ \ \ \times\;\left(1 - \frac{2}{2N}\right)\;\times\dots
+\times\;\left(1 - \frac{k-2}{2N}\right)}
+\end{array}
+\]
+so that the total probability that a pair coalesces is
+\[
+\mathsf{=\  k(k-1)/4N + O(1/N^2)}
+\]
+
+\end{slide}
+
+\begin{slide}[Replace]{Can probabilities of two or more lineages coalescing}
+
+Note that the total probability that some combination of lineages
+coalesces is
+\[
+\mathsf{1 - \Prob({\rm Probability~all~genes~have~separate~ancestors})}
+\]
+
+\[
+\mathsf{=\ 1 - \left[\ 1 \times \left(1 - \frac{1}{2N}\right) \left(1 - \frac{2}{2N}\right) \dots \left(1 - \frac{k-1}{2N}\right)\right]}
+\]
+
+\[
+\mathsf{=\ 1\ -\ \left[\ 1\ -\ \frac{1+2+3+\dots+(k-1)}{2N}\ +\ O(1/N^2)\ \right]}
+\]
+and since
+\[
+\mathsf{1\ +\ 2\ +\ 3\ +\ \dots\ +\ (n-1) \ = \ n(n-1)/2}
+\]
+the quantity
+\[
+\mathsf{= \ 1\ -\ \left[\ 1 - k(k-1)/4N + O(1/N^2)\right] \ \simeq \ k(k-1)/4N\ + \ O(1/N^2)}
+\]
+
+\end{slide}
+
+\begin{slide}[Replace]{Can calculate how many coalescences are of pairs}
+\bigskip
+
+This shows, since the terms of order $\mathsf{~1/N~}$ are the same,
+that the events involving 3 or more lineages simultaneously
+coalescing are in the terms of order $~\mathsf{1/N^2}~$ and thus become unimportant
+if $~\mathsf{N}~$ is large.
+\bigskip
+
+Here are the probabilities of 0, 1, or more coalescences with 10 lineages
+in populations of different sizes:
+\bigskip
+
+\begin{center}
+\begin{tabular}{c | c c c}
+$\mathsf{N}$ & 0 & 1 & $>1$\\
+\hline
+\raisebox{3pt}{\strut}100 &  0.79560747  & 0.18744678  &  0.01694575\\
+1000 &  0.97771632  &   0.02209806  &   0.00018562\\
+10000 & 0.99775217  &  0.00224595  & 0.00000187\\
+\end{tabular}
+\end{center}
+\bigskip
+
+Note that increasing the population size by a factor of 10 reduces the
+coalescent rate for pairs by about 10-fold, but reduces the rate for
+triples (or more) by about 100-fold.
+
+\end{slide}
+
+\begin{slide}[Replace]{The coalescent}
+
+To simulate a random genealogy, do the following:
+\begin{enumerate}
+\item Start with $~\mathsf{k}~$ lineages
+\item Draw an exponential time interval with mean $\mathsf{~4N/(k(k-1))}~$ generations.
+\item Combine two randomly chosen lineages.
+\item Decrease $~\mathsf{k}~$ by 1.
+\item If $\mathsf{~k = 1}$, then stop
+\item Otherwise go back to step 2.
+\end{enumerate}
+
+\end{slide}
+
+\begin{slide}[Replace]{An accurate analogy: Bugs In A Box}
+
+\parbox[b]{1.5in}{There is a box ... \\ \\ \\ \\ \\ \\ } \hspace{0.3in}
+\includegraphics[width=2.5in]{bugbox1.idraw}
+
+\end{slide}
+
+\begin{slide}[Replace]{An accurate analogy: Bugs In A Box}
+
+\parbox[b]{1.5in}{with bugs that are ...\\ \\ \\ \\ \\ \\ \\ } \hspace{0.3in}
+\includegraphics[width=2.5in]{bugbox2.idraw}
+
+\end{slide}
+
+\begin{slide}[Replace]{An accurate analogy: Bugs In A Box}
+
+\parbox[b]{1.5in}{hyperactive, ...\\ \\ \\ \\ \\ \\ \\ } \hspace{0.3in}
+\includegraphics[width=2.5in]{bugbox3.idraw}
+
+\end{slide}
+
+\begin{slide}[Replace]{An accurate analogy: Bugs In A Box}
+
+\parbox[b]{1.5in}{indiscriminate, ...\\ \\ \\ \\ \\ \\ \\ } \hspace{0.3in}
+\includegraphics[width=2.5in]{bugbox5.idraw}
+
+\end{slide}
+
+\begin{slide}[Replace]{An accurate analogy: Bugs In A Box}
+
+\parbox[b]{1.5in}{voracious ...\\ \\ \\ \\ \\ \\ \\ } \hspace{0.3in}
+\includegraphics[width=2.5in]{bugbox6.idraw}
+
+\end{slide}
+
+\begin{slide}[Replace]{An accurate analogy: Bugs In A Box}
+
+\parbox[b]{1.5in}{{\it (eats other bug)} ...\\ \\ \\ \\ \\ \\ \\ } \hspace{0.3in}
+\includegraphics[width=2.5in]{bugbox7.idraw}
+
+\end{slide}
+
+\begin{slide}[Replace]{An accurate analogy: Bugs In A Box}
+
+\parbox[b]{1.5in}{and insatiable.\\ \\ \\ \\ \\ \\ \\ } \hspace{0.3in}
+\includegraphics[width=2.5in]{bugbox8.idraw}
+
+\end{slide}
+
+\begin{slide}[Replace]{Random coalescent trees with 16 lineages }
+\bigskip
+
+\begin{tabular}{c c c c}
+\includegraphics[width=0.95in]{fig26-5a.ydraw} &
+\includegraphics[width=0.95in]{fig26-5b.ydraw} &
+\includegraphics[width=0.95in]{fig26-5c.ydraw} &
+\includegraphics[width=0.95in]{fig26-5d.ydraw}\\ 
+& & & \\
+\includegraphics[width=0.95in]{fig26-5e.ydraw} &
+\includegraphics[width=0.95in]{fig26-5g.ydraw} &
+\includegraphics[width=0.95in]{fig26-5h.ydraw} &
+\includegraphics[width=0.95in]{fig26-5i.ydraw}
+\end{tabular}
+
+\end{slide}
+
+\begin{slide}[Replace]{Coalescence is faster in small populations}
+
+\centerline{\includegraphics[height=3in]{popsize.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Migration can be taken into account}
+
+\centerline{\includegraphics[height=3.2in]{migration2.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Recombination creates loops}
+
+\centerline{\includegraphics[height=3.0in]{recombcoal.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{If we have a sample of 50 copies}
+
+\centerline{\includegraphics[height=3.3in]{coalsample.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{The first 10 account for most of the branch length}
+
+\centerline{\includegraphics[height=3.3in]{coalsample1.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{ ... and when we add the other 40 they add less length}
+
+\centerline{\includegraphics[height=3.3in]{coalsample2.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{We want to be able to analyze human evolution}
+
+\centerline{\includegraphics[height=3.2in]{eve.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{coalescent and ``gene trees'' versus species trees}
+
+\centerline{\includegraphics[height=3in]{coaltree0.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{coalescent and ``gene trees'' versus species trees}
+
+\centerline{\includegraphics[height=3in]{coaltree1.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{coalescent and ``gene trees'' versus species trees}
+
+\centerline{\includegraphics[height=3in]{coaltree2.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{coalescent and ``gene trees'' versus species trees}
+
+\centerline{\includegraphics[height=3in]{coaltree3.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{coalescent and ``gene trees'' versus species trees}
+
+\centerline{\includegraphics[height=3in]{coaltree4.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{coalescent and ``gene trees'' versus species trees}
+
+\centerline{\includegraphics[height=3in]{coaltree.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{If the branch is more than $\mathsf{N_e}$ generations long ... }
+
+\centerline{\includegraphics[height=3in]{genetree2a.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{If the branch is more than $\mathsf{N_e}$ generations long ... }
+
+\centerline{\includegraphics[height=3in]{genetree2b.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{If the branch is more than $\mathsf{N_e}$ generations long ... }
+
+\centerline{\includegraphics[height=3in]{genetree2.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{How do we compute a likelihood for a population sample? }
+
+\centerline{\includegraphics[width=3.4in]{popsample.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{If we have a tree for the sample sequences, we can}
+
+\centerline{\includegraphics[width=3.4in]{popsample2.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{The basic equation for coalescent likelihoods}
+
+In the case of a single population with parameters\\
+\begin{tabular}{c l}
+$\mathsf{N_e}$ & effective population size \\
+$\mathsf{\mu}$ & mutation rate per site
+\end{tabular}\\
+and assuming $~\mathsf{G'}~$ stands for a coalescent genealogy and $~\mathsf{D}~$ for the
+sequences,
+{\ptsize{11}
+\[
+\begin{array}{c c c c c}
+\mathsf{L} & \mathsf{=}  & \multicolumn{2}{l}{\mathsf{\prob(D\;|\;N_e,\;\mu)}} &\\
+& & & & \\
+ & \mathsf{=}  & \mathsf{\sum\limits_{G '}} & \mathsf{\prob(G'\;|\;N_e)} & \mathsf{\prob(D\;|\;G', \mu)} \\
+ &    &                   & \underbrace{~~~~~~~~~~~~~~~~~~} & \underbrace{~~~~~~~~~~~~~~~~~~} \\
+ & & & {\sf Kingman's~prior} & {\sf likelihood~of~tree}
+\end{array}
+\]
+}
+
+
+\end{slide}
+
+\begin{slide}[Replace]{Rescaling the branch lengths}
+\bigskip
+
+Rescaling branch lengths of $~\mathsf{G'}~$ so that branches are given in expected
+mutations per site, $~\mathsf{G = \mu G'}~$, we get (if we let $~\mathsf{\Theta
+= 4N_e\mu}~$)
+\bigskip
+
+\[
+\mathsf{L \ = \sum_G \prob(G\;|\;\Theta) \prob(D\;|\;G)}
+\]
+\bigskip
+
+\noindent
+as the fundamental equation.  For more complex population scenarios one
+simply replaces $~\mathsf{\Theta}~$ with a vector of parameters.
+\bigskip
+
+\end{slide}
+
+\begin{slide}[Replace]{The variability comes from two sources}
+
+\vspace{-0.2in}
+
+\centerline{\includegraphics[width=3.1in]{variability.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Computing the likelihood: averaging over coalescents}
+
+\centerline{\includegraphics[width=4.5in]{coalcurv1.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Computing the likelihood: averaging over coalescents}
+
+\centerline{\includegraphics[width=4.5in]{coalcurv2.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Computing the likelihood: averaging over coalescents}
+
+\centerline{\includegraphics[width=4.5in]{coalcurv3.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Computing the likelihood: averaging over coalescents}
+
+\centerline{\includegraphics[width=4.5in]{coalcurv.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Labelled histories}
+
+\centerline{\includegraphics[width=3in]{history.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Sampling approaches to coalescent likelihood}
+\bigskip
+
+\begin{center}
+\begin{tabular}{c c c}
+\includegraphics[height=1.3in]{griffiths2.ps} &
+\includegraphics[height=1.3in]{tavare.ps} &
+\includegraphics[height=1.3in]{mary_and_jon.ps} \\
+& & \\
+Bob Griffiths & Simon Tavar\'e & Mary Kuhner and Jon Yamato
+\end{tabular}
+\end{center}
+
+\end{slide}
+
+\begin{slide}[Replace]{Monte Carlo integration}
+
+To get the area under a curve, we can either evaluate the function
+($\mathsf{f(x)}$) at a series of grid points and add up heights $\mathsf{\times}$ widths:
+
+\centerline{\includegraphics[height=1in]{montecarlo.ydraw}}
+
+or we can sample at random the same number of points, add up height $\times$
+width:
+
+\centerline{\includegraphics[height=1in]{montecarlo2.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Importance sampling}
+\bigskip
+
+\hspace{-0.2in}\includegraphics[height=1.5in]{fig10-8.ydraw}
+
+\end{slide}
+
+\begin{slide}[Replace]{Importance sampling}
+
+\centerline{\includegraphics[height=3in]{importance.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{The math of importance sampling}
+\bigskip
+
+\[
+\begin{array}{c c l}
+\mathsf{\int f(x)\;dx}  & \mathsf{=} & \mathsf{\int \frac{f(x)}{g(x)}\;g(x)\;dx }\\
+& & \\
+& \mathsf{=} & \mathsf{\expect_g \left[\frac{f(x)}{g(x)}\right]} \\
+\end{array}
+\]
+\bigskip
+
+\noindent
+which is the expectation for points sampled from $~\mathsf{g(x)}~$ of the ratio $~\mathsf{\frac{f(x)}{g(x)}}$.
+\bigskip
+
+\noindent
+This is approximated by sampling a lot ($\mathsf{n}$) of points from $~\mathsf{g(x)}~$ and
+the computing the average:
+\bigskip
+
+\[
+\mathsf{L \ \ = \ \  \frac{1}{n} \sum_{i=1}^n \frac{f(x_i)}{g(x_i)}}
+\]
+\bigskip
+
+\end{slide}
+
+\begin{slide}[Replace]{Rearrangement to sample points in tree space}
+
+\centerline{\includegraphics[width=3in]{coalrearr1.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Dissolving a branch and regrowing it backwards}
+
+\centerline{\includegraphics[width=3in]{coalrearr2.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{We allow it coalesce with the other branches}
+
+\centerline{\includegraphics[width=3in]{coalrearr3.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{and this gives another coalescent}
+
+\centerline{\includegraphics[width=3in]{coalrearr4.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{The resulting likelihood ratio is}
+\bigskip
+
+\[
+\mathsf{\frac{L(\Theta)}{L(\Theta_0)} \ = \ \frac{1}{n}\sum\limits_{i=1}^n\
+\frac{\Prob(G_i|\Theta)}{\Prob(G_i|\Theta_0)}}
+\]
+\bigskip
+
+(``Wait a second -- where in this expression is the data?'') \ \ It's in
+the sampling that gives you the $\mathsf{G_i}$: the data biases those
+samples in the correct way.
+
+
+\end{slide}
+
+\begin{slide}[Replace]{An example of an MCMC likelihood curve}
+
+\centerline{\includegraphics[width=3.3in]{likecurv.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Major MCMC likelihood or Bayesian programs}
+
+\begin{itemize}
+\item {\bf LAMARC} by Mary Kuhner and Jon Yamato and others. Likelihood
+inference with multiple
+populations, recombination, migration, population growth.  No historical
+branching events or serial sampling, yet.
+\item {\bf BEAST} by Andrew Rambaut, Alexei Drummond and others.  Bayesian
+inference with multiple populations related by a tree. Support for
+serial sampling (no migration or recombination yet).
+\item {\bf genetree} by Bob Griffiths and Melanie Bahlo. Likelihood
+inference of migration rates and changes in population size.  No recombination
+or historical branching events.
+\item {\bf migrate} by Peter Beerli.  Likelihood inference with multiple
+populations and migration rates.  No recombination or historical branching
+events yet.
+\item {\bf IM} and {\bf IMa} by Rasmus Nielsen and Jody Hey.  Two or more
+populations allowing both historical splitting and migration after that.  No 
+recombination yet.
+\end{itemize}
+
+\end{slide}
+
+% \begin{slide}[Replace]{An object-oriented approach (program LAMARC) }
+% 
+% \centerline{\includegraphics[width=2.8in]{lamarc2.ydraw}}
+% 
+% \end{slide}
+
+\begin{slide}[Replace]{Trees we will use for consensus trees}
+\bigskip
+
+\centerline{\includegraphics[height=1.8in]{fig30-1.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Trees we will use for consensus trees}
+\bigskip
+
+\centerline{\includegraphics[height=1.8in]{fig30-1a.ydraw}}
+\bigskip
+
+(for unrooted trees we would use partitions induced by branches instead of
+clades)
+
+\end{slide}
+
+\begin{slide}[Replace]{Trees we will use for consensus trees}
+\bigskip
+
+\centerline{\includegraphics[height=1.8in]{fig30-1b.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Trees we will use for consensus trees}
+\bigskip
+
+\centerline{\includegraphics[height=1.8in]{fig30-1c.ydraw}}
+\bigskip
+
+(Do we count this one if the trees are considered rooted? unrooted?)
+
+\end{slide}
+
+\begin{slide}[Replace]{Trees we will use for consensus trees}
+\bigskip
+
+\centerline{\includegraphics[height=1.8in]{notinstrict.idraw}}
+\bigskip
+
+Here is a clade that is found on only two of the trees, so it is not
+included in the Strict Consensus Tree.
+
+\end{slide}
+
+\begin{slide}[Replace]{Their strict consensus tree}
+\bigskip
+
+\centerline{\includegraphics[height=2in]{fig30-2.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{A distressing case for the strict consensus tree}
+\bigskip
+
+\centerline{\includegraphics[height=2in]{fig30-3.ydraw}}
+\bigskip
+
+Only one species moves ...
+
+\end{slide}
+
+\begin{slide}[Replace]{A distressing case for the strict consensus tree}
+\bigskip
+
+\centerline{\includegraphics[height=2in]{fig30-3a.ydraw}}
+\bigskip
+
+... but the strict consensus tree becomes totally unresolved.
+
+\end{slide}
+
+\begin{slide}[Replace]{Majority-rule consensus tree}
+\bigskip
+
+\centerline{\includegraphics[height=2in]{fig30-4.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{The Adams consensus tree}
+\bigskip
+
+\bigskip
+
+For rooted trees, Adams (1972, 1986) suggested:
+\medskip
+
+\begin{enumerate}
+\item Take all rooted triples on each tree.
+\item Retain those that are not contradicted, where lack of
+resolution does not count as contradiction.
+\item Construct a tree of these.
+\end{enumerate}
+
+\end{slide}
+
+\begin{slide}[Replace]{Two of the possible triples to examine}
+\bigskip
+
+\centerline{\includegraphics[width=4.0in]{adamstriples.idraw}}
+\bigskip
+
+The green triple shows the same rooted topology on all three trees.
+The red triple is contradicted and does not get used in the Adams Consensus
+Tree.
+
+\end{slide}
+
+\begin{slide}[Replace]{The Adams consensus tree}
+\bigskip
+
+\centerline{\includegraphics[height=2in]{fig30-5.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Steel, B\"ocker, and Dress's shocking disproof}
+\bigskip
+
+Steel, M., S. B\"ocker, and A. W. M. Dress. 2000. Simple but fundamental limits for supertree and consensus tree methods. {\it Systematic Biology} {\bf 49(2):}
+363-368.
+\bigskip
+
+They put forward three minimal requirements for an unrooted Adams-like
+consensus tree based on observations of quartets, rather than triples.  Note
+that a quartet, like a triple, has three possible topologies, but unrooted
+ones:  ((A,B),(C,D))  and  ((A,C),(B,D))  and  ((A,D),(B,C)).
+
+\begin{itemize}
+\item The result shouldn't be altered by relabelling all the species in a
+consistent way.
+\item The result should not depend on the order in which the trees are input.
+\item If a quartet appears in all trees, it should appear in the consensus.
+\end{itemize}
+
+Alas, they then show there is no consensus tree method for unrooted trees that
+can satisfy all of these!
+
+\end{slide}
+
+\begin{slide}[Replace]{A consensus subtree}
+\bigskip
+
+\centerline{\includegraphics[height=2.5in]{fig30-6a.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{A consensus subtree}
+\bigskip
+
+\centerline{\includegraphics[height=2.5in]{fig30-6b.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{A consensus subtree}
+\bigskip
+
+\centerline{\includegraphics[height=2.5in]{fig30-6.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{A supertree}
+\bigskip
+
+\centerline{\includegraphics[height=2.5in]{supertree.ydraw}}
+\medskip
+
+Construct a tree with all tips, for which each of the smaller trees is a
+subtree.  What to do if there is conflict?  There are various
+suggestions.
+
+\end{slide}
+
+\end{document}
+
+\begin{slide}[Replace]{The symmetric difference metric}
+\bigskip
+
+\centerline{\includegraphics[height=2.5in]{fig30-7.ydraw}}
+\bigskip
+
+The symmetric difference is the number of partitions that are in one but not
+both of these lists, in this case 3.
+
+\end{slide}
+
+\begin{slide}[Replace]{The Robinson-Foulds and Branch Length distances}
+
+\centerline{\includegraphics[height=3.0in]{branchdist.idraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Asymmetry at base of a tree}
+\bigskip
+
+A tree with $~\mathsf{n}~$ tips can, at the bottom fork, have clades whose
+ultimate sizes are $\mathsf{~~~1\,:\,n-1}$, $\mathsf{~~~2\,:\,n-2}$,
+$\mathsf{~~~3\,:\,n-3}$, $~~~\dots, \mathsf{~~~n-1\,:\,1}$.
+\bigskip
+
+\begin{center}
+\begin{quote}
+\fbox{
+\parbox[t]{3.5in}{
+Under a random branching model, these possibilities are all equiprobable (this
+is true when there is random death of lineages too).
+}
+}
+\end{quote}
+\end{center}
+\bigskip
+
+As we can't tell which clade is on the left, we can symmetrize this, always
+putting the smaller clade on the left.  
+\bigskip
+
+So with 7 tips we have equal probabilities of ~1\,:\,6, ~2\,:\,5, and ~3\,:\,4.
+With an even number of tips (say 8) we have to be more careful, as ~4\,:\,4~ is then only half as probable as  as each of the others ~1\,:\,7, ~2\,:\,6,~ and ~3\,:\,5.. 
+
+\end{slide}
+
+\begin{slide}[Replace]{Harding's probability of a tree shape}
+
+\centerline{\includegraphics[height=2.5in]{fig33-1.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Birth-death process tree}
+
+\centerline{\includegraphics[height=3in]{fig33-2a.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{If we remove the extinct lineages}
+
+\centerline{\includegraphics[height=3in]{fig33-2a1.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{We get ... }
+
+\centerline{\includegraphics[height=3in]{fig33-2a2.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Reconstructed lineages from that tree}
+
+\centerline{\includegraphics[height=3in]{fig33-2b.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Birth-death processes and tree shapes}
+
+With branching rate $~\mathsf{\lambda}~$ and death rate $~\mathsf{\mu}$,
+\bigskip
+
+probability of survival of a lineage for $~\mathsf{t}~$ is
+{\large
+\[
+\mathsf{s(t) \ = \ \prob(n>0\;|\;t) \ = \ \frac{(\lambda-\mu)e^{(\lambda-\mu)t}}{ \lambda\;e^{(\lambda-\mu)t}-\mu}}
+\]
+}
+
+\end{slide}
+
+\begin{slide}[Replace]{Number of reconstructed and actual lineages}
+\bigskip
+
+\noindent
+Nee, May, and Harvey (1994) argue that the number of lineages at time $~\mathsf{t}~$ ago who have descendants in the present, given that they started $~\mathsf{T}~$ time ago, is expected to be
+\[
+\mathsf{\expect[N_R(t, T)] \ = \ \frac{e^{(\lambda-\mu)t}\ s(T-t)}{s(T)}}
+\]
+
+\noindent
+and the expected number that actually were there then, given that at least one is
+still alive now, is
+\[
+\mathsf{\expect[N(t, T)] \ = \ \frac{e^{(\lambda-\mu)t}}{s(T)} \ - \ \frac{s(t)-s(T)}{s(t) s(T-t)}}
+\]
+
+\end{slide}
+
+\begin{slide}[Replace]{Reconstructed and actual lineages}
+
+\centerline{\includegraphics[height=3in]{fig33-3.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Rooted tree with ancestors in ``intermediate'' position}
+
+\centerline{\includegraphics[width=3in]{fig34-1a.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Rooted tree with ancestors in ``centered'' position}
+
+\centerline{\includegraphics[width=3in]{fig34-1b.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Rooted tree with ancestors in ``weighted'' position}
+
+\centerline{\includegraphics[width=3in]{fig34-1c.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Rooted tree with ancestors in ``inner'' position}
+
+\centerline{\includegraphics[width=3in]{fig34-1d.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Drawn with diagonal lines}
+
+\centerline{\includegraphics[width=3in]{fig34-2a.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Drawn so as to be V-shaped}
+
+\centerline{\includegraphics[width=3in]{fig34-2b.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{A curvogram}
+
+\centerline{\includegraphics[width=3in]{fig34-2c.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{A swoopogram}
+
+\centerline{\includegraphics[width=3in]{fig34-2d.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{A eurogram}
+
+\centerline{\includegraphics[width=3in]{fig34-2e.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{A circular drawing of a rooted tree}
+
+\centerline{\includegraphics[width=3in]{fig34-2f.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{The equal-angle algorithm}
+
+\centerline{\includegraphics[width=3.5in]{fig34-3.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{The equal-angle algorithm tree for the example}
+
+\centerline{\includegraphics[width=2.5in]{fig34-4.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{The n-body algorithm for the example}
+
+\centerline{\includegraphics[width=2.5in]{fig34-5.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{The equal-daylight algorithm}
+
+\centerline{\includegraphics[width=3in]{fig34-6.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Equal-daylight tree for the example}
+
+\centerline{\includegraphics[width=2.3in]{fig34-7.ydraw}}
+
+\end{slide}
+
+\end{document}
+
