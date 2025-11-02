@@ -1,0 +1,258 @@
+Script started on Sun 03 Jan 2010 07:46:38 AM PST
+]0;joe@evolution:~/courses/gs570/2010/week9evolution> ./foo
+This is pdfeTeX, Version 3.141592-1.21a-2.2 (Web2C 7.5.4)
+entering extended mode
+(./week9.tex
+LaTeX2e <2003/12/01>
+Babel <v3.8d> and hyphenation patterns for american, french, german, ngerman, b
+ahasa, basque, bulgarian, catalan, croatian, czech, danish, dutch, esperanto, e
+stonian, finnish, greek, icelandic, irish, italian, latin, magyar, norsk, polis
+h, portuges, romanian, russian, serbian, slovak, slovene, spanish, swedish, tur
+kish, ukrainian, nohyphenation, loaded.
+(./prosper.cls
+Document Class: prosper 2001/01/23, v. 1.1
+(c) 2000 Frederic Goualard, CWI, The Netherlands
+CVSId: $Id: prosper.cls,v 1.5 2001/01/31 10:20:44 exupery Exp $
+ 
+(/usr/share/texmf/tex/latex/seminar/seminar.cls
+Document Class: seminar 1997/10/13, 1.4
+Document Style: `seminar' v1.4 <1997/10/13> (tvz)
+(/usr/share/texmf/tex/latex/base/article.cls
+Document Class: article 2004/02/16 v1.4f Standard LaTeX document class
+(/usr/share/texmf/tex/latex/base/leqno.clo)
+(/usr/share/texmf/tex/latex/base/size10.clo))
+(/usr/share/texmf/tex/latex/seminar/sem-page.sty))
+(/usr/share/texmf/tex/latex/seminar/seminar.con)
+(/usr/share/texmf/tex/latex/seminar/semcolor.sty
+Style Option: `semcolor' for doc style `seminar' 1.01 <2004/05/18> (tvz)
+(/usr/share/texmf/tex/latex/pstricks/pstricks.sty
+(/usr/share/texmf/tex/generic/pstricks/pstricks.tex
+`PSTricks' v1.04  <2004/06/22> (tvz)
+(/usr/share/texmf/tex/generic/pstricks/pstricks.con))
+(/usr/share/texmf/tex/latex/xcolor/xcolor.sty
+(/usr/share/texmf/tex/latex/graphics/color.cfg)
+(/usr/share/texmf/tex/latex/graphics/dvips.def))))
+(/usr/share/texmf/tex/latex/seminar/semlayer.sty)
+(/usr/share/texmf/tex/latex/graphics/graphicx.sty
+(/usr/share/texmf/tex/latex/graphics/keyval.sty)
+(/usr/share/texmf/tex/latex/graphics/graphics.sty
+(/usr/share/texmf/tex/latex/graphics/trig.sty)
+(/usr/share/texmf/tex/latex/graphics/graphics.cfg)))
+(/usr/share/texmf/tex/latex/hyperref/hyperref.sty
+(/usr/share/texmf/tex/latex/hyperref/pd1enc.def)
+(/usr/share/texmf/tex/latex/hyperref/hyperref.cfg)
+Implicit mode ON; LaTeX internals redefined
+(/usr/share/texmf/tex/latex/url/url.sty))
+*hyperref using driver hdvips*
+(/usr/share/texmf/tex/latex/hyperref/hdvips.def
+(/usr/share/texmf/tex/latex/hyperref/pdfmark.def))
+(/usr/share/texmf/tex/latex/base/ifthen.sty) (./PPRbluish.sty
+bluish style for Prosper ---
+(/usr/share/texmf/tex/latex/pstricks/pst-grad.sty
+(/usr/share/texmf/tex/generic/pstricks/pst-grad.tex  v1.04, 2004/06/24))
+(/usr/share/texmf/tex/latex/amsfonts/amssymb.sty
+(/usr/share/texmf/tex/latex/amsfonts/amsfonts.sty))
+(/usr/share/texmf/tex/latex/psnfss/times.sty)))
+(/usr/share/texmf/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf/tex/latex/amsmath/amstext.sty
+(/usr/share/texmf/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texmf/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texmf/tex/latex/amsmath/amsopn.sty)) (./week9.aux)
+(/usr/share/texmf/tex/latex/psnfss/ot1ptm.fd)
+(/usr/share/texmf/tex/latex/hyperref/nameref.sty) (./week9.out) (./week9.out)
+(/usr/share/texmf/tex/latex/psnfss/t1phv.fd)
+(/usr/share/texmf/tex/latex/amsfonts/umsa.fd)
+(/usr/share/texmf/tex/latex/amsfonts/umsb.fd) [1] <coal1-0.ydraw> [2]
+<coal1-1.ydraw> [3] <coal1-2.ydraw> [4] <coal1-3.ydraw> [5] <coal1-4.ydraw>
+[6] <coal1-5.ydraw> [7] <coal1-6.ydraw> [8] <coal1-7.ydraw> [9]
+<coal1-8.ydraw> [10] <coal1-9.ydraw> [11] <coal1-10.ydraw> [12]
+<coal1-11.ydraw> [13] <coalgenes.ydraw> [14] <coalthree.ydraw> [15]
+<coalinped.ydraw> [16] <kingman3.ydraw> [17] [18]
+
+Package amsmath Warning: Foreign command \atopwithdelims;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 186.
+
+[19] [20] [21] [22] <fig26-5a.ydraw> <fig26-5b.ydraw> <fig26-5c.ydraw>
+<fig26-5d.ydraw> <fig26-5e.ydraw> <fig26-5g.ydraw> <fig26-5h.ydraw>
+<fig26-5i.ydraw> [23] <popsize.ydraw> [24] <migration2.ydraw> [25]
+<recombcoal.ydraw> [26] <coalsample.ydraw> [27] <coalsample1.ydraw> [28]
+<coalsample2.ydraw> [29] <eve.ydraw> [30] <coaltree0.ydraw> [31]
+<coaltree1.ydraw> [32] <coaltree2.ydraw> [33] <coaltree3.ydraw> [34]
+<coaltree4.ydraw> [35] <coaltree.ydraw> [36] <genetree2a.ydraw> [37]
+<genetree2b.ydraw> [38] <genetree2.ydraw> [39] <popsample.ydraw> [40]
+<popsample2.ydraw> [41] [42] [43] <variability.ydraw> [44]
+Underfull \hbox (badness 8170) in paragraph at lines 450--450
+[]\T1/phv/b/n/12 We can com-pute the like-li-hood by av-er-ag-ing over
+<coalcurv.ydraw> [45] <history.ydraw> [46] <montecarlo.ydraw>
+<montecarlo2.ydraw> [47] <fig10-8.ydraw> [48] <importance.ydraw> [49] [50]
+<coalrearr1.ydraw> [51] <coalrearr2.ydraw> [52] <coalrearr3.ydraw> [53]
+<coalrearr4.ydraw> [54]
+
+Package amsmath Warning: Foreign command \over;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 544.
+
+[55] <likecurv.ydraw> [56] [57] <lamarc2.ydraw> [58] (./week9.aux) )
+(see the transcript file for additional information)
+Output written on week9.dvi (58 pages, 93104 bytes).
+Transcript written on week9.log.
+This is dvips(k) 5.95a Copyright 2005 Radical Eye Software (www.radicaleye.com)
+' TeX output 2010.01.03:0746' -> week9.ps
+dvips: both landscape and papersize specified:  ignoring landscape
+<tex.pro><pstricks.pro><pst-dots.pro><pst-grad.pro><8r.enc><texnansi.enc>
+<texps.pro><special.pro><color.pro>. <cmr7.pfb><cmsy5.pfb><cmss8.pfb>
+<cmss12.pfb><cmsy7.pfb><cmex10.pfb><cmmi10.pfb><cmr10.pfb><cmsy10.pfb>
+<cmss10.pfb>[1] [2<coal1-0.ydraw>] [3<coal1-1.ydraw>] [4<coal1-2.ydraw>] [5
+<coal1-3.ydraw>] [6<coal1-4.ydraw>] [7<coal1-5.ydraw>] [8<coal1-6.ydraw>] [9
+<coal1-7.ydraw>] [10<coal1-8.ydraw>] [11<coal1-9.ydraw>] [12<coal1-10.ydraw>] 
+[13<coal1-11.ydraw>] [14<coalgenes.ydraw>] [15<coalthree.ydraw>] [16
+<coalinped.ydraw>] [17<kingman3.ydraw>] [18] [19] [20] [21] [22] [23
+<fig26-5a.ydraw><fig26-5b.ydraw><fig26-5c.ydraw><fig26-5d.ydraw>
+<fig26-5e.ydraw><fig26-5g.ydraw><fig26-5h.ydraw><fig26-5i.ydraw>] [24
+<popsize.ydraw>] [25<migration2.ydraw>] [26<recombcoal.ydraw>] [27
+<coalsample.ydraw>] [28<coalsample1.ydraw>] [29<coalsample2.ydraw>] [30
+<eve.ydraw>] [31<coaltree0.ydraw>] [32<coaltree1.ydraw>] [33<coaltree2.ydraw>] 
+[34<coaltree3.ydraw>] [35<coaltree4.ydraw>] [36<coaltree.ydraw>] [37
+<genetree2a.ydraw>] [38<genetree2b.ydraw>] [39<genetree2.ydraw>] [40
+<popsample.ydraw>] [41<popsample2.ydraw>] [42] [43] [44<variability.ydraw>] 
+[45<coalcurv.ydraw>] [46<history.ydraw>] [47<montecarlo.ydraw>
+<montecarlo2.ydraw>] [48<fig10-8.ydraw>] [49<importance.ydraw>] [50] [51
+<coalrearr1.ydraw>] [52<coalrearr2.ydraw>] [53<coalrearr3.ydraw>] [54
+<coalrearr4.ydraw>] [55] [56<likecurv.ydraw>] [57] [58<lamarc2.ydraw>] 
+ERROR: /invalidfont in --.type1execchar--
+Operand stack:
+   --nostringval--   --nostringval--   --dict:16/17(ro)(L)--   83   S   -string-
+Execution stack:
+   %interp_exit   .runexec2   --nostringval--   --nostringval--   --nostringval--   2   %stopped_push   --nostringval--   --nostringval--   --nostringval--   false   1   %stopped_push   1   3   %oparray_pop   1   3   %oparray_pop   1   3   %oparray_pop   1   3   %oparray_pop   .runexec2   --nostringval--   --nostringval--   --nostringval--   2   %stopped_push   --nostringval--   --nostringval--   --nostringval--   --nostringval--   %array_continue   --nostringval--   %finish_show   --nostringval--   --nostringval--   13   9   2   --nostringval--   (pdf_text_enum_t)   %op_show_continue
+Dictionary stack:
+   --dict:1121/1686(ro)(G)--   --dict:0/20(G)--   --dict:107/200(L)--   --dict:191/300(L)--   --dict:65/200(L)--   --dict:36/51(L)--   --dict:1/17(L)--   --dict:5/17(L)--   --dict:3/3(L)--
+Current allocation mode is local
+Current file position is 1855987
+ESP Ghostscript 815.02: Unrecoverable error, exit code 1
+ESP Ghostscript 815.02: ERROR: A pdfmark destination page 23 points beyond the last page 22.
+*** glibc detected *** /usr/bin/gs: corrupted double-linked list: 0x00000000108434c0 ***
+======= Backtrace: =========
+/lib64/libc.so.6[0x3771e72368]
+/lib64/libc.so.6(cfree+0x4b)[0x3771e7273b]
+/usr/lib64/libgs.so.8[0x377c6a82cf]
+/usr/lib64/libgs.so.8[0x377c68faa9]
+/usr/lib64/libgs.so.8(alloc_restore_all+0x114)[0x377c535264]
+/usr/lib64/libgs.so.8(gs_main_finit+0x1a5)[0x377c504095]
+/usr/bin/gs(main+0xa0)[0x4009f0]
+/lib64/libc.so.6(__libc_start_main+0xf4)[0x3771e1d994]
+/usr/bin/gs[0x4008b9]
+======= Memory map: ========
+00400000-00401000 r-xp 00000000 fd:00 4641462                            /usr/bin/gs
+00600000-00602000 rw-p 00000000 fd:00 4641462                            /usr/bin/gs
+105fc000-10d0f000 rw-p 105fc000 00:00 0                                  [heap]
+3771a00000-3771a1c000 r-xp 00000000 fd:00 11305173                       /lib64/ld-2.5.so
+3771c1b000-3771c1c000 r--p 0001b000 fd:00 11305173                       /lib64/ld-2.5.so
+3771c1c000-3771c1d000 rw-p 0001c000 fd:00 11305173                       /lib64/ld-2.5.so
+3771e00000-3771f4d000 r-xp 00000000 fd:00 11305232                       /lib64/libc-2.5.so
+3771f4d000-377214d000 ---p 0014d000 fd:00 11305232                       /lib64/libc-2.5.so
+377214d000-3772151000 r--p 0014d000 fd:00 11305232                       /lib64/libc-2.5.so
+3772151000-3772152000 rw-p 00151000 fd:00 11305232                       /lib64/libc-2.5.so
+3772152000-3772157000 rw-p 3772152000 00:00 0 
+3772200000-3772282000 r-xp 00000000 fd:00 11305283                       /lib64/libm-2.5.so
+3772282000-3772481000 ---p 00082000 fd:00 11305283                       /lib64/libm-2.5.so
+3772481000-3772482000 r--p 00081000 fd:00 11305283                       /lib64/libm-2.5.so
+3772482000-3772483000 rw-p 00082000 fd:00 11305283                       /lib64/libm-2.5.so
+3772600000-3772602000 r-xp 00000000 fd:00 11305233                       /lib64/libdl-2.5.so
+3772602000-3772802000 ---p 00002000 fd:00 11305233                       /lib64/libdl-2.5.so
+3772802000-3772803000 r--p 00002000 fd:00 11305233                       /lib64/libdl-2.5.so
+3772803000-3772804000 rw-p 00003000 fd:00 11305233                       /lib64/libdl-2.5.so
+3772a00000-3772a16000 r-xp 00000000 fd:00 11305259                       /lib64/libpthread-2.5.so
+3772a16000-3772c15000 ---p 00016000 fd:00 11305259                       /lib64/libpthread-2.5.so
+3772c15000-3772c16000 r--p 00015000 fd:00 11305259                       /lib64/libpthread-2.5.so
+3772c16000-3772c17000 rw-p 00016000 fd:00 11305259                       /lib64/libpthread-2.5.so
+3772c17000-3772c1b000 rw-p 3772c17000 00:00 0 
+3772e00000-3772e14000 r-xp 00000000 fd:00 4651038                        /usr/lib64/libz.so.1.2.3
+3772e14000-3773013000 ---p 00014000 fd:00 4651038                        /usr/lib64/libz.so.1.2.3
+3773013000-3773014000 rw-p 00013000 fd:00 4651038                        /usr/lib64/libz.so.1.2.3
+3773200000-3773305000 r-xp 00000000 fd:00 4651045                        /usr/lib64/libX11.so.6.2.0
+3773305000-3773505000 ---p 00105000 fd:00 4651045                        /usr/lib64/libX11.so.6.2.0
+3773505000-377350c000 rw-p 00105000 fd:00 4651045                        /usr/lib64/libX11.so.6.2.0
+3773600000-3773602000 r-xp 00000000 fd:00 4623559                        /usr/lib64/libXau.so.6.0.0
+3773602000-3773801000 ---p 00002000 fd:00 4623559                        /usr/lib64/libXau.so.6.0.0
+3773801000-3773802000 rw-p 00001000 fd:00 4623559                        /usr/lib64/libXau.so.6.0.0
+3773a00000-3773a05000 r-xp 00000000 fd:00 4651044                        /usr/lib64/libXdmcp.so.6.0.0
+3773a05000-3773c04000 ---p 00005000 fd:00 4651044                        /usr/lib64/libXdmcp.so.6.0.0
+3773c04000-3773c05000 rw-p 00004000 fd:00 4651044                        /usr/lib64/libXdmcp.so.6.0.0
+3773e00000-3773e10000 r-xp 00000000 fd:00 4634235                        /usr/lib64/libXext.so.6.4.0
+3773e10000-3774010000 ---p 00010000 fd:00 4634235                        /usr/lib64/libXext.so.6.4.0
+3774010000-3774011000 rw-p 00010000 fd:00 4634235                        /usr/lib64/libXext.so.6.4.0
+3774a00000-3774a23000 r-xp 00000000 fd:00 4638980                        /usr/lib64/libpng12.so.0.10.0
+3774a23000-3774c23000 ---p 00023000 fd:00 4638980                        /usr/lib64/libpng12.so.0.10.0
+3774c23000-3774c24000 rw-p 00023000 fd:00 4638980                        /usr/lib64/libpng12.so.0.10.0
+3776a00000-3776a0d000 r-xp 00000000 fd:00 11305284                       /lib64/libgcc_s-4.1.2-20070626.so.1
+3776a0d000-3776c0d000 ---p 0000d000 fd:00 11305284                       /lib64/libgcc_s-4.1.2-20070626.so.1
+3776c0d000-3776c0e000 rw-p 0000d000 fd:00 11305284                       /lib64/libgcc_s-4.1.2-20070626.so.1
+3776e00000-3776e15000 r-xp 00000000 fd:00 4635318                        /usr/lib64/libcupsimage.so.2
+3776e15000-3777014000 ---p 00015000 fd:00 4635318                        /usr/lib64/libcupsimage.so.2
+3777014000-3777015000 rw-p 00014000 fd:00 4635318                        /usr/lib64/libcupsimage.so.2
+3777200000-37772e6000 r-xp 00000000 fd:00 4649709                        /usr/lib64/libstdc++.so.6.0.8
+37772e6000-37774e5000 ---p 000e6000 fd:00 4649709                        /usr/lib64/libstdc++.so.6.0.8
+37774e5000-37774eb000 r--p 000e5000 fd:00 4649709                        /usr/lib64/libstdc++.so.6.0.8
+37774eb000-37774ee000 rw-p 000eb000 fd:00 4649709                        /usr/lib64/libstdc++.so.6.0.8
+37774ee000-3777500000 rw-p 37774ee000 00:00 0 
+3777600000-3777609000 r-xp 00000000 fd:00 4651048                        /usr/lib64/libSM.so.6.0.0
+3777609000-3777809000 ---p 00009000 fd:00 4651048                        /usr/lib64/libSM.so.6.0.0
+3777809000-377780a000 rw-p 00009000 fd:00 4651048                        /usr/lib64/libSM.so.6.0.0
+3777a00000-3777a21000 r-xp 00000000 fd:00 4651059                        /usr/lib64/libjpeg.so.62.0.0
+3777a21000-3777c21000 ---p 00021000 fd:00 4651059                        /usr/lib64/libjpeg.so.62.0.0
+3777c21000-3777c22000 rw-p 00021000 fd:00 4651059                        /usr/lib64/libjpeg.so.62.0.0
+377c000000-377c015000 r-xp 00000000 fd:00 11305258                       /lib64/libnsl-2.5.so
+377c015000-377c214000 ---p 00015000 fd:00 11305258                       /lib64/libnsl-2.5.so
+377c214000-377c215000 r--p 00014000 fd:00 11305258                       /lib64/libnsl-2.5.so
+377c215000-377c216000 rw-p 00015000 fd:00 11305258                       /lib64/libnsl-2.5.so
+377c216000-377c218000 rw-p 377c216000 00:00 0 
+377c400000-377c773000 r-xp 00000000 fd:00 4627606                        /usr/lib64/libgs.so.8.15
+377c773000-377c973000 ---p 00373000 fd:00 4627606                        /usr/lib64/libgs.so.8.15
+377c973000-377cb74000 rw-p 00373000 fd:00 4627606                        /usr/lib64/libgs.so.8.15
+377cb74000-377cd01000 rw-p 377cb74000 00:00 0 
+377d000000-377d05b000 r-xp 00000000 fd:00 4651049                        /usr/lib64/libXt.so.6.0.0
+377d05b000-377d25a000 ---p 0005b000 fd:00 4651049                        /usr/lib64/libXt.so.6.0.0
+377d25a000-377d260000 rw-p 0005a000 fd:00 4651049                        /usr/lib64/libXt.so.6.0.0
+377d260000-377d261000 rw-p 377d260000 00:00 0 
+3781000000-3781009000 r-xp 00000000 fd:00 11305256                       /lib64/libcrypt-2.5.so
+3781009000-3781208000 ---p 00009000 fd:00 11305256                       /lib64/libcrypt-2.5.so
+3781208000-3781209000 r--p 00008000 fd:00 11305256                       /lib64/libcrypt-2.5.so
+3781209000-378120a000 rw-p 00009000 fd:00 11305256                       /lib64/libcrypt-2.5.so
+378120a000-3781238000 rw-p 378120a000 00:00 0 
+3785000000-3785057000 r-xp 00000000 fd:00 4624097                        /usr/lib64/libtiff.so.3.8.2
+3785057000-3785256000 ---p 00057000 fd:00 4624097                        /usr/lib64/libtiff.so.3.8.2
+3785256000-3785259000 rw-p 00056000 fd:00 4624097                        /usr/lib64/libtiff.so.3.8.2
+3785400000-3785434000 r-xp 00000000 fd:00 4651110                        /usr/lib64/libcups.so.2
+3785434000-3785633000 ---p 00034000 fd:00 4651110                        /usr/lib64/libcups.so.2
+3785633000-3785636000 rw-p 00033000 fd:00 4651110                        /usr/lib64/libcups.so.2
+3785c00000-3785c79000 r-xp 00000000 fd:00 4651109                        /usr/lib64/libgnutls.so.13.0.6
+3785c79000-3785e79000 ---p 00079000 fd:00 4651109                        /usr/lib64/libgnutls.so.13.0.6
+3785e79000-3785e83000 rw-p 00079000 fd:00 4651109                        /usr/lib64/libgnutls.so.13.0.6
+3786400000-3786403000 r-xp 00000000 fd:00 4625429                        /usr/lib64/libgpg-error.so.0.3.0
+3786403000-3786602000 ---p 00003000 fd:00 4625429                        /usr/lib64/libgpg-error.so.0.3.0
+3786602000-3786603000 rw-p 00002000 fd:00 4625429                        /usr/lib64/libgpg-error.so.0.3.0
+3786c00000-3786c4a000 r-xp 00000000 fd:00 4651108                        /usr/lib64/libgcrypt.so.11.2.2
+3786c4a000-3786e4a000 ---p 0004a000 fd:00 4651108                        /usr/lib64/libgcrypt.so.11.2.2
+3786e4a000-3786e4c000 rw-p 0004a000 fd:00 4651108                        /usr/lib64/libgcrypt.so.11.2.2
+3786e4c000-3786e4d000 rw-p 3786e4c000 00:00 0 
+2baaa3ba2000-2baaa3ba3000 rw-p 2baaa3ba2000 00:00 0 
+2baaa3bd2000-2baaa3bda000 rw-p 2baaa3bd2000 00:00 0 
+2baaa3bda000-2baaa3beb000 r-xp 00000000 fd:00 6521007                    /usr/lib64/ghostscript/8.15/X11.so
+2baaa3beb000-2baaa3dea000 ---p 00011000 fd:00 6521007                    /usr/lib64/ghostscript/8.15/X11.so
+2baaa3dea000-2baaa3df0000 rw-p 00010000 fd:00 6521007                    /usr/lib64/ghostscript/8.15/X11.so
+2baaa3df0000-2baaa3df2000 rw-p 2baaa3df0000 00:00 0 
+2baaa3df6000-2baaa3df7000 rw-p 2baaa3df6000 00:00 0 
+2baaa3e1f000-2baaa3e36000 r-xp 00000000 fd:00 4651047                    /usr/lib64/libICE.so.6.3.0
+2baaa3e36000-2baaa4035000 ---p 00017000 fd:00 4651047                    /usr/lib64/libICE.so.6.3.0
+2baaa4035000-2baaa4037000 rw-p 00016000 fd:00 4651047                    /usr/lib64/libICE.so.6.3.0
+2baaa4037000-2baaa403a000 rw-p 2baaa4037000 00:00 0 
+2baaa8000000-2baaa8021000 rw-p 2baaa8000000 00:00 0 
+2baaa8021000-2baaac000000 ---p 2baaa8021000 00:00 0 
+7fff06ef2000-7fff06f07000 rw-p 7ffffffea000 00:00 0                      [stack]
+ffffffffff600000-ffffffffffe00000 ---p 00000000 00:00 0                  [vdso]
+./foo: line 3: 16455 Aborted                 ps2pdf -dEmbedAllFonts=true week9.ps
+]0;joe@evolution:~/courses/gs570/2010/week9evolution> exit
+
+Script done on Sun 03 Jan 2010 07:46:42 AM PST

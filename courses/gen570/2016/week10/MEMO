@@ -1,0 +1,24 @@
+Changes needed in projections
+
+week1
+
+Need to change subscripts in Sankoff formula so "i" not used
+  for two different things (site and state)
+
+
+week2
+
+Give at end of heuristic search lecture some figure on
+genetic algorithms, on Nixon's "parsimony ratchet"
+
+Maybe a figure on multiple starting points for addition
+
+
+Homeworks
+
+Next time, have them explore DNA versus protein versis codon
+treatment of substantially diverged protein data.
+
+Also, in Bayesian runs have them report what priors were
+used.
+
