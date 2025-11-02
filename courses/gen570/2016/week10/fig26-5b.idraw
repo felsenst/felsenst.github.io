@@ -1,0 +1,226 @@
+%!PS-Adobe-2.0
+%%Title: Phylip Tree Output
+%%DocumentFonts: (atend)
+%%Pages: 1 1
+%%BoundingBox: 0 0 612 792
+%%DocumentPaperSizes: Letter
+%%Orientation: Portrait
+%%EndComments
+/l {newpath moveto lineto stroke} def
+%%EndProlog
+%%
+%%Page: 1 1
+%%PageBoundingBox: 0 0 612 792
+%%PageFonts: (atend)
+%%BeginPageSetup
+%%PaperSize: Letter
+ 1 setlinecap 
+ 1 setlinejoin  
+    3.00 setlinewidth newpath 
+  183.16   266.12   183.16   279.10 l
+  183.16   279.10    44.72   279.10 l
+   44.72   279.10    44.72   446.21 l
+   44.72   446.21    20.97   446.21 l
+   20.97   446.21    20.97   520.21 l
+   20.97   520.21     5.13   520.21 l
+    5.13   520.21     5.13   525.81 l
+   20.97   520.21    36.80   520.21 l
+   36.80   520.21    36.80   525.81 l
+   44.72   446.21    68.47   446.21 l
+   68.47   446.21    68.47   525.81 l
+  183.16   279.10   321.59   279.10 l
+  321.59   279.10   321.59   420.58 l
+  321.59   420.58   201.09   420.58 l
+  201.09   420.58   201.09   476.83 l
+  201.09   476.83   159.53   476.83 l
+  159.53   476.83   159.53   500.18 l
+  159.53   500.18   123.90   500.18 l
+  123.90   500.18   123.90   511.05 l
+  123.90   511.05   100.14   511.05 l
+  100.14   511.05   100.14   525.81 l
+  123.90   511.05   147.65   511.05 l
+  147.65   511.05   147.65   519.91 l
+  147.65   519.91   131.81   519.91 l
+  131.81   519.91   131.81   525.81 l
+  147.65   519.91   163.49   519.91 l
+  163.49   519.91   163.49   525.81 l
+  159.53   500.18   195.16   500.18 l
+  195.16   500.18   195.16   525.81 l
+  201.09   476.83   242.66   476.83 l
+  242.66   476.83   242.66   523.60 l
+  242.66   523.60   226.83   523.60 l
+  226.83   523.60   226.83   525.81 l
+  242.66   523.60   258.50   523.60 l
+  258.50   523.60   258.50   525.81 l
+  321.59   420.58   442.09   420.58 l
+  442.09   420.58   442.09   450.63 l
+  442.09   450.63   317.88   450.63 l
+  317.88   450.63   317.88   486.15 l
+  317.88   486.15   290.17   486.15 l
+  290.17   486.15   290.17   525.81 l
+  317.88   486.15   345.59   486.15 l
+  345.59   486.15   345.59   510.37 l
+  345.59   510.37   321.84   510.37 l
+  321.84   510.37   321.84   525.81 l
+  345.59   510.37   369.34   510.37 l
+  369.34   510.37   369.34   520.55 l
+  369.34   520.55   353.51   520.55 l
+  353.51   520.55   353.51   525.81 l
+  369.34   520.55   385.18   520.55 l
+  385.18   520.55   385.18   525.81 l
+  442.09   450.63   566.30   450.63 l
+  566.30   450.63   566.30   482.21 l
+  566.30   482.21   525.72   482.21 l
+  525.72   482.21   525.72   497.23 l
+  525.72   497.23   476.23   497.23 l
+  476.23   497.23   476.23   520.22 l
+  476.23   520.22   432.69   520.22 l
+  432.69   520.22   432.69   525.12 l
+  432.69   525.12   416.85   525.12 l
+  416.85   525.12   416.85   525.81 l
+  432.69   525.12   448.52   525.12 l
+  448.52   525.12   448.52   525.81 l
+  476.23   520.22   519.78   520.22 l
+  519.78   520.22   519.78   524.67 l
+  519.78   524.67   496.03   524.67 l
+  496.03   524.67   496.03   525.04 l
+  496.03   525.04   480.19   525.04 l
+  480.19   525.04   480.19   525.81 l
+  496.03   525.04   511.86   525.04 l
+  511.86   525.04   511.86   525.81 l
+  519.78   524.67   543.53   524.67 l
+  543.53   524.67   543.53   525.81 l
+  525.72   497.23   575.20   497.23 l
+  575.20   497.23   575.20   525.81 l
+  566.30   482.21   606.87   482.21 l
+  606.87   482.21   606.87   525.81 l
+ stroke    0.00 setlinewidth 
+1 setlinecap 1 setlinejoin 
+gsave
+/Times-Roman findfont 0.053524 scalefont setfont
+5.132539 525.825259 translate 45.000000 rotate
+0 0 moveto
+(M) show
+grestore
+gsave
+/Times-Roman findfont 0.053524 scalefont setfont
+36.803131 525.825259 translate 45.000000 rotate
+0 0 moveto
+(J) show
+grestore
+gsave
+/Times-Roman findfont 0.053524 scalefont setfont
+68.473722 525.825265 translate 45.000000 rotate
+0 0 moveto
+(B) show
+grestore
+gsave
+/Times-Roman findfont 0.053524 scalefont setfont
+100.144314 525.825237 translate 45.000000 rotate
+0 0 moveto
+(F) show
+grestore
+gsave
+/Times-Roman findfont 0.053524 scalefont setfont
+131.814906 525.825262 translate 45.000000 rotate
+0 0 moveto
+(G) show
+grestore
+gsave
+/Times-Roman findfont 0.053524 scalefont setfont
+163.485498 525.825262 translate 45.000000 rotate
+0 0 moveto
+(C) show
+grestore
+gsave
+/Times-Roman findfont 0.053524 scalefont setfont
+195.156089 525.825208 translate 45.000000 rotate
+0 0 moveto
+(E) show
+grestore
+gsave
+/Times-Roman findfont 0.053524 scalefont setfont
+226.826681 525.825207 translate 45.000000 rotate
+0 0 moveto
+(R) show
+grestore
+gsave
+/Times-Roman findfont 0.053524 scalefont setfont
+258.497273 525.825207 translate 45.000000 rotate
+0 0 moveto
+(A) show
+grestore
+gsave
+/Times-Roman findfont 0.053524 scalefont setfont
+290.167864 525.825223 translate 45.000000 rotate
+0 0 moveto
+(S) show
+grestore
+gsave
+/Times-Roman findfont 0.053524 scalefont setfont
+321.838456 525.825220 translate 45.000000 rotate
+0 0 moveto
+(Q) show
+grestore
+gsave
+/Times-Roman findfont 0.053524 scalefont setfont
+353.509048 525.825259 translate 45.000000 rotate
+0 0 moveto
+(K) show
+grestore
+gsave
+/Times-Roman findfont 0.053524 scalefont setfont
+385.179640 525.825259 translate 45.000000 rotate
+0 0 moveto
+(N) show
+grestore
+gsave
+/Times-Roman findfont 0.053524 scalefont setfont
+416.850231 525.825254 translate 45.000000 rotate
+0 0 moveto
+(L) show
+grestore
+gsave
+/Times-Roman findfont 0.053524 scalefont setfont
+448.520823 525.825254 translate 45.000000 rotate
+0 0 moveto
+(H) show
+grestore
+gsave
+/Times-Roman findfont 0.053524 scalefont setfont
+480.191415 525.825237 translate 45.000000 rotate
+0 0 moveto
+(T) show
+grestore
+gsave
+/Times-Roman findfont 0.053524 scalefont setfont
+511.862006 525.825237 translate 45.000000 rotate
+0 0 moveto
+(I) show
+grestore
+gsave
+/Times-Roman findfont 0.053524 scalefont setfont
+543.532598 525.825224 translate 45.000000 rotate
+0 0 moveto
+(P) show
+grestore
+gsave
+/Times-Roman findfont 0.053524 scalefont setfont
+575.203190 525.825258 translate 45.000000 rotate
+0 0 moveto
+(D) show
+grestore
+gsave
+/Times-Roman findfont 0.053524 scalefont setfont
+606.873782 525.825245 translate 45.000000 rotate
+0 0 moveto
+(O) show
+grestore
+stroke     0.01 setlinewidth 
+ 1 setlinecap 1 setlinejoin 
+stroke showpage 
+
+%%PageTrailer
+%%PageFonts: Times-Roman
+%%Trailer
+%%DocumentFonts: Times-Roman
