@@ -1,0 +1,486 @@
+
+DNA parsimony algorithm, version 3.69
+
+
+     8 trees in all found
+
+
+  +----Ornithorhy
+  |  
+  8---Monodelphi
+  |  
+  |   +-Sorex     
+  |   |  
+  |   |     +-Equus     
+  |   |  +--4  
+  +--11  |  +-Canis     
+      |  |  
+      |  |     +Myotis    
+      |  |     |  
+      |  |     |     +--Loxodonta 
+      +--1  +-10  +--6  
+         |  |  |  |  +--Choloepus 
+         |  |  |  |  
+         |  |  +--3     +Macaca    
+         |  |     |  +--7  
+         |  |     |  |  +Homo      
+         +--2     +--5  
+            |        |  +---Mus       
+            |        +--9  
+            |           +--Cavia     
+            |  
+            |  +Tursiops  
+            +-12  
+               +-Bos       
+
+
+requires a total of    713.000
+
+  between      and       length
+  -------      ---       ------
+     8      Ornithorhy   0.080354
+     8      Monodelphi   0.071879
+     8          11       0.063464
+    11      Sorex        0.037652
+    11           1       0.022941
+     1           4       0.005012
+     4      Equus        0.025392
+     4      Canis        0.028652
+     1           2       0.004556
+     2          10       0.008966
+    10      Myotis       0.019090
+    10           3       0.010724
+     3           6       0.016634
+     6      Loxodonta    0.054925
+     6      Choloepus    0.050234
+     3           5       0.005730
+     5           7       0.010674
+     7      Macaca       0.008681
+     7      Homo         0.005208
+     5           9       0.016605
+     9      Mus          0.068308
+     9      Cavia        0.045070
+     2          12       0.015505
+    12      Tursiops     0.010736
+    12      Bos          0.020349
+
+
+  +----Ornithorhy
+  |  
+  8---Monodelphi
+  |  
+  |   +-Sorex     
+  |   |  
+  |   |  +-Canis     
+  +--11  |  
+      |  |     +Myotis    
+      |  |     |  
+      |  |  +-10  +-Equus     
+      +--1  |  |  |  
+         |  |  |  |     +--Loxodonta 
+         |  |  +--4  +--6  
+         |  |     |  |  +--Choloepus 
+         |  |     |  |  
+         |  |     +--3     +Macaca    
+         +--2        |  +--7  
+            |        |  |  +Homo      
+            |        +--5  
+            |           |  +---Mus       
+            |           +--9  
+            |              +--Cavia     
+            |  
+            |  +Tursiops  
+            +-12  
+               +Bos       
+
+
+requires a total of    713.000
+
+  between      and       length
+  -------      ---       ------
+     8      Ornithorhy   0.080977
+     8      Monodelphi   0.071057
+     8          11       0.063120
+    11      Sorex        0.039104
+    11           1       0.023851
+     1      Canis        0.026331
+     1           2       0.004836
+     2          10       0.004084
+    10      Myotis       0.019643
+    10           4       0.007440
+     4      Equus        0.023016
+     4           3       0.012971
+     3           6       0.018171
+     6      Loxodonta    0.056159
+     6      Choloepus    0.049198
+     3           5       0.005663
+     5           7       0.009904
+     7      Macaca       0.008681
+     7      Homo         0.004960
+     5           9       0.016882
+     9      Mus          0.067708
+     9      Cavia        0.045718
+     2          12       0.016782
+    12      Tursiops     0.008929
+    12      Bos          0.022156
+
+
+  +----Ornithorhy
+  |  
+  8---Monodelphi
+  |  
+  |   +-Sorex     
+  |   |  
+  |   |  +-Canis     
+  |   |  |  
+  +--11  |     +Myotis    
+      |  |     |  
+      |  |     |  +Equus     
+      |  |  +-10  |  
+      +--1  |  |  |        +Macaca    
+         |  |  |  |     +--7  
+         |  |  +--4     |  +Homo      
+         |  |     |  +--5  
+         |  |     |  |  |  +---Loxodonta 
+         |  |     |  |  +--6  
+         +--2     +--3     +--Choloepus 
+            |        |  
+            |        |  +---Mus       
+            |        +--9  
+            |           +--Cavia     
+            |  
+            |  +Tursiops  
+            +-12  
+               +-Bos       
+
+
+requires a total of    713.000
+
+  between      and       length
+  -------      ---       ------
+     8      Ornithorhy   0.080977
+     8      Monodelphi   0.071057
+     8          11       0.063102
+    11      Sorex        0.039122
+    11           1       0.023603
+     1      Canis        0.026597
+     1           2       0.004854
+     2          10       0.003541
+    10      Myotis       0.020470
+    10           4       0.007228
+     4      Equus        0.022650
+     4           3       0.014430
+     3           5       0.004216
+     5           7       0.010152
+     7      Macaca       0.008102
+     7      Homo         0.005622
+     5           6       0.018750
+     6      Loxodonta    0.055952
+     6      Choloepus    0.049901
+     3           9       0.015972
+     9      Mus          0.067874
+     9      Cavia        0.045552
+     2          12       0.016534
+    12      Tursiops     0.008964
+    12      Bos          0.022121
+
+
+  +----Ornithorhy
+  |  
+  8---Monodelphi
+  |  
+  |   +-Sorex     
+  |   |  
+  |   |           +Macaca    
+  |   |        +--7  
+  |   |        |  +Homo      
+  |   |     +--5  
+  +--11     |  |  +--Loxodonta 
+      |     |  +--6  
+      |  +--3     +--Choloepus 
+      |  |  |  
+      |  |  |  +---Mus       
+      |  |  +--9  
+      +--2     +-Cavia     
+         |  
+         |  +Equus     
+         |  |  
+         +--4     +-Myotis    
+            |  +-10  
+            |  |  +-Canis     
+            +--1  
+               |  +Tursiops  
+               +-12  
+                  +Bos       
+
+
+requires a total of    713.000
+
+  between      and       length
+  -------      ---       ------
+     8      Ornithorhy   0.079082
+     8      Monodelphi   0.073153
+     8          11       0.061302
+    11      Sorex        0.038976
+    11           2       0.022669
+     2           3       0.010372
+     3           5       0.005150
+     5           7       0.009922
+     7      Macaca       0.008102
+     7      Homo         0.005820
+     5           6       0.019317
+     6      Loxodonta    0.055165
+     6      Choloepus    0.050856
+     3           9       0.014527
+     9      Mus          0.068849
+     9      Cavia        0.044494
+     2           4       0.008208
+     4      Equus        0.023358
+     4           1       0.006986
+     1          10       0.007700
+    10      Myotis       0.020164
+    10      Canis        0.025802
+     1          12       0.016283
+    12      Tursiops     0.008763
+    12      Bos          0.022321
+
+
+  +----Ornithorhy
+  |  
+  8---Monodelphi
+  |  
+  |   +-Sorex     
+  |   |  
+  |   |           +Macaca    
+  |   |        +--7  
+  |   |        |  +Homo      
+  +--11     +--5  
+      |     |  |  +--Loxodonta 
+      |     |  +--6  
+      |  +--3     +--Choloepus 
+      |  |  |  
+      |  |  |  +---Mus       
+      +--2  +--9  
+         |     +-Cavia     
+         |  
+         |  +Equus     
+         +--4  
+            |  +Myotis    
+            +-10  
+               |  +-Canis     
+               +--1  
+                  |  +Tursiops  
+                  +-12  
+                     +-Bos       
+
+
+requires a total of    713.000
+
+  between      and       length
+  -------      ---       ------
+     8      Ornithorhy   0.079266
+     8      Monodelphi   0.073132
+     8          11       0.061588
+    11      Sorex        0.038610
+    11           2       0.022834
+     2           3       0.010702
+     3           5       0.004894
+     5           7       0.009599
+     7      Macaca       0.008102
+     7      Homo         0.005820
+     5           6       0.019416
+     6      Loxodonta    0.055289
+     6      Choloepus    0.050732
+     3           9       0.014543
+     9      Mus          0.068634
+     9      Cavia        0.044792
+     2           4       0.008192
+     4      Equus        0.022650
+     4          10       0.008088
+    10      Myotis       0.018767
+    10           1       0.005616
+     1      Canis        0.027878
+     1          12       0.017526
+    12      Tursiops     0.008864
+    12      Bos          0.021808
+
+
+  +----Ornithorhy
+  |  
+  8---Monodelphi
+  |  
+  |   +-Sorex     
+  |   |  
+  |   |  +-Equus     
+  +--11  |  
+      |  |        +---Loxodonta 
+      |  |     +--6  
+      |  |     |  +--Choloepus 
+      +--4     |  
+         |  +--3     +Macaca    
+         |  |  |  +--7  
+         |  |  |  |  +Homo      
+         |  |  +--5  
+         +--2     |  +---Mus       
+            |     +--9  
+            |        +-Cavia     
+            |  
+            |  +Myotis    
+            +-10  
+               |  +-Canis     
+               +--1  
+                  |  +Tursiops  
+                  +-12  
+                     +-Bos       
+
+
+requires a total of    713.000
+
+  between      and       length
+  -------      ---       ------
+     8      Ornithorhy   0.079919
+     8      Monodelphi   0.072082
+     8          11       0.063327
+    11      Sorex        0.038517
+    11           4       0.024628
+     4      Equus        0.021230
+     4           2       0.005291
+     2           3       0.012136
+     3           6       0.018419
+     6      Loxodonta    0.055357
+     6      Choloepus    0.050000
+     3           5       0.005572
+     5           7       0.009854
+     7      Macaca       0.008681
+     7      Homo         0.005159
+     5           9       0.017130
+     9      Mus          0.068105
+     9      Cavia        0.045321
+     2          10       0.006845
+    10      Myotis       0.017560
+    10           1       0.005911
+     1      Canis        0.027770
+     1          12       0.017857
+    12      Tursiops     0.009086
+    12      Bos          0.021586
+
+
+  +----Ornithorhy
+  |  
+  8---Monodelphi
+  |  
+  |   +-Sorex     
+  |   |  
+  |   |     +Equus     
+  |   |     |  
+  |   |     |     +--Loxodonta 
+  |   |  +--4  +--6  
+  +--11  |  |  |  +-Choloepus 
+      |  |  |  |  
+      |  |  +--3     +Macaca    
+      |  |     |  +--7  
+      |  |     |  |  +Homo      
+      |  |     +--5  
+      +--2        |  +---Mus       
+         |        +--9  
+         |           +-Cavia     
+         |  
+         |     +Myotis    
+         |  +-10  
+         |  |  +-Canis     
+         +--1  
+            |  +Tursiops  
+            +-12  
+               +Bos       
+
+
+requires a total of    713.000
+
+  between      and       length
+  -------      ---       ------
+     8      Ornithorhy   0.079969
+     8      Monodelphi   0.072230
+     8          11       0.063976
+    11      Sorex        0.037338
+    11           2       0.024099
+     2           4       0.005707
+     4      Equus        0.022527
+     4           3       0.013015
+     3           6       0.018519
+     6      Loxodonta    0.055976
+     6      Choloepus    0.049431
+     3           5       0.005350
+     5           7       0.010599
+     7      Macaca       0.008681
+     7      Homo         0.004960
+     5           9       0.016220
+     9      Mus          0.067642
+     9      Cavia        0.045751
+     2           1       0.004573
+     1          10       0.007582
+    10      Myotis       0.020536
+    10      Canis        0.025489
+     1          12       0.016088
+    12      Tursiops     0.009212
+    12      Bos          0.021873
+
+
+  +----Ornithorhy
+  |  
+  8---Monodelphi
+  |  
+  |   +-Sorex     
+  |   |  
+  |   |     +Equus     
+  |   |     |  
+  |   |     |        +Macaca    
+  |   |     |     +--7  
+  +--11  +--4     |  +Homo      
+      |  |  |  +--5  
+      |  |  |  |  |  +--Loxodonta 
+      |  |  |  |  +--6  
+      |  |  +--3     +--Choloepus 
+      |  |     |  
+      +--2     |  +---Mus       
+         |     +--9  
+         |        +--Cavia     
+         |  
+         |     +Myotis    
+         |  +-10  
+         |  |  +-Canis     
+         +--1  
+            |  +Tursiops  
+            +-12  
+               +Bos       
+
+
+requires a total of    713.000
+
+  between      and       length
+  -------      ---       ------
+     8      Ornithorhy   0.080032
+     8      Monodelphi   0.072185
+     8          11       0.063942
+    11      Sorex        0.037273
+    11           2       0.023963
+     2           4       0.005314
+     4      Equus        0.023133
+     4           3       0.013560
+     3           5       0.004637
+     5           7       0.010204
+     7      Macaca       0.008102
+     7      Homo         0.005622
+     5           6       0.018886
+     6      Loxodonta    0.055778
+     6      Choloepus    0.050143
+     3           9       0.015616
+     9      Mus          0.067919
+     9      Cavia        0.045447
+     2           1       0.004787
+     1          10       0.007606
+    10      Myotis       0.020563
+    10      Canis        0.025486
+     1          12       0.016061
+    12      Tursiops     0.009259
+    12      Bos          0.021825
+
