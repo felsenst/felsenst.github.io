@@ -1,0 +1,211 @@
+\documentclass[pdf,bluish,slideColor,colorBG]{prosper}
+\hypersetup{pdfpagemode=FullScreen}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\def\baselinestretch{0.7}
+\parindent 0.3in
+\hyphenpenalty=10000
+\tolerance=10000
+\pagestyle{empty}
+
+\def\Prob{{\rm Prob\;}}
+\def\prob{{\rm \;Prob\;}}
+\def\Var{{\rm Var}}        % Var
+\def\Cov{{\rm Cov}}        % Cov
+
+\DeclareSymbolFont{AMSb}{U}{msb}{m}{n}
+\DeclareMathSymbol{\expect}{\mathalpha}{AMSb}{'105}
+
+% bold math (use \bm{...})
+\def\bm#1{\mathpalette\bmstyle{#1}}
+\def\bmstyle#1#2{\mbox{\boldmath$#1#2$}}
+
+\title{Optimum selection and OU processes}
+
+\author{Joe Felsenstein}
+
+\institution{Biology 550D}
+
+\subtitle{\small \\ 22 November 2016}
+
+
+\definecolor{orange}{rgb}{1.0,0.8,0.0}
+\definecolor{Dandelion}{rgb}{0.8,0.4,0.3}
+\definecolor{golden}{rgb}{1.0,0.75,0.2}
+%\definecolor{golden}{rgb}{1.0,0.8,0.3}
+\definecolor{purple}{rgb}{0.6,0.2,0.6}
+\definecolor{darkblue}{rgb}{0.1,0.1,0.6}
+\definecolor{yellow}{rgb}{1.0,1.0,0.0}
+\definecolor{brightred}{rgb}{1.0,0.,0.0}
+\definecolor{black}{rgb}{0.0,0.0,0.0}
+\definecolor{white}{rgb}{1.0,1.0,1.0}
+\definecolor{purple}{rgb}{0.8,0.0,0.8}
+
+% sets backgroundcolor for whole document 
+%\pagecolor{darkblue}
+%\pagecolor{white}
+% sets text color
+%\color{yellow}
+%\color{black}
+% to change just a few words
+% using \textcolor{color}{text}
+
+\DeclareSymbolFont{AMSb}{U}{msb}{m}{n}
+\DeclareMathSymbol{\expect}{\mathalpha}{AMSb}{'105}
+
+\def\Prob{{\rm Prob\;}}
+\def\prob{{\rm \;Prob\;}}
+\def\Var{{\rm Var}}        % Var
+\def\Cov{{\rm Cov}}        % Cov
+
+\begin{document}
+
+% Source of covariation (VA, selective)
+% 
+% Ornstein-Uhlenbeck (Marguerite?)
+% Chasing a peak
+% Go where peak goes
+% Smoothing caused by this
+% Equilibrium covariances
+% Tree covariation
+% 
+
+
+\maketitle
+
+{
+\parindent=0in
+
+\overlays{11}{
+\begin{slide}[Replace]{Analyzing various kinds of data with morphometrics}
+
+A casual outline. Participation compulsory. Issues for discussion:
+
+\begin{itemstep}
+\item Within individuals. Growth: What about allometry?
+\begin{enumerate}
+\item Sequence of observations of individuals
+\item Observations of different individuals of various sizes
+\end{enumerate}
+\item Multiple individuals within a population
+\begin{enumerate}
+\item Phenotypic variation
+\item Quantitative genetic breeding designs
+\item Pedigrees of individuals
+\end{enumerate}
+\item Multiple populations
+\begin{enumerate}
+\item Are populations different.  Which ones?
+\item Are differences correlated with the environment?
+\end{enumerate}
+\item Multiple species on a phylogeny
+\end{itemstep}
+
+\end{slide}
+}
+
+\begin{slide}[Replace]{What causes change in quantitative characters? }
+\bigskip
+
+For neutral mutation and genetic drift, can show that for a quantitative
+character with additive genetic variance $~\mathsf{V_A}~$ and population size $\mathsf{~N~}$
+the genetic (additive) value of the population mean is:
+\bigskip
+
+\[
+\mathsf{\Var (\Delta \bar{g}) \ = \ V_A / N}
+\]
+\bigskip
+
+If mutation and drift are at equilibrium:
+\[
+\mathsf{\expect\left[V_A^{(t+1)}\right] \ = \ V_A^{(t)} \left(1 - \frac{1}{2N}\right) + V_M}
+\]
+\bigskip
+
+\end{slide}
+
+\begin{slide}[Replace]{In neutral traits additive genetic variance rules}
+\bigskip
+
+so that
+\[
+\mathsf{\expect\left[V_A\right] \ = \ 2N V_M}
+\]
+
+whereby
+\[
+\mathsf{\Var[\Delta {\bar g}] \ = \ \left(2N V_M \right) / N  \ = \  2 V_M}
+\]
+
+an analog of Kimura's result for neutral mutation.
+\bigskip
+
+Thus to transform characters to independent Brownian motions of equal
+evolutionary variance, we could use the additive genetic variance $\mathsf{V_A}$.
+
+\end{slide}
+
+\begin{slide}[Replace]{With multiple characters ... }
+\bigskip
+
+There is a precise analogue of this for multiple characters:
+
+\[
+\mathsf{\expect\left[{\bf A}^{(t+1)}\right] \ = \ {\bf A}^{(t)} \left(1 -
+\frac{1}{2N}\right) + {\bf M}}
+\]
+\noindent
+where $\mathsf{~{\bf A}~}$ is the additive genetic covariances, and
+$\mathsf{~{\bf M}~}$ is the covariance matrix of pleiotropic effects of
+mutation.
+
+\[
+\mathsf{\expect\left[{\bf A}\right] \ = \ 2N\, {\bf M}}
+\]
+
+\noindent
+and
+
+\[
+\mathsf{\Var[{\bf \Delta {\bar g}}] \ = \ \left(2N {\bf M} \right) / N  \ = \
+2 {\bf M}}
+\]
+\bigskip
+
+\noindent
+so as long as mutations cause expected change zero (i.e. they are not near some
+biological limit), the effect of genetic drift is that the mean phenotype
+wanders according to the mutational covariances.  The constant additive genetic variance assumption was used by Russ Lande.
+
+\end{slide}
+
+\begin{slide}[Replace]{References for multivariate Brownian motion}
+
+Felsenstein, J.  2004.  {\it Inferring Phylogenies.}  Sinauer Associates,
+Sunderland, Massachusetts. \textcolor{purple}{\bf [See particularly
+chapters 23, 24, 25]}
+\medskip
+
+Felsenstein, J. 1988. Phylogenies and quantitative characters. {\it Annual
+Review of Ecology and Systematics} {\bf 19:} 445-471. \textcolor{purple}{\bf
+[Review with selection as well as neutral mutation]}
+\medskip
+
+Felsenstein, J. 2002. Quantitative characters, phylogenies, and
+morphometrics.pp. 27-44 in {\it Morphology, Shape, and Phylogenetics}, ed.
+N. MacLeod. Systematics Association Special Volume Series 64. Taylor
+and Francis, London.  \textcolor{purple}{\bf[Review repeating 1988 material and going into some
+more detail on the question of threshold models.]}
+\medskip
+
+Lynch, M. and W. G. Hill. 1986. Phenotypic evolution by neutral mutation.
+{\it Evolution} {\bf 40:} 915-935.
+\medskip
+
+\end{slide}
+
+\end{document}
+

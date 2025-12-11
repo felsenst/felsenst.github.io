@@ -1,0 +1,726 @@
+\documentclass[bluish,slideColor,colorBG,pdf]{prosper}
+\hypersetup{pdfpagemode=FullScreen}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{color}
+\def\baselinestretch{0.7}
+\setlength{\topmargin}{-80pt}
+\setlength{\textheight}{600pt}
+\setlength{\oddsidemargin}{0pt}
+\setlength{\evensidemargin}{60pt}
+\setlength{\textwidth}{577pt}
+\setlength{\footskip}{0pt}
+\parindent 0.3in
+\hyphenpenalty=10000
+\tolerance=10000
+\pagestyle{empty}
+
+% expectation symbol -- use "\expect"
+\DeclareSymbolFont{AMSb}{U}{msb}{m}{n}
+\DeclareMathSymbol{\expect}{\mathalpha}{AMSb}{'105}
+
+\title{What is the counterpart to the comparative}
+\subtitle{method within (rather then between) species? } 
+\author{Joe Felsenstein}
+\institution{UC Berkeley, 13 November 2012}
+
+\begin{document}
+
+{\parindent=0in
+
+\maketitle
+
+\begin{slide}[Replace]{A geographic region with local migration}
+
+\centerline{\includegraphics[width=2.2in]{migrex1.idraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Phenotypes resulting from genetic drift alone}
+
+\centerline{\includegraphics[width=2.2in]{migrex2.idraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{A more general migration matrix}
+ 
+\centerline{\includegraphics[width=4in]{generalmatrix.idraw}}
+ 
+\end{slide}
+ 
+\begin{slide}[Replace]{Is this a graphical model? Yes}
+
+\centerline{\includegraphics[width=4in]{graphicalmodel.idraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Optimum selection}
+
+\centerline{\includegraphics[width=2.2in]{optsel1.idraw}}
+
+Suppose that the fitness is a Gaussian curve with optimum $\mathsf{p}$:
+\[
+\mathsf{\bar{w}(x) \ \ = \ \ \exp\left[\frac{(x-p)^2}{2\,S}\right]}
+\]
+and it falls away as if the standard deviation were $\mathsf{\sqrt{S}}$.  Note that
+this means that the bigger $\mathsf{S}$ is the weaker selection is.
+
+\end{slide}
+
+\begin{slide}[Replace]{Optimum selection, continued}
+
+\centerline{\includegraphics[width=3.2in]{optsel2.idraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{The upshot is that after selection the survivors have}
+
+{\ptsize{12}
+\[
+\mathsf{\sigma^{2'} \ = \  \frac{1}{\frac{1}{\sigma^2}+\frac{1}{S}}}
+\]
+}
+
+and the mean
+{\ptsize{12}
+\[
+\mathsf{\mu' \ = \  \frac{\mu\, \frac{1}{\sigma^2}\ + \ p\, \frac{1}{S}}{\frac{1}{\sigma^2}\ + \ \frac{1}{S}}}
+\]
+}
+
+Taking heritability into account the response is multiplied by $\mathsf{h^2}$.
+
+\end{slide}
+
+\begin{slide}[Replace]{An approximate model for optimum selection}
+
+
+{\parindent=-15pt
+If
+\medskip
+
+{\ptsize{12} $\mathsf{m_{ij}}$ ~} is the fraction of individuals in population $i$ that come
+from population $j$ that generation,
+\medskip
+
+{\ptsize{12} $\mathsf{x_i}$ ~} is the mean of population $i$,
+\medskip
+
+{\ptsize{12} $\mathsf{p_i}$ ~} is the optimum value of the phenotype in population $i$,
+\medskip
+
+{\ptsize{12} $\mathsf{\sigma}$ ~} is a strength-of-selection parameter (related to heritability and additive genetic variance)
+\medskip
+
+and
+
+{\ptsize{12} $\mathsf{\varepsilon_i}$ ~} is the change in mean due to genetic drift in population $i$
+\medskip
+ 
+{\ptsize{12}
+\[
+\mathsf{{\bf x}^{(t+1)}\  =\ \sigma\, {\bf p} + (1-\sigma) {\bf M}\;{\bf x}^{(t)} + \varepsilon} 
+\]
+}
+
+}
+\end{slide}
+
+%%\begin{slide}[Replace]{An approximate model for optimum selection, contd.}
+%%
+%%\vspace{-0.3in}
+%%
+%%{\parindent=0in
+%%
+%%Taking expectations throughout,
+%%{\large
+%%\[
+%%\mathsf{\expect[{\bf x}] \ =\  \sigma\, {\bf p} + (1-\sigma) {\bf M}\; \expect[{\bf x}]}
+%%\]
+%%}
+%%
+%%Which is easily solved to give
+%%{\large
+%%\[
+%%\mathsf{\expect[{\bf x}]\  = \ ({\bf I} - (1-\sigma){\bf M})^{-1}\ \sigma\, {\bf p}}
+%%\]	
+%%}
+%%
+%%}
+%%
+%%\end{slide}
+%%
+%\begin{slide}[Replace]{Covariances of means between populations}
+%
+%\vspace{-0.3in}
+%
+%We can show that if ~~~~ {\large $\mathsf{{\bf y} = {\bf x} - \expect[{\bf x}]}$},
+%
+%Since the covariances matrix of populations are given by
+%{\large
+%\[
+%\mathsf{{\bf C} \ = \ \expect[{\bf y}{\bf y}^T]}
+%\]
+%}
+%
+%we end up with the equation
+%{\large
+%\[
+%\mathsf{{\bf C} \ = \ (1-\sigma)^2 \ {\bf M} \ {\bf C} \ {\bf M}^T \ + \ {\bf V}},
+%\]
+%}
+%
+%where $\mathsf{\bf V}$ is the covariance matrix of changes due to drift, which
+%will be a diagonal matrix as drift operates independently in different
+%populations.
+%
+%\end{slide}
+%
+%\begin{slide}[Replace]{The migration matrix and its spectrum}
+%
+%\vspace{-0.3in}
+%
+%If we assume that the migration is conservative, that expected numbers
+%$\mathsf{F_{ij} \ = D_i m_{ij}}$ (not rates) moving in opposite directions (from $\mathsf{j}$
+%to $\mathsf{i}$) are equal (the same expected
+%number of people move from Puyallup to Seattle as vice versa, which
+%of course implies very different rates of migration).
+%
+%We now show that we can write the eigenvectors and eigenvalues of the migration matrix in
+%terms of those of a symmetrized matrix
+%
+%{\large
+%\[
+%\mathbf{{\bf D}^{1/2}\;{\bf M}\;{\bf D}^{-1/2}}
+%\]
+%}
+%
+%where $\mathsf{D}$ is the diagonal matrix of population sizes.
+%It is computationally easier to find them using symmetric matrix
+%eigenvalue routines.
+%
+%\end{slide}
+%
+%\begin{slide}{The migration matrix and its spectrum}
+%
+%\vspace{-0.3in}
+%
+%\[
+%\mathsf{{\bf D}^{1/2}\ {\bf M}\ {\bf D}^{-1/2} \ = \ {\bf D}^{-1/2}\ {\bf F}\ {\bf D}^{-1/2}\ =\ {\bf H}} 
+%\]
+%
+%which is symmetric since $\mathsf{\bf F}$ is symmetric too.  It can be rewritten as 
+%\[
+%\mathsf{{\bf H}\ =\ {\bf I}\ +\ \alpha\ {\bf G}.}
+%\]
+%
+%{\bf G} is symmetric, has its rows and columns sum to 0.  As it is multiplied
+%by a ``fudge-factor" $\alpha$ we can think of it as the matrix of {\it relative}
+%rates of migration (adjusted for population sizes).
+%
+%\end{slide}
+%
+%\begin{slide}[Replace]{Spectral decomposition of the migration matrix}
+%
+%\vspace{-0.3in}
+%
+%Suppose that the spectral decomposition of $~\mathsf{\bf G}~$ is
+%\[
+%\mathsf{{\bf G }\ =\ {\bf U}\ {\bf \Lambda}\ {\bf U}^T}
+%\]
+%
+%Then the spectral decomposition of ${\bf H}$ is
+%\[
+%\mathsf{{\bf H}\ =\ {\bf U}\ ({\bf I}\ +\ \alpha \Lambda)\ {\bf U}^T}
+%\]
+%
+%which means that the spectral decomposition of ${\bf M}$ is simply
+%(since 
+%$\mathsf{{\bf U}^T\ {\bf D}^{1/2}\ =\ ({\bf D}^{-1/2}\ {\bf U})^{-1}}$)
+%\[
+%\mathsf{{\bf M}\ =\ ({\bf D}^{-1/2}\ {\bf U})\ ({\bf I}\ +\ \alpha \Lambda)\ ({\bf D}^{-1/2} {\bf U})^{-1}}.
+%\]
+%
+%\end{slide}
+%
+%\begin{slide}[Replace]{The spectrum of the means}
+%
+%\vspace{-0.3in}
+%
+%Since we know the spectral decomposition of {\bf M}:
+%\[
+%\mathsf{{\bf M}\ =\ ({\bf D}^{-1/2} {\bf U})\  ({\bf I} + \alpha \Lambda)\  ({\bf D}^{-1/2} {\bf U})^{-1}}
+%\]
+%
+%we can write the spectral decomposition of $~{\bf I} - (1-\sigma) {\bf M}~$ as:
+%\[
+%\mathsf{{\bf I} - (1-\sigma) {\bf M}\ =\ ({\bf D}^{-1/2} {\bf U})\  ({\bf I} - (1-\sigma)({\bf I} + \alpha \Lambda))\  ({\bf D}^{-1/2} {\bf U})^{-1}}.
+%\]
+%\vfill
+%
+%which leads to
+%\[
+%\mathsf{({\bf I} - (1-\sigma) {\bf M})^{-1}\ =\ ({\bf D}^{-1/2} {\bf U})\  ({\bf I} - (1-\sigma)({\bf I} + \alpha \Lambda))^{-1}\  ({\bf D}^{-1/2} {\bf U})^{-1}}.
+%\]
+%
+%\end{slide}
+%
+%\begin{slide}[Replace]{Expectations of the phenotypes}
+%
+%\vspace{-0.3in}
+%
+%a form for the expectations of the phenotypes:
+%\[
+%\mathsf{({\bf D}^{-1/2} {\bf U})^{-1} \expect[{\bf x}]\ =\ ({\bf I} - (1-\sigma)({\bf I}
+%+ \alpha \Lambda))^{-1}\  ({\bf D}^{-1/2} {\bf U})^{-1}\  \sigma {\bf p}}
+%\]
+%
+%The upshot of this is that the expectations of $\mathsf{\bf x}$, if they are transformed
+%by being multiplied by the transformation $\mathsf{({\bf D}^{-1/2}{\bf U})^{-1}}$
+%(which is the one that diagonalizes $\mathsf{\bf M}$), are simply multiples of the
+%corresponding transform of the optima $\mathsf{\bf p}$.
+%\vfill
+%
+%Thus, in effect, migration damps the spectrum of $\mathsf{\bf p}$ by multiplying its
+%$\mathsf{~i}$-th element by
+%
+%\[
+%\mathsf{{\sigma  \over 1-(1-\sigma)(1+\alpha \lambda_{i})}}
+%\]
+%
+%(the eigenvalues $\lambda_i$ are negative so this {\it is} actually a dampening).
+%
+%\end{slide}
+%
+%\begin{slide}[Replace]{Covariances of means between populations}
+%
+%\vspace{-0.3in}
+%
+%Given the equation
+%\[
+%\mathsf{{\bf x}^{(t+1)}  = \sigma {\bf p} + (1-\sigma){\bf M}{\bf x}^{(t)} + \varepsilon}
+%\]
+%
+%and subtracting from it the expectations equation:
+%\[
+%\mathsf{{\expect}[{\bf x}]\  =\  \sigma {\bf p}\ +\ (1-\sigma)\ {\bf M}\ {\expect}[{\bf x}]}
+%\]
+%
+%We find that if $\mathsf{{\bf y} = {\bf x} - {\expect}[{\bf x}]}$,
+%\[
+%\mathsf{{\bf y}^{(t+1)}\  =\  (1-\sigma)\ {\bf M}\ {\bf y}^{(t)}\ +\ \varepsilon}.
+%\]
+%
+%\end{slide}
+%
+%\begin{slide}[Replace]{The spectrum of the covariances}
+%
+%Since the covariances matrix of populations are given by
+%\[
+%\mathsf{{\bf C}\ =\ {\expect}[{\bf y}{\bf y}^T]}
+%\]
+%
+%we end up with the equation
+%\[
+%\mathsf{{\bf C}\ =\  (1-\sigma)^2\ {\bf M}\ {\bf C}\ {\bf M}^T\ +\ {\bf V}},
+%\]
+%
+%where $\mathsf{\bf V}$ is the covariance matrix of changes due to drift, which
+%will be a diagonal matrix as drift operates independently in different
+%populations.
+%
+%\end{slide}
+%
+%\begin{slide}[Replace]{The spectrum of the transformed values}
+%
+%\vspace{-0.3in}
+%
+%We had the equation for the covariances ${\bf C}$ of population means around
+%their expectations:
+%\[
+%\mathsf{{\bf C}\ =\  (1-\sigma)^2\ {\bf M}\ {\bf C}\ {\bf M}^T\ +\ {\bf V}},
+%\]
+%
+%Applying the same transformation $({\bf D}^{-1/2}{\bf U})^{-1}$,
+%\[
+%\begin{array}{c c l}
+%\mathsf{{\rm Cov}[({\bf D}^{-1/2}{\bf U})^{-1}\ {\bf y}]} &  \mathsf{=}  & \mathsf{({\bf D}^{-1/2}{\bf U})^{-1}\ {\bf C}\ (({\bf D}^{-1/2}{\bf U})^{-1})^T}\\
+%& & \\
+%& \mathsf{=} &\ \mathsf{(1-\sigma)^2\ ({\bf D}^{-1/2} {\bf U})^{-1}\ {\bf M}\ {\bf C}\ {\bf M}^T\ (({\bf D}^{-1/2}{\bf U})^{-1})^T}\\
+%& & \\
+%& & \ \ \mathsf{+ \ (({\bf D}^{-1/2}{\bf U})^{-1})^T}\\
+%\end{array}
+%\]
+%
+%Since the spectral decomposition of ${\bf M}$ is
+%\[
+%\mathsf{{\bf M}\ =\ ({\bf D}^{-1/2}{\bf U})\ ({\bf I}+\alpha \Lambda)\ ({\bf D}^{-1/2} {\bf U})^{-1}}
+%\]
+%
+%\end{slide}
+%
+%\begin{slide}[Replace]{A transformation to independence}
+%
+%\vspace{-0.3in}
+%
+%If we define ${\bf B}$ by
+%\[
+%\mathsf{{\bf B} = {\rm Cov}[({\bf D}^{-1/2}{\bf U})^{-1}\ {\bf y}]}
+%\]
+%
+%Then we see since ${\bf V} = \beta {\bf D}^{-1}$ that
+%\[
+%\mathsf{{\bf B}\ =\ (1-\sigma)^2\ ({\bf I} + \alpha\Lambda)\ {\bf B}\ ({\bf I} + \alpha\Lambda) \ + \ \beta {\bf I}}
+%\]
+%
+%Solving elementwise we can readily show that the solution is the diagonal matrix
+%\[
+%\mathsf{{\bf B}\ =\ \beta\ ({\bf I} - (1-\sigma)^2 ({\bf I} + \alpha\Lambda)^2)^{-1}}  
+%\]
+%
+%Thus transforming the phenotype by multiplying their values by the matrix
+%$\mathsf{{\bf D}^{-1/2} {\bf U}}$ creates a set of values that are independent.
+%
+%They have zero covariances and the variance of the $i$-th value is
+%\[
+%\mathsf{{\rm Var}[z_i]\ =\ {\beta \over 1-(1-\sigma)^2(1+\alpha \lambda_{i})^2}}
+%\]
+%
+%\end{slide}
+%
+%\begin{slide}[Replace]{Computing the covariances}
+%
+%\vspace{-0.3in}
+%
+%From the matrix $\mathsf{\bf B}$ we can also easily undo the transformation and
+%obtain $\mathsf{\bf C}$:
+%
+%\[
+%\begin{array}{c c l}
+%\mathsf{\bf C}&\ \mathsf{=} &\mathsf{\ ({\bf D}^{-1/2} {\bf U})\ {\bf B}\ ({\bf D}^{-1/2}{\bf U})^{-1}}\\
+%& & \\
+%  &\ \mathsf{=} \ & \mathsf{({\bf D}^{-1/2} {\bf U}) \ ({\bf I} - (1-\sigma)^2 ({\bf I} \ + \ \alpha\Lambda)^2)^{-1} \ ({\bf D}^{-1/2} {\bf U})^{-1}}
+%\end{array}
+%\]
+%
+%\end{slide}
+%
+\begin{slide}[Replace]{The spectrum of the covariances}
+
+
+After some algebra using these eigenvectors $\mathbf{U}$, we can solve for expected means and covariances,
+
+Transforming the phenotype by multiplying their values by the matrix
+$\mathsf{{\bf D}^{-1/2} {\bf U}}$ creates a set of values that are independent.
+\bigskip
+
+They have zero covariances and the variance of the $\mathsf{i}$-th value is
+{\ptsize{12}
+\[
+\mathsf{{\rm Var}[z_i] \ = \ \frac{\beta}{1-(1-\sigma)^2(1+\alpha \lambda_{i})^2}}
+\]
+}
+
+and this can be rewritten in terms of quantities like $\ \mathsf{4Ns}\ $ and $\ \mathsf{4Nm}\ $.
+
+\end{slide}
+
+\begin{slide}[Replace]{Approximate solution}
+
+
+Note that the migration estimation programs don't really estimate $m_{ij}$,
+but instead quantities like $4Nm_{ij}$.  However, quantities like
+
+{\ptsize{12}
+\[
+\mathsf{\frac{\beta}{1-(1-\sigma)^2(1+\alpha \lambda_{i})^2}}
+\]
+}
+
+can be written, to good approximation, as
+
+{\ptsize{12}
+\[
+\mathsf{\frac{\beta}{2 \sigma-2 \alpha \lambda_{i}}}
+\]
+}
+
+and this can be rewritten in terms of quantities like {\ptsize{12} $\ \mathsf{4Ns}\ $} and {\ptsize{12} $\ \mathsf{4Nm}\ $}.
+
+\end{slide}
+
+\begin{slide}[Replace]{Fitting models to the means}
+
+
+{\parindent=0pt
+
+With  $\mathsf{n}$ populations, with means from each, and an environmental variable or variables such as temperature $\mathsf{\tau}$, we can imagine fitting a
+model for the optima $\mathsf{{\bf p}}$ :
+
+{\ptsize{12}
+\[
+\mathsf{p = a + b \tau}
+\]
+}
+In this case we have variables $\mathsf{\alpha}$, $\mathsf{\beta}$, $\mathsf{\sigma}$, $\mathsf{a}$, and $\mathsf{b}$.
+With $\mathsf{n}$ populations we can fit these and have $\mathsf{n-5}$ degrees of freedom left
+over.  We can imagine doing likelihood ratio tests of hypotheses such
+as $\mathsf{b = 0}$ or $\mathsf{\sigma = 0}$.
+\medskip
+
+We can also imagine knowing $\mathsf{\alpha}$, which makes for one more degree of
+freedom.
+\bigskip
+}
+
+\end{slide}
+
+\begin{slide}[Replace]{Multiple characters}
+\bigskip
+
+We can ask about tests involving covariances among characters as well.
+
+It turns out that we can use the same transform on all characters and get
+a block-diagonal covariance matrix.  The blocks depend on
+\begin{itemize}
+\item ${\bf A}$, the additive genetic covariance matrix of the characters
+(this may require quantitative genetics experiments)
+\item ${\bf V}$, the phenotypic covariances in a population (this is rather
+easy to infer)
+\item ${\bf S}$, the shape of the adaptive landscape peak (this is one thing
+we want to know -- it can only be inferred otherwise by before-and-after
+experiments observing fitnesses of individuals.
+\end{itemize}
+
+We can use it to infer the (multivariate) regression of the optimums of the
+characters on the environmental variable(s).
+
+\end{slide}
+
+\begin{slide}[Replace]{A worry: direct effects of the environment}
+\bigskip
+
+If the responses to the environment are not genetic but are the direct effect
+on the phenotype, we might get wrong inferences about selection.
+
+\begin{itemize}
+\item We could escape this by ``common garden'' experiments but this is hard.
+\item There are statistical ways of detecting this -- basically that migration
+among neighbors will not make them more similar than corresponding pairs of
+populations that have the same two environments but are farther away from
+each other. Power of inference?
+\end{itemize}
+
+\end{slide}
+
+\begin{slide}[Replace]{13 populations and an environmental variable}
+
+\centerline{\includegraphics[width=3in]{pop13.idraw}}
+\bigskip
+
+Simulated with $N = 100,\ \ m = 0.2,\ \ a = 10, \ \ b = 0.1, \ \ \sigma = 0.0001$
+
+\end{slide}
+
+\begin{slide}[Replace]{phenotype plotted against the environmental variable}
+\bigskip
+
+\centerline{\includegraphics[width=3.5in]{phenplot.idraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{contrasts of phenotype versus constrast of environment}
+\bigskip
+
+\centerline{\includegraphics[width=3.5in]{zplot.idraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{A numerical example with a 5-population matrix}
+
+\centerline{\includegraphics[width=2.3in]{migr5.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{The contrasts from that 5-population matrix}
+\vspace{-0.5in}
+
+\centerline{\includegraphics[width=2.8in]{migmatcont.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{A simulated example}
+\vspace{-0.8in}
+
+\centerline{\includegraphics[width=2.8in]{cline.idraw}}
+\bigskip
+
+\centerline{(No selection, with $\mathsf{m = 0.01}$ and $\mathsf{\beta = 0.02}$)}
+
+\end{slide}
+
+\begin{slide}[Replace]{Its contrasts}
+
+\centerline{\includegraphics[width=3in]{clinecontrasts.idraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Fourier transform of characters}
+
+
+When we have a linear ``stepping-stone" model of population
+structure, the appropriate transform is simply the discrete Fourier
+transform.  Migration damps the sine waves of different wavelengths
+differently.  Here is a linear continuum with the optimum phenotype
+curve the sum of three sine waves, and the corresponding curve of the
+phenotypic means that results when migration damps them:
+\vspace{-0.3in}
+
+\centerline{\includegraphics[width=1.9in]{sinewaves2.idraw}}
+
+\end{slide}
+
+%\begin{slide}[Replace]{A numerical example}
+%
+%\centerline{\includegraphics[width=2.8in]{stepstone0.idraw}}
+%
+%(This has a stepping stone with $\mathbf{m} = 0.001$ and $\mathbf{\sigma = 0.002}$.  The environmental variable is in fact the true optimum.)
+%
+%\end{slide}
+%
+%\begin{slide}[Replace]{The phenotypes plotted against the environment}
+%\vspace{-0.1in}
+%
+%\centerline{\includegraphics[width=3in]{stepstone.idraw}}
+%
+%\end{slide}
+%
+%\begin{slide}[Replace]{A numerical example}
+%
+%\centerline{\includegraphics[width=3in]{stepstone2.idraw}}
+%
+%\end{slide}
+%
+%\begin{slide}[Replace]{A simulated cline with strong selection}
+%
+%\centerline{\includegraphics[width=2.85in]{cline4.idraw}}
+%
+%\end{slide}
+%
+%\begin{slide}[Replace]{Likelihood contours in that case}
+%
+%\centerline{\includegraphics[width=3.0in]{contour4.idraw}}
+%
+%\end{slide}
+%
+\begin{slide}[Replace]{Previous work}
+
+Previous papers on this:
+\begin{itemize}
+\item Mal\'ecot (1949) and Kimura and Weiss (1964) used Fourier transforms
+to solve for identity by descent in one- and two-dimensional infinite
+stepping stone models of gene frequencies.
+\item Much subsequent work by Takeo Maruyama (1971ff.) on this for finite
+one- and two-dimensional stepping stone models.
+\item Hansen, Armbruster and Antonsen ({\bf \it American Naturalist}, 2000) used Fourier transforms to correct
+for migration in analyzing phenotypic data in one-dimensional stepping stone
+models.  This work is in effect
+a generalization of theirs to the general migration matrix model of Bodmer
+and Cavalli-Sforza (1965).
+\end{itemize}
+
+\end{slide}
+
+\begin{slide}[Replace]{Previous work, continued}
+
+\begin{itemize}
+\item Much of the present algebra was already published by me:
+\begin{quote}
+Felsenstein, J.  2002.  Contrasts for a
+within-species comparative method.
+pp.  118-129 in M. Slatkin and M. Veuille, 
+{\bf \it Modern Developments
+in Theoretical Population Genetics.}  Oxford University Press, Oxford.
+\end{quote}
+\item See also relevant agonizing about what we can infer about migration
+matrices in my paper in Journal of Theoretical Biology, 1981.
+\item Inference of migration matrices by sampling (IS and MCMC) methods:
+papers by Beerli and Felsenstein (1999, 2001) and Bahlo and Griffiths (2000).
+\end{itemize}
+
+\end{slide}
+%
+%%%\begin{slide}[Replace]{But shouldn't we be using the coalescent instead?}
+%%%
+%%%\vspace{-0.3in}
+%%%
+%%%\vspace{-0.5in} \centerline{\includegraphics[width=3in]{migcoal.ydraw}}
+%%%
+%%%\end{slide}
+%%%
+%%\begin{slide}[Replace]{Future directions}
+%%
+%%\vspace{-0.3in}
+%%
+%%\begin{description}
+%%\item[(1)] I have left out direct environmental effects on the trait.  These
+%%can be included.  The similarity between values in neighboring populations,
+%%beyond what can be due to the environmental similarity of those populations,
+%%is then a critical piece of evidence.
+%%\item[(2)] It doesn't take into account the sampling variance, as it assumes
+%%in effect that we observe the population means directly.  This can be
+%%remedied, as it has been in between-species comparative methods.
+%%\item[(3)] It is one-character.  We can presumably carry things through in
+%%a very similar way with vectors of characters instead of scalars.  However
+%%the additive genetic covariances will come in.  Right now the additive
+%%genetic variance is there, but assumed constant and sneakily hidden in the
+%%quantity $\mathsf{\sigma}$.
+%%\end{description}
+%%
+%%\end{slide}
+%%
+%%\begin{slide}[Replace]{more future directions}
+%%
+%%\vspace{-0.3in}
+%%
+%%\begin{description}
+%%\item[(4)]With within-population covariances being estimated, as in (1),
+%%the shape of the optimum curve will have an effect on the within-population
+%%covariances expected (so will migration).  $\mathsf{\sigma}$ will be replaced by
+%%a matrix, which will depend on additive genetic covariances as well as the
+%%shape of the optima.
+%%\item[(5)] How about covariances due to mutation?  Here they have so far
+%%been left out, the only source of variation being assumed to be drift.
+%%Mutation will affect the within-population covariances that are used to
+%%predict the effect of drift.
+%%\item[(6)] What about genomics, particularly QTL mapping?
+%%\item[(7)] Any point in thinking about integrating these inferences with
+%%quantitative genetic experiments?
+%%\item[(8)] Any hope of combining between- and within-species inferences?
+%%Phylogenies {\bf \it and} migration matrices?
+%%\end{description}
+%%
+%%\end{slide}
+%%
+\begin{slide}[Replace]{Furthermore ... }
+
+
+Is there some way of thinking about how we can infer, from distributions of
+gene frequencies, the whole set of migration matrices and historical
+branching events that are not rejected?  This raises some very interesting
+algebraic issues.
+\bigskip
+
+It is an example (like pedigree estimation and invariants of phylogenies)
+of a highly structured set of hypotheses, all with the same number of
+degrees of freedom, where we need to know which ones the data supports.
+\bigskip
+
+In this sense the problem is not so statistically simpleminded.
+
+\end{slide}
+}
+
+\end{document}
+

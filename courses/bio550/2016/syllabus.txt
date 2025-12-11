@@ -1,0 +1,81 @@
+
+
+FRED:
+
+
+  JF   1.  The JF overview and initial topics, for 9/29, when I'm out of town.
+
+  FB   2.  The FLB overview on 10/4. My Chapter 1, emphasizing the
+             variety of diagrams.  Chapter 2, "one or two variables."
+
+               Pictures of covariance, lines that fit well,
+               correlations, lines that fit badly,
+               initial examples -- Wright chickens, growth series.
+
+  FB   3.  Chapter 3. Multiple regression
+
+               Logic of MR as path analysis
+               The three main special cases (ANCOVA, growth
+                 innovations, LDISC).
+               Morphometric examples: Bumpus, allometry in multiple groups
+
+  JF   4.  Random walk, including [FB?] in more than one dimension.
+
+  JF   X.  Introduction to likelihood for Gaussian structures.
+             [I don't know where this goes, but it is obviously essential.]
+
+  FB   5-6 [FB, JF both in absentia].  FB's Chapter 4 ("Transition to
+             Multivariate Analysis")
+
+               The information matrix for a bivariate Gaussian distribution
+               Covariance matrix inversion and covariance matrix
+                 eigenanalysis embody opposing approaches to measurement
+               The Wishart distribution and its implications for PCA
+               Critique of covariance matrices.  Are they real? (I.e.,
+                 does the organism know about them?) Do their inverses
+                 and/or their eigenanalyses have any biological meaning?
+
+  FB   7.  Introduction to GMM: how to keep your place in an anatomy.
+             (My Chapter 5.1.)
+
+  FB   8.  Methods for landmarks three at a time. Tensors; uniform term.
+             (My Chapter 5.2.)
+
+  FB   9.  Procrustes approaches and the relative warps.  My chapters 5.3-5.4.
+
+               Principal coordinates of shape; of size-shape.
+               The critique of shape space as non-biological
+               The critique of Procrustes distance as enforcing
+                 unrealistic symmetries.
+
+  FB  10.  Thin-plate splines; partial warps; semilandmarks.
+             [My Chapter 5.5.]
+
+  FB  11.  Pattern engines for shape coordinates, and their graphics
+             [My Chapter 5.6.]
+
+               group mean differences
+               regressions
+  JF           phylogenetic corrections, contrasts
+               integration
+
+
+          Thoughts? [No, that's not a 12th lecture on the syllabus.]
+
+
+
+ME:
+
+An introduction to quantitative genetics (1 session)
+Brownian motion models and quantitative genetics (1-2)
+Movement on fitness surfaces toward adaptive peaks (1-2)
+Likelihoods for phylogenies under covarying Brownian Motion (1)
+Comparative methods including contrasts methods (2 lectures)
+Within-species phenotypic variation and sampling error (1)
+
+Two more just suggested themselves:
+
+1. Why Fred is being too negative about covariances and about principal
+components
+2. What is it that Fred is saying, anyway?
+

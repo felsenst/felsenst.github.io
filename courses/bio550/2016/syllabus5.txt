@@ -1,0 +1,83 @@
+<html>
+<head>
+<title>Biology 550D: Morphometrics in Biology</title>
+</head>
+<body bgcolor="#ccffff">
+
+<h1>Syllabus<h1>
+<P>
+This is not the final version.  It will be updated from time to time.  FB =
+Fred Bookstein, JF = Joe Felsenstein.
+<P>
+<table border=2>
+<tr> <td>Who</td> <td>lecture number</td> <td>date</td> <td>topic, readings</td> </tr>
+
+<tr>  <td>JF</td> <td>  1.</td> <td>   9/29</td> <td>   Overview and initial topics, installing and using R</td></tr>
+
+<tr>  <td>FB</td> <td>  2.</td> <td>   10/4</td> <td>    Overview.  Chapter 1, emphasizing the
+               variety of diagrams.  Chapter 2, "one or two variables."
+               Pictures of covariance, lines that fit well,
+               correlations, lines that fit badly,
+               initial examples -- Wright chickens, growth series.</td></tr>
+
+<tr>  <td>FB</td> <td>  3.</td> <td>   10/6</td> <td>   Chapter 3. Multiple regression
+               Logic of MR as path analysis
+               The three main special cases (ANCOVA, growth
+                 innovations, LDISC).
+               Morphometric examples: Bumpus, allometry in multiple groups</td></tr>
+
+<tr>  <td>JF</td> <td>  4.</td> <td>   10/11</td> <td> Quantitative genetics</td></tr>
+
+<tr>  <td>JF</td> <td>  5.</td> <td>   10/13</td> <td>  Brownian motion and quantitative genetics</td></tr>
+
+<tr>  <td>FB</td> <td>  6.</td> <td>   10/18</td> <td> Introduction to GMM: how to keep your place in an anatomy.
+             (Chapter 5.1.)</td></tr>
+
+<tr>  <td>FB</td> <td>  7.</td> <td>   10/20</td> <td>  Methods for landmarks three at a time. Tensors;
+                uniform term.  (Chapter 5.2.)</td></tr>
+
+<tr>  <td>FB</td> <td>  8.</td> <td>   10/25</td> <td>  FB's Chapter 4 ("Transition to Multivariate Analysis")
+               The information matrix for a bivariate Gaussian distribution
+               Covariance matrix inversion and covariance matrix
+                 eigenanalysis embody opposing approaches to measurement
+               The Wishart distribution and its implications for PCA
+               Critique of covariance matrices.  Are they real? (I.e.,
+                 does the organism know about them?) Do their inverses
+                 and/or their eigenanalyses have any biological meaning?</td></tr>
+
+<tr>  <td>students</td> <td>9.</td> <td> 10/27</td> <td> Discussion (moderated, Fred and Joe not present)</td></tr>
+
+<tr>  <td>Paul Sampson</td> <td>  10.</td> <td> 11/1</td> <td>   Paul's work</td></tr>
+
+<tr>  <td>JF</td> <td> 11.</td> <td>   11/3</td> <td>   Fitness surfaces, Brownian Motion and O/U model</td></tr>
+
+<tr>  <td>FB</td> <td> 12.</td> <td>   11/8</td> <td>   Chapter 4 material, continued (see above)</td></tr>
+
+<tr>  <td>FB</td> <td> 13.</td> <td>   11/10</td> <td> Procrustes approaches and the relative warps  Chap. 5.3-5.4.
+               Principal coordinates of shape; of size-shape.
+               The critique of shape space as non-biological
+               The critique of Procrustes distance as enforcing
+                 unrealistic symmetries.</td></tr>
+
+<tr>  <td>FB</td> <td> 14.</td> <td>   11/15</td> <td>   Thin-plate splines; partial warps; semilandmarks.
+             [Chapter 5.5.]</td></tr>
+
+<tr>  <td>FB</td> <td> 15.</td> <td>   11/17</td> <td>   Pattern engines for shape coordinates, and their graphics
+             [Chapter 5.6.]</td></tr>
+
+<tr>  <td>JF</td> <td> 16.</td> <td>   11/22</td> <td>  Likelihood and phylogenies with Brownian Motion</td></tr>
+
+<tr>  <td>all</td> <td>    </td> <td>  11/24</td> <td>  Anatomical dissection and consumption of a dinosaur</td></tr>
+
+<tr> <td>JF</td> <td> 17.</td> <td>   11/29</td> <td>   Comparative methods</td></tr>
+
+<tr>  <td></td> <td>  18.</td> <td>   12/1</td> <td>   Student reports?</td></tr>
+
+<tr>  <td>JF</td> <td> 19.</td> <td>   12/6</td> <td>    Comparative methods, continued</td></tr>
+
+<tr>  <td>JF</td> <td> 20.</td> <td>   12/8</td> <td>   Within-species variation and sampling error</td></tr>
+
+</table>
+
+</body>
+</html>

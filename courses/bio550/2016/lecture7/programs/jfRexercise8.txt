@@ -1,0 +1,81 @@
+
+                    R functions used in demonstration on 12/8
+
+
+These functions can be cut-and-pasted into your R environment.
+
+
+The function  driftandm  simulates a stepping-stone model of 100 populations
+evolving according to a phenotypic optimum selection model with genetic drift
+and migration.  N is local population size,  m  is the migration rate (m/2 from
+each adjacent stepping-stone),   f  is the fraction of the way to the optimum
+that each population moves under selection.
+
+The optimum has a linear cline with phenotype  10  in the middle of the
+species and a slope of  b  per population.
+
+
+driftandm <- function(N,m,f,b) {
+# genetic drift, selection, and migration in a linear cline of optima
+  y <- 10.0+b*(seq(1:100)-50.5);   # optimum phenotypes
+  x <- y;              # start out with means sitting on optima
+  for(t in 1:1000) {
+    x <- x + rnorm(100, mean=0, sd=sqrt(1/N));  # genetic drift of means
+    xl <- x[1:99];           # migration code starts here ...
+    xr <- x[2:100];
+    x[1] <- (1-m/2)*x[1];
+    x[100] <- x[100]*(1-m/2);
+    x[2:99] <- (1-m)*x[2:99];
+    x[1:99] <- x[1:99]+(m/2)*xr;
+    x[2:100] <- x[2:100]+(m/2)*xl;    # ... and ends here
+    x <- x+f*(y-x);     # optimum selection: go  f  of way to optimum
+    }
+   plot(seq(1:100),x,ylim=c(0,20),ylab="character mean",xlab="population");
+   lines(seq(1:100),x);
+  lines(seq(1:100),y);
+}
+
+
+
+The function  regressm  runs 100 replicates under the above model.  It then
+plots the confidence intervals from a simple regression of population means
+on population position, and draws a line for the 95% interval.  If the
+interval fails to include a slope of zero, it is colored red and drawn with
+a double-thickness line.
+
+To see whether the intervals include  b = 0  the correct fraction of the time,
+run this function with the argument  b, the true slope, being zero.  When
+m  is zero, the interval should have the correct coverage, but when  m  is
+greater than zero, it should not owing to residuals being correlated owing to
+migration.
+
+
+regressm <- function(N,m,f,b) {
+  y <- 10+b*(seq(1:100)-50.5);
+  plot(c(0,100),c(0,0),type="l",xlim=c(1,100),ylim=c(-0.1,0.1),xlab="replicate",
+   ylab="confidence interval on slope");
+  for (reps in 1:100) {
+     x <- y;   # start right on top of optima
+     for(t in 1:1000) {
+        x <- x + rnorm(100, mean=0, sd=sqrt(1/N));  # genetic drift
+        xl <- x[1:99];              # migration ...
+        xr <- x[2:100];
+        x[1] <- (1-m/2)*x[1];
+        x[100] <- x[100]*(1-m/2);
+        x[2:99] <- (1-m)*x[2:99];
+        x[1:99] <- x[1:99]+(m/2)*xr;
+        x[2:100] <- x[2:100]+(m/2)*xl;   # ... done migration
+        x <- x+f*(y-x);       # selection: move fraction  f  of way to optimum
+        }
+     fit <- lm(x~seq(1:100));
+     coef <- summary(fit)$coefficients[2,1] ;
+     err <- summary(fit)$coefficients[2,2];
+     b <- coef + c(-1,1)*err*qt(0.975, 98);
+     if ((b[1] > 0.0) | (b[2] < 0.0))
+       lines(c(reps,reps),c(b[1],b[2]),col="red",lwd=2,ylim=c(-1,1),ylab="character mean",xlab="population")
+     else
+       lines(c(reps,reps),c(b[1],b[2]),ylim=c(-1,1),ylab="character mean",xlab="population")
+   }
+}
+
+

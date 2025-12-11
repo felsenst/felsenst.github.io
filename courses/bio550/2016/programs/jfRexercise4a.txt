@@ -1,0 +1,182 @@
+                                                         version 2, 11/10/2016
+
+                             R exercise 4a
+
+           (Additional to the earlier R exercise for lecture 4)
+
+This tells you how to read in forms such as the fishes data I gave you, or the
+Vilmann rat data Fred gave you, and do Generalized Procrustes Analysis
+superpositions.  It uses the code Fred gave on the course website in the file
+"S.procrustes.from.scratch" which will be found in the course Catalyst files.
+
+The material below modifies Fred's routine for reading in the Vilmann rat data
+into one that can read in a general  n x m  array.
+
+1.  This is Fred's statement for reading in the Vilmann rat dataset.
+
+## read in two-dimensional coordinate data  [these are 18*8 octagons (x,y)]
+## except that we are going to read the matrix first and get  n  and  m
+## 
+##
+ 
+ vil.coordinate.data.144<-t(matrix(scan(
+      file="vilmann.data.set.txt",n=18*144,what=numeric()),18,144))[,3:18]
+
+But we want to do something that will work more generally.
+
+
+2. Now we want instead to read in data like the simulated fishes data I gave
+you.  You can do that like this (as we saw earlier) by the commands 
+
+a <- read.table("fishes1.txt");
+
+and convert it into a matrix of  n x m  and drop the first column (the names)
+by doing
+
+b <- data.matrix(a[,2:dim(a)[2]]);
+
+That assumes that the file of data has a first column of names.
+
+
+3.  Now here is a function that will take these forms and do a Generalized
+Procrustes Analysis.  It starts by detecting  n  and  m.   You can just copy
+this function and paste it into your R environment.  It is hard to understand
+because Fred has very cleverly used complex numbers so each landmark is not a
+pair of (x,y) coordinates but a single complex number   x + i y    That way
+he can rotate a point by just doing a multiplication.
+
+
+procrustes <- function(b) {
+## JF: function doing Fred's Procrustes algorithm on a file of  n  rows which
+##    has a name and then   m   coordinates, blank-separated.
+##    argument   b   is the array  n x m  with the data
+##
+##   Procrustes from scratch (for two-dimensional data)
+
+##      this version takes advantage of complex arithmetic
+##      code is in Splus, very easy to convert to R
+
+## JF:  get the dimensions
+
+  n <- dim(b)[1];   ## number of specimens
+  m <- dim(b)[2];   ## number of coordinates (twice the number of landmarks)
+
+## JF: the code after this point is Fred's except generalized by me to  n x m
+ 
+## convert to complex numbers
+ vil.complex.144<-matrix(complex(r=b[,seq(1,m-1,2)], i=b[,seq(2,m,2)]),n,m/2)
+
+## center to mean zero casewise
+ vil.centered.144<-sweep(vil.complex.144, 1,apply(vil.complex.144,1,mean),"-")
+
+## scale to unit Centroid Size casewise
+ vil.scaled.144<-sweep(vil.centered.144,
+        1,sqrt(apply(Mod(vil.centered.144)^2,1,sum)),"/")
+
+## compute tentative Procrustes mean 
+ vil.testmean.144<-apply(vil.scaled.144,2,mean)
+
+## set up GPA cycle
+ vil.iterates<-matrix(vil.scaled.144,n,m)
+
+## loop
+ print("Convergence: changes in iteration cycles 1-5");
+ print("------------ ------- -- --------- ------ ---");
+ for (iloop in 1:5) {
+
+## for each case
+    for (j in 1:n) {
+
+## rotate
+      vil.iterates[j,]<-vil.scaled.144[j,]*
+           (sum(vil.testmean.144*Conj(vil.scaled.144[j,]))/
+            sum(vil.scaled.144[j,]*Conj(vil.scaled.144[j,])))
+
+## restore Centroid Size 1
+      vil.iterates[j,]<-vil.iterates[j,]/sqrt(sum(
+            Mod(vil.iterates[j,])^2))
+}
+## convergence criterion (hardly ever needed)
+
+  print(sum(Mod(vil.testmean.144-apply(vil.iterates,2,mean))^2))
+
+## replace tentative mean by new centroids
+   vil.testmean.144<-apply(vil.iterates,2,mean)
+}
+
+## rotate mean to first principal axis horizontal
+ vil.pc1<-princomp(cbind(Re(vil.testmean.144),Im(vil.testmean.144)))$loadings[,1]
+ if (vil.pc1[1]<0) vil.pc1<- -vil.pc1; vil.pc1[2]<- -vil.pc1[2]
+ vil.turn<-complex(r=vil.pc1[1],i=vil.pc1[2])
+ vil.testmean.144<-vil.turn*vil.testmean.144
+ vil.iterates<-vil.turn*vil.iterates
+
+## JF: my modification of Fred's plot routines using ordinary "plot" and "line"
+
+ xmin <- min(Re(vil.iterates));      ## find min, max of each specimen's x,
+y's
+ ymin <- min(Im(vil.iterates));
+ xmax <- max(Re(vil.iterates));
+ ymax <- max(Im(vil.iterates));
+##  plots a single plot with the points (smaller ones if there are more)
+##  with the mean form drawn with lines in red on top of them
+ plot(vil.iterates,pch=16,asp=1,cex=5/sqrt(n),xlim=c(xmin,xmax),
+        ylim=c(ymin,ymax),xlab="x", ylab="y");
+ lines(vil.testmean.144,type="l",col="red",lwd=2);
+ xvil <- Re(vil.iterates);           ## the  x  coordinates   n x (m/2)
+ yvil <- Im(vil.iterates);           ## the  y  coordinates   n x (m/2)
+ superposed <- matrix(0, n, m);      ##  empty matrix to hold output values
+ for (i in 1:(m/2)) {                ## copy columns into superposition array
+   superposed[,2*i-1] <- xvil[,i];   ## a column of x's, then ...
+   superposed[,2*i] <- yvil[,i];     ## a column of y's
+ }
+return(superposed);
+}
+
+
+What that function does is superpose the forms by Generalized Procrustes
+Analysis, get the superposed forms and the mean form as  vil.iterates  and
+vil.testmean.   As it goes it prints out an indication of how much change
+occurs in its 5 iterations of fitting -- you can see that this gets smaller
+very rapidly.
+
+It then plots in red the mean form (a plot that assumes that the coordinates
+are around the outside of the form) as line segments, and plots the individual
+GPA-superposed Procrustes coordinates.
+
+It also returns as an result the array of superposed forms, which is an
+n x m  array.  If you just run this function by typing  "procrustes(b)" you
+will get that whole array printed out on your screen, which may startle you.
+Better to run it by typing
+
+bbb <- procrustes(b)
+
+
+4. You should be able to use this to basically duplicate my file
+"fishes1proc.txt".   I can also put up more simulated-fishes data sets if you
+want.  You might benefit also from making up small datasets of your own and
+running this function on them.
+
+
+5. Finally, note that for forms from a phylogeny one uses the contrasts if one
+wants to compute  eigenvalues and eigenvectors (or equivalently, "principal
+warps" or the results of SVD computations).  But do not attempt to do a
+Procrustes superposition of the contrasts -- it is meaningful on the original
+forms, not the contrasts.  The analysis I had you do in the previous exercise
+was equivalent to doing the Generalized Procrustes Analysis on the forms,
+then taking contrasts, then getting an eigenvector of those, and then plotting
+them on the mean form from the Generalized Procrustes Analysis, *not* on the
+mean of contrast values, which wouldn't make sense.
+
+
+6. An interesting exercise is to compare the eigenvectors (plotted onto the
+mean fish by the routine I gave last time) from two analyses: one which
+uses the contrasts to get the eigenvectors, and one which just assumes wrongly
+that the forms are independent and identically distributed and gets the
+eigenvectors from the covariances of the forms without any attempt to correct
+for the phylogeny.
+
+7. Enjoy.
+
+                                                        Joe Felsenstein
+

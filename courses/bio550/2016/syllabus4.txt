@@ -1,0 +1,70 @@
+
+who   number  date       topic, readings
+---   ------  ----       ---------------
+
+  JF   1.    9/29    Overview and initial topics, installing and using R
+
+  FB   2.    10/4     Overview.  Chapter 1, emphasizing the
+               variety of diagrams.  Chapter 2, "one or two variables."
+               Pictures of covariance, lines that fit well,
+               correlations, lines that fit badly,
+               initial examples -- Wright chickens, growth series.
+
+  FB   3.    10/6    Chapter 3. Multiple regression
+               Logic of MR as path analysis
+               The three main special cases (ANCOVA, growth
+                 innovations, LDISC).
+               Morphometric examples: Bumpus, allometry in multiple groups
+
+  FB   4.    10/11  Introduction to GMM: how to keep your place in an anatomy.
+             (Chapter 5.1.)
+
+  FB   5.    10/13   Methods for landmarks three at a time. Tensors;
+                uniform term.  (Chapter 5.2.)
+
+  FB   6.    10/18   FB's Chapter 4 ("Transition to Multivariate Analysis")
+               The information matrix for a bivariate Gaussian distribution
+               Covariance matrix inversion and covariance matrix
+                 eigenanalysis embody opposing approaches to measurement
+               The Wishart distribution and its implications for PCA
+               Critique of covariance matrices.  Are they real? (I.e.,
+                 does the organism know about them?) Do their inverses
+                 and/or their eigenanalyses have any biological meaning?
+
+  FB   7.    10/21   Chapter 4 material, continued (see above)
+
+  FB   8.    10/25  Procrustes approaches and the relative warps  Chap. 5.3-5.4.
+               Principal coordinates of shape; of size-shape.
+               The critique of shape space as non-biological
+               The critique of Procrustes distance as enforcing
+                 unrealistic symmetries.
+
+  FB   9.    10/25    Thin-plate splines; partial warps; semilandmarks.
+             [Chapter 5.5.]
+
+  students 10. 10/27  Discussion (moderated), Fred and Joe not present
+
+  Paul S   11.  11/1    Paul's work
+
+  JF  12.    11/3     Quantitative genetics
+
+  FB  13.    11/8    Pattern engines for shape coordinates, and their graphics
+             [Chapter 5.6.]
+
+  JF  14.    11/10   Brownian motion and quantitative genetics
+
+  JF  15.    11/15   Fitness surfaces, Brownian Motion and O/U model
+
+  JF  16.    11/17   Likelihood and phylogenies wih Brownian Motion
+
+  JF  17.    11/22   Comparative methods
+
+      18.    12/1    Student reports?
+
+  JF  19.    12/6    Comparative methods, continued
+
+  JF  20.    12/8     Within-species variation and sampling error
+
+
+
+

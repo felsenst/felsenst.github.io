@@ -1,0 +1,31 @@
+rm outfile
+./treecont4 << END
+40
+3
+5
+n
+3183
+1
+END
+cp outfile infile.10
+rm outfile
+./treecont4 << END
+40
+3
+5
+y
+3183
+1
+END
+cp outfile infile.10a
+rm outfile
+./treecont4 << END
+40
+3
+0
+n
+3183
+1
+END
+cp outfile infile.10b
+rm outfile

@@ -1,0 +1,28 @@
+
+Fred Bookstein and I will teach a special topics course, BIOL 550D, this Autumn
+Quarter.  Here are some of the details:
+
+
+Biology 550D
+
+Morphometrics for Biologists
+
+Fred L. Bookstein (Department of Statistics)  and
+Joe Felsenstein (Department of Genome Sciences and Department of Biology)
+
+3 credits
+
+Tuesdays and Thursdays
+
+10:30-11:50am
+
+Hitchcock 312
+
+
+This course will be a general introduction to morphometric methods and their use in developmental and evolutionary biology.  Bookstein is a world leader in morphometrics, and he and Felsenstein are working actively on methods for applying morphometrics to phylogenetic questions.  The course is intended for graduate students in the biological sciences.  Use of morphometric methods to describe 2- and 3-dimensional shapes and differences between shapes is increasing rapidly.  The class will give students an overview of methods in this field, along with the mathematical and statistical methods needed to use them.  The syllabus will combine techniques for analysis of "extents" -- measures like length or area that it makes sense to take logarithms of -- with techniques for analysis of shape (the tools usually called "geometric morphometrics").
+
+Classes, 80 minutes long, will be a combination of lectures and in-class exercises using R packages and other free software.  Many of the lectures will be drawn from a new Bookstein book manuscript that attempts to rebuild today's morphometric toolkit on a new, firmer foundation of biological reasoning.
+
+Please note that in the Time Schedule the class is BIOL 550D (the D is important).  There are four "sections" of Biology 550, which is listed as "Evolution and Systematics Seminar".  The sections are actually separate courses.  Only the fourth, section D, is this course.  The schedule line number is 22546.
+
+

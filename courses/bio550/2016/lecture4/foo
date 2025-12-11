@@ -1,0 +1,3 @@
+latex comparative.tex
+dvips -o comparative.ps comparative.dvi
+ps2pdf comparative.ps

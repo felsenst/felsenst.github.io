@@ -1,0 +1,392 @@
+\documentclass[pdf,bluish,slideColor,colorBG]{prosper}
+\hypersetup{pdfpagemode=FullScreen}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\def\baselinestretch{0.7}
+\parindent 0.3in
+\hyphenpenalty=10000
+\tolerance=10000
+\pagestyle{empty}
+
+\def\Prob{{\rm Prob\;}}
+\def\prob{{\rm \;Prob\;}}
+\def\Var{{\rm Var}}        % Var
+\def\Cov{{\rm Cov}}        % Cov
+
+\DeclareSymbolFont{AMSb}{U}{msb}{m}{n}
+\DeclareMathSymbol{\expect}{\mathalpha}{AMSb}{'105}
+
+% bold math (use \bm{...})
+\def\bm#1{\mathpalette\bmstyle{#1}}
+\def\bmstyle#1#2{\mbox{\boldmath$#1#2$}}
+
+\title{Comparative method and phylogenies}
+
+\author{Joe Felsenstein}
+
+\institution{NIMBioS Tutorial on Evolutionary Quantitative Genetics}
+
+\subtitle{\small \\ 7 August 2014}
+
+
+\definecolor{orange}{rgb}{1.0,0.8,0.0}
+\definecolor{Dandelion}{rgb}{0.8,0.4,0.3}
+\definecolor{golden}{rgb}{1.0,0.75,0.2}
+%\definecolor{golden}{rgb}{1.0,0.8,0.3}
+\definecolor{purple}{rgb}{0.6,0.2,0.6}
+\definecolor{darkblue}{rgb}{0.1,0.1,0.6}
+\definecolor{yellow}{rgb}{1.0,1.0,0.0}
+\definecolor{brightred}{rgb}{1.0,0.,0.0}
+\definecolor{black}{rgb}{0.0,0.0,0.0}
+\definecolor{white}{rgb}{1.0,1.0,1.0}
+\definecolor{purple}{rgb}{0.8,0.0,0.8}
+
+% sets backgroundcolor for whole document 
+%\pagecolor{darkblue}
+%\pagecolor{white}
+% sets text color
+%\color{yellow}
+%\color{black}
+% to change just a few words
+% using \textcolor{color}{text}
+
+\DeclareSymbolFont{AMSb}{U}{msb}{m}{n}
+\DeclareMathSymbol{\expect}{\mathalpha}{AMSb}{'105}
+
+\def\Prob{{\rm Prob\;}}
+\def\prob{{\rm \;Prob\;}}
+\def\Var{{\rm Var}}        % Var
+\def\Cov{{\rm Cov}}        % Cov
+
+\begin{document}
+
+% OUTLINE ALL TALKS
+% Brownian motion approximation
+% Edwards and Cavalli-Sforza
+% me, 1968/1973
+% Lande, 1976 
+% REML trees with Brownian motion
+% Pruning
+% Inferring the covariances?
+% incl. Grafen (and/or PGLS)
+% The determinant result (make sure Jacobian included)
+% Some kind of simulation with finite number of loci w/mutation
+% 
+% Source of covariation (VA, selective)
+% 
+% Ornstein-Uhlenbeck (Marguerite?)
+% Chasing a peak
+% Go where peak goes
+% Smoothing caused by this
+% Equilibrium covariances
+% Tree covariation
+% 
+% Morphometrics
+% Bookstein
+% Alignment
+% Rotation and optimization (and approximations)
+% Need for special models
+
+% Threshold models
+% Sewall Wright( and guinea pig)
+% 
+
+
+\maketitle
+
+{
+\parindent=0in
+
+\begin{slide}[Replace]{A simple case to show effects of phylogeny}
+\bigskip
+
+\centerline{\includegraphics[height=2in]{fig25-2.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Two uncorrelated characters evolving on that tree}
+
+\centerline{\includegraphics[height=3in]{fig25-3a.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Identifying the two clades}
+
+\centerline{\includegraphics[height=3in]{fig25-3b.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{A tree on which we are to observe two characters}
+\bigskip
+
+\centerline{\includegraphics[height=2.4in]{fig25-4.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Contrasts on that tree}
+
+\[
+\begin{array}{c c c c c c c c c c c l}
+ & & & & & & & & & & & \multicolumn{1}{c}{$\rm Variance$} \\
+ & & & & & & & & & & & \multicolumn{1}{c}{$\rm proportional$}\\
+\multicolumn{7}{c}{\rm Contrast} & & & & & \multicolumn{1}{c}{$\rm to$} \\
+ & & & & & & & & & & & \\
+\mathsf{y_1} & \mathsf{=} & \mathsf{x_a} & \mathsf{-} & \mathsf{x_b} & & & & & & & \mathsf{~~~0.4}  \\
+ & & & & & & & & & & & \\ 
+\mathsf{y_2} & \mathsf{=} &\mathsf{\frac{1}{4}\;x_a} & \mathsf{+} & \mathsf{\frac{3}{4}\;x_b} & \mathsf{-} & \mathsf{x_c} & & & & & \mathsf{~~~0.975} \\ & & & & & & & & & & & \\ 
+\mathsf{y_3} & \mathsf{=} & & & & & & & \mathsf{x_d} & \mathsf{-} & \mathsf{x_e} & \mathsf{~~~0.2} \\
+ & & & & & & & & & & & \\ 
+\mathsf{y_4} & \mathsf{=} & \mathsf{\frac{1}{6}\;x_a} & \mathsf{+} & \mathsf{\frac{1}{2}\;x_b} & \mathsf{+} & \mathsf{\frac{1}{3}\;x_c} & \mathsf{-} & \mathsf{\frac{1}{2}\;x_d} & \mathsf{-}  & \mathsf{\frac{1}{2}\;x_e} & \mathsf{~~~1.11666}
+\end{array}
+\]
+
+\end{slide}
+
+\begin{slide}[Replace]{Contrasts for the 20-species two-clade example}
+
+\centerline{\includegraphics[height=3in]{fig25-5.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{The algebra}
+
+If $\bf{T}$ is the covariances of $~\mathsf{n}~$ tips on the tree, and $\bf{V}$ is the (unknown) covariances of the Brownian motion of the $~\mathsf{p}~$ characters, the log-likelihood of
+a set of characters (stacked as a vector) $\bf{x}$ is
+\[
+\ln L \ = \ - (np/2) \ln (2\pi) - (1/2) \ln |{\bf T}\otimes{\bf V}| - (1/2) ({\bf x-\mu})^t ({\bf T}\otimes{\bf V})^{-1} ({\bf x-\mu})
+\]
+If ${\bf C}$ is an $~\mathsf{(n-1) \times n}~$ set of contrasts, each
+orthogonal to the grand mean, such that ${\bf CTC}^t$ is an $~\mathsf{n-1}$-dimensional identity matrix, then taking the density of the transformed data
+{\bf y} = {\bf C} {\bf x}, this has expectation vector {\bf 0}:
+\[
+\ln L \ = \ K - (1/2) \ln |{\bf I}_{n-1}\otimes{\bf V}| - (1/2) {\bf y}^t ({\bf I}_{(n-1)}\otimes{\bf V})^{-1} {\bf y}
+\]
+(where $K$ collects the constant stuff, including the $\mathsf{\ln(v_1+v_2)}$) Jacobian term.
+
+\end{slide}
+
+\begin{slide}[Replace]{ ... simplifying ... }
+
+  This can also be expressed as
+\[
+\ln L \ = \ K - ((n-1)/2) \ln |{\bf V}| - (1/2) {\rm tr} \left({\bf S} {\bf V})^{-1} \right)
+\]
+where
+\[
+{\bf S} \ = \ \sum\limits_i {\bf y}^{(i)} \left({\bf y}^{(i)}\right)^t
+\]
+is the $~\mathsf{p \times p}~$ sum of squares matrix of characters across contrasts. 
+
+Inferring the Brownian motion phylogenetic covariances by maximum likelihood
+we find that
+\[
+\widehat{\bf V} \ = \ {\bf S} / (n-1)
+\]
+which leads to
+\[
+\ln L \ = \ K' \ - \ ((n-1)/2) \ln |\widehat{\bf V}|
+\]
+\end{slide}
+
+\begin{slide}[Replace]{An example: Riek and Geiser, 2013 }
+
+Alexander Riek and Fritz Geiser. 2013.  Allometry of thermal variables in mammals: consequences of body size and phylogeny. {\it Biological Reviews} {\bf 88 (3):} 564-572.
+
+\vspace{-0.55in}
+\begin{tabular}{c c}
+\includegraphics[width=2.2in]{tips.ps} &
+\includegraphics[width=2.2in]{contrasts.ps} \\[-0.45in]
+body temperature vs. log(body size)  & contrasts vs. contrasts \\
+($P$ for slope $\neq 0$ is $0.000375$)  &  ($P$ for slope $\neq 0$ is $0.116$) 
+\end{tabular}
+
+\end{slide}
+
+\begin{slide}[Replace]{When the tree is noisy: Propagating bootstrap sampling}
+
+\centerline{\includegraphics[width=4in]{propagatebs1a.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Propagating bootstrap sampling}
+
+\centerline{\includegraphics[width=4in]{propagatebs1b.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Propagating bootstrap sampling}
+
+\centerline{\includegraphics[width=4in]{propagatebs1c.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Propagating bootstrap sampling}
+
+\centerline{\includegraphics[width=4in]{propagatebs1d.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Propagating bootstrap sampling}
+
+\centerline{\includegraphics[width=4in]{propagatebs2.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Propagating bootstrap sampling}
+
+\centerline{\includegraphics[width=4in]{propagatebs3.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Propagating bootstrap sampling}
+
+\centerline{\includegraphics[width=4in]{propagatebs100.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{A Bayesian model}
+
+\centerline{\includegraphics[width=4in]{propagatebayes1a.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{A Bayesian model}
+
+\centerline{\includegraphics[width=4in]{propagatebayes1b.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{A Bayesian model}
+
+\centerline{\includegraphics[width=4in]{propagatebayes1c.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Bayesian MCMC}
+
+\centerline{\includegraphics[width=4in]{propagatebayes1d.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Bayesian MCMC}
+
+\centerline{\includegraphics[width=4in]{propagatebayes2.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Bayesian MCMC}
+
+\centerline{\includegraphics[width=4in]{propagatebayes3.ydraw}}
+
+\end{slide}
+
+\begin{slide}[Replace]{Bayesian MCMC}
+
+\centerline{\includegraphics[width=4in]{propagatebayes4.ydraw}}
+
+\end{slide}
+
+\overlays{6}{
+\begin{slide}[Replace]{Some complications}
+
+\begin{itemstep}
+\item (As noted above) dealing with uncertainty about the phylogeny
+\item Small sample size from species means their species means are
+uncertain.  Must use a model with another level of variation -- within-species
+phenotypic variation (Ricklefs and Starck, 1996; Ives et al., 2007; 
+Felsenstein, 2008)
+\item Rate of change of morphological characters need not be constant on the
+molecular tree branch lengths.
+\item Note -- regressions involving contrasts should assume that they all have expectation zero.
+\item How to infer the effect of an environmental variable when only its present-day values are known but not its values when the past changes were occurring?
+(note: regressing on the present-day values is generally {\bf wrong}, see
+paper by Hansen and Bartoszek, {\it Systematic Biology}, 2012).
+\item Might be able to assume environment does Brownian motion and infer
+covariances.
+\end{itemstep}
+
+\end{slide}
+}
+
+\overlays{6}{
+\begin{slide}[Replace]{Poor inference of covariation -- what to do with that?}
+\bigskip
+
+ 
+\begin{itemstep}
+\item Covariances are hard to infer with only (say) 50 species sampled
+\item ... particularly if they samples are not independent but on a tree
+\item ... particularly if the quantitative characters are thresholded
+\item How do we propagate the resulting uncertainty when biologists want
+``fly on the wall'' certainty?
+\item Expanding to more species may put the model at risk
+\item Expanding to more characters just adds new parameters to estimate
+\end{itemstep}
+
+\end{slide}
+}
+ 
+\begin{slide}[Replace]{References for phylogenetic comparative methods}
+
+Felsenstein, J. 1985. Phylogenies and the
+comparative method. {\it American Naturalist} {\bf 125:} 1--5.
+\textcolor{purple}{\bf [Introduces the contrasts method]}
+\medskip
+
+Felsenstein, J. 1988. Phylogenies and quantitative characters. {\it Annual 
+Review of Ecology and Systematics} \textcolor{purple}{\bf [Suggests using
+bootstrapping to correct comparative methods for uncertainty about the
+phylogeny} {\bf 19:} 445--471.
+\medskip
+
+Harvey, P. H. and M. D. Pagel. 1991. {\it The Comparative Method in
+Evolutionary Biology.} Oxford University Press, Oxford. 
+\textcolor{purple}{\bf [The major book introducing statistical phylogenetic comparative methods]}
+\medskip
+
+Grafen, A. 1989. The phylogenetic regression.  {\it Philosophical Transactions 
+of the Royal Society of London, Series B} {\bf 326:} 119--157.  \textcolor{purple}{\bf [Using generalized least squares to evaluate the likelihood for
+Brownian Motion phylogenies and do comparative methods analysis, without the
+contrasts methods. In the simplest case, is exactly equivalent to the contrasts
+method.  Discusses ways of coping with unresolved parts of the
+phylogeny and with varying evolutionary rates.]}
+\medskip
+
+\end{slide}
+
+\begin{slide}[Replace]{References, continued}
+
+Ricklefs, R. E. and J. M. Starck. 1996.  Applications of phylogenetically
+independent contrasts: A mixed progress report. {\it Oikos} {\bf 77:} 167--172.
+\textcolor{purple}{\bf [Pointing put that small sample size within species is
+a problem for comparative methods]}
+\medskip
+
+Ives, A. R., P. E. Midford, and T. Garland. 2007. Within-species
+variation and measurement error in phylogenetic
+comparative methods. {\it Systematic Biology} {\bf 56:} 252-270.
+\textcolor{purple}{\bf [Taking small sample size into account when we
+know the within-species phenotypic covariances]}
+\medskip
+
+Hansen, T. F., and K. Bartoszek.  2012. Interpreting the evolutionary regression: the interplay between observational and biological errors in phylogenetic comparative studies.  {\it Systematic Biology} {\bf 61(3):} 413 –- 425.
+\medskip
+
+Felsenstein, J. 2008 Comparative methods with
+sampling error and within-species variation: contrasts
+revisited and revised. {\it American Naturalist} {\bf 171:} 713--725.
+\textcolor{purple}{\bf [Inferring both between=species evolutionary
+covariances and within-species phenotypic variation]}
+\medskip
+
+Felsenstein, J.  2004.  {\it Inferring Phylogenies.}  Sinauer Associates,
+Sunderland, Massachusetts. \textcolor{purple}{\bf Mentions this model and
+also sample size issues in contrasts method.}
+\medskip
+
+\end{slide}
+}
+\end{document}
+

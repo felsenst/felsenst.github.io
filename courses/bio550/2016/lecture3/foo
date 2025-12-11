@@ -1,0 +1,3 @@
+latex browncomp.tex
+dvips -o browncomp.ps browncomp.dvi
+ps2pdf browncomp.ps

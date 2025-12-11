@@ -1,0 +1,30 @@
+chasepeak <- function(x0,y0,t,psd) {
+# process starts at (x0,y0) in a 2x2 square around the origin, for t generations
+# it undergoes genetic drift and also tries to climb a peak that moves by
+# its own Brownian motion along the diagonal from lower left to upper right.
+# The two characters show negative genetic correlations of -2/3
+# psd   is the standard deviation of jumps of the peak
+#
+x <- x0;
+y <- y0;
+xx <- rep(0,t);      # array to hold the phenotype  x  values
+yy <- rep(0,t);      # array to hold the phenotype  y  values
+pp <- rep(0,t);      # array to hold phenotypic optimum  x  values (y is same)
+a <- chol(matrix(c(1.0,-2/3,-2/3,1.0),2,2));  # used for genetic correlations
+px <- 0;   # coordinates of the optimum
+py <- 0;
+for  (tt in 1:t) {
+  pp[tt] <- px;
+  xx[tt] <- x;
+  yy[tt] <- y;
+  px <- px + rnorm(1,sd=psd);   # move the optimum  x (and y) values
+  v <- t(a) %*% matrix(c(rnorm(1,0,sd=0.1),rnorm(1,0,sd=0.1)),2,1) + matrix(c(x,y),2,1);
+  x <- v[1,1];
+  y <- v[2,1];
+  x <- x + 0.1*(px-x);  # go 0.1 of way to the peak
+  y <- y + 0.1*(px-y);  # ditto (py is same as px)
+}
+plot(xx,yy,type="l",col="black",xlim=c(-1,1),ylim=c(-1,1));   # plot the x,y
+lines(pp,pp,type="p",col="red");   # plot the optimum locations
+}
+

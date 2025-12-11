@@ -1,0 +1,35 @@
+
+                            R exercise #6
+
+This is a function that plots 10 replicates of a Brownian Motion (if the
+parameter  a  is  0)  or 10 replicates of an Ornstein-Uhlenbeck process
+if  a  is set to a value greater than  0.   Try values of  a  from about
+0.001  to  0.01.
+
+Copy/paste this into your R environment 
+
+plotouup <- function(a){
+# upwards simulation of ...
+# Ornstein-Uhlenbeck process (simulated as a normal random walk of 1000 steps)
+# the parameter  a  is the fraction of the way toward  0  that the
+# value is moved at each step.
+# If  a = 0   it is just a Brownian Motion,  a > 0  is OU
+x <- rnorm(1000,0,sd=sqrt(0.001));
+  y = rep(0,1000);
+  y[1] = x[1];
+  for (j in 2:1000) {
+    y[j] = (1-a)*y[j-1]+x[j];
+  }
+yl <- 2.5;
+t <- seq(0.001,1,0.001);
+plot(y,t,type="l",xlim=c(-yl,yl),xlab="x",ylab="time");
+for (i in 2:10) {
+  x <- rnorm(1000,0,sd=sqrt(0.001));
+  y[1] = x[1];
+  for (j in 2:1000) {
+    y[j] = (1-a)*y[j-1]+x[j];
+    }
+  lines(y,t,type="l");
+  }
+}
+

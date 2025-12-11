@@ -1,0 +1,3 @@
+latex lecture2.tex
+dvips -o lecture2.ps lecture2.dvi
+ps2pdf lecture2.ps

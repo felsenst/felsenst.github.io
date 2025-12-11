@@ -1,0 +1,8 @@
+
+                 Computer exercise in R for Lecture 4
+
+I have provided two 100-species data sets in an R-compatible format.  Both
+are derived from the same simulation which evolves 10 landmarks (hence 20
+coordinates) in a tree of 100 species, with size and shape changing.  The
+species are named  A, AA, AB, B, BA, BB, ... with 100 species in all.  The
+names are in random order but correspond to the names at the tips of the tree.

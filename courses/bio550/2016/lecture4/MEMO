@@ -1,0 +1,25 @@
+
+Get sheep name fixed
+
+read in data frame (how to get names right?)
+
+library(ape)
+
+get variables as vectors (how?)
+
+read tree
+
+associate names (how?)
+
+take logs of sizes!
+
+use pic to get contrasts
+
+make a matrix of them
+
+covariances (through the mean!)
+
+how to do regressions, correlations?
+
+how to do PCs?
+

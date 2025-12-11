@@ -1,0 +1,77 @@
+
+                          R Exercise for 10/11
+
+These are three functions that you can copy/paste into your R environment
+and then run to see what happens.  They work by simulating a Brownian motion
+(by interpolating it by a Gaussian random walk). 
+
+1. The first, "brownianup" simulates a Brownian Motion on an axis, for 1000
+steps of 0.001 in time, with variance 0.001 per step (so total variance is 1.0)
+for all 1000 steps.  It plots it with the variable horizontally, with time
+vertically.  It is similar to what you ran last time.
+
+
+plotbrownianup <- function(){
+x <- rnorm(1000,0,sd=sqrt(0.001));
+y <- cumsum(x);
+yl <- 2.5;
+t <- seq(0.001,1,0.001);
+plot(y,t,type="l",xlim=c(-yl,yl),xlab="x",ylab="time");
+}
+
+
+2. The second simulates a phylogeny, with a lineage undergoing Brownian
+motion for 1000 steps as above, but with the lineage splitting after a
+fraction (a) of that time, where (a) is a parameter that you choose.
+The two lineages start from that place and then evolve independently by
+the Brownian motion.  The lineages are plotted, with time vertically, for
+a single tree.
+
+
+plottwotree <- function(a){
+# argument (a)  is the fraction of time that the two lineages share ancestry
+sd1 <- sqrt(0.001);
+xl <- 3.0;
+shtime <- trunc(a*1000);
+indtime <- 1000-shtime;
+rx1 <- rnorm(shtime,0,sd1);
+rx2 <- rnorm(indtime,0,sd1);
+rx3 <- rnorm(indtime,0,sd1);
+x <- cumsum(rx1);
+y <- x[shtime]+cumsum(rx2);
+z <- x[shtime]+cumsum(rx3);
+t <- seq(0.001,1,0.001);
+plot(x,t[1:shtime],type="l",xlim=c(-xl,xl),ylim=c(0,1),xlab="x+y  or
+x+z",ylab="time");
+lines(y,t[(shtime+1):1000]);
+lines(z,t[(shtime+1):1000]);
+}
+
+
+3. The third function does the same, with the same parameter (a),  but now
+it instead simulates 1000 trees, and plots a scatter plot of the results
+after the 1000 steps, with 400 replicate trees.  It shows the phenotypes in
+the two lineages, one being  x  and one being  y.  How does the correlation
+between them depend on the value of (a) ?
+
+
+plottwocorr <- function(a){
+#  argument  (a)  is fraction of time that the two lineages share ancestry
+reps <- 400;
+sd1 <- sqrt(0.001);
+x <- rep(0,reps);
+y <- rep(0,reps);
+xl <- 5.0;
+shtime <- trunc(a*1000);
+indtime <- 1000-shtime;
+for(i in 1:reps) {
+  rx1 <- rnorm(shtime,0,sd1);
+  rx2 <- rnorm(indtime,0,sd1);
+  rx3 <- rnorm(indtime,0,sd1);
+  x[i] <- cumsum(c(rx1,rx2))[1000];
+  y[i] <- cumsum(c(rx1,rx3))[1000];
+}
+plot(x,y,type="p",xlim=c(-xl,xl),ylim=c(-xl,xl),
+xlab="final  x+y",ylab="final  x+z");
+}
+

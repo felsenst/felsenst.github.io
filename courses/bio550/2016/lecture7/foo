@@ -1,0 +1,3 @@
+latex migsel.tex
+dvips -o migsel.ps migsel.dvi
+ps2pdf migsel.ps
